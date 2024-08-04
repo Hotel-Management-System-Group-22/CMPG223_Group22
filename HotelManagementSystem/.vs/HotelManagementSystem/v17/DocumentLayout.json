@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -43,6 +51,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Reports-Form.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "RelativeDocumentMoniker": "Reports-Form.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "RelativeToolTip": "Reports-Form.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAlwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T17:50:34.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Reports-Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "RelativeDocumentMoniker": "Reports-Form.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs [Design]",
+              "RelativeToolTip": "Reports-Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T17:47:35.892Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Manage-Jobs-Form.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
@@ -55,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Manage-Jobs-Form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
@@ -67,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Caitlin.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Caitlin.cs",
               "RelativeDocumentMoniker": "Caitlin.cs",
@@ -75,24 +108,22 @@
               "RelativeToolTip": "Caitlin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAmwBUAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:58:07.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T08:58:07.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Caitlin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Caitlin.cs",
               "RelativeDocumentMoniker": "Caitlin.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Caitlin.cs [Design]",
               "RelativeToolTip": "Caitlin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:57:56.121Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-02T08:57:56.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -100,20 +131,18 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAmwBUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T08:55:59.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-02T08:55:59.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T07:30:07.914Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-21T07:30:07.914Z"
             }
           ]
         }
