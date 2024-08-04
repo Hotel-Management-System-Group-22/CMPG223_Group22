@@ -8,3 +8,14 @@ C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelMa
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe.config
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.pdb
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.Form1.resources
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.MaintainRooms.resources
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.Properties.Resources.resources
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.GenerateResource.cache
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
