@@ -58,6 +58,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports-Form.Designer.cs">
+      <DependentUpon>Reports-Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage-Jobs-Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports-Form.resx">
+      <DependentUpon>Reports-Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
