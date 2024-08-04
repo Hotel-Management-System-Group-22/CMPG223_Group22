@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace HotelManagementSystem
 {
-    public partial class LogIn : Form
+    public partial class Employees : Form
     {
-        public LogIn()
+        public Employees()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Employees_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void LogIn_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
