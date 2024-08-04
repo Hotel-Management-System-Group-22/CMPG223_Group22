@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace HotelManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class Caitlin : Form
     {
-        public Form1()
+        public Caitlin()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            button1.Text = "Hello";
         }
     }
 }
