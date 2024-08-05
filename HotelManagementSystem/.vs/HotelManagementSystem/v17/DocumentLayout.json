@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +34,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CheckOut.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
+              "RelativeDocumentMoniker": "CheckOut.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs [Design]",
+              "RelativeToolTip": "CheckOut.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T10:13:05.871Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
+              "RelativeDocumentMoniker": "CheckIn.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs [Design]",
+              "RelativeToolTip": "CheckIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T10:12:26.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAADwvxYAAAAOAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxUAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T08:39:36.703Z",
               "EditorCaption": ""
@@ -49,14 +85,14 @@
               "RelativeDocumentMoniker": "MaintainRooms.cs",
               "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs",
               "RelativeToolTip": "MaintainRooms.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAswCcAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwCcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T08:35:22.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MaintainRooms.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs",
               "RelativeDocumentMoniker": "MaintainRooms.cs",
@@ -68,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
