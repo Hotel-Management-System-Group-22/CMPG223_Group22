@@ -40,6 +40,8 @@
             this.cmbAddRole = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbAddJob = new System.Windows.Forms.ComboBox();
+            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelManagementSystemDataSet1 = new HotelManagementSystem.HotelManagementSystemDataSet1();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAddLName = new System.Windows.Forms.TextBox();
@@ -67,11 +69,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnSearchReset = new System.Windows.Forms.Button();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoStaff = new System.Windows.Forms.RadioButton();
+            this.rdoDes = new System.Windows.Forms.RadioButton();
+            this.rdoAsc = new System.Windows.Forms.RadioButton();
+            this.rdoClerk = new System.Windows.Forms.RadioButton();
+            this.rdoAdmin = new System.Windows.Forms.RadioButton();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -80,19 +82,6 @@
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.TableAdapterManager();
-            this.employeeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.employeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +91,21 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.jobTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSet1TableAdapters.JobTableAdapter();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.employeeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -110,9 +113,10 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).BeginInit();
             this.employeeBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -186,6 +190,7 @@
             this.btnAddEmp.TabIndex = 6;
             this.btnAddEmp.Text = "ADD";
             this.btnAddEmp.UseVisualStyleBackColor = true;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // cmbAddRole
             // 
@@ -210,16 +215,25 @@
             // 
             // cmbAddJob
             // 
+            this.cmbAddJob.DataSource = this.jobBindingSource;
+            this.cmbAddJob.DisplayMember = "Job_Title";
             this.cmbAddJob.FormattingEnabled = true;
-            this.cmbAddJob.Items.AddRange(new object[] {
-            "Front Desk Manager ",
-            "Front Desk Clerk",
-            "Housekeeping Manager",
-            "Housekeeping Attendant"});
             this.cmbAddJob.Location = new System.Drawing.Point(224, 143);
             this.cmbAddJob.Name = "cmbAddJob";
             this.cmbAddJob.Size = new System.Drawing.Size(180, 24);
             this.cmbAddJob.TabIndex = 6;
+            this.cmbAddJob.ValueMember = "Job_ID";
+            this.cmbAddJob.SelectedIndexChanged += new System.EventHandler(this.cmbAddJob_SelectedIndexChanged);
+            // 
+            // jobBindingSource
+            // 
+            this.jobBindingSource.DataMember = "Job";
+            this.jobBindingSource.DataSource = this.hotelManagementSystemDataSet1;
+            // 
+            // hotelManagementSystemDataSet1
+            // 
+            this.hotelManagementSystemDataSet1.DataSetName = "HotelManagementSystemDataSet1";
+            this.hotelManagementSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -261,6 +275,7 @@
             this.txtAddFName.Name = "txtAddFName";
             this.txtAddFName.Size = new System.Drawing.Size(180, 22);
             this.txtAddFName.TabIndex = 0;
+            this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
             // 
             // btnDeleteReset
             // 
@@ -280,6 +295,7 @@
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
+            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // label8
             // 
@@ -296,6 +312,7 @@
             this.txtDeleteSerach.Name = "txtDeleteSerach";
             this.txtDeleteSerach.Size = new System.Drawing.Size(180, 22);
             this.txtDeleteSerach.TabIndex = 0;
+            this.txtDeleteSerach.TextChanged += new System.EventHandler(this.txtDeleteSerach_TextChanged);
             // 
             // txtUpdateSearch
             // 
@@ -303,6 +320,7 @@
             this.txtUpdateSearch.Name = "txtUpdateSearch";
             this.txtUpdateSearch.Size = new System.Drawing.Size(180, 22);
             this.txtUpdateSearch.TabIndex = 11;
+            this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
             // 
             // label11
             // 
@@ -331,6 +349,7 @@
             this.btnUpdateEmp.TabIndex = 6;
             this.btnUpdateEmp.Text = "UPDATE";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
+            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
             // cmbUpdateRole
             // 
@@ -355,11 +374,14 @@
             // 
             // cmbUpdateJob
             // 
+            this.cmbUpdateJob.DataSource = this.jobBindingSource;
+            this.cmbUpdateJob.DisplayMember = "Job_Title";
             this.cmbUpdateJob.FormattingEnabled = true;
             this.cmbUpdateJob.Location = new System.Drawing.Point(289, 160);
             this.cmbUpdateJob.Name = "cmbUpdateJob";
             this.cmbUpdateJob.Size = new System.Drawing.Size(180, 24);
             this.cmbUpdateJob.TabIndex = 6;
+            this.cmbUpdateJob.ValueMember = "Job_ID";
             // 
             // label6
             // 
@@ -469,15 +491,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.btnSearchReset);
-            this.tabPage4.Controls.Add(this.radioButton5);
-            this.tabPage4.Controls.Add(this.radioButton3);
-            this.tabPage4.Controls.Add(this.radioButton4);
-            this.tabPage4.Controls.Add(this.radioButton2);
-            this.tabPage4.Controls.Add(this.radioButton1);
+            this.tabPage4.Controls.Add(this.rdoStaff);
+            this.tabPage4.Controls.Add(this.rdoDes);
+            this.tabPage4.Controls.Add(this.rdoAsc);
+            this.tabPage4.Controls.Add(this.rdoClerk);
+            this.tabPage4.Controls.Add(this.rdoAdmin);
             this.tabPage4.Controls.Add(this.txtSearch);
             this.tabPage4.Controls.Add(this.label13);
             this.tabPage4.Controls.Add(this.label12);
@@ -501,55 +524,60 @@
             this.btnSearchReset.UseVisualStyleBackColor = true;
             this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
             // 
-            // radioButton5
+            // rdoStaff
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(197, 169);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(145, 20);
-            this.radioButton5.TabIndex = 9;
-            this.radioButton5.Text = "Employee staff only";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoStaff.AutoSize = true;
+            this.rdoStaff.Location = new System.Drawing.Point(197, 169);
+            this.rdoStaff.Name = "rdoStaff";
+            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
+            this.rdoStaff.TabIndex = 9;
+            this.rdoStaff.Text = "Employee staff only";
+            this.rdoStaff.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdoDes
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(197, 256);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(101, 20);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.Text = "Descending";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoDes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoDes.AutoSize = true;
+            this.rdoDes.Location = new System.Drawing.Point(197, 256);
+            this.rdoDes.Name = "rdoDes";
+            this.rdoDes.Size = new System.Drawing.Size(101, 20);
+            this.rdoDes.TabIndex = 7;
+            this.rdoDes.Text = "Descending";
+            this.rdoDes.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdoAsc
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(197, 221);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(92, 20);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.Text = "Ascending";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdoAsc.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoAsc.AutoSize = true;
+            this.rdoAsc.Location = new System.Drawing.Point(197, 221);
+            this.rdoAsc.Name = "rdoAsc";
+            this.rdoAsc.Size = new System.Drawing.Size(92, 20);
+            this.rdoAsc.TabIndex = 6;
+            this.rdoAsc.Text = "Ascending";
+            this.rdoAsc.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoClerk
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(197, 138);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(123, 20);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.Text = "Clerk users only";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoClerk.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoClerk.AutoSize = true;
+            this.rdoClerk.Location = new System.Drawing.Point(197, 138);
+            this.rdoClerk.Name = "rdoClerk";
+            this.rdoClerk.Size = new System.Drawing.Size(123, 20);
+            this.rdoClerk.TabIndex = 5;
+            this.rdoClerk.Text = "Clerk users only";
+            this.rdoClerk.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoAdmin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(197, 104);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(130, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.Text = "Admin users only";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoAdmin.AutoSize = true;
+            this.rdoAdmin.Location = new System.Drawing.Point(197, 104);
+            this.rdoAdmin.Name = "rdoAdmin";
+            this.rdoAdmin.Size = new System.Drawing.Size(130, 20);
+            this.rdoAdmin.TabIndex = 4;
+            this.rdoAdmin.Text = "Admin users only";
+            this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
             // txtSearch
             // 
@@ -557,6 +585,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(202, 22);
             this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label13
             // 
@@ -609,131 +638,6 @@
             this.tableAdapterManager.JobTableAdapter = null;
             this.tableAdapterManager.ROOMTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // employeeBindingNavigator
-            // 
-            this.employeeBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.employeeBindingNavigator.BindingSource = this.employeeBindingSource;
-            this.employeeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.employeeBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.employeeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.employeeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.employeeBindingNavigatorSaveItem});
-            this.employeeBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.employeeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.employeeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.employeeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.employeeBindingNavigator.Name = "employeeBindingNavigator";
-            this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(1278, 27);
-            this.employeeBindingNavigator.TabIndex = 12;
-            this.employeeBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // employeeBindingNavigatorSaveItem
-            // 
-            this.employeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.employeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeBindingNavigatorSaveItem.Image")));
-            this.employeeBindingNavigatorSaveItem.Name = "employeeBindingNavigatorSaveItem";
-            this.employeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.employeeBindingNavigatorSaveItem.Text = "Save Data";
-            this.employeeBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeeBindingNavigatorSaveItem_Click);
             // 
             // employeeDataGridView
             // 
@@ -821,6 +725,110 @@
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.Width = 125;
             // 
+            // jobTableAdapter
+            // 
+            this.jobTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 22);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
+            // employeeBindingNavigator
+            // 
+            this.employeeBindingNavigator.AddNewItem = null;
+            this.employeeBindingNavigator.BindingSource = this.employeeBindingSource;
+            this.employeeBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.employeeBindingNavigator.DeleteItem = null;
+            this.employeeBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.employeeBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.employeeBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.employeeBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.employeeBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.employeeBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.employeeBindingNavigator.Name = "employeeBindingNavigator";
+            this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(1278, 31);
+            this.employeeBindingNavigator.TabIndex = 12;
+            this.employeeBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -834,6 +842,8 @@
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -845,10 +855,11 @@
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).EndInit();
             this.employeeBindingNavigator.ResumeLayout(false);
             this.employeeBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -894,30 +905,17 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoDes;
+        private System.Windows.Forms.RadioButton rdoAsc;
+        private System.Windows.Forms.RadioButton rdoAdmin;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdoStaff;
+        private System.Windows.Forms.RadioButton rdoClerk;
         private System.Windows.Forms.Button btnSearchReset;
         private HotelManagementSystemDataSet hotelManagementSystemDataSet;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private HotelManagementSystemDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private HotelManagementSystemDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator employeeBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton employeeBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView employeeDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -927,5 +925,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private HotelManagementSystemDataSet1 hotelManagementSystemDataSet1;
+        private System.Windows.Forms.BindingSource jobBindingSource;
+        private HotelManagementSystemDataSet1TableAdapters.JobTableAdapter jobTableAdapter;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.BindingNavigator employeeBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

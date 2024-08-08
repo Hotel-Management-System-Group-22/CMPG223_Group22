@@ -56,7 +56,7 @@
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+          //  this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtUsername
             // 
@@ -80,6 +80,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pbViewPassword
             // 
@@ -88,7 +89,7 @@
             this.pbViewPassword.Size = new System.Drawing.Size(75, 23);
             this.pbViewPassword.TabIndex = 6;
             this.pbViewPassword.TabStop = false;
-            this.pbViewPassword.Click += new System.EventHandler(this.pictureBox1_Click);
+           // this.pbViewPassword.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbExit
             // 
@@ -112,7 +113,7 @@
             this.Controls.Add(this.label1);
             this.Name = "LogIn";
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.LogIn_Load);
+            //this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
