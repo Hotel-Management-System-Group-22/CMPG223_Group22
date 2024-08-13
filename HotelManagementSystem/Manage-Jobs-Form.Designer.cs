@@ -47,12 +47,12 @@
             this.btnAddJob = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEditJobRate = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtEditJobTitle = new System.Windows.Forms.TextBox();
+            this.txtEditJobRate = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblSelectedID = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtJobRate = new System.Windows.Forms.TextBox();
@@ -221,7 +221,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAddCancel);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnAcceptNewJob);
             this.groupBox1.Controls.Add(this.txtAddJobTitle);
@@ -242,47 +241,12 @@
             this.groupBox2.Controls.Add(this.txtEditJobTitle);
             this.groupBox2.Controls.Add(this.txtEditJobRate);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(647, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 250);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edit Job Info";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 94);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 16);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Job Rate:";
-            // 
-            // txtEditJobRate
-            // 
-            this.txtEditJobRate.Location = new System.Drawing.Point(113, 94);
-            this.txtEditJobRate.Name = "txtEditJobRate";
-            this.txtEditJobRate.Size = new System.Drawing.Size(100, 22);
-            this.txtEditJobRate.TabIndex = 10;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(23, 181);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Accept";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Job Title:";
             // 
             // button1
             // 
@@ -294,12 +258,47 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Job Title:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(23, 181);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Accept";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // txtEditJobTitle
             // 
             this.txtEditJobTitle.Location = new System.Drawing.Point(113, 53);
             this.txtEditJobTitle.Name = "txtEditJobTitle";
             this.txtEditJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtEditJobTitle.TabIndex = 9;
+            // 
+            // txtEditJobRate
+            // 
+            this.txtEditJobRate.Location = new System.Drawing.Point(113, 94);
+            this.txtEditJobRate.Name = "txtEditJobRate";
+            this.txtEditJobRate.Size = new System.Drawing.Size(100, 22);
+            this.txtEditJobRate.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 16);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Job Rate:";
             // 
             // lblSelectedID
             // 
@@ -340,6 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 544);
             this.Controls.Add(this.lblSelectedID);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEditJob);
             this.Controls.Add(this.btnAddJob);
