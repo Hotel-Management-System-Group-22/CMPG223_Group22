@@ -83,6 +83,7 @@
             this.btnCheckOutCancel.TabIndex = 13;
             this.btnCheckOutCancel.Text = "Cancel";
             this.btnCheckOutCancel.UseVisualStyleBackColor = true;
+            this.btnCheckOutCancel.Click += new System.EventHandler(this.btnCheckOutCancel_Click);
             // 
             // dateTimePicker1
             // 

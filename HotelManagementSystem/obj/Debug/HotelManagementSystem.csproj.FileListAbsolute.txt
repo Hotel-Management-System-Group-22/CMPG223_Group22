@@ -19,3 +19,5 @@ C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelMana
 C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
 C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.CheckIn.resources
+C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.CheckOut.resources

@@ -19,8 +19,8 @@ namespace HotelManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-           //MaintainRooms maintainRooms = new MaintainRooms();
-            //maintainRooms.ShowDialog();
+           MaintainRooms maintainRooms = new MaintainRooms();
+            maintainRooms.ShowDialog();
         }
     }
 }

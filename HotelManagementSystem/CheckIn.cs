@@ -16,5 +16,13 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtRoomID.Text = string.Empty;
+            txtGuestID.Text = string.Empty;
+            txtBookingID.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
+        }
     }
 }
