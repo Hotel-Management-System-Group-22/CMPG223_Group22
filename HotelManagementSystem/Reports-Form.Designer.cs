@@ -31,46 +31,46 @@
             this.cbReports = new System.Windows.Forms.ComboBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.calReports = new System.Windows.Forms.MonthCalendar();
             this.btnGenerateReport = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvBookings = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
             this.SuspendLayout();
             // 
             // cbReports
             // 
             this.cbReports.FormattingEnabled = true;
-            this.cbReports.Location = new System.Drawing.Point(206, 439);
+            this.cbReports.Items.AddRange(new object[] {
+            "Guests Checked Out",
+            "Top 10 Week Traffic"});
+            this.cbReports.Location = new System.Drawing.Point(345, 423);
             this.cbReports.Name = "cbReports";
-            this.cbReports.Size = new System.Drawing.Size(121, 24);
+            this.cbReports.Size = new System.Drawing.Size(182, 24);
             this.cbReports.TabIndex = 0;
             this.cbReports.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dtpStart
             // 
-            this.dtpStart.Location = new System.Drawing.Point(138, 311);
+            this.dtpStart.Location = new System.Drawing.Point(36, 382);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(262, 22);
             this.dtpStart.TabIndex = 1;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // dtpEnd
             // 
-            this.dtpEnd.Location = new System.Drawing.Point(138, 379);
+            this.dtpEnd.Location = new System.Drawing.Point(507, 382);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(262, 22);
+            this.dtpEnd.Size = new System.Drawing.Size(268, 22);
             this.dtpEnd.TabIndex = 2;
-            // 
-            // calReports
-            // 
-            this.calReports.Location = new System.Drawing.Point(138, 46);
-            this.calReports.Name = "calReports";
-            this.calReports.TabIndex = 3;
+            this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
             // 
             // btnGenerateReport
             // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(39, 440);
+            this.btnGenerateReport.Location = new System.Drawing.Point(240, 481);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(126, 23);
             this.btnGenerateReport.TabIndex = 4;
@@ -80,17 +80,18 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(366, 440);
+            this.btnCancel.Location = new System.Drawing.Point(452, 481);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(135, 279);
+            this.lblStartDate.Location = new System.Drawing.Point(54, 354);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(69, 16);
             this.lblStartDate.TabIndex = 6;
@@ -99,7 +100,7 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(135, 349);
+            this.lblEndDate.Location = new System.Drawing.Point(524, 354);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(66, 16);
             this.lblEndDate.TabIndex = 7;
@@ -108,28 +109,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 420);
+            this.label3.Location = new System.Drawing.Point(237, 426);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Report type:";
             // 
+            // dgvBookings
+            // 
+            this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookings.Location = new System.Drawing.Point(22, 29);
+            this.dgvBookings.Name = "dgvBookings";
+            this.dgvBookings.RowHeadersWidth = 51;
+            this.dgvBookings.RowTemplate.Height = 24;
+            this.dgvBookings.Size = new System.Drawing.Size(777, 306);
+            this.dgvBookings.TabIndex = 9;
+            // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 511);
+            this.ClientSize = new System.Drawing.Size(821, 531);
+            this.Controls.Add(this.dgvBookings);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnGenerateReport);
-            this.Controls.Add(this.calReports);
             this.Controls.Add(this.dtpEnd);
             this.Controls.Add(this.dtpStart);
             this.Controls.Add(this.cbReports);
             this.Name = "ReportsForm";
             this.Text = "Generate Reports";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,11 +152,11 @@
         private System.Windows.Forms.ComboBox cbReports;
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.MonthCalendar calReports;
         private System.Windows.Forms.Button btnGenerateReport;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvBookings;
     }
 }

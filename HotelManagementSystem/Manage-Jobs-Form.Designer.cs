@@ -125,9 +125,9 @@
             // 
             // btnDeleteJob
             // 
-            this.btnDeleteJob.Location = new System.Drawing.Point(192, 485);
+            this.btnDeleteJob.Location = new System.Drawing.Point(142, 485);
             this.btnDeleteJob.Name = "btnDeleteJob";
-            this.btnDeleteJob.Size = new System.Drawing.Size(294, 23);
+            this.btnDeleteJob.Size = new System.Drawing.Size(154, 23);
             this.btnDeleteJob.TabIndex = 10;
             this.btnDeleteJob.Text = "Delete Selected Job";
             this.btnDeleteJob.UseVisualStyleBackColor = true;
@@ -200,17 +200,17 @@
             // 
             // btnEditJob
             // 
-            this.btnEditJob.Location = new System.Drawing.Point(822, 485);
+            this.btnEditJob.Location = new System.Drawing.Point(351, 485);
             this.btnEditJob.Name = "btnEditJob";
-            this.btnEditJob.Size = new System.Drawing.Size(75, 23);
+            this.btnEditJob.Size = new System.Drawing.Size(157, 23);
             this.btnEditJob.TabIndex = 15;
-            this.btnEditJob.Text = "Edit Job";
+            this.btnEditJob.Text = "Edit Selected Job";
             this.btnEditJob.UseVisualStyleBackColor = true;
             this.btnEditJob.Click += new System.EventHandler(this.btnEditJob_Click);
             // 
             // btnAddJob
             // 
-            this.btnAddJob.Location = new System.Drawing.Point(677, 485);
+            this.btnAddJob.Location = new System.Drawing.Point(822, 485);
             this.btnAddJob.Name = "btnAddJob";
             this.btnAddJob.Size = new System.Drawing.Size(75, 23);
             this.btnAddJob.TabIndex = 14;
