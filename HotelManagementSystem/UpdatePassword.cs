@@ -27,37 +27,69 @@ namespace HotelManagementSystem
             string newPassword = txtNewPassword.Text.Trim();
             string confirmPassword = txtNewPassword2.Text.Trim();
 
-            if (newPassword.Length >= 8 && newPassword.Length < 12)
+            string specialCharacters = "!@#&*_?";
+            string numbers = "123456789";
+            int specialCharFound = 0;
+            int numFound = 0;
+
+            foreach (char currentChar in newPassword)
             {
-                if (newPassword == confirmPassword)
+                if (specialCharacters.Contains(currentChar))
                 {
-                    LogIn login = new LogIn();
-                    string query = "UPDATE Employee SET Employee_Password = @newPassword WHERE Employee_Username = @username";
+                    specialCharFound++;
+                }
+                if (numbers.Contains(currentChar))
+                {
+                    numFound++;
+                }
+            }
 
-                    using (SqlConnection conn = new SqlConnection(connection))
-                    {
-                        conn.Open();
-
-                        using (SqlCommand command = new SqlCommand(query, conn))
-                        {
-                            command.Parameters.AddWithValue("@newPassword", newPassword);
-                            command.Parameters.AddWithValue("@username", username);
-
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("Password has been changed.");
-                            login.Show();
-                            this.Hide();
-                        }
-                    }
+            if (specialCharFound < 1)
+            {
+                errorProvider1.SetError(txtNewPassword, "Password must contain at least one special character.");
+            }
+            else
+            {
+                errorProvider1.Clear();
+                if (numFound < 2)
+                {
+                    errorProvider2.SetError(txtNewPassword, "Password must contain at least 2 digits.");
                 }
                 else
                 {
-                    MessageBox.Show("Passwords do not match.");
+                    errorProvider2.Clear();
+                    if (newPassword.Length < 8 || newPassword.Length > 12)
+                    {
+                        errorProvider3.SetError(txtNewPassword, "Password must be between 8 and 12 characters.");
+                    }
+                    else
+                    {
+                        errorProvider3.Clear();
+                        if (newPassword == confirmPassword)
+                        {
+                            string query = "UPDATE Employee SET Employee_Password = @newPassword WHERE Employee_Username = @username";
+
+                            using (SqlConnection conn = new SqlConnection(connection))
+                            {
+                                conn.Open();
+                                using (SqlCommand command = new SqlCommand(query, conn))
+                                {
+                                    command.Parameters.AddWithValue("@newPassword", newPassword);
+                                    command.Parameters.AddWithValue("@username", username);
+
+                                    command.ExecuteNonQuery();
+                                    MessageBox.Show("Password has been changed.");
+                                    login.Show();
+                                    this.Hide();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Passwords do not match.");
+                        }
+                    }
                 }
-            }
-            else 
-            {
-                MessageBox.Show("Password length must be between 8 - 12 digits");
             }
         }
     }

@@ -33,10 +33,12 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pbViewPassword = new System.Windows.Forms.PictureBox();
+            this.pbNotView = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).BeginInit();
+            this.pbViewPassword = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +58,6 @@
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
-          //  this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtUsername
             // 
@@ -82,14 +83,16 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pbViewPassword
+            // pbNotView
             // 
-            this.pbViewPassword.Location = new System.Drawing.Point(374, 174);
-            this.pbViewPassword.Name = "pbViewPassword";
-            this.pbViewPassword.Size = new System.Drawing.Size(75, 23);
-            this.pbViewPassword.TabIndex = 6;
-            this.pbViewPassword.TabStop = false;
-           // this.pbViewPassword.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbNotView.Image = global::HotelManagementSystem.Properties.Resources.OIP;
+            this.pbNotView.Location = new System.Drawing.Point(374, 167);
+            this.pbNotView.Name = "pbNotView";
+            this.pbNotView.Size = new System.Drawing.Size(45, 47);
+            this.pbNotView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNotView.TabIndex = 8;
+            this.pbNotView.TabStop = false;
+            this.pbNotView.Click += new System.EventHandler(this.pbNotView_Click);
             // 
             // pbExit
             // 
@@ -99,23 +102,35 @@
             this.pbExit.TabIndex = 7;
             this.pbExit.TabStop = false;
             // 
+            // pbViewPassword
+            // 
+            this.pbViewPassword.Image = global::HotelManagementSystem.Properties.Resources.preview_show_interface_icon_free_vector;
+            this.pbViewPassword.Location = new System.Drawing.Point(374, 167);
+            this.pbViewPassword.Name = "pbViewPassword";
+            this.pbViewPassword.Size = new System.Drawing.Size(45, 48);
+            this.pbViewPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbViewPassword.TabIndex = 6;
+            this.pbViewPassword.TabStop = false;
+            this.pbViewPassword.Click += new System.EventHandler(this.pbViewPassword_Click);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 450);
             this.Controls.Add(this.pbExit);
-            this.Controls.Add(this.pbViewPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbViewPassword);
+            this.Controls.Add(this.pbNotView);
             this.Name = "LogIn";
             this.Text = "LogIn";
-            //this.Load += new System.EventHandler(this.LogIn_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +145,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pbViewPassword;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.PictureBox pbNotView;
     }
 }

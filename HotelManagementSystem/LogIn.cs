@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using BCrypt.Net;
+//using BCrypt.Net;
 
 namespace HotelManagementSystem
 {
@@ -20,6 +20,7 @@ namespace HotelManagementSystem
         public LogIn()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '•';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -76,6 +77,21 @@ namespace HotelManagementSystem
         private bool IsFirstTimeLogin(string storedPassword)
         {
             return storedPassword.Length == 12;
+        }
+
+        private void pbViewPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '\0';
+            pbViewPassword.Visible = false;
+            pbNotView.Visible = true;
+            
+        }
+
+        private void pbNotView_Click(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '•';
+            pbViewPassword.Visible = true;
+            pbNotView.Visible = false;
         }
     }
 }

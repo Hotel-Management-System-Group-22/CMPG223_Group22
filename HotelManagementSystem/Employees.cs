@@ -113,9 +113,34 @@ namespace HotelManagementSystem
                 return GenerateRandomString(length, passwordChars);
             }
         }
+        public bool checkNames(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                errorProvider1.SetError(txtAddFName, "Please enter " + txtAddFName.Text);
+            }
+
+            // Check if the first character is uppercase
+            if (!char.IsUpper(name[0]))
+            {
+                errorProvider1.SetError(txtAddFName, "Please start with Capital Letter");
+            }
+
+            // Check if all remaining characters are lowercase
+            for (int i = 1; i < name.Length; i++)
+            {
+                if (!char.IsLower(name[i]))
+                {
+                    errorProvider1.SetError(txtAddFName, "Must only contain letters");
+                }
+            }
+
+            return true;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabPage4;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -128,17 +153,17 @@ namespace HotelManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            tabPage3.Focus();
+            tabControl1.SelectedTab = tabPage3;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            tabPage1.Show();
+            tabControl1.SelectedTab = tabPage1;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            tabPage2.Show();
+            tabControl1.SelectedTab = tabPage2;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -184,7 +209,10 @@ namespace HotelManagementSystem
             int admin = 0;
             string name = txtAddFName.Text;
             string surname = txtAddLName.Text;
-            if (cmbAddRole.SelectedItem != null)
+
+            checkNames(name);
+            
+                if (cmbAddRole.SelectedItem != null)
             {
                 string selectedRole = cmbAddRole.SelectedItem.ToString();
 
@@ -363,6 +391,11 @@ namespace HotelManagementSystem
         private void txtUpdateSearch_TextChanged(object sender, EventArgs e)
         {
             UpdateEmployeeDataGridView(txtUpdateSearch.Text, employeeDataGridView, "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm");
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
