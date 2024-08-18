@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -325,25 +326,33 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
-                DialogResult result = MessageBox.Show("Are you sure you want to Delete this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this job and all associated employees? \nJob ID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM Job WHERE Job_ID = " + selectedId;
+                    // Update Room table, delete employees, and delete the job
+                    string query = @"
+                        BEGIN TRANSACTION;
+                        UPDATE Room SET Employee_ID = NULL WHERE Employee_ID IN (SELECT Employee_ID FROM Employee WHERE Job_ID = @JobID);
+                        DELETE FROM Employee WHERE Job_ID = @JobID;
+                        DELETE FROM Job WHERE Job_ID = @JobID;
+                        COMMIT TRANSACTION;
+                        ";
 
-                    // Use a SqlConnection to connect to the database
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         try
                         {
                             connection.Open();
 
-                            // Use a SqlCommand to execute the delete query
                             using (SqlCommand command = new SqlCommand(query, connection))
                             {
+                                command.Parameters.AddWithValue("@JobID", selectedId);
+
                                 int rowsAffected = command.ExecuteNonQuery();
                                 MessageBox.Show(rowsAffected > 0
-                                    ? "Record deleted successfully."
-                                    : "No record found with the specified ID.");
+                                    ? "Job and associated employees deleted successfully."
+                                    : "No record found with the specified Job ID.");
                             }
                             loadData();
                         }
@@ -353,12 +362,42 @@ namespace HotelManagementSystem
                         }
                     }
                 }
-                else {
-                    MessageBox.Show("Action Canceled");
+                else
+                {
+                    MessageBox.Show("Action canceled.");
                 }
-            } else
+            }
+            else
             {
-                MessageBox.Show("No record selected. Please select which job you would like to Delete");
+                MessageBox.Show("No record selected. Please select a job to delete.");
+            }
+        }
+
+        private void txtEditJobRate_Validating(object sender, CancelEventArgs e)
+        {
+            string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
+            if (!Regex.IsMatch(txtEditJobRate.Text, pattern))
+            {
+                errorProvider1.SetError(txtEditJobRate, "Please enter a valid decimal number.");
+                e.Cancel = true; // Prevents the user from leaving the TextBox if validation fails
+            }
+            else
+            {
+                errorProvider1.SetError(txtEditJobRate, string.Empty); // Clears the error if the input is valid
+            }
+        }
+
+        private void txtAddJobRate_Validating(object sender, CancelEventArgs e)
+        {
+            string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
+            if (!Regex.IsMatch(txtAddJobRate.Text, pattern))
+            {
+                errorProvider2.SetError(txtAddJobRate, "Please enter a valid decimal number.");
+                e.Cancel = true; // Prevents the user from leaving the TextBox if validation fails
+            }
+            else
+            {
+                errorProvider2.SetError(txtAddJobRate, string.Empty); // Clears the error if the input is valid
             }
         }
     }

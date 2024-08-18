@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.dgvJobList = new System.Windows.Forms.DataGridView();
@@ -57,10 +58,14 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtJobRate = new System.Windows.Forms.TextBox();
             this.txtJobTitle = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,15 +180,16 @@
             // 
             // txtAddJobRate
             // 
-            this.txtAddJobRate.Location = new System.Drawing.Point(113, 94);
+            this.txtAddJobRate.Location = new System.Drawing.Point(88, 94);
             this.txtAddJobRate.Name = "txtAddJobRate";
             this.txtAddJobRate.Size = new System.Drawing.Size(100, 22);
             this.txtAddJobRate.TabIndex = 10;
             this.txtAddJobRate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtAddJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddJobRate_Validating);
             // 
             // txtAddJobTitle
             // 
-            this.txtAddJobTitle.Location = new System.Drawing.Point(113, 53);
+            this.txtAddJobTitle.Location = new System.Drawing.Point(88, 53);
             this.txtAddJobTitle.Name = "txtAddJobTitle";
             this.txtAddJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtAddJobTitle.TabIndex = 9;
@@ -241,7 +247,7 @@
             this.groupBox2.Controls.Add(this.txtEditJobTitle);
             this.groupBox2.Controls.Add(this.txtEditJobRate);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(647, 50);
+            this.groupBox2.Location = new System.Drawing.Point(653, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 250);
             this.groupBox2.TabIndex = 17;
@@ -279,17 +285,18 @@
             // 
             // txtEditJobTitle
             // 
-            this.txtEditJobTitle.Location = new System.Drawing.Point(113, 53);
+            this.txtEditJobTitle.Location = new System.Drawing.Point(90, 53);
             this.txtEditJobTitle.Name = "txtEditJobTitle";
             this.txtEditJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtEditJobTitle.TabIndex = 9;
             // 
             // txtEditJobRate
             // 
-            this.txtEditJobRate.Location = new System.Drawing.Point(113, 94);
+            this.txtEditJobRate.Location = new System.Drawing.Point(90, 94);
             this.txtEditJobRate.Name = "txtEditJobRate";
             this.txtEditJobRate.Size = new System.Drawing.Size(100, 22);
             this.txtEditJobRate.TabIndex = 10;
+            this.txtEditJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtEditJobRate_Validating);
             // 
             // label8
             // 
@@ -333,6 +340,14 @@
             this.txtJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtJobTitle.TabIndex = 3;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // ManageJobsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -363,6 +378,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,5 +416,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtJobRate;
         private System.Windows.Forms.TextBox txtJobTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
