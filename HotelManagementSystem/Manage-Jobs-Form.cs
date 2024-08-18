@@ -150,51 +150,54 @@ namespace HotelManagementSystem
         }
 
             private void btnAcceptNewJob_Click(object sender, EventArgs e)
-        {
-            string jobtitle = txtAddJobTitle.Text;
-            string jobrate = txtAddJobRate.Text;
-
-            DialogResult result = MessageBox.Show("Are you sure you want to Add this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
             {
-                string query = "INSERT INTO Job (Job_Title, Job_Rate) VALUES (@Value2, @Value3)";
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    SqlCommand command = new SqlCommand(query, connection);
-
-                    // Add parameters to the SqlCommand
-                    command.Parameters.AddWithValue("@Value2", jobtitle);
-                    command.Parameters.AddWithValue("@Value3", jobrate);
-
-                    try
+                string jobtitle = txtAddJobTitle.Text;
+                string jobrate = txtAddJobRate.Text;
+                if (jobtitle != "" && jobrate != "") { 
+                    DialogResult result = MessageBox.Show("Are you sure you want to Add this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
                     {
-                        connection.Open();
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected > 0)
+                        string query = "INSERT INTO Job (Job_Title, Job_Rate) VALUES (@Value2, @Value3)";
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
                         {
-                            Console.WriteLine("Insert successful.");
-                            loadData();
+                            SqlCommand command = new SqlCommand(query, connection);
+
+                            // Add parameters to the SqlCommand
+                            command.Parameters.AddWithValue("@Value2", jobtitle);
+                            command.Parameters.AddWithValue("@Value3", jobrate);
+
+                            try
+                            {
+                                connection.Open();
+                                int rowsAffected = command.ExecuteNonQuery();
+                                if (rowsAffected > 0)
+                                {
+                                    Console.WriteLine("Insert successful.");
+                                    loadData();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Insert failed.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("An error occurred: " + ex.Message);
+                            }
                         }
-                        else
-                        {
-                            Console.WriteLine("Insert failed.");
-                        }
+                        lblSelectedID.Visible = false;
+                        groupBox1.Visible = false;
+                        txtAddJobTitle.Text = "";
+                        txtAddJobRate.Text = "";
+
                     }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("An error occurred: " + ex.Message);
-                    }
+                }else{
+                    MessageBox.Show("Fields cannot be Empty");
                 }
-                lblSelectedID.Visible = false;
-                groupBox1.Visible = false;
-                txtAddJobTitle.Text = "";
-                txtAddJobRate.Text = "";
-
             }
-        }
 
-        private void btnAddJob_Click_1(object sender, EventArgs e)
+            private void btnAddJob_Click_1(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
             groupBox2.Visible = false;
