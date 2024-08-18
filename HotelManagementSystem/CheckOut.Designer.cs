@@ -34,9 +34,12 @@
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnCheckOutCancel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtCheckOutRoomID = new System.Windows.Forms.TextBox();
-            this.txtCheckOutGuestID = new System.Windows.Forms.TextBox();
-            this.txtCheckOutBookingID = new System.Windows.Forms.TextBox();
+            this.txtRoomID = new System.Windows.Forms.TextBox();
+            this.txtGuestID = new System.Windows.Forms.TextBox();
+            this.txtBookingID = new System.Windows.Forms.TextBox();
+            this.btnBookingUpdate = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -74,10 +77,11 @@
             this.btnCheckOut.TabIndex = 14;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnCheckOutCancel
             // 
-            this.btnCheckOutCancel.Location = new System.Drawing.Point(86, 286);
+            this.btnCheckOutCancel.Location = new System.Drawing.Point(489, 225);
             this.btnCheckOutCancel.Name = "btnCheckOutCancel";
             this.btnCheckOutCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCheckOutCancel.TabIndex = 13;
@@ -92,43 +96,65 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
             this.dateTimePicker1.TabIndex = 12;
             // 
-            // txtCheckOutRoomID
+            // txtRoomID
             // 
-            this.txtCheckOutRoomID.Location = new System.Drawing.Point(206, 162);
-            this.txtCheckOutRoomID.Name = "txtCheckOutRoomID";
-            this.txtCheckOutRoomID.Size = new System.Drawing.Size(100, 20);
-            this.txtCheckOutRoomID.TabIndex = 11;
+            this.txtRoomID.Location = new System.Drawing.Point(206, 162);
+            this.txtRoomID.Name = "txtRoomID";
+            this.txtRoomID.Size = new System.Drawing.Size(100, 20);
+            this.txtRoomID.TabIndex = 11;
             // 
-            // txtCheckOutGuestID
+            // txtGuestID
             // 
-            this.txtCheckOutGuestID.Location = new System.Drawing.Point(206, 115);
-            this.txtCheckOutGuestID.Name = "txtCheckOutGuestID";
-            this.txtCheckOutGuestID.Size = new System.Drawing.Size(100, 20);
-            this.txtCheckOutGuestID.TabIndex = 10;
+            this.txtGuestID.Location = new System.Drawing.Point(206, 115);
+            this.txtGuestID.Name = "txtGuestID";
+            this.txtGuestID.Size = new System.Drawing.Size(100, 20);
+            this.txtGuestID.TabIndex = 10;
             // 
-            // txtCheckOutBookingID
+            // txtBookingID
             // 
-            this.txtCheckOutBookingID.Location = new System.Drawing.Point(206, 67);
-            this.txtCheckOutBookingID.Name = "txtCheckOutBookingID";
-            this.txtCheckOutBookingID.Size = new System.Drawing.Size(100, 20);
-            this.txtCheckOutBookingID.TabIndex = 9;
+            this.txtBookingID.Location = new System.Drawing.Point(206, 67);
+            this.txtBookingID.Name = "txtBookingID";
+            this.txtBookingID.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingID.TabIndex = 9;
+            // 
+            // btnBookingUpdate
+            // 
+            this.btnBookingUpdate.Location = new System.Drawing.Point(590, 216);
+            this.btnBookingUpdate.Name = "btnBookingUpdate";
+            this.btnBookingUpdate.Size = new System.Drawing.Size(146, 32);
+            this.btnBookingUpdate.TabIndex = 18;
+            this.btnBookingUpdate.Text = "Update Booking Info";
+            this.btnBookingUpdate.UseVisualStyleBackColor = true;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(86, 254);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(650, 150);
+            this.dataGridView1.TabIndex = 19;
             // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnBookingUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnCheckOutCancel);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtCheckOutRoomID);
-            this.Controls.Add(this.txtCheckOutGuestID);
-            this.Controls.Add(this.txtCheckOutBookingID);
+            this.Controls.Add(this.txtRoomID);
+            this.Controls.Add(this.txtGuestID);
+            this.Controls.Add(this.txtBookingID);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
+            this.Load += new System.EventHandler(this.CheckOut_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,8 +168,10 @@
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnCheckOutCancel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtCheckOutRoomID;
-        private System.Windows.Forms.TextBox txtCheckOutGuestID;
-        private System.Windows.Forms.TextBox txtCheckOutBookingID;
+        private System.Windows.Forms.TextBox txtRoomID;
+        private System.Windows.Forms.TextBox txtGuestID;
+        private System.Windows.Forms.TextBox txtBookingID;
+        private System.Windows.Forms.Button btnBookingUpdate;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

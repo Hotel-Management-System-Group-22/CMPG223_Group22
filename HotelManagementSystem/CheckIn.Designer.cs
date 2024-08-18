@@ -28,16 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtBookingID = new System.Windows.Forms.TextBox();
-            this.txtGuestID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBookingUpdate = new System.Windows.Forms.Button();
+            this.btnCheckIn = new System.Windows.Forms.Button();
             this.txtRoomID = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnCheckIn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtGuestID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(86, 254);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(657, 150);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Guest ID";
             // 
             // txtBookingID
             // 
@@ -46,12 +66,34 @@
             this.txtBookingID.Size = new System.Drawing.Size(100, 20);
             this.txtBookingID.TabIndex = 0;
             // 
-            // txtGuestID
+            // label1
             // 
-            this.txtGuestID.Location = new System.Drawing.Point(206, 116);
-            this.txtGuestID.Name = "txtGuestID";
-            this.txtGuestID.Size = new System.Drawing.Size(100, 20);
-            this.txtGuestID.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(83, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Booking ID";
+            // 
+            // btnBookingUpdate
+            // 
+            this.btnBookingUpdate.Location = new System.Drawing.Point(590, 216);
+            this.btnBookingUpdate.Name = "btnBookingUpdate";
+            this.btnBookingUpdate.Size = new System.Drawing.Size(146, 32);
+            this.btnBookingUpdate.TabIndex = 9;
+            this.btnBookingUpdate.Text = "Update Booking Info";
+            this.btnBookingUpdate.UseVisualStyleBackColor = true;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Location = new System.Drawing.Point(381, 225);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckIn.TabIndex = 5;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // txtRoomID
             // 
@@ -69,7 +111,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(86, 287);
+            this.btnCancel.Location = new System.Drawing.Point(489, 225);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -77,32 +119,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnCheckIn
+            // txtGuestID
             // 
-            this.btnCheckIn.Location = new System.Drawing.Point(381, 226);
-            this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckIn.TabIndex = 5;
-            this.btnCheckIn.Text = "Check In";
-            this.btnCheckIn.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Booking ID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Guest ID";
+            this.txtGuestID.Location = new System.Drawing.Point(206, 116);
+            this.txtGuestID.Name = "txtGuestID";
+            this.txtGuestID.Size = new System.Drawing.Size(100, 20);
+            this.txtGuestID.TabIndex = 1;
             // 
             // label3
             // 
@@ -118,6 +140,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnBookingUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,6 +153,8 @@
             this.Controls.Add(this.txtBookingID);
             this.Name = "CheckIn";
             this.Text = "CheckIn";
+            this.Load += new System.EventHandler(this.CheckIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,14 +162,16 @@
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBookingID;
-        private System.Windows.Forms.TextBox txtGuestID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBookingUpdate;
+        private System.Windows.Forms.Button btnCheckIn;
         private System.Windows.Forms.TextBox txtRoomID;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnCheckIn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtGuestID;
         private System.Windows.Forms.Label label3;
     }
 }
