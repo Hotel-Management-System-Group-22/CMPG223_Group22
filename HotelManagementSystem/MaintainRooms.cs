@@ -28,11 +28,8 @@ namespace HotelManagementSystem
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         int selectedId;
 
-
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void ResetTabPages()
         {
-            tabControl1.SelectedIndex = 0;
             btnSearchReset_Click(this, EventArgs.Empty);
             btnSearchReset.PerformClick();
             btnAddReset_Click(this, EventArgs.Empty);
@@ -41,30 +38,44 @@ namespace HotelManagementSystem
             btnDeleteReset.PerformClick();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        public bool IsValueInRoomTable(string columnName, object value)
         {
-            tabControl1.SelectedIndex = 1;
-            btnUpdateRoom.Visible = false;
-            btnAddRoom.Visible = true;
-            txtRoomID.Visible = false;
-            lblRoomID.Visible = false;
-            LoadData();
+            string query = "";
+
+
+            if (columnName == "Room_ID")
+            {
+                // Write the SQL query to check if the value exists in the specified column
+                 query = $"SELECT COUNT(*) FROM Room WHERE {columnName} = @Value";
+            }else
+            {
+                if (columnName == "Employee_ID")
+                {
+                    // Write the SQL query to check if the value exists in the specified column
+                     query = $"SELECT COUNT(*) FROM Employee WHERE {columnName} = @Value";
+                }
+            }
+                    
+            
+
+            // Connect to the database and execute the query
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    //  Add the parameter to the query
+                    command.Parameters.AddWithValue("@Value", value);
+
+                    // Open the connection and execute the query
+                    conn.Open();
+                    int count = (int)command.ExecuteScalar();
+
+                    // Return true if the value exists, otherwise false
+                    return count > 0;
+                }
+            }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 1;
-            txtRoomID.Visible = true;
-            lblRoomID.Visible = true;
-            btnUpdateRoom.Visible = true;
-            btnAddRoom.Visible = false;
-            LoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 2;
-        }
         private void LoadData()
         {
             string query = "SELECT * FROM Room";
@@ -78,6 +89,44 @@ namespace HotelManagementSystem
                 dataGridView1.DataSource = dataTable;
             }
         }
+
+
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+            ResetTabPages();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            btnUpdateRoom.Visible = false;
+            btnAddRoom.Visible = true;
+            txtRoomID.Visible = false;
+            lblRoomID.Visible = false;
+            LoadData();
+            ResetTabPages();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            txtRoomID.Visible = true;
+            lblRoomID.Visible = true;
+            btnUpdateRoom.Visible = true;
+            btnAddRoom.Visible = false;
+            btnUpdateRoom.Location = new Point(btnAddRoom.Location.X, btnAddRoom.Location.Y);
+            LoadData();
+            ResetTabPages();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+            ResetTabPages();
+        }
+        
 
         private void label13_Click(object sender, EventArgs e)
         {
@@ -137,6 +186,10 @@ namespace HotelManagementSystem
         {
             txtSearchRoom.Text = string.Empty;
             rdbAscending.Checked = true;
+            cbxSearchStatus.SelectedIndex = -1;
+            txtSearchEmployee.Text = string.Empty;
+            LoadData();
+
         }
 
         private void btnAddReset_Click(object sender, EventArgs e)
@@ -161,7 +214,7 @@ namespace HotelManagementSystem
 
         private void cbxRoomStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView((cbxRoomStatus.SelectedIndex).ToString(), dataGridView1, "SELECT * FROM Room WHERE Room_Status LIKE @searchTerm");
+            //UpdateEmployeeDataGridView((cbxRoomStatus.SelectedIndex).ToString(), dataGridView1, "SELECT * FROM Room WHERE Room_Status LIKE @searchTerm");
         }
 
         private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
@@ -234,7 +287,7 @@ namespace HotelManagementSystem
             }
             else
             {
-                MessageBox.Show("No record selected. Please select which job you would like to Delete");
+                MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete");
             }
 
         }
@@ -246,7 +299,7 @@ namespace HotelManagementSystem
 
         private void txtEmployeeID_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtEmployeeID.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+            //UpdateEmployeeDataGridView(txtEmployeeID.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
         }
 
         private void btnUpdateRoom_Click(object sender, EventArgs e)
@@ -257,54 +310,114 @@ namespace HotelManagementSystem
 
             if (sRoomStatus != "-1" && sEmployeeID != "")
             {
-
-                DialogResult result = MessageBox.Show("Are you sure you want to edit this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-
-                    using (SqlConnection conn = new SqlConnection(connection))
-                    {
-                        SqlCommand command = new SqlCommand(query, conn);
-
-                        // Add parameters to the SqlCommand
-                        command.Parameters.AddWithValue("@Value1", sEmployeeID);
-                        command.Parameters.AddWithValue("@Value2", sRoomStatus);
-                        command.Parameters.AddWithValue("@ID", selectedId);
-
-                        try
+                if (IsValueInRoomTable("Employee_ID", int.Parse(sEmployeeID)))
+                    {               
+                    
+                        if (dataGridView1.SelectedRows.Count > 0)
                         {
-                            conn.Open();
-                            int rowsAffected = command.ExecuteNonQuery();
-                            if (rowsAffected > 0)
+                            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                            int iSelectedID = Convert.ToInt32(selectedRow.Cells["Room_ID"].Value);
+                            DialogResult result = MessageBox.Show("Are you sure you want to edit this record? \nID: " + iSelectedID, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (result == DialogResult.Yes)
                             {
-                                Console.WriteLine("Insert successful.");
-                                LoadData();
-                            }
-                            else
-                            {
-                                Console.WriteLine("Insert failed.");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("An error occurred: " + ex.Message);
-                        }
-                    }
 
-                }
-          
-            }
-            else
-            {
-                MessageBox.Show("Fields cannot be Empty");
-            }
-            LoadData();
+                                using (SqlConnection conn = new SqlConnection(connection))
+                                {
+                                    SqlCommand command = new SqlCommand(query, conn);
+
+                                    // Add parameters to the SqlCommand
+                                    command.Parameters.AddWithValue("@Value1", sEmployeeID);
+                                    command.Parameters.AddWithValue("@Value2", sRoomStatus);
+                                    command.Parameters.AddWithValue("@ID", iSelectedID);
+
+                                    try
+                                    {
+                                        conn.Open();
+                                        int rowsAffected = command.ExecuteNonQuery();
+                                        if (rowsAffected > 0)
+                                        {
+                                            Console.WriteLine("Insert successful.");
+                                            LoadData();
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Insert failed.");
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Console.WriteLine("An error occurred: " + ex.Message);
+                                    }
+                                }
+
+                            }
+                        }else { MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete"); }
+
+                    }else{MessageBox.Show("Employee ID does not exist");}                
+            }else { MessageBox.Show("Fields cannot be Empty"); }
+           
 
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
+            // Step 2: Write the SQL query to insert a new room
+            string query = "INSERT INTO Room (Employee_ID, Room_Status) VALUES (@Employee_ID, @Room_Status)";
+            string sRoomStatus = cbxRoomStatus.SelectedIndex.ToString();
+            string sEmployeeID = txtEmployeeID.Text;
 
+
+
+            if (sRoomStatus != "-1" && sEmployeeID != "")
+            {
+                if (IsValueInRoomTable("Employee_ID", int.Parse(sEmployeeID)))
+                {
+
+                    DialogResult result = MessageBox.Show("Are you sure you want to Add this record? \nEmployeeID: " + sEmployeeID + "\nRoom Status: " + sRoomStatus, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (result == DialogResult.Yes)
+                        {
+
+                            // Step 3: Connect to the database and execute the query
+                            using (SqlConnection conn = new SqlConnection(connection))
+                            {
+                                using (SqlCommand command = new SqlCommand(query, conn))
+                                {
+                                    // Step 4: Add parameters to the query
+                                    command.Parameters.AddWithValue("@Employee_ID", sEmployeeID);
+                                    command.Parameters.AddWithValue("@Room_Status", sRoomStatus);
+
+                                    // Step 5: Open the connection and execute the query
+                                    conn.Open();
+                                    int rowsAffected = command.ExecuteNonQuery();
+
+                                    // Step 6: Check if the insert was successful
+                                    if (rowsAffected > 0)
+                                    {
+                                        MessageBox.Show("New room added successfully.");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Failed to add the new room.");
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Action Canceled");
+                        }
+                    }
+                   
+                    
+                    
+
+                }else { MessageBox.Show("Employee ID does not exist"); }
+                
+            }else { MessageBox.Show("Fields cannot be Empty"); }
+            LoadData();          
+            
         }
         private void dataGridView1_SelectionChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -320,6 +433,26 @@ namespace HotelManagementSystem
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateEmployeeDataGridView((cbxSearchStatus.SelectedIndex).ToString(), dataGridView1, "SELECT * FROM Room WHERE Room_Status LIKE @searchTerm");
+        }
+
+        private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
+        {
+            UpdateEmployeeDataGridView(txtSearchEmployee.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

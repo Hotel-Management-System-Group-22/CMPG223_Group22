@@ -30,6 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpSearch = new System.Windows.Forms.TabPage();
+            this.txtSearchEmployee = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxSearchStatus = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.rdbDescending = new System.Windows.Forms.RadioButton();
             this.rdbAscending = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,6 +83,10 @@
             // 
             // tbpSearch
             // 
+            this.tbpSearch.Controls.Add(this.txtSearchEmployee);
+            this.tbpSearch.Controls.Add(this.label5);
+            this.tbpSearch.Controls.Add(this.cbxSearchStatus);
+            this.tbpSearch.Controls.Add(this.label4);
             this.tbpSearch.Controls.Add(this.rdbDescending);
             this.tbpSearch.Controls.Add(this.rdbAscending);
             this.tbpSearch.Controls.Add(this.label2);
@@ -93,10 +101,50 @@
             this.tbpSearch.Text = "Search";
             this.tbpSearch.UseVisualStyleBackColor = true;
             // 
+            // txtSearchEmployee
+            // 
+            this.txtSearchEmployee.Location = new System.Drawing.Point(136, 56);
+            this.txtSearchEmployee.Name = "txtSearchEmployee";
+            this.txtSearchEmployee.Size = new System.Drawing.Size(121, 20);
+            this.txtSearchEmployee.TabIndex = 12;
+            this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Employee ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // cbxSearchStatus
+            // 
+            this.cbxSearchStatus.FormattingEnabled = true;
+            this.cbxSearchStatus.Items.AddRange(new object[] {
+            "Unoccupied",
+            "Occupied"});
+            this.cbxSearchStatus.Location = new System.Drawing.Point(136, 88);
+            this.cbxSearchStatus.Name = "cbxSearchStatus";
+            this.cbxSearchStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbxSearchStatus.TabIndex = 10;
+            this.cbxSearchStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Room status";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // rdbDescending
             // 
             this.rdbDescending.AutoSize = true;
-            this.rdbDescending.Location = new System.Drawing.Point(160, 108);
+            this.rdbDescending.Location = new System.Drawing.Point(136, 136);
             this.rdbDescending.Name = "rdbDescending";
             this.rdbDescending.Size = new System.Drawing.Size(82, 17);
             this.rdbDescending.TabIndex = 5;
@@ -108,7 +156,7 @@
             // 
             this.rdbAscending.AutoSize = true;
             this.rdbAscending.Checked = true;
-            this.rdbAscending.Location = new System.Drawing.Point(160, 84);
+            this.rdbAscending.Location = new System.Drawing.Point(136, 113);
             this.rdbAscending.Name = "rdbAscending";
             this.rdbAscending.Size = new System.Drawing.Size(75, 17);
             this.rdbAscending.TabIndex = 4;
@@ -120,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 84);
+            this.label2.Location = new System.Drawing.Point(12, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
@@ -129,7 +177,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 37);
+            this.label1.Location = new System.Drawing.Point(13, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 2;
@@ -137,7 +185,7 @@
             // 
             // btnSearchReset
             // 
-            this.btnSearchReset.Location = new System.Drawing.Point(314, 32);
+            this.btnSearchReset.Location = new System.Drawing.Point(15, 162);
             this.btnSearchReset.Name = "btnSearchReset";
             this.btnSearchReset.Size = new System.Drawing.Size(75, 23);
             this.btnSearchReset.TabIndex = 1;
@@ -147,9 +195,9 @@
             // 
             // txtSearchRoom
             // 
-            this.txtSearchRoom.Location = new System.Drawing.Point(144, 32);
+            this.txtSearchRoom.Location = new System.Drawing.Point(136, 30);
             this.txtSearchRoom.Name = "txtSearchRoom";
-            this.txtSearchRoom.Size = new System.Drawing.Size(100, 20);
+            this.txtSearchRoom.Size = new System.Drawing.Size(121, 20);
             this.txtSearchRoom.TabIndex = 0;
             this.txtSearchRoom.TextChanged += new System.EventHandler(this.txtSearchRoom_TextChanged);
             // 
@@ -174,7 +222,7 @@
             // 
             // btnUpdateRoom
             // 
-            this.btnUpdateRoom.Location = new System.Drawing.Point(156, 196);
+            this.btnUpdateRoom.Location = new System.Drawing.Point(240, 162);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(108, 23);
             this.btnUpdateRoom.TabIndex = 29;
@@ -184,7 +232,7 @@
             // 
             // txtRoomID
             // 
-            this.txtRoomID.Location = new System.Drawing.Point(157, 18);
+            this.txtRoomID.Location = new System.Drawing.Point(136, 36);
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(121, 20);
             this.txtRoomID.TabIndex = 28;
@@ -193,7 +241,7 @@
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(27, 25);
+            this.lblRoomID.Location = new System.Drawing.Point(13, 39);
             this.lblRoomID.Name = "lblRoomID";
             this.lblRoomID.Size = new System.Drawing.Size(49, 13);
             this.lblRoomID.TabIndex = 27;
@@ -202,7 +250,7 @@
             // 
             // btnAddRoom
             // 
-            this.btnAddRoom.Location = new System.Drawing.Point(30, 196);
+            this.btnAddRoom.Location = new System.Drawing.Point(136, 162);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(75, 23);
             this.btnAddRoom.TabIndex = 12;
@@ -212,7 +260,7 @@
             // 
             // btnAddReset
             // 
-            this.btnAddReset.Location = new System.Drawing.Point(358, 27);
+            this.btnAddReset.Location = new System.Drawing.Point(15, 162);
             this.btnAddReset.Name = "btnAddReset";
             this.btnAddReset.Size = new System.Drawing.Size(75, 23);
             this.btnAddReset.TabIndex = 11;
@@ -226,7 +274,7 @@
             this.cbxRoomStatus.Items.AddRange(new object[] {
             "Unoccupied",
             "Occupied"});
-            this.cbxRoomStatus.Location = new System.Drawing.Point(156, 77);
+            this.cbxRoomStatus.Location = new System.Drawing.Point(135, 91);
             this.cbxRoomStatus.Name = "cbxRoomStatus";
             this.cbxRoomStatus.Size = new System.Drawing.Size(121, 21);
             this.cbxRoomStatus.TabIndex = 8;
@@ -234,7 +282,7 @@
             // 
             // txtEmployeeID
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(156, 44);
+            this.txtEmployeeID.Location = new System.Drawing.Point(135, 58);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(121, 20);
             this.txtEmployeeID.TabIndex = 5;
@@ -243,7 +291,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 77);
+            this.label6.Location = new System.Drawing.Point(12, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 3;
@@ -252,7 +300,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 51);
+            this.label3.Location = new System.Drawing.Point(12, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 0;
@@ -273,7 +321,7 @@
             // 
             // btnDeleteReset
             // 
-            this.btnDeleteReset.Location = new System.Drawing.Point(333, 45);
+            this.btnDeleteReset.Location = new System.Drawing.Point(15, 162);
             this.btnDeleteReset.Name = "btnDeleteReset";
             this.btnDeleteReset.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteReset.TabIndex = 3;
@@ -283,7 +331,7 @@
             // 
             // btnDeleteRoom
             // 
-            this.btnDeleteRoom.Location = new System.Drawing.Point(131, 111);
+            this.btnDeleteRoom.Location = new System.Drawing.Point(136, 162);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteRoom.TabIndex = 2;
@@ -293,7 +341,7 @@
             // 
             // txtDeleteRoomID
             // 
-            this.txtDeleteRoomID.Location = new System.Drawing.Point(131, 48);
+            this.txtDeleteRoomID.Location = new System.Drawing.Point(136, 36);
             this.txtDeleteRoomID.Name = "txtDeleteRoomID";
             this.txtDeleteRoomID.Size = new System.Drawing.Size(100, 20);
             this.txtDeleteRoomID.TabIndex = 1;
@@ -302,7 +350,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 55);
+            this.label8.Location = new System.Drawing.Point(12, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 13);
             this.label8.TabIndex = 0;
@@ -438,5 +486,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnDeleteRoom;
         private System.Windows.Forms.Button btnDeleteReset;
+        private System.Windows.Forms.ComboBox cbxSearchStatus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSearchEmployee;
+        private System.Windows.Forms.Label label5;
     }
 }
