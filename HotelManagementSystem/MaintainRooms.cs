@@ -89,6 +89,28 @@ namespace HotelManagementSystem
                 dataGridView1.DataSource = dataTable;
             }
         }
+        private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
+        {
+
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@searchTerm", $"%{searchTerm.Trim()}%");
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            dataGridView.DataSource = dataTable;
+        }
+
 
 
 
@@ -217,28 +239,7 @@ namespace HotelManagementSystem
             //UpdateEmployeeDataGridView((cbxRoomStatus.SelectedIndex).ToString(), dataGridView1, "SELECT * FROM Room WHERE Room_Status LIKE @searchTerm");
         }
 
-        private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
-        {
-
-            DataTable dataTable = new DataTable();
-
-            using (SqlConnection conn = new SqlConnection(connection))
-            {
-                conn.Open();
-
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@searchTerm", $"%{searchTerm.Trim()}%");
-
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        adapter.Fill(dataTable);
-                    }
-                }
-            }
-            dataGridView.DataSource = dataTable;
-        }
-
+      
 
         private void txtSearchRoom_TextChanged(object sender, EventArgs e)
         {

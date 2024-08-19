@@ -31,6 +31,27 @@ namespace HotelManagementSystem
                 dataGridView1.DataSource = dataTable;
             }
         }
+        private void UpdateDataGridView(string searchTerm, DataGridView dataGridView, string query)
+        {
+
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@searchTerm", $"%{searchTerm.Trim()}%");
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            dataGridView.DataSource = dataTable;
+        }
 
         public void ValidateArrivalDate(int bookingId, DateTime userProvidedArrivalDate)
         {
@@ -121,7 +142,8 @@ namespace HotelManagementSystem
             txtBookingID.Text = string.Empty;
             txtGuestID.Text = string.Empty;
             txtRoomID.Text = string.Empty;
-            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker1.Value = DateTime.Now; 
+            LoadData();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -135,40 +157,11 @@ namespace HotelManagementSystem
                     {
                         if (IsValueInTable("Room_ID", txtRoomID.Text))
                         {
-                            DialogResult result = MessageBox.Show("Are you sure you want to edit this record? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            DialogResult result = MessageBox.Show("Are you sure you want to check out? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
 
-                                ValidateArrivalDate(int.Parse(txtBookingID.Text), DateTime.Now);
-                                /*
-                                /*
-                               using (SqlConnection conn = new SqlConnection(connection))
-                               {
-                                   SqlCommand command = new SqlCommand(query, conn);
-
-                                   // Add parameters to the SqlCommand
-                                   command.Parameters.AddWithValue("@Value1", DateTime.Now);
-                                   command.Parameters.AddWithValue("@ID", txtBookingID.Text);
-
-                                   try
-                                   {
-                                       conn.Open();
-                                       int rowsAffected = command.ExecuteNonQuery();
-                                       if (rowsAffected > 0)
-                                       {
-                                           Console.WriteLine("Insert successful.");
-                                       }
-                                       else
-                                       {
-                                           Console.WriteLine("Insert failed.");
-                                       }
-                                   }
-                                   catch (Exception ex)
-                                   {
-                                       Console.WriteLine("An error occurred: " + ex.Message);
-                                   }
-                               }
-                               */
+                                ValidateArrivalDate(int.Parse(txtBookingID.Text), DateTime.Now);                               
                             }
                         }
                         else { MessageBox.Show("Room ID does not exist"); }
@@ -190,6 +183,50 @@ namespace HotelManagementSystem
         private void CheckOut_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void txtBookingID_TextChanged(object sender, EventArgs e)
+        {
+            UpdateDataGridView(txtBookingID.Text, dataGridView1, "SELECT * FROM Booking WHERE Booking_ID LIKE @searchTerm");
+        }
+
+        private void txtGuestID_TextChanged(object sender, EventArgs e)
+        {
+            UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+        }
+
+        private void txtRoomID_TextChanged(object sender, EventArgs e)
+        {
+            UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime searchDate = dateTimePicker1.Value.Date;
+            DataTable dataTable = new DataTable();
+
+            //Write the SQL query to filter bookings by the selected Guest_Arrival date
+            string query = "SELECT * FROM Booking WHERE Guest_Arrival = @Guest_Arrival";
+
+            //  Connect to the database and execute the query
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    // Add the selected date parameter to the query
+                    command.Parameters.AddWithValue("@Guest_Arrival", searchDate.Date);
+
+                    //Create a DataAdapter to execute the query and fill a DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable searchTerm = new DataTable();
+
+                    // Fill the DataTable with the query results
+                    adapter.Fill(dataTable);
+
+                    //Bind the DataTable to the GridView
+                    dataGridView1.DataSource = dataTable;
+                }
+            }
         }
     }
 }

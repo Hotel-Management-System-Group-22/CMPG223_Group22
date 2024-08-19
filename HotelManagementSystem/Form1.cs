@@ -23,7 +23,7 @@ namespace HotelManagementSystem
           //MaintainRooms maintainRooms = new MaintainRooms();
            //maintainRooms.ShowDialog();
            // CheckIn checkIn = new CheckIn();
-           // checkIn.ShowDialog();
+          // checkIn.ShowDialog();
             CheckOut checkOut = new CheckOut();
           checkOut.ShowDialog();
         }
