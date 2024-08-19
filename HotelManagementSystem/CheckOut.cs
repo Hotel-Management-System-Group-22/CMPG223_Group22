@@ -153,7 +153,7 @@ namespace HotelManagementSystem
             {
                 if (IsValueInTable("Booking_ID", txtBookingID.Text))
                 {
-                    if (IsValueInTable("Guest_ID", txtBookingID.Text))
+                    if (IsValueInTable("Guest_ID", txtGuestID.Text))
                     {
                         if (IsValueInTable("Room_ID", txtRoomID.Text))
                         {

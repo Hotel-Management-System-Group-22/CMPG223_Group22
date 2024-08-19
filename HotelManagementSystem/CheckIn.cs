@@ -154,7 +154,7 @@ namespace HotelManagementSystem
             {
                 if (IsValueInTable("Booking_ID",txtBookingID.Text))
                 {
-                    if (IsValueInTable("Guest_ID", txtBookingID.Text))
+                    if (IsValueInTable("Guest_ID", txtGuestID.Text))
                     {
                         if (IsValueInTable("Room_ID", txtRoomID.Text))
                         {
@@ -165,8 +165,7 @@ namespace HotelManagementSystem
                                 ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
 
                             }
-                        }
-                        else { MessageBox.Show("Room ID does not exist"); }
+                        }else { MessageBox.Show("Room ID does not exist"); }
                     }else { MessageBox.Show("Guest ID does not exist"); }
                 }else { MessageBox.Show("Booking ID does not exist"); }
 
