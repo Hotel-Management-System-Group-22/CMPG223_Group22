@@ -103,8 +103,37 @@ namespace HotelManagementSystem
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             //deleting of guest 
-            
-            //string query = "DELETE FROM Guest WHERE Guest_"
+
+            string query = "DELETE FROM Guest WHERE Guest_FName = @name";
+            string name = txtFName_Delete.Text;
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand comm = new SqlCommand(query, conn))
+
+                    comm.Parameters.AddWithValue("@name", name);
+
+                DialogResult dialogResult = MessageBox.Show("Would you liketo delete this guest:", "Delete Guest Confrimation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(dialogResult == DialogResult.Yes)
+                {
+                    /*int rowsAffected = comm.ExecuteNonQuery();
+                     * if (rowsAffected > 0 ){
+                     * comm.ExecuteNonQuery();
+                     * MessageBox.Show("Guest has been successfully deleted");
+                     * }
+                     * else {
+                     * MessageBox.Show("No guest found with the provided name selected");
+                     * }
+                     * }
+                     * LoadData();
+                     */
+
+
+                }
+            }
         }
 
         private void RdnBtnAscDelete_CheckedChanged(object sender, EventArgs e)
@@ -113,6 +142,11 @@ namespace HotelManagementSystem
             {
                 //DgvGuests = ("SELECT * FROM Guest WHERE surname LIKE '%" + txtFName_Delete + "%' ORDER BY name ASC");
             }
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
