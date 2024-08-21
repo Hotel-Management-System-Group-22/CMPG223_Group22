@@ -81,7 +81,7 @@
             this.btnBookingUpdate.Location = new System.Drawing.Point(590, 216);
             this.btnBookingUpdate.Name = "btnBookingUpdate";
             this.btnBookingUpdate.Size = new System.Drawing.Size(146, 32);
-            this.btnBookingUpdate.TabIndex = 9;
+            this.btnBookingUpdate.TabIndex = 6;
             this.btnBookingUpdate.Text = "Update Booking Info";
             this.btnBookingUpdate.UseVisualStyleBackColor = true;
             this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
@@ -91,7 +91,7 @@
             this.btnCheckIn.Location = new System.Drawing.Point(381, 225);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckIn.TabIndex = 5;
+            this.btnCheckIn.TabIndex = 4;
             this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseVisualStyleBackColor = true;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
@@ -117,7 +117,7 @@
             this.btnCancel.Location = new System.Drawing.Point(489, 225);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

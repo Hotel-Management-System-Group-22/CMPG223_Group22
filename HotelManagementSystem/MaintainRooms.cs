@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace HotelManagementSystem
@@ -157,7 +158,20 @@ namespace HotelManagementSystem
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateEmployeeDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRoomID.Text = string.Empty;
+              
+            }
+            
         }
 
         private void rdbDescending_CheckedChanged(object sender, EventArgs e)
@@ -243,7 +257,20 @@ namespace HotelManagementSystem
 
         private void txtSearchRoom_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtSearchRoom.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtSearchRoom.Text, out int result)) || (txtSearchRoom.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateEmployeeDataGridView(txtSearchRoom.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSearchRoom.Text = string.Empty;
+
+            }
 
         }
 
@@ -295,12 +322,37 @@ namespace HotelManagementSystem
 
         private void txtDeleteRoomID_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtDeleteRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtDeleteRoomID.Text, out int result)) || (txtDeleteRoomID.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateEmployeeDataGridView(txtDeleteRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDeleteRoomID.Text = string.Empty;
+
+            }
+            
         }
 
         private void txtEmployeeID_TextChanged(object sender, EventArgs e)
         {
             //UpdateEmployeeDataGridView(txtEmployeeID.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtEmployeeID.Text, out int result)) || (txtEmployeeID.Text == string.Empty))
+            {
+                // The input is a valid integer
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmployeeID.Text = string.Empty;
+
+            }
         }
 
         private void btnUpdateRoom_Click(object sender, EventArgs e)
@@ -450,7 +502,20 @@ namespace HotelManagementSystem
 
         private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtSearchEmployee.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtSearchEmployee.Text, out int result)) || (txtSearchEmployee.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateEmployeeDataGridView(txtSearchEmployee.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSearchEmployee.Text = string.Empty;
+
+            }
+           
         }
 
         private void label5_Click(object sender, EventArgs e)

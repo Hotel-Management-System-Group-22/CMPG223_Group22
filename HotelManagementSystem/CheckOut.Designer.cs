@@ -74,7 +74,7 @@
             this.btnCheckOut.Location = new System.Drawing.Point(381, 225);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckOut.TabIndex = 14;
+            this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
@@ -84,7 +84,7 @@
             this.btnCheckOutCancel.Location = new System.Drawing.Point(489, 225);
             this.btnCheckOutCancel.Name = "btnCheckOutCancel";
             this.btnCheckOutCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckOutCancel.TabIndex = 13;
+            this.btnCheckOutCancel.TabIndex = 5;
             this.btnCheckOutCancel.Text = "Cancel";
             this.btnCheckOutCancel.UseVisualStyleBackColor = true;
             this.btnCheckOutCancel.Click += new System.EventHandler(this.btnCheckOutCancel_Click);
@@ -94,7 +94,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(86, 224);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtRoomID
@@ -102,7 +102,7 @@
             this.txtRoomID.Location = new System.Drawing.Point(206, 162);
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(100, 20);
-            this.txtRoomID.TabIndex = 11;
+            this.txtRoomID.TabIndex = 2;
             this.txtRoomID.TextChanged += new System.EventHandler(this.txtRoomID_TextChanged);
             // 
             // txtGuestID
@@ -110,7 +110,7 @@
             this.txtGuestID.Location = new System.Drawing.Point(206, 115);
             this.txtGuestID.Name = "txtGuestID";
             this.txtGuestID.Size = new System.Drawing.Size(100, 20);
-            this.txtGuestID.TabIndex = 10;
+            this.txtGuestID.TabIndex = 1;
             this.txtGuestID.TextChanged += new System.EventHandler(this.txtGuestID_TextChanged);
             // 
             // txtBookingID
@@ -118,7 +118,7 @@
             this.txtBookingID.Location = new System.Drawing.Point(206, 67);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(100, 20);
-            this.txtBookingID.TabIndex = 9;
+            this.txtBookingID.TabIndex = 0;
             this.txtBookingID.TextChanged += new System.EventHandler(this.txtBookingID_TextChanged);
             // 
             // btnBookingUpdate
@@ -126,7 +126,7 @@
             this.btnBookingUpdate.Location = new System.Drawing.Point(590, 216);
             this.btnBookingUpdate.Name = "btnBookingUpdate";
             this.btnBookingUpdate.Size = new System.Drawing.Size(146, 32);
-            this.btnBookingUpdate.TabIndex = 18;
+            this.btnBookingUpdate.TabIndex = 6;
             this.btnBookingUpdate.Text = "Update Booking Info";
             this.btnBookingUpdate.UseVisualStyleBackColor = true;
             this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);

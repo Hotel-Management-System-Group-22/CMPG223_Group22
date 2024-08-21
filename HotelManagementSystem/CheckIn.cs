@@ -186,17 +186,58 @@ namespace HotelManagementSystem
 
         private void txtBookingID_TextChanged(object sender, EventArgs e)
         {
-            UpdateDataGridView(txtBookingID.Text, dataGridView1, "SELECT * FROM Booking WHERE Booking_ID LIKE @searchTerm");
+
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtBookingID.Text, out int result)) || (txtBookingID.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateDataGridView(txtBookingID.Text, dataGridView1, "SELECT * FROM Booking WHERE Booking_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBookingID.Text = string.Empty;
+
+            }
+            
         }
 
         private void txtGuestID_TextChanged(object sender, EventArgs e)
         {
-            UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtGuestID.Text, out int result)) || (txtGuestID.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGuestID.Text = string.Empty;
+
+            }
+           
         }
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)
         {
-            UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+            // Try to parse the text in the TextBox to an integer
+            if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
+            {
+                // The input is a valid integer
+                UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+            }
+            else
+            {
+                // The input is not a valid integer
+                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRoomID.Text = string.Empty;
+
+            }
+
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

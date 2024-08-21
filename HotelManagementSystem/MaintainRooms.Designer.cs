@@ -106,7 +106,7 @@
             this.txtSearchEmployee.Location = new System.Drawing.Point(136, 56);
             this.txtSearchEmployee.Name = "txtSearchEmployee";
             this.txtSearchEmployee.Size = new System.Drawing.Size(121, 20);
-            this.txtSearchEmployee.TabIndex = 12;
+            this.txtSearchEmployee.TabIndex = 2;
             this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // label5
@@ -128,7 +128,7 @@
             this.cbxSearchStatus.Location = new System.Drawing.Point(136, 88);
             this.cbxSearchStatus.Name = "cbxSearchStatus";
             this.cbxSearchStatus.Size = new System.Drawing.Size(121, 21);
-            this.cbxSearchStatus.TabIndex = 10;
+            this.cbxSearchStatus.TabIndex = 3;
             this.cbxSearchStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
@@ -188,7 +188,7 @@
             this.btnSearchReset.Location = new System.Drawing.Point(15, 162);
             this.btnSearchReset.Name = "btnSearchReset";
             this.btnSearchReset.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchReset.TabIndex = 1;
+            this.btnSearchReset.TabIndex = 6;
             this.btnSearchReset.Text = "Reset";
             this.btnSearchReset.UseVisualStyleBackColor = true;
             this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
@@ -198,7 +198,7 @@
             this.txtSearchRoom.Location = new System.Drawing.Point(136, 30);
             this.txtSearchRoom.Name = "txtSearchRoom";
             this.txtSearchRoom.Size = new System.Drawing.Size(121, 20);
-            this.txtSearchRoom.TabIndex = 0;
+            this.txtSearchRoom.TabIndex = 1;
             this.txtSearchRoom.TextChanged += new System.EventHandler(this.txtSearchRoom_TextChanged);
             // 
             // tbpAdd_Update
@@ -225,7 +225,7 @@
             this.btnUpdateRoom.Location = new System.Drawing.Point(240, 162);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(108, 23);
-            this.btnUpdateRoom.TabIndex = 29;
+            this.btnUpdateRoom.TabIndex = 5;
             this.btnUpdateRoom.Text = "Update room";
             this.btnUpdateRoom.UseVisualStyleBackColor = true;
             this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
@@ -235,7 +235,7 @@
             this.txtRoomID.Location = new System.Drawing.Point(136, 36);
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(121, 20);
-            this.txtRoomID.TabIndex = 28;
+            this.txtRoomID.TabIndex = 1;
             this.txtRoomID.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblRoomID
@@ -253,7 +253,7 @@
             this.btnAddRoom.Location = new System.Drawing.Point(136, 162);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(75, 23);
-            this.btnAddRoom.TabIndex = 12;
+            this.btnAddRoom.TabIndex = 4;
             this.btnAddRoom.Text = "Add room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
@@ -263,7 +263,7 @@
             this.btnAddReset.Location = new System.Drawing.Point(15, 162);
             this.btnAddReset.Name = "btnAddReset";
             this.btnAddReset.Size = new System.Drawing.Size(75, 23);
-            this.btnAddReset.TabIndex = 11;
+            this.btnAddReset.TabIndex = 6;
             this.btnAddReset.Text = "Reset";
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.btnAddReset_Click);
@@ -277,7 +277,7 @@
             this.cbxRoomStatus.Location = new System.Drawing.Point(135, 91);
             this.cbxRoomStatus.Name = "cbxRoomStatus";
             this.cbxRoomStatus.Size = new System.Drawing.Size(121, 21);
-            this.cbxRoomStatus.TabIndex = 8;
+            this.cbxRoomStatus.TabIndex = 3;
             this.cbxRoomStatus.SelectedIndexChanged += new System.EventHandler(this.cbxRoomStatus_SelectedIndexChanged);
             // 
             // txtEmployeeID
@@ -285,7 +285,7 @@
             this.txtEmployeeID.Location = new System.Drawing.Point(135, 58);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(121, 20);
-            this.txtEmployeeID.TabIndex = 5;
+            this.txtEmployeeID.TabIndex = 2;
             this.txtEmployeeID.TextChanged += new System.EventHandler(this.txtEmployeeID_TextChanged);
             // 
             // label6
@@ -324,7 +324,7 @@
             this.btnDeleteReset.Location = new System.Drawing.Point(15, 162);
             this.btnDeleteReset.Name = "btnDeleteReset";
             this.btnDeleteReset.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteReset.TabIndex = 3;
+            this.btnDeleteReset.TabIndex = 18;
             this.btnDeleteReset.Text = "Reset";
             this.btnDeleteReset.UseVisualStyleBackColor = true;
             this.btnDeleteReset.Click += new System.EventHandler(this.btnDeleteReset_Click);
@@ -334,7 +334,7 @@
             this.btnDeleteRoom.Location = new System.Drawing.Point(136, 162);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteRoom.TabIndex = 2;
+            this.btnDeleteRoom.TabIndex = 17;
             this.btnDeleteRoom.Text = "Delete room";
             this.btnDeleteRoom.UseVisualStyleBackColor = true;
             this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
@@ -344,7 +344,7 @@
             this.txtDeleteRoomID.Location = new System.Drawing.Point(136, 36);
             this.txtDeleteRoomID.Name = "txtDeleteRoomID";
             this.txtDeleteRoomID.Size = new System.Drawing.Size(100, 20);
-            this.txtDeleteRoomID.TabIndex = 1;
+            this.txtDeleteRoomID.TabIndex = 16;
             this.txtDeleteRoomID.TextChanged += new System.EventHandler(this.txtDeleteRoomID_TextChanged);
             // 
             // label8
@@ -375,7 +375,7 @@
             this.btnMenuDelete.Location = new System.Drawing.Point(6, 162);
             this.btnMenuDelete.Name = "btnMenuDelete";
             this.btnMenuDelete.Size = new System.Drawing.Size(80, 30);
-            this.btnMenuDelete.TabIndex = 5;
+            this.btnMenuDelete.TabIndex = 15;
             this.btnMenuDelete.Text = "Delete";
             this.btnMenuDelete.UseVisualStyleBackColor = true;
             this.btnMenuDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -385,7 +385,7 @@
             this.btnMenuAdd.Location = new System.Drawing.Point(6, 68);
             this.btnMenuAdd.Name = "btnMenuAdd";
             this.btnMenuAdd.Size = new System.Drawing.Size(80, 30);
-            this.btnMenuAdd.TabIndex = 4;
+            this.btnMenuAdd.TabIndex = 7;
             this.btnMenuAdd.Text = "Add";
             this.btnMenuAdd.UseVisualStyleBackColor = true;
             this.btnMenuAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -395,7 +395,7 @@
             this.btnMenuSearch.Location = new System.Drawing.Point(6, 32);
             this.btnMenuSearch.Name = "btnMenuSearch";
             this.btnMenuSearch.Size = new System.Drawing.Size(80, 30);
-            this.btnMenuSearch.TabIndex = 3;
+            this.btnMenuSearch.TabIndex = 0;
             this.btnMenuSearch.Text = "Search";
             this.btnMenuSearch.UseVisualStyleBackColor = true;
             this.btnMenuSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -406,7 +406,7 @@
             this.btnMenuUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenuUpdate.Name = "btnMenuUpdate";
             this.btnMenuUpdate.Size = new System.Drawing.Size(80, 30);
-            this.btnMenuUpdate.TabIndex = 2;
+            this.btnMenuUpdate.TabIndex = 12;
             this.btnMenuUpdate.Text = "Update";
             this.btnMenuUpdate.UseVisualStyleBackColor = true;
             this.btnMenuUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
