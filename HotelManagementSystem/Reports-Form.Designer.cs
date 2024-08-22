@@ -120,6 +120,7 @@
             this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookings.Location = new System.Drawing.Point(22, 29);
             this.dgvBookings.Name = "dgvBookings";
+            this.dgvBookings.ReadOnly = true;
             this.dgvBookings.RowHeadersWidth = 51;
             this.dgvBookings.RowTemplate.Height = 24;
             this.dgvBookings.Size = new System.Drawing.Size(777, 306);

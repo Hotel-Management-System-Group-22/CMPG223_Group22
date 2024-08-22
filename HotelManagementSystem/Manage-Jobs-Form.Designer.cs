@@ -88,6 +88,7 @@
             this.dgvJobList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJobList.Location = new System.Drawing.Point(73, 84);
             this.dgvJobList.Name = "dgvJobList";
+            this.dgvJobList.ReadOnly = true;
             this.dgvJobList.RowHeadersWidth = 51;
             this.dgvJobList.RowTemplate.Height = 24;
             this.dgvJobList.Size = new System.Drawing.Size(532, 294);
