@@ -22,6 +22,8 @@ namespace HotelManagementSystem
         string sJobRate;
         string sJobTitle;
         int selectedId;
+        Regex regex = new Regex(@"^[a-zA-Z\s]+$");
+
         public ManageJobsForm()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace HotelManagementSystem
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (!(int.TryParse(txtAddJobTitle.Text, out int result)) || txtAddJobTitle.Text == string.Empty)
+            if (regex.IsMatch(txtAddJobTitle.Text) || txtAddJobTitle.Text == string.Empty)
             {
                 // The input is a valid integer
                 sJobTitle = txtAddJobTitle.Text;
@@ -217,7 +219,7 @@ namespace HotelManagementSystem
                         }
                     }
                     lblSelectedID.Visible = false;
-                    groupBox1.Visible = false;
+                    //groupBox1.Visible = false;
                     txtAddJobTitle.Text = "";
                     txtAddJobRate.Text = "";
 
@@ -408,7 +410,7 @@ namespace HotelManagementSystem
 
         private void txtEditJobRate_Validating(object sender, CancelEventArgs e)
         {
-            string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
+           /* string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
             if (!Regex.IsMatch(txtEditJobRate.Text, pattern))
             {
                 errorProvider1.SetError(txtEditJobRate, "Please enter a valid decimal number.");
@@ -417,12 +419,12 @@ namespace HotelManagementSystem
             else
             {
                 errorProvider1.SetError(txtEditJobRate, string.Empty); // Clears the error if the input is valid
-            }
+            }*/
         }
 
         private void txtAddJobRate_Validating(object sender, CancelEventArgs e)
         {
-            string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
+            /*string pattern = @"^-?\d+(\,\d+)?$"; // Allows positive and negative decimals with a comma separator
             if (!Regex.IsMatch(txtAddJobRate.Text, pattern))
             {
                 errorProvider2.SetError(txtAddJobRate, "Please enter a valid decimal number.");
@@ -431,7 +433,7 @@ namespace HotelManagementSystem
             else
             {
                 errorProvider2.SetError(txtAddJobRate, string.Empty); // Clears the error if the input is valid
-            }
+            }*/
         }
 
         private void txtJobID_TextChanged(object sender, EventArgs e)
@@ -478,7 +480,7 @@ namespace HotelManagementSystem
         private void txtJobTitle_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if (!(int.TryParse(txtJobTitle.Text, out int result)) || txtJobTitle.Text == string.Empty)
+            if (regex.IsMatch(txtJobTitle.Text) || txtJobTitle.Text == string.Empty)
             {
                 // The input is a valid integer
                 UpdateEmployeeDataGridView(txtJobTitle.Text, dgvJobList, "SELECT * FROM Job WHERE Job_Title LIKE @searchTerm");
@@ -515,7 +517,7 @@ namespace HotelManagementSystem
 
         private void txtEditJobTitle_TextChanged(object sender, EventArgs e)
         {
-            if (!(int.TryParse(txtEditJobTitle.Text, out int result)) || txtEditJobTitle.Text == string.Empty)
+            if (regex.IsMatch(txtEditJobTitle.Text) || txtEditJobTitle.Text == string.Empty)
             {
                 // The input is a valid integer
                 sJobTitle = txtEditJobTitle.Text;
@@ -545,6 +547,19 @@ namespace HotelManagementSystem
                 txtEditJobRate.Select(txtEditJobRate.Text.Length, 0);
 
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+            groupBox2.Visible = false;
+            txtAddJobRate.Text = "";
+            txtAddJobTitle.Text = "";
+            txtEditJobRate.Text = "";
+            txtEditJobTitle.Text = "";
+            txtJobRate.Text = "";
+            txtJobTitle.Text = "";
+            txtJobID.Text = "";
         }
     }
 }

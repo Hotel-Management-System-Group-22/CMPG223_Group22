@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.dgvJobList = new System.Windows.Forms.DataGridView();
@@ -57,14 +56,11 @@
             this.lblSelectedID = new System.Windows.Forms.Label();
             this.txtJobRate = new System.Windows.Forms.TextBox();
             this.txtJobTitle = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -217,7 +213,7 @@
             // 
             // btnAddJob
             // 
-            this.btnAddJob.Location = new System.Drawing.Point(822, 485);
+            this.btnAddJob.Location = new System.Drawing.Point(741, 485);
             this.btnAddJob.Name = "btnAddJob";
             this.btnAddJob.Size = new System.Drawing.Size(75, 23);
             this.btnAddJob.TabIndex = 14;
@@ -228,7 +224,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAddCancel);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnAcceptNewJob);
             this.groupBox1.Controls.Add(this.txtAddJobTitle);
@@ -249,7 +244,7 @@
             this.groupBox2.Controls.Add(this.txtEditJobTitle);
             this.groupBox2.Controls.Add(this.txtEditJobRate);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(653, 50);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 250);
             this.groupBox2.TabIndex = 17;
@@ -314,7 +309,7 @@
             // lblSelectedID
             // 
             this.lblSelectedID.AutoSize = true;
-            this.lblSelectedID.Location = new System.Drawing.Point(670, 325);
+            this.lblSelectedID.Location = new System.Drawing.Point(658, 339);
             this.lblSelectedID.Name = "lblSelectedID";
             this.lblSelectedID.Size = new System.Drawing.Size(93, 16);
             this.lblSelectedID.TabIndex = 18;
@@ -336,19 +331,23 @@
             this.txtJobTitle.TabIndex = 3;
             this.txtJobTitle.TextChanged += new System.EventHandler(this.txtJobTitle_TextChanged);
             // 
-            // errorProvider1
+            // btnReset
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
+            this.btnReset.Location = new System.Drawing.Point(845, 485);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 19;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ManageJobsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 544);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblSelectedID);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEditJob);
@@ -372,8 +371,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,7 +406,6 @@
         private System.Windows.Forms.Label lblSelectedID;
         private System.Windows.Forms.TextBox txtJobRate;
         private System.Windows.Forms.TextBox txtJobTitle;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button btnReset;
     }
 }
