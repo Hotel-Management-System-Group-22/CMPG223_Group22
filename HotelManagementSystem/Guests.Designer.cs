@@ -568,6 +568,7 @@
             this.DgvGuests.RowTemplate.Height = 24;
             this.DgvGuests.Size = new System.Drawing.Size(1167, 215);
             this.DgvGuests.TabIndex = 2;
+            this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
             // 
             // Guests
             // 

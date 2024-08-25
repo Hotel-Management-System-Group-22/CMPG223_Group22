@@ -26,9 +26,46 @@ namespace HotelManagementSystem
 
         }
 
-        private void LoadData()
+        private void DgvGuests(string searchTerm, DataGridView dataGridView, string query)
         {
-            string query = "SELECT * FROM Guest";
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection (connection))
+            {
+                conn.Open();
+
+                
+            }
+
+        }
+
+       
+
+        private void LoadGuests()
+        {
+            string query = " ";
+
+            try
+            {
+               
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    conn.Open();
+
+                    query = "select * from Guests";
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    DgvGuests.DataSource = dataTable;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -92,7 +129,7 @@ namespace HotelManagementSystem
                    
                     command.ExecuteNonQuery();
                     MessageBox.Show("Guest has been added");
-                    LoadData();
+                    LoadGuests();
                 }
             }
 
@@ -145,6 +182,58 @@ namespace HotelManagementSystem
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+
+            string name = TxtFName_Update.Text;
+            string lastname = TxtLName_Update.Text;
+            string contact = TxtContactNo_Update.Text;
+            string email = TxtBoxEmail_Update.Text;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection)) 
+                {
+                    conn.Open();
+
+                    string query = " ";
+                    query = "update Guests set Guest_FName = @name, Guest_LName = @lastname, Guest_ContactNo = @contact, Guest_Email = @email where Guest_FName = @name";
+
+                    using (SqlCommand command = new SqlCommand (query, conn))
+                    {
+
+                        command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@surname", lastname);
+                        command.Parameters.AddWithValue("@contact", contact);
+                        command.Parameters.AddWithValue(@"email", email);
+                        
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Guest information has been successfully updated");
+                            LoadGuests();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No guest has been updated");
+                        }
+
+                    }
+                
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void DgvGuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
