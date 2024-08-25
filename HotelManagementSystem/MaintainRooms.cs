@@ -17,6 +17,7 @@ namespace HotelManagementSystem
 {
     public partial class MaintainRooms : Form
     {
+
         public MaintainRooms()
         {
             InitializeComponent();
@@ -28,6 +29,8 @@ namespace HotelManagementSystem
 
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         int selectedId;
+        string sRoomID = "";
+        string sEmployeeID = "";
 
         public void ResetTabPages()
         {
@@ -37,6 +40,8 @@ namespace HotelManagementSystem
             btnAddReset.PerformClick();
             btnDeleteReset_Click(this, EventArgs.Empty);
             btnDeleteReset.PerformClick();
+            sRoomID = "";
+            sEmployeeID = "";
         }
 
         public bool IsValueInRoomTable(string columnName, object value)
@@ -159,17 +164,19 @@ namespace HotelManagementSystem
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
+            if ((int.TryParse(txtRoomID.Text, out int result)) || txtRoomID.Text == "")
             {
                 // The input is a valid integer
                 UpdateEmployeeDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+                sRoomID = txtRoomID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtRoomID.Text = string.Empty;
-              
+                txtRoomID.Text = sRoomID;
+                txtRoomID.Select(txtRoomID.Text.Length, 0);
+
             }
             
         }
@@ -259,16 +266,18 @@ namespace HotelManagementSystem
         {
             
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtSearchRoom.Text, out int result)) || (txtSearchRoom.Text == string.Empty))
+            if ((int.TryParse(txtSearchRoom.Text, out int result))|| txtSearchRoom.Text == "")
             {
                 // The input is a valid integer
                 UpdateEmployeeDataGridView(txtSearchRoom.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+                sRoomID = txtSearchRoom.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSearchRoom.Text = string.Empty;
+                txtSearchRoom.Text = sRoomID;
+                txtSearchRoom.Select(txtSearchRoom.Text.Length, 0);
 
             }
 
@@ -323,16 +332,18 @@ namespace HotelManagementSystem
         private void txtDeleteRoomID_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtDeleteRoomID.Text, out int result)) || (txtDeleteRoomID.Text == string.Empty))
+            if ((int.TryParse(txtDeleteRoomID.Text, out int result)) || txtDeleteRoomID.Text == "" )
             {
                 // The input is a valid integer
                 UpdateEmployeeDataGridView(txtDeleteRoomID.Text, dataGridView1, "SELECT * FROM Room WHERE Room_ID LIKE @searchTerm");
+                sRoomID = txtDeleteRoomID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDeleteRoomID.Text = string.Empty;
+                txtDeleteRoomID.Text = sRoomID;
+                txtDeleteRoomID.Select(txtDeleteRoomID.Text.Length, 0);
 
             }
             
@@ -342,15 +353,17 @@ namespace HotelManagementSystem
         {
             //UpdateEmployeeDataGridView(txtEmployeeID.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtEmployeeID.Text, out int result)) || (txtEmployeeID.Text == string.Empty))
+            if ((int.TryParse(txtEmployeeID.Text, out int result)) || txtEmployeeID.Text == "" )
             {
                 // The input is a valid integer
+                sEmployeeID = txtEmployeeID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEmployeeID.Text = string.Empty;
+                txtEmployeeID.Text = sEmployeeID;
+                txtEmployeeID.Select(txtEmployeeID.Text.Length, 0);
 
             }
         }
@@ -503,16 +516,18 @@ namespace HotelManagementSystem
         private void txtSearchEmployee_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtSearchEmployee.Text, out int result)) || (txtSearchEmployee.Text == string.Empty))
+            if ((int.TryParse(txtSearchEmployee.Text, out int result)) || txtSearchEmployee.Text == "")
             {
                 // The input is a valid integer
                 UpdateEmployeeDataGridView(txtSearchEmployee.Text, dataGridView1, "SELECT * FROM Room WHERE Employee_ID LIKE @searchTerm");
+                sEmployeeID = txtSearchEmployee.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSearchEmployee.Text = string.Empty;
+                txtSearchEmployee.Text =sEmployeeID;
+                txtSearchEmployee.Select(txtSearchEmployee.Text.Length, 0);
 
             }
            

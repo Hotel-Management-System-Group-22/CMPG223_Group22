@@ -14,6 +14,7 @@ namespace HotelManagementSystem
 {
     public partial class CheckIn : Form
     {
+        string sRoomId = "", sGuestId = "", sBookingId = "";
         public CheckIn()
         {
             InitializeComponent();
@@ -150,23 +151,16 @@ namespace HotelManagementSystem
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             string query = "UPDATE Booking SET Guest_Arrival= @Value1 WHERE Booking_ID = @ID";
-            if (txtBookingID.Text != "" && txtGuestID.Text != "" && txtRoomID.Text != "")
+            if (txtBookingID.Text != "" )
             {
                 if (IsValueInTable("Booking_ID",txtBookingID.Text))
-                {
-                    if (IsValueInTable("Guest_ID", txtGuestID.Text))
-                    {
-                        if (IsValueInTable("Room_ID", txtRoomID.Text))
+                {                    
+                    DialogResult result = MessageBox.Show("Are you sure you want to check in? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            DialogResult result = MessageBox.Show("Are you sure you want to check in? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (result == DialogResult.Yes)
-                            {
+                            ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
 
-                                ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
-
-                            }
-                        }else { MessageBox.Show("Room ID does not exist"); }
-                    }else { MessageBox.Show("Guest ID does not exist"); }
+                         }                        
                 }else { MessageBox.Show("Booking ID does not exist"); }
 
             }else { MessageBox.Show("Fields cannot be Empty"); }
@@ -192,12 +186,14 @@ namespace HotelManagementSystem
             {
                 // The input is a valid integer
                 UpdateDataGridView(txtBookingID.Text, dataGridView1, "SELECT * FROM Booking WHERE Booking_ID LIKE @searchTerm");
+                sBookingId = txtBookingID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtBookingID.Text = string.Empty;
+                txtBookingID.Text = sBookingId;
+                txtBookingID.Select(txtBookingID.Text.Length, 0);
 
             }
             
@@ -210,12 +206,14 @@ namespace HotelManagementSystem
             {
                 // The input is a valid integer
                 UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+                sGuestId = txtGuestID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGuestID.Text = string.Empty;
+                txtGuestID.Text = sGuestId;
+                txtGuestID.Select(txtGuestID.Text.Length, 0);
 
             }
            
@@ -228,12 +226,14 @@ namespace HotelManagementSystem
             {
                 // The input is a valid integer
                 UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+                sRoomId = txtRoomID.Text;
             }
             else
             {
                 // The input is not a valid integer
                 MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtRoomID.Text = string.Empty;
+                txtRoomID.Text = sRoomId;
+                txtRoomID.Select(txtRoomID.Text.Length, 0);
 
             }
 
