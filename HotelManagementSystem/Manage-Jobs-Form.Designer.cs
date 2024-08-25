@@ -55,7 +55,6 @@
             this.txtEditJobRate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblSelectedID = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txtJobRate = new System.Windows.Forms.TextBox();
             this.txtJobTitle = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -101,6 +100,7 @@
             this.txtJobID.Name = "txtJobID";
             this.txtJobID.Size = new System.Drawing.Size(100, 22);
             this.txtJobID.TabIndex = 2;
+            this.txtJobID.TextChanged += new System.EventHandler(this.txtJobID_TextChanged);
             // 
             // lblJobID
             // 
@@ -228,6 +228,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAddCancel);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnAcceptNewJob);
             this.groupBox1.Controls.Add(this.txtAddJobTitle);
@@ -248,7 +249,7 @@
             this.groupBox2.Controls.Add(this.txtEditJobTitle);
             this.groupBox2.Controls.Add(this.txtEditJobRate);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(653, 50);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 250);
             this.groupBox2.TabIndex = 17;
@@ -290,6 +291,7 @@
             this.txtEditJobTitle.Name = "txtEditJobTitle";
             this.txtEditJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtEditJobTitle.TabIndex = 9;
+            this.txtEditJobTitle.TextChanged += new System.EventHandler(this.txtEditJobTitle_TextChanged);
             // 
             // txtEditJobRate
             // 
@@ -297,6 +299,7 @@
             this.txtEditJobRate.Name = "txtEditJobRate";
             this.txtEditJobRate.Size = new System.Drawing.Size(100, 22);
             this.txtEditJobRate.TabIndex = 10;
+            this.txtEditJobRate.TextChanged += new System.EventHandler(this.txtEditJobRate_TextChanged);
             this.txtEditJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtEditJobRate_Validating);
             // 
             // label8
@@ -317,22 +320,13 @@
             this.lblSelectedID.TabIndex = 18;
             this.lblSelectedID.Text = "Selected Job: ";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(562, 422);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 13;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // txtJobRate
             // 
             this.txtJobRate.Location = new System.Drawing.Point(408, 423);
             this.txtJobRate.Name = "txtJobRate";
             this.txtJobRate.Size = new System.Drawing.Size(100, 22);
             this.txtJobRate.TabIndex = 4;
+            this.txtJobRate.TextChanged += new System.EventHandler(this.txtJobRate_TextChanged);
             // 
             // txtJobTitle
             // 
@@ -340,6 +334,7 @@
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.Size = new System.Drawing.Size(100, 22);
             this.txtJobTitle.TabIndex = 3;
+            this.txtJobTitle.TextChanged += new System.EventHandler(this.txtJobTitle_TextChanged);
             // 
             // errorProvider1
             // 
@@ -355,11 +350,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 544);
             this.Controls.Add(this.lblSelectedID);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEditJob);
             this.Controls.Add(this.btnAddJob);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeleteJob);
             this.Controls.Add(this.lblJobRate);
@@ -414,7 +407,6 @@
         private System.Windows.Forms.TextBox txtEditJobRate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblSelectedID;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtJobRate;
         private System.Windows.Forms.TextBox txtJobTitle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
