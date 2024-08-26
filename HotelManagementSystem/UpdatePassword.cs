@@ -14,16 +14,19 @@ namespace HotelManagementSystem
 {
     public partial class UpdatePassword : Form
     {
-        public UpdatePassword()
+        private string username;
+        public UpdatePassword(string userName)
         {
             InitializeComponent();
+            this.username = userName;  // Initialize with the username passed from the LogIn form
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        LogIn login = new LogIn();
+        
         private void Update_Click(object sender, EventArgs e)
         {
+            LogIn login = new LogIn();
 
-            string username = txtUsername.Text.Trim();
+            string username = login.GetUsername();
             string newPassword = txtNewPassword.Text.Trim();
             string confirmPassword = txtNewPassword2.Text.Trim();
 
@@ -75,7 +78,7 @@ namespace HotelManagementSystem
                                 using (SqlCommand command = new SqlCommand(query, conn))
                                 {
                                     command.Parameters.AddWithValue("@newPassword", newPassword);
-                                    command.Parameters.AddWithValue("@username", username);
+                                    command.Parameters.AddWithValue("@username", this.username);
 
                                     command.ExecuteNonQuery();
                                     MessageBox.Show("Password has been changed.");

@@ -48,7 +48,8 @@ namespace HotelManagementSystem
                             if (IsFirstTimeLogin(storedPassword))
                             {
                                 // Redirect to password change form
-                                UpdatePassword changePasswordForm = new UpdatePassword();
+                                UpdatePassword changePasswordForm = new UpdatePassword(username);
+                                
                                 changePasswordForm.Show();
                                 this.Hide();
                             }
@@ -92,6 +93,10 @@ namespace HotelManagementSystem
             txtPassword.PasswordChar = '•';
             pbViewPassword.Visible = true;
             pbNotView.Visible = false;
+        }
+        public string GetUsername()
+        {
+            return txtUsername.Text.Trim();
         }
     }
 }

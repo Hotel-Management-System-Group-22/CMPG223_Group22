@@ -34,8 +34,6 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword2 = new System.Windows.Forms.TextBox();
             this.Update = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -49,7 +47,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 158);
+            this.label2.Location = new System.Drawing.Point(215, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 1;
@@ -58,7 +56,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(162, 218);
+            this.label3.Location = new System.Drawing.Point(170, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 16);
             this.label3.TabIndex = 2;
@@ -66,14 +64,14 @@
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(363, 155);
+            this.txtNewPassword.Location = new System.Drawing.Point(371, 138);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(203, 22);
             this.txtNewPassword.TabIndex = 3;
             // 
             // txtNewPassword2
             // 
-            this.txtNewPassword2.Location = new System.Drawing.Point(363, 212);
+            this.txtNewPassword2.Location = new System.Drawing.Point(371, 195);
             this.txtNewPassword2.Name = "txtNewPassword2";
             this.txtNewPassword2.Size = new System.Drawing.Size(203, 22);
             this.txtNewPassword2.TabIndex = 4;
@@ -87,22 +85,6 @@
             this.Update.Text = "Update Password";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(363, 101);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(203, 22);
-            this.txtUsername.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(234, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Username:";
             // 
             // errorProvider1
             // 
@@ -125,8 +107,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.txtNewPassword2);
             this.Controls.Add(this.txtNewPassword);
@@ -150,8 +130,6 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtNewPassword2;
         private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
