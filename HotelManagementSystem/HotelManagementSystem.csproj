@@ -46,16 +46,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking Menu.Designer.cs">
+      <DependentUpon>Booking Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-In.Designer.cs">
+      <DependentUpon>Check-In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-InConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-InConfirmation.Designer.cs">
+      <DependentUpon>Check-InConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check-Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check-Out.Designer.cs">
+      <DependentUpon>Check-Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check_OutConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check_OutConfirmation.Designer.cs">
+      <DependentUpon>Check_OutConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmation Form.Designer.cs">
+      <DependentUpon>Confirmation Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="New Guests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Guests.Designer.cs">
+      <DependentUpon>New Guests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInformation.Designer.cs">
+      <DependentUpon>UpdateInformation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Booking Menu.resx">
+      <DependentUpon>Booking Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-In.resx">
+      <DependentUpon>Check-In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-InConfirmation.resx">
+      <DependentUpon>Check-InConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check-Out.resx">
+      <DependentUpon>Check-Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check_OutConfirmation.resx">
+      <DependentUpon>Check_OutConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmation Form.resx">
+      <DependentUpon>Confirmation Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Guests.resx">
+      <DependentUpon>New Guests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateInformation.resx">
+      <DependentUpon>UpdateInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
