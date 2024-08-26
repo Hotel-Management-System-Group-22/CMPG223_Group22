@@ -39,7 +39,7 @@ namespace HotelManagementSystem
         }
         private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
         {
-            
+
             DataTable dataTable = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(connection))
@@ -106,7 +106,7 @@ namespace HotelManagementSystem
             public static string GenerateUsername(string name, string lastName)
             {
                 string usernameChars = NumberChars;
-                return name+lastName+ GenerateRandomString(2, usernameChars);
+                return name + lastName + GenerateRandomString(2, usernameChars);
             }
 
             // Method to generate a random password for security reasons
@@ -116,31 +116,31 @@ namespace HotelManagementSystem
                 return GenerateRandomString(length, passwordChars);
             }
         }
-       /* public bool checkNames(string name)
-        {
-            if (string.IsNullOrEmpty(name))
-            {
-                errorProvider1.SetError(txtAddFName, "Please enter " + txtAddFName.Text);
-            }
+        /* public bool checkNames(string name)
+         {
+             if (string.IsNullOrEmpty(name))
+             {
+                 errorProvider1.SetError(txtAddFName, "Please enter " + txtAddFName.Text);
+             }
 
-            // Check if the first character is uppercase
-            if (!char.IsUpper(name[0]))
-            {
-                errorProvider1.SetError(txtAddFName, "Please start with Capital Letter");
-            }
+             // Check if the first character is uppercase
+             if (!char.IsUpper(name[0]))
+             {
+                 errorProvider1.SetError(txtAddFName, "Please start with Capital Letter");
+             }
 
-            // Check if all remaining characters are lowercase
-            for (int i = 1; i < name.Length; i++)
-            {
-                if (!char.IsLower(name[i]))
-                {
-                    errorProvider1.SetError(txtAddFName, "Must only contain letters");
-                }
-            }
+             // Check if all remaining characters are lowercase
+             for (int i = 1; i < name.Length; i++)
+             {
+                 if (!char.IsLower(name[i]))
+                 {
+                     errorProvider1.SetError(txtAddFName, "Must only contain letters");
+                 }
+             }
 
-            return true;
-        }
-        */
+             return true;
+         }
+         */
 
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
@@ -244,62 +244,62 @@ namespace HotelManagementSystem
         {
             ValidateTextBox(txtAddFName);
             ValidateTextBox(txtAddLName);
-            if (string.IsNullOrEmpty(errorProvider1.GetError(txtAddFName)) &&string.IsNullOrEmpty(errorProvider1.GetError(txtAddLName)) &&cmbAddRole.SelectedItem != null &&cmbAddJob.SelectedItem != null)
+            if (string.IsNullOrEmpty(errorProvider1.GetError(txtAddFName)) && string.IsNullOrEmpty(errorProvider1.GetError(txtAddLName)) && cmbAddRole.SelectedItem != null && cmbAddJob.SelectedItem != null)
             {
                 int clerk = 0;
                 int admin = 0;
                 string name = txtAddFName.Text;
                 string surname = txtAddLName.Text;
 
-                    if (cmbAddRole.SelectedItem != null)
-                    {
-                        string selectedRole = cmbAddRole.SelectedItem.ToString();
+                if (cmbAddRole.SelectedItem != null)
+                {
+                    string selectedRole = cmbAddRole.SelectedItem.ToString();
 
-                        if (selectedRole == "Administrator")
-                        {
-                            admin = 1;
-                            clerk = 0;
-                        }
-                        else if (selectedRole == "Clerk")
-                        {
-                            admin = 0;
-                            clerk = 1;
-                        }
+                    if (selectedRole == "Administrator")
+                    {
+                        admin = 1;
+                        clerk = 0;
                     }
-                    int selectedJobID = (int)cmbAddJob.SelectedValue;
-                    string username = RandomGenerator.GenerateUsername(txtAddFName.Text, txtAddLName.Text);
-                    string password = RandomGenerator.GenerateRandomPassword();
-
-                    string query = "INSERT INTO Employee ( Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Employee_Username, Employee_Password, Job_ID) VALUES (@name, @surname, @admin, @clerk, @username, @password, @jobId)";
-
-
-                    using (SqlConnection conn = new SqlConnection(connection))
+                    else if (selectedRole == "Clerk")
                     {
-                        conn.Open();
-
-                        using (SqlCommand command = new SqlCommand(query, conn))
-                        {
-                            command.Parameters.AddWithValue("@name", name);
-                            command.Parameters.AddWithValue("@surname", surname);
-                            command.Parameters.AddWithValue("@admin", admin);
-                            command.Parameters.AddWithValue("@clerk", clerk);
-                            command.Parameters.AddWithValue("@username", username);
-                            command.Parameters.AddWithValue("@password", password);
-                            command.Parameters.AddWithValue("@jobId", selectedJobID);
-
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("Employee " + name + " " + surname + " has been added");
-                            MessageBox.Show("Employee username: " + username + "\n" + "Employee default password: " + password);
-                            //MessageBox.Show("Employee default password: " + password);
-                            LoadData();
-                        }
+                        admin = 0;
+                        clerk = 1;
                     }
                 }
-                else
+                int selectedJobID = (int)cmbAddJob.SelectedValue;
+                string username = RandomGenerator.GenerateUsername(txtAddFName.Text, txtAddLName.Text);
+                string password = RandomGenerator.GenerateRandomPassword();
+
+                string query = "INSERT INTO Employee ( Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Employee_Username, Employee_Password, Job_ID) VALUES (@name, @surname, @admin, @clerk, @username, @password, @jobId)";
+
+
+                using (SqlConnection conn = new SqlConnection(connection))
                 {
-                    MessageBox.Show("Please complete all fields and ensure all errors are corrected");
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@surname", surname);
+                        command.Parameters.AddWithValue("@admin", admin);
+                        command.Parameters.AddWithValue("@clerk", clerk);
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+                        command.Parameters.AddWithValue("@jobId", selectedJobID);
+
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Employee " + name + " " + surname + " has been added");
+                        MessageBox.Show("Employee username: " + username + "\n" + "Employee default password: " + password);
+                        //MessageBox.Show("Employee default password: " + password);
+                        LoadData();
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please complete all fields and ensure all errors are corrected");
+            }
+        }
 
 
 
@@ -310,7 +310,7 @@ namespace HotelManagementSystem
 
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
-
+            PopulateDeleteFields(selectedEmployeeID);
             string query = "DELETE FROM Employee WHERE Employee_Username = @employeeUsername";
             string username = txtDeleteSerach.Text;
 
@@ -322,7 +322,7 @@ namespace HotelManagementSystem
                     command.Parameters.AddWithValue("@employeeUsername", username);
 
                     DialogResult dialogResult = MessageBox.Show("Are you sure you would like to delete this user:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if(dialogResult == DialogResult.Yes)
+                    if (dialogResult == DialogResult.Yes)
                     {
                         int rowsAffected = command.ExecuteNonQuery();
 
@@ -331,7 +331,7 @@ namespace HotelManagementSystem
                             command.ExecuteNonQuery();
                             MessageBox.Show("Employee sucessfully deleted");
                         }
-                        else 
+                        else
                         {
                             MessageBox.Show("No employee found with the provided username.");
                         }
@@ -353,19 +353,19 @@ namespace HotelManagementSystem
             }
 
             // Show initial confirmation message
-            DialogResult initialConfirm = MessageBox.Show("Are you sure you want to update this employee's details?","Confirm Update",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult initialConfirm = MessageBox.Show("Are you sure you want to update this employee's details?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (initialConfirm == DialogResult.No)
             {
                 MessageBox.Show("Update cancelled.");
                 return; // Exit the method if the user does not confirm
             }
-            
+
             // Clear previous errors
             errorProvider1.Clear();
 
             // Validate inputs
-            bool hasErrors = !string.IsNullOrEmpty(errorProvider1.GetError(txtUpdateFName)) ||!string.IsNullOrEmpty(errorProvider1.GetError(txtUpdateLName));
+            bool hasErrors = !string.IsNullOrEmpty(errorProvider1.GetError(txtUpdateFName)) || !string.IsNullOrEmpty(errorProvider1.GetError(txtUpdateLName));
 
             if (string.IsNullOrEmpty(txtUpdateFName.Text.Trim()) && string.IsNullOrEmpty(txtUpdateLName.Text.Trim()) && cmbUpdateRole.SelectedItem == null && cmbUpdateJob.SelectedItem == null)
             {
@@ -501,7 +501,7 @@ namespace HotelManagementSystem
             // Update the DataGridView with the constructed query
             UpdateEmployeeDataGridView(searchTerm, employeeDataGridView, query);
         }
- 
+
         private void cmbAddJob_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -510,7 +510,7 @@ namespace HotelManagementSystem
         private void txtAddFName_TextChanged(object sender, EventArgs e)
         {
             ValidateTextBox(txtAddFName);
-            
+
         }
 
         private void txtDeleteSerach_TextChanged(object sender, EventArgs e)
@@ -615,6 +615,64 @@ namespace HotelManagementSystem
                         DataTable dt = new DataTable();
                         dt.Load(reader);
                         employeeDataGridView.DataSource = dt;
+                    }
+                }
+            }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private int selectedEmployeeID = -1;
+        private void employeeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Ensure valid row and column index
+            {
+                DataGridViewRow row = employeeDataGridView.Rows[e.RowIndex];
+                
+                if (row.Cells["Employee_ID"].Value != DBNull.Value)
+                {
+                    selectedEmployeeID = Convert.ToInt32(row.Cells["Employee_ID"].Value);
+
+                    // Check which tab or mode is active and populate fields accordingly
+                    if (tabControl1.SelectedTab == tabPage2)
+                    {
+                        PopulateDeleteFields(selectedEmployeeID);
+                    }
+                }
+                else
+                {
+                    selectedEmployeeID = -1; // Default to invalid ID if cell value is not present
+                }
+            }
+        }
+
+        private void PopulateDeleteFields(int employeeId)
+        {
+            string query = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_ID = @id";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@id", employeeId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
+                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
+                            txtVerifyAdmin.Text = reader["Is_Admin_YN"].ToString();
+                            txtVerifyClerk.Text = reader["Is_Clerk_YN"].ToString();
+                            txtVerifyJob.Text = reader["Job_Id"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }

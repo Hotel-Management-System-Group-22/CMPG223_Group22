@@ -68,7 +68,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bttnSearch = new System.Windows.Forms.Button();
+            this.txtSearchLName = new System.Windows.Forms.TextBox();
+            this.txtSearchFName = new System.Windows.Forms.TextBox();
             this.btnSearchReset = new System.Windows.Forms.Button();
             this.rdoStaff = new System.Windows.Forms.RadioButton();
             this.rdoDes = new System.Windows.Forms.RadioButton();
@@ -78,6 +83,8 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hotelManagementSystemDataSet = new HotelManagementSystem.HotelManagementSystemDataSet();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.EmployeeTableAdapter();
@@ -104,13 +111,17 @@
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtSearchFName = new System.Windows.Forms.TextBox();
-            this.txtSearchLName = new System.Windows.Forms.TextBox();
-            this.bttnSearch = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtVerifyFName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtVerifyLName = new System.Windows.Forms.TextBox();
+            this.txtVerifyAdmin = new System.Windows.Forms.TextBox();
+            this.txtVerifyClerk = new System.Windows.Forms.TextBox();
+            this.txtVerifyJob = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -126,6 +137,7 @@
             this.employeeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -289,7 +301,7 @@
             // 
             // btnDeleteReset
             // 
-            this.btnDeleteReset.Location = new System.Drawing.Point(512, 81);
+            this.btnDeleteReset.Location = new System.Drawing.Point(484, 41);
             this.btnDeleteReset.Name = "btnDeleteReset";
             this.btnDeleteReset.Size = new System.Drawing.Size(298, 32);
             this.btnDeleteReset.TabIndex = 9;
@@ -299,7 +311,7 @@
             // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(243, 181);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(127, 194);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
@@ -310,7 +322,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 86);
+            this.label8.Location = new System.Drawing.Point(67, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(184, 16);
             this.label8.TabIndex = 1;
@@ -318,7 +330,7 @@
             // 
             // txtDeleteSerach
             // 
-            this.txtDeleteSerach.Location = new System.Drawing.Point(299, 86);
+            this.txtDeleteSerach.Location = new System.Drawing.Point(271, 46);
             this.txtDeleteSerach.Name = "txtDeleteSerach";
             this.txtDeleteSerach.Size = new System.Drawing.Size(180, 22);
             this.txtDeleteSerach.TabIndex = 0;
@@ -472,6 +484,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.btnDeleteReset);
             this.tabPage2.Controls.Add(this.txtDeleteSerach);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
@@ -482,6 +495,7 @@
             this.tabPage2.Size = new System.Drawing.Size(835, 306);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tabPage3
             // 
@@ -529,13 +543,56 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // flowLayoutPanel1
+            // label16
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(314, 362);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(418, 19);
-            this.flowLayoutPanel1.TabIndex = 12;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(473, 107);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 16);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Last Name:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(473, 79);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 16);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "First Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(473, 50);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 16);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Username:";
+            // 
+            // bttnSearch
+            // 
+            this.bttnSearch.Location = new System.Drawing.Point(495, 233);
+            this.bttnSearch.Name = "bttnSearch";
+            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
+            this.bttnSearch.TabIndex = 18;
+            this.bttnSearch.Text = "SEARCH";
+            this.bttnSearch.UseVisualStyleBackColor = true;
+            this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtSearchLName
+            // 
+            this.txtSearchLName.Location = new System.Drawing.Point(556, 101);
+            this.txtSearchLName.Name = "txtSearchLName";
+            this.txtSearchLName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchLName.TabIndex = 17;
+            // 
+            // txtSearchFName
+            // 
+            this.txtSearchFName.Location = new System.Drawing.Point(556, 73);
+            this.txtSearchFName.Name = "txtSearchFName";
+            this.txtSearchFName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchFName.TabIndex = 16;
             // 
             // btnSearchReset
             // 
@@ -628,6 +685,23 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Filter Users:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(430, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 141);
+            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search by:";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(314, 362);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(418, 19);
+            this.flowLayoutPanel1.TabIndex = 12;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // hotelManagementSystemDataSet
             // 
             this.hotelManagementSystemDataSet.DataSetName = "HotelManagementSystemDataSet";
@@ -672,6 +746,7 @@
             this.employeeDataGridView.RowTemplate.Height = 24;
             this.employeeDataGridView.Size = new System.Drawing.Size(1130, 282);
             this.employeeDataGridView.TabIndex = 12;
+            this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -746,7 +821,7 @@
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -761,14 +836,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -776,7 +851,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -785,13 +860,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // employeeBindingNavigator
             // 
@@ -817,7 +892,7 @@
             this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employeeBindingNavigator.Name = "employeeBindingNavigator";
             this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(1278, 31);
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(1278, 27);
             this.employeeBindingNavigator.TabIndex = 12;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -827,7 +902,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -836,7 +911,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // errorProvider1
@@ -847,65 +922,109 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // txtSearchFName
+            // groupBox3
             // 
-            this.txtSearchFName.Location = new System.Drawing.Point(556, 73);
-            this.txtSearchFName.Name = "txtSearchFName";
-            this.txtSearchFName.Size = new System.Drawing.Size(202, 22);
-            this.txtSearchFName.TabIndex = 16;
+            this.groupBox3.Controls.Add(this.txtVerifyJob);
+            this.groupBox3.Controls.Add(this.txtVerifyClerk);
+            this.groupBox3.Controls.Add(this.txtVerifyAdmin);
+            this.groupBox3.Controls.Add(this.txtVerifyLName);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.txtVerifyFName);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(484, 88);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(298, 215);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Verfify Employee details";
             // 
-            // txtSearchLName
+            // label7
             // 
-            this.txtSearchLName.Location = new System.Drawing.Point(556, 101);
-            this.txtSearchLName.Name = "txtSearchLName";
-            this.txtSearchLName.Size = new System.Drawing.Size(202, 22);
-            this.txtSearchLName.TabIndex = 17;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Employee First Name";
             // 
-            // bttnSearch
+            // label17
             // 
-            this.bttnSearch.Location = new System.Drawing.Point(495, 233);
-            this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
-            this.bttnSearch.TabIndex = 18;
-            this.bttnSearch.Text = "SEARCH";
-            this.bttnSearch.UseVisualStyleBackColor = true;
-            this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(140, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Employee Last Name:";
             // 
-            // label14
+            // label18
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(473, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 16);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Username:";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Is Admin:";
             // 
-            // label15
+            // txtVerifyFName
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(473, 79);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 16);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "First Name:";
+            this.txtVerifyFName.Location = new System.Drawing.Point(178, 35);
+            this.txtVerifyFName.Name = "txtVerifyFName";
+            this.txtVerifyFName.ReadOnly = true;
+            this.txtVerifyFName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyFName.TabIndex = 3;
             // 
-            // label16
+            // label19
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(473, 107);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 16);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Last Name:";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 138);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(54, 16);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Is Clerk:";
             // 
-            // groupBox2
+            // label20
             // 
-            this.groupBox2.Location = new System.Drawing.Point(430, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 141);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Search by:";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 178);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 16);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Employee Job:";
+            // 
+            // txtVerifyLName
+            // 
+            this.txtVerifyLName.Location = new System.Drawing.Point(178, 70);
+            this.txtVerifyLName.Name = "txtVerifyLName";
+            this.txtVerifyLName.ReadOnly = true;
+            this.txtVerifyLName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyLName.TabIndex = 6;
+            // 
+            // txtVerifyAdmin
+            // 
+            this.txtVerifyAdmin.Location = new System.Drawing.Point(178, 98);
+            this.txtVerifyAdmin.Name = "txtVerifyAdmin";
+            this.txtVerifyAdmin.ReadOnly = true;
+            this.txtVerifyAdmin.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyAdmin.TabIndex = 7;
+            // 
+            // txtVerifyClerk
+            // 
+            this.txtVerifyClerk.Location = new System.Drawing.Point(178, 135);
+            this.txtVerifyClerk.Name = "txtVerifyClerk";
+            this.txtVerifyClerk.ReadOnly = true;
+            this.txtVerifyClerk.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyClerk.TabIndex = 8;
+            // 
+            // txtVerifyJob
+            // 
+            this.txtVerifyJob.Location = new System.Drawing.Point(178, 172);
+            this.txtVerifyJob.Name = "txtVerifyJob";
+            this.txtVerifyJob.ReadOnly = true;
+            this.txtVerifyJob.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyJob.TabIndex = 9;
             // 
             // Employees
             // 
@@ -940,6 +1059,8 @@
             this.employeeBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1027,5 +1148,16 @@
         private System.Windows.Forms.RadioButton rdoClerk;
         private System.Windows.Forms.RadioButton rdoAdmin;
         private System.Windows.Forms.RadioButton rdoStaff;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtVerifyJob;
+        private System.Windows.Forms.TextBox txtVerifyClerk;
+        private System.Windows.Forms.TextBox txtVerifyAdmin;
+        private System.Windows.Forms.TextBox txtVerifyLName;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtVerifyFName;
     }
 }
