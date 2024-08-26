@@ -66,6 +66,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtVerifyJob = new System.Windows.Forms.TextBox();
+            this.txtVerifyClerk = new System.Windows.Forms.TextBox();
+            this.txtVerifyAdmin = new System.Windows.Forms.TextBox();
+            this.txtVerifyLName = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtVerifyFName = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
@@ -111,23 +122,14 @@
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtVerifyFName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtVerifyLName = new System.Windows.Forms.TextBox();
-            this.txtVerifyAdmin = new System.Windows.Forms.TextBox();
-            this.txtVerifyClerk = new System.Windows.Forms.TextBox();
-            this.txtVerifyJob = new System.Windows.Forms.TextBox();
+            this.cbConfirm = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).BeginInit();
@@ -137,7 +139,6 @@
             this.employeeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -311,7 +312,7 @@
             // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(127, 194);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(123, 202);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
@@ -484,6 +485,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbConfirm);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.btnDeleteReset);
             this.tabPage2.Controls.Add(this.txtDeleteSerach);
@@ -496,6 +498,110 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtVerifyJob);
+            this.groupBox3.Controls.Add(this.txtVerifyClerk);
+            this.groupBox3.Controls.Add(this.txtVerifyAdmin);
+            this.groupBox3.Controls.Add(this.txtVerifyLName);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.txtVerifyFName);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(484, 88);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(298, 215);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Verfify Employee details";
+            // 
+            // txtVerifyJob
+            // 
+            this.txtVerifyJob.Location = new System.Drawing.Point(178, 172);
+            this.txtVerifyJob.Name = "txtVerifyJob";
+            this.txtVerifyJob.ReadOnly = true;
+            this.txtVerifyJob.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyJob.TabIndex = 9;
+            // 
+            // txtVerifyClerk
+            // 
+            this.txtVerifyClerk.Location = new System.Drawing.Point(178, 135);
+            this.txtVerifyClerk.Name = "txtVerifyClerk";
+            this.txtVerifyClerk.ReadOnly = true;
+            this.txtVerifyClerk.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyClerk.TabIndex = 8;
+            // 
+            // txtVerifyAdmin
+            // 
+            this.txtVerifyAdmin.Location = new System.Drawing.Point(178, 98);
+            this.txtVerifyAdmin.Name = "txtVerifyAdmin";
+            this.txtVerifyAdmin.ReadOnly = true;
+            this.txtVerifyAdmin.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyAdmin.TabIndex = 7;
+            // 
+            // txtVerifyLName
+            // 
+            this.txtVerifyLName.Location = new System.Drawing.Point(178, 70);
+            this.txtVerifyLName.Name = "txtVerifyLName";
+            this.txtVerifyLName.ReadOnly = true;
+            this.txtVerifyLName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyLName.TabIndex = 6;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(15, 178);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 16);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Employee Job:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 138);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(54, 16);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Is Clerk:";
+            // 
+            // txtVerifyFName
+            // 
+            this.txtVerifyFName.Location = new System.Drawing.Point(178, 35);
+            this.txtVerifyFName.Name = "txtVerifyFName";
+            this.txtVerifyFName.ReadOnly = true;
+            this.txtVerifyFName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyFName.TabIndex = 3;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Is Admin:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(15, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(140, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Employee Last Name:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Employee First Name";
             // 
             // tabPage3
             // 
@@ -922,109 +1028,15 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // groupBox3
+            // cbConfirm
             // 
-            this.groupBox3.Controls.Add(this.txtVerifyJob);
-            this.groupBox3.Controls.Add(this.txtVerifyClerk);
-            this.groupBox3.Controls.Add(this.txtVerifyAdmin);
-            this.groupBox3.Controls.Add(this.txtVerifyLName);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.txtVerifyFName);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(484, 88);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(298, 215);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Verfify Employee details";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Employee First Name";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 16);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Employee Last Name:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(15, 106);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 16);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Is Admin:";
-            // 
-            // txtVerifyFName
-            // 
-            this.txtVerifyFName.Location = new System.Drawing.Point(178, 35);
-            this.txtVerifyFName.Name = "txtVerifyFName";
-            this.txtVerifyFName.ReadOnly = true;
-            this.txtVerifyFName.Size = new System.Drawing.Size(100, 22);
-            this.txtVerifyFName.TabIndex = 3;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 138);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(54, 16);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Is Clerk:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 178);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 16);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Employee Job:";
-            // 
-            // txtVerifyLName
-            // 
-            this.txtVerifyLName.Location = new System.Drawing.Point(178, 70);
-            this.txtVerifyLName.Name = "txtVerifyLName";
-            this.txtVerifyLName.ReadOnly = true;
-            this.txtVerifyLName.Size = new System.Drawing.Size(100, 22);
-            this.txtVerifyLName.TabIndex = 6;
-            // 
-            // txtVerifyAdmin
-            // 
-            this.txtVerifyAdmin.Location = new System.Drawing.Point(178, 98);
-            this.txtVerifyAdmin.Name = "txtVerifyAdmin";
-            this.txtVerifyAdmin.ReadOnly = true;
-            this.txtVerifyAdmin.Size = new System.Drawing.Size(100, 22);
-            this.txtVerifyAdmin.TabIndex = 7;
-            // 
-            // txtVerifyClerk
-            // 
-            this.txtVerifyClerk.Location = new System.Drawing.Point(178, 135);
-            this.txtVerifyClerk.Name = "txtVerifyClerk";
-            this.txtVerifyClerk.ReadOnly = true;
-            this.txtVerifyClerk.Size = new System.Drawing.Size(100, 22);
-            this.txtVerifyClerk.TabIndex = 8;
-            // 
-            // txtVerifyJob
-            // 
-            this.txtVerifyJob.Location = new System.Drawing.Point(178, 172);
-            this.txtVerifyJob.Name = "txtVerifyJob";
-            this.txtVerifyJob.ReadOnly = true;
-            this.txtVerifyJob.Size = new System.Drawing.Size(100, 22);
-            this.txtVerifyJob.TabIndex = 9;
+            this.cbConfirm.AutoSize = true;
+            this.cbConfirm.Location = new System.Drawing.Point(91, 170);
+            this.cbConfirm.Name = "cbConfirm";
+            this.cbConfirm.Size = new System.Drawing.Size(360, 20);
+            this.cbConfirm.TabIndex = 11;
+            this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+            this.cbConfirm.UseVisualStyleBackColor = true;
             // 
             // Employees
             // 
@@ -1047,6 +1059,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -1059,8 +1073,6 @@
             this.employeeBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1159,5 +1171,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtVerifyFName;
+        private System.Windows.Forms.CheckBox cbConfirm;
     }
 }

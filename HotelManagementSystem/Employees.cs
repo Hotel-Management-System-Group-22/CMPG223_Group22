@@ -16,6 +16,7 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Text.RegularExpressions;
 using System.Diagnostics.Eventing.Reader;
+using System.Collections;
 
 namespace HotelManagementSystem
 {
@@ -244,6 +245,14 @@ namespace HotelManagementSystem
         {
             ValidateTextBox(txtAddFName);
             ValidateTextBox(txtAddLName);
+            if (cmbAddJob.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbAddJob, "Please select job");
+            }
+            else if (cmbAddRole.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbAddRole, "Please select role");
+            }
             if (string.IsNullOrEmpty(errorProvider1.GetError(txtAddFName)) && string.IsNullOrEmpty(errorProvider1.GetError(txtAddLName)) && cmbAddRole.SelectedItem != null && cmbAddJob.SelectedItem != null)
             {
                 int clerk = 0;
@@ -310,17 +319,61 @@ namespace HotelManagementSystem
 
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
-            PopulateDeleteFields(selectedEmployeeID);
-            string query = "DELETE FROM Employee WHERE Employee_Username = @employeeUsername";
-            string username = txtDeleteSerach.Text;
+            //PopulateDeleteFields(selectedEmployeeID);
+
+            string username = txtDeleteSerach.Text; // Assuming txtDeleteSearch is the TextBox for username input
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("Please enter a username to search.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
+            string Deletequery = "DELETE FROM Employee WHERE Employee_Username = @employeeUsername";
+            //string username = txtDeleteSerach.Text;
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand(query, conn))
+
+                using (SqlCommand command = new SqlCommand(Selectquery, conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Populate the text boxes with the retrieved data
+                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
+                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
+                            txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
+                            txtVerifyClerk.Text = Convert.ToBoolean(reader["Is_Clerk_YN"]) ? "Yes" : "No";
+                            txtVerifyJob.Text = reader["Job_Id"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided username.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                            //ClearVerifyFields(); // Optionally clear fields if no employee is found
+                        }
+                    }
+                }
+            }
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(Deletequery, conn))
                 {
                     command.Parameters.AddWithValue("@employeeUsername", username);
 
+                    if (!cbConfirm.Checked)
+                    {
+                        MessageBox.Show("Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete");
+                        return;
+                    }
                     DialogResult dialogResult = MessageBox.Show("Are you sure you would like to delete this user:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -345,6 +398,14 @@ namespace HotelManagementSystem
         {
             ValidateTextBox(txtUpdateFName);
             ValidateTextBox(txtUpdateLName);
+            if (cmbUpdateJob.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbUpdateJob, "Please select job");
+            }
+            else if (cmbUpdateRole.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(cmbUpdateRole, "Please select role");
+            }
             // Check if username is provided
             if (string.IsNullOrWhiteSpace(txtUpdateSearch.Text))
             {
@@ -624,59 +685,14 @@ namespace HotelManagementSystem
         {
 
         }
-        private int selectedEmployeeID = -1;
+        //private int selectedEmployeeID = -1;
         private void employeeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Ensure valid row and column index
-            {
-                DataGridViewRow row = employeeDataGridView.Rows[e.RowIndex];
-                
-                if (row.Cells["Employee_ID"].Value != DBNull.Value)
-                {
-                    selectedEmployeeID = Convert.ToInt32(row.Cells["Employee_ID"].Value);
 
-                    // Check which tab or mode is active and populate fields accordingly
-                    if (tabControl1.SelectedTab == tabPage2)
-                    {
-                        PopulateDeleteFields(selectedEmployeeID);
-                    }
-                }
-                else
-                {
-                    selectedEmployeeID = -1; // Default to invalid ID if cell value is not present
-                }
-            }
         }
 
-        private void PopulateDeleteFields(int employeeId)
-        {
-            string query = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_ID = @id";
-            using (SqlConnection conn = new SqlConnection(connection))
-            {
-                conn.Open();
-
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@id", employeeId);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
-                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
-                            txtVerifyAdmin.Text = reader["Is_Admin_YN"].ToString();
-                            txtVerifyClerk.Text = reader["Is_Clerk_YN"].ToString();
-                            txtVerifyJob.Text = reader["Job_Id"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No employee found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
+        
         }
     }
-}
+
 
