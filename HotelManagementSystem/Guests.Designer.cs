@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpBoxMenu = new System.Windows.Forms.GroupBox();
             this.BtnDeleteGuest = new System.Windows.Forms.Button();
             this.BtnUpdatePage = new System.Windows.Forms.Button();
             this.BtnAddPage = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tbPgAddGuest = new System.Windows.Forms.TabPage();
+            this.tbAddGuest = new System.Windows.Forms.TabPage();
             this.BtnAddGuest = new System.Windows.Forms.Button();
             this.TxtFName_Add = new System.Windows.Forms.TextBox();
             this.TxtLName_Add = new System.Windows.Forms.TextBox();
@@ -44,7 +45,7 @@
             this.lblLNameAdd = new System.Windows.Forms.Label();
             this.LblContactNo = new System.Windows.Forms.Label();
             this.LblEmailAddress = new System.Windows.Forms.Label();
-            this.tbPgUpdateGuest = new System.Windows.Forms.TabPage();
+            this.tbUpdateGuest = new System.Windows.Forms.TabPage();
             this.LblEmail_Update = new System.Windows.Forms.Label();
             this.LblContactNo_Update = new System.Windows.Forms.Label();
             this.LblLName_Update = new System.Windows.Forms.Label();
@@ -52,51 +53,61 @@
             this.TxtContactNo_Update = new System.Windows.Forms.TextBox();
             this.TxtBoxEmail_Update = new System.Windows.Forms.TextBox();
             this.BtnUpdate = new System.Windows.Forms.Button();
-            this.grpBxSortBy = new System.Windows.Forms.GroupBox();
-            this.RdnAsc = new System.Windows.Forms.RadioButton();
-            this.RdnDesc = new System.Windows.Forms.RadioButton();
             this.BtnReset = new System.Windows.Forms.Button();
             this.TxtFName_Update = new System.Windows.Forms.TextBox();
-            this.LblGroupBY = new System.Windows.Forms.Label();
             this.LblFName_Update = new System.Windows.Forms.Label();
-            this.tbPageDeleteGuest = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RdnBtnAscDelete = new System.Windows.Forms.RadioButton();
-            this.RdnBtnDescDelete = new System.Windows.Forms.RadioButton();
-            this.txtFName_Delete = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnReset_Delet = new System.Windows.Forms.Button();
+            this.tbDeleteGuest = new System.Windows.Forms.TabPage();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSearchGuest = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
+            this.rdoLName = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.DgvGuests = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLName_delete = new System.Windows.Forms.TextBox();
+            this.txtCellNr_Delete = new System.Windows.Forms.TextBox();
+            this.txtEmail_Delete = new System.Windows.Forms.TextBox();
+            this.txtFName_Delete = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbConfirmation = new System.Windows.Forms.CheckBox();
+            this.txtFName_Search = new System.Windows.Forms.TextBox();
+            this.txtLName_Search = new System.Windows.Forms.TextBox();
+            this.rdoFName = new System.Windows.Forms.RadioButton();
+            this.txtContact_Search = new System.Windows.Forms.TextBox();
+            this.rdoContact = new System.Windows.Forms.RadioButton();
+            this.txtEmail_Search = new System.Windows.Forms.TextBox();
+            this.rdoEmail = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdoDsc = new System.Windows.Forms.RadioButton();
+            this.rdoAsc = new System.Windows.Forms.RadioButton();
+            this.btnResetSearch = new System.Windows.Forms.Button();
             this.grpBoxMenu.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tbPgAddGuest.SuspendLayout();
-            this.tbPgUpdateGuest.SuspendLayout();
-            this.grpBxSortBy.SuspendLayout();
-            this.tbPageDeleteGuest.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tbAddGuest.SuspendLayout();
+            this.tbUpdateGuest.SuspendLayout();
+            this.tbDeleteGuest.SuspendLayout();
+            this.tbSearchGuest.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBoxMenu
             // 
+            this.grpBoxMenu.Controls.Add(this.button2);
             this.grpBoxMenu.Controls.Add(this.BtnDeleteGuest);
             this.grpBoxMenu.Controls.Add(this.BtnUpdatePage);
             this.grpBoxMenu.Controls.Add(this.BtnAddPage);
             this.grpBoxMenu.Location = new System.Drawing.Point(937, 12);
             this.grpBoxMenu.Name = "grpBoxMenu";
-            this.grpBoxMenu.Size = new System.Drawing.Size(268, 238);
+            this.grpBoxMenu.Size = new System.Drawing.Size(268, 325);
             this.grpBoxMenu.TabIndex = 0;
             this.grpBoxMenu.TabStop = false;
             this.grpBoxMenu.Text = "Menu";
@@ -133,34 +144,34 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tbPgAddGuest);
-            this.tabControl1.Controls.Add(this.tbPgUpdateGuest);
-            this.tabControl1.Controls.Add(this.tbPageDeleteGuest);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tbAddGuest);
+            this.tabControl1.Controls.Add(this.tbUpdateGuest);
+            this.tabControl1.Controls.Add(this.tbDeleteGuest);
+            this.tabControl1.Controls.Add(this.tbSearchGuest);
             this.tabControl1.Location = new System.Drawing.Point(38, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(762, 279);
             this.tabControl1.TabIndex = 1;
             // 
-            // tbPgAddGuest
+            // tbAddGuest
             // 
-            this.tbPgAddGuest.Controls.Add(this.BtnAddGuest);
-            this.tbPgAddGuest.Controls.Add(this.TxtFName_Add);
-            this.tbPgAddGuest.Controls.Add(this.TxtLName_Add);
-            this.tbPgAddGuest.Controls.Add(this.TxtContactNo_Add);
-            this.tbPgAddGuest.Controls.Add(this.TxtEmail_Add);
-            this.tbPgAddGuest.Controls.Add(this.lblFNameAdd);
-            this.tbPgAddGuest.Controls.Add(this.lblLNameAdd);
-            this.tbPgAddGuest.Controls.Add(this.LblContactNo);
-            this.tbPgAddGuest.Controls.Add(this.LblEmailAddress);
-            this.tbPgAddGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbPgAddGuest.Name = "tbPgAddGuest";
-            this.tbPgAddGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPgAddGuest.Size = new System.Drawing.Size(754, 250);
-            this.tbPgAddGuest.TabIndex = 0;
-            this.tbPgAddGuest.Text = "ADD GUEST";
-            this.tbPgAddGuest.UseVisualStyleBackColor = true;
+            this.tbAddGuest.Controls.Add(this.BtnAddGuest);
+            this.tbAddGuest.Controls.Add(this.TxtFName_Add);
+            this.tbAddGuest.Controls.Add(this.TxtLName_Add);
+            this.tbAddGuest.Controls.Add(this.TxtContactNo_Add);
+            this.tbAddGuest.Controls.Add(this.TxtEmail_Add);
+            this.tbAddGuest.Controls.Add(this.lblFNameAdd);
+            this.tbAddGuest.Controls.Add(this.lblLNameAdd);
+            this.tbAddGuest.Controls.Add(this.LblContactNo);
+            this.tbAddGuest.Controls.Add(this.LblEmailAddress);
+            this.tbAddGuest.Location = new System.Drawing.Point(4, 25);
+            this.tbAddGuest.Name = "tbAddGuest";
+            this.tbAddGuest.Padding = new System.Windows.Forms.Padding(3);
+            this.tbAddGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbAddGuest.TabIndex = 0;
+            this.tbAddGuest.Text = "ADD GUEST";
+            this.tbAddGuest.UseVisualStyleBackColor = true;
             // 
             // BtnAddGuest
             // 
@@ -178,6 +189,7 @@
             this.TxtFName_Add.Name = "TxtFName_Add";
             this.TxtFName_Add.Size = new System.Drawing.Size(100, 22);
             this.TxtFName_Add.TabIndex = 10;
+            this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
             // TxtLName_Add
             // 
@@ -185,6 +197,7 @@
             this.TxtLName_Add.Name = "TxtLName_Add";
             this.TxtLName_Add.Size = new System.Drawing.Size(100, 22);
             this.TxtLName_Add.TabIndex = 9;
+            this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
             // TxtContactNo_Add
             // 
@@ -192,6 +205,7 @@
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
             this.TxtContactNo_Add.Size = new System.Drawing.Size(100, 22);
             this.TxtContactNo_Add.TabIndex = 8;
+            this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
             // TxtEmail_Add
             // 
@@ -199,6 +213,7 @@
             this.TxtEmail_Add.Name = "TxtEmail_Add";
             this.TxtEmail_Add.Size = new System.Drawing.Size(100, 22);
             this.TxtEmail_Add.TabIndex = 7;
+            this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
             // 
             // lblFNameAdd
             // 
@@ -223,9 +238,9 @@
             this.LblContactNo.AutoSize = true;
             this.LblContactNo.Location = new System.Drawing.Point(20, 100);
             this.LblContactNo.Name = "LblContactNo";
-            this.LblContactNo.Size = new System.Drawing.Size(101, 16);
+            this.LblContactNo.Size = new System.Drawing.Size(109, 16);
             this.LblContactNo.TabIndex = 5;
-            this.LblContactNo.Text = "Contct Number: ";
+            this.LblContactNo.Text = "Contact Number: ";
             // 
             // LblEmailAddress
             // 
@@ -236,26 +251,24 @@
             this.LblEmailAddress.TabIndex = 6;
             this.LblEmailAddress.Text = "Email Address: ";
             // 
-            // tbPgUpdateGuest
+            // tbUpdateGuest
             // 
-            this.tbPgUpdateGuest.Controls.Add(this.LblEmail_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.LblContactNo_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.LblLName_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.TxtLName_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.TxtContactNo_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.TxtBoxEmail_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.BtnUpdate);
-            this.tbPgUpdateGuest.Controls.Add(this.grpBxSortBy);
-            this.tbPgUpdateGuest.Controls.Add(this.BtnReset);
-            this.tbPgUpdateGuest.Controls.Add(this.TxtFName_Update);
-            this.tbPgUpdateGuest.Controls.Add(this.LblGroupBY);
-            this.tbPgUpdateGuest.Controls.Add(this.LblFName_Update);
-            this.tbPgUpdateGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbPgUpdateGuest.Name = "tbPgUpdateGuest";
-            this.tbPgUpdateGuest.Size = new System.Drawing.Size(754, 250);
-            this.tbPgUpdateGuest.TabIndex = 2;
-            this.tbPgUpdateGuest.Text = "UPDATE GUEST";
-            this.tbPgUpdateGuest.UseVisualStyleBackColor = true;
+            this.tbUpdateGuest.Controls.Add(this.LblEmail_Update);
+            this.tbUpdateGuest.Controls.Add(this.LblContactNo_Update);
+            this.tbUpdateGuest.Controls.Add(this.LblLName_Update);
+            this.tbUpdateGuest.Controls.Add(this.TxtLName_Update);
+            this.tbUpdateGuest.Controls.Add(this.TxtContactNo_Update);
+            this.tbUpdateGuest.Controls.Add(this.TxtBoxEmail_Update);
+            this.tbUpdateGuest.Controls.Add(this.BtnUpdate);
+            this.tbUpdateGuest.Controls.Add(this.BtnReset);
+            this.tbUpdateGuest.Controls.Add(this.TxtFName_Update);
+            this.tbUpdateGuest.Controls.Add(this.LblFName_Update);
+            this.tbUpdateGuest.Location = new System.Drawing.Point(4, 25);
+            this.tbUpdateGuest.Name = "tbUpdateGuest";
+            this.tbUpdateGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbUpdateGuest.TabIndex = 2;
+            this.tbUpdateGuest.Text = "UPDATE GUEST";
+            this.tbUpdateGuest.UseVisualStyleBackColor = true;
             // 
             // LblEmail_Update
             // 
@@ -290,6 +303,7 @@
             this.TxtLName_Update.Name = "TxtLName_Update";
             this.TxtLName_Update.Size = new System.Drawing.Size(100, 22);
             this.TxtLName_Update.TabIndex = 10;
+            this.TxtLName_Update.TextChanged += new System.EventHandler(this.TxtLName_Update_TextChanged);
             // 
             // TxtContactNo_Update
             // 
@@ -297,6 +311,7 @@
             this.TxtContactNo_Update.Name = "TxtContactNo_Update";
             this.TxtContactNo_Update.Size = new System.Drawing.Size(100, 22);
             this.TxtContactNo_Update.TabIndex = 9;
+            this.TxtContactNo_Update.TextChanged += new System.EventHandler(this.TxtContactNo_Update_TextChanged);
             // 
             // TxtBoxEmail_Update
             // 
@@ -304,10 +319,11 @@
             this.TxtBoxEmail_Update.Name = "TxtBoxEmail_Update";
             this.TxtBoxEmail_Update.Size = new System.Drawing.Size(100, 22);
             this.TxtBoxEmail_Update.TabIndex = 8;
+            this.TxtBoxEmail_Update.TextChanged += new System.EventHandler(this.TxtBoxEmail_Update_TextChanged);
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(614, 73);
+            this.BtnUpdate.Location = new System.Drawing.Point(160, 183);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(75, 23);
             this.BtnUpdate.TabIndex = 3;
@@ -315,42 +331,9 @@
             this.BtnUpdate.UseVisualStyleBackColor = true;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // grpBxSortBy
-            // 
-            this.grpBxSortBy.Controls.Add(this.RdnAsc);
-            this.grpBxSortBy.Controls.Add(this.RdnDesc);
-            this.grpBxSortBy.Location = new System.Drawing.Point(192, 147);
-            this.grpBxSortBy.Name = "grpBxSortBy";
-            this.grpBxSortBy.Size = new System.Drawing.Size(200, 100);
-            this.grpBxSortBy.TabIndex = 7;
-            this.grpBxSortBy.TabStop = false;
-            this.grpBxSortBy.Text = "According to:";
-            // 
-            // RdnAsc
-            // 
-            this.RdnAsc.AutoSize = true;
-            this.RdnAsc.Location = new System.Drawing.Point(33, 23);
-            this.RdnAsc.Name = "RdnAsc";
-            this.RdnAsc.Size = new System.Drawing.Size(85, 20);
-            this.RdnAsc.TabIndex = 6;
-            this.RdnAsc.TabStop = true;
-            this.RdnAsc.Text = "Asceding";
-            this.RdnAsc.UseVisualStyleBackColor = true;
-            // 
-            // RdnDesc
-            // 
-            this.RdnDesc.AutoSize = true;
-            this.RdnDesc.Location = new System.Drawing.Point(33, 64);
-            this.RdnDesc.Name = "RdnDesc";
-            this.RdnDesc.Size = new System.Drawing.Size(94, 20);
-            this.RdnDesc.TabIndex = 5;
-            this.RdnDesc.TabStop = true;
-            this.RdnDesc.Text = "Desceding";
-            this.RdnDesc.UseVisualStyleBackColor = true;
-            // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(614, 17);
+            this.BtnReset.Location = new System.Drawing.Point(37, 183);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(75, 23);
             this.BtnReset.TabIndex = 4;
@@ -364,15 +347,7 @@
             this.TxtFName_Update.Name = "TxtFName_Update";
             this.TxtFName_Update.Size = new System.Drawing.Size(100, 22);
             this.TxtFName_Update.TabIndex = 3;
-            // 
-            // LblGroupBY
-            // 
-            this.LblGroupBY.AutoSize = true;
-            this.LblGroupBY.Location = new System.Drawing.Point(46, 156);
-            this.LblGroupBY.Name = "LblGroupBY";
-            this.LblGroupBY.Size = new System.Drawing.Size(140, 16);
-            this.LblGroupBY.TabIndex = 1;
-            this.LblGroupBY.Text = "Sort by Last Names in:";
+            this.TxtFName_Update.TextChanged += new System.EventHandler(this.TxtFName_Update_TextChanged);
             // 
             // LblFName_Update
             // 
@@ -383,181 +358,80 @@
             this.LblFName_Update.TabIndex = 0;
             this.LblFName_Update.Text = "First Name:";
             // 
-            // tbPageDeleteGuest
+            // tbDeleteGuest
             // 
-            this.tbPageDeleteGuest.Controls.Add(this.groupBox1);
-            this.tbPageDeleteGuest.Controls.Add(this.txtFName_Delete);
-            this.tbPageDeleteGuest.Controls.Add(this.label2);
-            this.tbPageDeleteGuest.Controls.Add(this.label1);
-            this.tbPageDeleteGuest.Controls.Add(this.BtnReset_Delet);
-            this.tbPageDeleteGuest.Controls.Add(this.BtnDelete);
-            this.tbPageDeleteGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbPageDeleteGuest.Name = "tbPageDeleteGuest";
-            this.tbPageDeleteGuest.Size = new System.Drawing.Size(754, 250);
-            this.tbPageDeleteGuest.TabIndex = 3;
-            this.tbPageDeleteGuest.Text = "DELETE GUEST";
-            this.tbPageDeleteGuest.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.RdnBtnAscDelete);
-            this.groupBox1.Controls.Add(this.RdnBtnDescDelete);
-            this.groupBox1.Location = new System.Drawing.Point(227, 91);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 89);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "According to:";
-            // 
-            // RdnBtnAscDelete
-            // 
-            this.RdnBtnAscDelete.AutoSize = true;
-            this.RdnBtnAscDelete.Location = new System.Drawing.Point(6, 28);
-            this.RdnBtnAscDelete.Name = "RdnBtnAscDelete";
-            this.RdnBtnAscDelete.Size = new System.Drawing.Size(85, 20);
-            this.RdnBtnAscDelete.TabIndex = 2;
-            this.RdnBtnAscDelete.TabStop = true;
-            this.RdnBtnAscDelete.Text = "Asceding";
-            this.RdnBtnAscDelete.UseVisualStyleBackColor = true;
-            this.RdnBtnAscDelete.CheckedChanged += new System.EventHandler(this.RdnBtnAscDelete_CheckedChanged);
-            // 
-            // RdnBtnDescDelete
-            // 
-            this.RdnBtnDescDelete.AutoSize = true;
-            this.RdnBtnDescDelete.Location = new System.Drawing.Point(6, 59);
-            this.RdnBtnDescDelete.Name = "RdnBtnDescDelete";
-            this.RdnBtnDescDelete.Size = new System.Drawing.Size(94, 20);
-            this.RdnBtnDescDelete.TabIndex = 3;
-            this.RdnBtnDescDelete.TabStop = true;
-            this.RdnBtnDescDelete.Text = "Desceding";
-            this.RdnBtnDescDelete.UseVisualStyleBackColor = true;
-            // 
-            // txtFName_Delete
-            // 
-            this.txtFName_Delete.Location = new System.Drawing.Point(165, 30);
-            this.txtFName_Delete.Name = "txtFName_Delete";
-            this.txtFName_Delete.Size = new System.Drawing.Size(100, 22);
-            this.txtFName_Delete.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Sort according to Last Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Guest First Name:";
-            // 
-            // BtnReset_Delet
-            // 
-            this.BtnReset_Delet.Location = new System.Drawing.Point(626, 23);
-            this.BtnReset_Delet.Name = "BtnReset_Delet";
-            this.BtnReset_Delet.Size = new System.Drawing.Size(75, 23);
-            this.BtnReset_Delet.TabIndex = 1;
-            this.BtnReset_Delet.Text = "Reset";
-            this.BtnReset_Delet.UseVisualStyleBackColor = true;
-            this.BtnReset_Delet.Click += new System.EventHandler(this.BtnReset_Delet_Click);
+            this.tbDeleteGuest.Controls.Add(this.cbConfirmation);
+            this.tbDeleteGuest.Controls.Add(this.groupBox1);
+            this.tbDeleteGuest.Controls.Add(this.BtnDelete);
+            this.tbDeleteGuest.Location = new System.Drawing.Point(4, 25);
+            this.tbDeleteGuest.Name = "tbDeleteGuest";
+            this.tbDeleteGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbDeleteGuest.TabIndex = 3;
+            this.tbDeleteGuest.Text = "DELETE GUEST";
+            this.tbDeleteGuest.UseVisualStyleBackColor = true;
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(626, 91);
+            this.BtnDelete.Location = new System.Drawing.Point(72, 201);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(202, 46);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // tabPage1
+            // tbSearchGuest
             // 
-            this.tabPage1.AccessibleName = "tbPgSearch";
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.lbl);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(754, 250);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "SEARCH GUEST";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(169, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
+            this.tbSearchGuest.AccessibleName = "tbPgSearch";
+            this.tbSearchGuest.Controls.Add(this.btnResetSearch);
+            this.tbSearchGuest.Controls.Add(this.groupBox3);
+            this.tbSearchGuest.Controls.Add(this.groupBox2);
+            this.tbSearchGuest.Controls.Add(this.btnSearch);
+            this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
+            this.tbSearchGuest.Name = "tbSearchGuest";
+            this.tbSearchGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbSearchGuest.TabIndex = 4;
+            this.tbSearchGuest.Text = "SEARCH GUEST";
+            this.tbSearchGuest.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(169, 86);
+            this.groupBox2.Controls.Add(this.txtEmail_Search);
+            this.groupBox2.Controls.Add(this.rdoEmail);
+            this.groupBox2.Controls.Add(this.txtContact_Search);
+            this.groupBox2.Controls.Add(this.rdoContact);
+            this.groupBox2.Controls.Add(this.txtLName_Search);
+            this.groupBox2.Controls.Add(this.rdoFName);
+            this.groupBox2.Controls.Add(this.txtFName_Search);
+            this.groupBox2.Controls.Add(this.rdoLName);
+            this.groupBox2.Location = new System.Drawing.Point(26, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(381, 157);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Search by:";
             // 
-            // radioButton2
+            // rdoLName
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 21);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 20);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoLName.AutoSize = true;
+            this.rdoLName.Location = new System.Drawing.Point(20, 34);
+            this.rdoLName.Name = "rdoLName";
+            this.rdoLName.Size = new System.Drawing.Size(131, 20);
+            this.rdoLName.TabIndex = 3;
+            this.rdoLName.TabStop = true;
+            this.rdoLName.Text = "Guest Last Name";
+            this.rdoLName.UseVisualStyleBackColor = true;
+            this.rdoLName.CheckedChanged += new System.EventHandler(this.rdoLName_CheckedChanged);
             // 
-            // radioButton1
+            // btnSearch
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(16, 58);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 20);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(605, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(53, 21);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(44, 16);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = "label3";
+            this.btnSearch.Location = new System.Drawing.Point(471, 150);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(145, 42);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.Submit_Click);
             // 
             // DgvGuests
             // 
@@ -570,6 +444,227 @@
             this.DgvGuests.TabIndex = 2;
             this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(11, 244);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(243, 62);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "SEARCH GUEST";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtLName_delete);
+            this.groupBox1.Controls.Add(this.txtCellNr_Delete);
+            this.groupBox1.Controls.Add(this.txtEmail_Delete);
+            this.groupBox1.Controls.Add(this.txtFName_Delete);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(20, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(405, 169);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Confirm Values";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Email Address:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Contact Number:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Last Name:\r\n";
+            // 
+            // txtLName_delete
+            // 
+            this.txtLName_delete.Location = new System.Drawing.Point(158, 64);
+            this.txtLName_delete.Name = "txtLName_delete";
+            this.txtLName_delete.ReadOnly = true;
+            this.txtLName_delete.Size = new System.Drawing.Size(100, 22);
+            this.txtLName_delete.TabIndex = 27;
+            this.txtLName_delete.TextChanged += new System.EventHandler(this.txtLName_delete_TextChanged);
+            // 
+            // txtCellNr_Delete
+            // 
+            this.txtCellNr_Delete.Location = new System.Drawing.Point(158, 92);
+            this.txtCellNr_Delete.Name = "txtCellNr_Delete";
+            this.txtCellNr_Delete.ReadOnly = true;
+            this.txtCellNr_Delete.Size = new System.Drawing.Size(100, 22);
+            this.txtCellNr_Delete.TabIndex = 26;
+            this.txtCellNr_Delete.TextChanged += new System.EventHandler(this.txtCellNr_Delete_TextChanged);
+            // 
+            // txtEmail_Delete
+            // 
+            this.txtEmail_Delete.Location = new System.Drawing.Point(158, 123);
+            this.txtEmail_Delete.Name = "txtEmail_Delete";
+            this.txtEmail_Delete.ReadOnly = true;
+            this.txtEmail_Delete.Size = new System.Drawing.Size(100, 22);
+            this.txtEmail_Delete.TabIndex = 25;
+            this.txtEmail_Delete.TextChanged += new System.EventHandler(this.txtEmail_Delete_TextChanged);
+            // 
+            // txtFName_Delete
+            // 
+            this.txtFName_Delete.Location = new System.Drawing.Point(158, 36);
+            this.txtFName_Delete.Name = "txtFName_Delete";
+            this.txtFName_Delete.ReadOnly = true;
+            this.txtFName_Delete.Size = new System.Drawing.Size(100, 22);
+            this.txtFName_Delete.TabIndex = 24;
+            this.txtFName_Delete.TextChanged += new System.EventHandler(this.txtFName_Delete_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(72, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "First Name:";
+            // 
+            // cbConfirmation
+            // 
+            this.cbConfirmation.AutoSize = true;
+            this.cbConfirmation.Location = new System.Drawing.Point(469, 201);
+            this.cbConfirmation.Name = "cbConfirmation";
+            this.cbConfirmation.Size = new System.Drawing.Size(238, 20);
+            this.cbConfirmation.TabIndex = 24;
+            this.cbConfirmation.Text = "Is this the Guest you want to delete?";
+            this.cbConfirmation.UseVisualStyleBackColor = true;
+            // 
+            // txtFName_Search
+            // 
+            this.txtFName_Search.Location = new System.Drawing.Point(192, 64);
+            this.txtFName_Search.Name = "txtFName_Search";
+            this.txtFName_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtFName_Search.TabIndex = 5;
+            // 
+            // txtLName_Search
+            // 
+            this.txtLName_Search.Location = new System.Drawing.Point(192, 32);
+            this.txtLName_Search.Name = "txtLName_Search";
+            this.txtLName_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtLName_Search.TabIndex = 7;
+            // 
+            // rdoFName
+            // 
+            this.rdoFName.AutoSize = true;
+            this.rdoFName.Location = new System.Drawing.Point(20, 66);
+            this.rdoFName.Name = "rdoFName";
+            this.rdoFName.Size = new System.Drawing.Size(131, 20);
+            this.rdoFName.TabIndex = 6;
+            this.rdoFName.TabStop = true;
+            this.rdoFName.Text = "Guest First Name";
+            this.rdoFName.UseVisualStyleBackColor = true;
+            this.rdoFName.CheckedChanged += new System.EventHandler(this.rdoFName_CheckedChanged);
+            // 
+            // txtContact_Search
+            // 
+            this.txtContact_Search.Location = new System.Drawing.Point(192, 101);
+            this.txtContact_Search.Name = "txtContact_Search";
+            this.txtContact_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtContact_Search.TabIndex = 9;
+            // 
+            // rdoContact
+            // 
+            this.rdoContact.AutoSize = true;
+            this.rdoContact.Location = new System.Drawing.Point(20, 101);
+            this.rdoContact.Name = "rdoContact";
+            this.rdoContact.Size = new System.Drawing.Size(162, 20);
+            this.rdoContact.TabIndex = 8;
+            this.rdoContact.TabStop = true;
+            this.rdoContact.Text = "Guest Contact Number";
+            this.rdoContact.UseVisualStyleBackColor = true;
+            this.rdoContact.CheckedChanged += new System.EventHandler(this.rdoContact_CheckedChanged);
+            // 
+            // txtEmail_Search
+            // 
+            this.txtEmail_Search.Location = new System.Drawing.Point(192, 129);
+            this.txtEmail_Search.Name = "txtEmail_Search";
+            this.txtEmail_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtEmail_Search.TabIndex = 11;
+            // 
+            // rdoEmail
+            // 
+            this.rdoEmail.AutoSize = true;
+            this.rdoEmail.Location = new System.Drawing.Point(20, 129);
+            this.rdoEmail.Name = "rdoEmail";
+            this.rdoEmail.Size = new System.Drawing.Size(100, 20);
+            this.rdoEmail.TabIndex = 10;
+            this.rdoEmail.TabStop = true;
+            this.rdoEmail.Text = "Guest Email";
+            this.rdoEmail.UseVisualStyleBackColor = true;
+            this.rdoEmail.CheckedChanged += new System.EventHandler(this.rdoEmail_CheckedChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdoDsc);
+            this.groupBox3.Controls.Add(this.rdoAsc);
+            this.groupBox3.Location = new System.Drawing.Point(581, 21);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(137, 121);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Sort by:";
+            // 
+            // rdoDsc
+            // 
+            this.rdoDsc.AutoSize = true;
+            this.rdoDsc.Location = new System.Drawing.Point(20, 66);
+            this.rdoDsc.Name = "rdoDsc";
+            this.rdoDsc.Size = new System.Drawing.Size(101, 20);
+            this.rdoDsc.TabIndex = 6;
+            this.rdoDsc.TabStop = true;
+            this.rdoDsc.Text = "Descending";
+            this.rdoDsc.UseVisualStyleBackColor = true;
+            // 
+            // rdoAsc
+            // 
+            this.rdoAsc.AutoSize = true;
+            this.rdoAsc.Location = new System.Drawing.Point(20, 34);
+            this.rdoAsc.Name = "rdoAsc";
+            this.rdoAsc.Size = new System.Drawing.Size(92, 20);
+            this.rdoAsc.TabIndex = 3;
+            this.rdoAsc.TabStop = true;
+            this.rdoAsc.Text = "Ascending";
+            this.rdoAsc.UseVisualStyleBackColor = true;
+            // 
+            // btnResetSearch
+            // 
+            this.btnResetSearch.Location = new System.Drawing.Point(471, 201);
+            this.btnResetSearch.Name = "btnResetSearch";
+            this.btnResetSearch.Size = new System.Drawing.Size(145, 42);
+            this.btnResetSearch.TabIndex = 13;
+            this.btnResetSearch.Text = "Reset";
+            this.btnResetSearch.UseVisualStyleBackColor = true;
+            this.btnResetSearch.Click += new System.EventHandler(this.btnResetSearch_Click);
+            // 
             // Guests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -580,23 +675,24 @@
             this.Controls.Add(this.grpBoxMenu);
             this.Name = "Guests";
             this.Text = "Guests";
+            this.Load += new System.EventHandler(this.Guests_Load);
             this.grpBoxMenu.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tbPgAddGuest.ResumeLayout(false);
-            this.tbPgAddGuest.PerformLayout();
-            this.tbPgUpdateGuest.ResumeLayout(false);
-            this.tbPgUpdateGuest.PerformLayout();
-            this.grpBxSortBy.ResumeLayout(false);
-            this.grpBxSortBy.PerformLayout();
-            this.tbPageDeleteGuest.ResumeLayout(false);
-            this.tbPageDeleteGuest.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tbAddGuest.ResumeLayout(false);
+            this.tbAddGuest.PerformLayout();
+            this.tbUpdateGuest.ResumeLayout(false);
+            this.tbUpdateGuest.PerformLayout();
+            this.tbDeleteGuest.ResumeLayout(false);
+            this.tbDeleteGuest.PerformLayout();
+            this.tbSearchGuest.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -609,9 +705,9 @@
         private System.Windows.Forms.Button BtnUpdatePage;
         private System.Windows.Forms.Button BtnAddPage;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tbPgAddGuest;
-        private System.Windows.Forms.TabPage tbPgUpdateGuest;
-        private System.Windows.Forms.TabPage tbPageDeleteGuest;
+        private System.Windows.Forms.TabPage tbAddGuest;
+        private System.Windows.Forms.TabPage tbUpdateGuest;
+        private System.Windows.Forms.TabPage tbDeleteGuest;
         private System.Windows.Forms.DataGridView DgvGuests;
         private System.Windows.Forms.Label lblFNameAdd;
         private System.Windows.Forms.Label lblLNameAdd;
@@ -622,21 +718,10 @@
         private System.Windows.Forms.TextBox TxtLName_Add;
         private System.Windows.Forms.TextBox TxtContactNo_Add;
         private System.Windows.Forms.TextBox TxtEmail_Add;
-        private System.Windows.Forms.GroupBox grpBxSortBy;
-        private System.Windows.Forms.RadioButton RdnAsc;
-        private System.Windows.Forms.RadioButton RdnDesc;
         private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.TextBox TxtFName_Update;
-        private System.Windows.Forms.Label LblGroupBY;
         private System.Windows.Forms.Label LblFName_Update;
         private System.Windows.Forms.Button BtnUpdate;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton RdnBtnAscDelete;
-        private System.Windows.Forms.RadioButton RdnBtnDescDelete;
-        private System.Windows.Forms.TextBox txtFName_Delete;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnReset_Delet;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.TextBox TxtLName_Update;
         private System.Windows.Forms.TextBox TxtContactNo_Update;
@@ -644,14 +729,33 @@
         private System.Windows.Forms.Label LblEmail_Update;
         private System.Windows.Forms.Label LblContactNo_Update;
         private System.Windows.Forms.Label LblLName_Update;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tbSearchGuest;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rdoLName;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLName_delete;
+        private System.Windows.Forms.TextBox txtCellNr_Delete;
+        private System.Windows.Forms.TextBox txtEmail_Delete;
+        private System.Windows.Forms.TextBox txtFName_Delete;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox cbConfirmation;
+        private System.Windows.Forms.TextBox txtEmail_Search;
+        private System.Windows.Forms.RadioButton rdoEmail;
+        private System.Windows.Forms.TextBox txtContact_Search;
+        private System.Windows.Forms.RadioButton rdoContact;
+        private System.Windows.Forms.TextBox txtLName_Search;
+        private System.Windows.Forms.RadioButton rdoFName;
+        private System.Windows.Forms.TextBox txtFName_Search;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdoDsc;
+        private System.Windows.Forms.RadioButton rdoAsc;
+        private System.Windows.Forms.Button btnResetSearch;
     }
 }
 
