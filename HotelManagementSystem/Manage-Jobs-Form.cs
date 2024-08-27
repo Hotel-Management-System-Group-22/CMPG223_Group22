@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -15,6 +17,11 @@ namespace HotelManagementSystem
 {
     public partial class ManageJobsForm : Form
     {
+        Boolean isAfrikaans = false;
+        public ManageJobsForm(Boolean isAfrikaans) { 
+             this.isAfrikaans = isAfrikaans;
+             InitializeComponent();
+        }
 
         //Connection String
         string connectionString = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
@@ -24,15 +31,56 @@ namespace HotelManagementSystem
         int selectedId;
         Regex regex = new Regex(@"^[a-zA-Z\s]+$");
 
-        public ManageJobsForm()
-        {
-            InitializeComponent();
-        }
-
         private void ManageJobsForm_Load(object sender, EventArgs e)
         {
             loadData();
             tabcontrol.Visible = false;
+            if (isAfrikaans)
+            {
+                lblAddRate.Text = "Werkskoers: ";
+                lblAddTitle.Text = "Werkstitel";
+                lblEditRate.Text = "Werkskoers: ";
+                lblEditTitle.Text = "Werkstitel";
+                lblJobID.Text = "Werk ID";
+                lblJobRate.Text = "Werkskoers: ";
+                lblJobTitle.Text = "Werkstitel";
+                lblSearchJob.Text = "Werk Soek";
+                lblSelectedID.Text = "Geselekteerde ID";
+                lblSelectRecords.Text = "Kies Rekords Hieronder";
+                btnAcceptNewJob.Text = "Aanvaar";
+                btnAddCancel.Text = "Kanseleer";
+                btnAddJob.Text = "Werk Byvoeg";
+                btnDeleteJob.Text = "Vee Geselekteerde Werk Uit";
+                btnEditJob.Text = "Werk Redigeer";
+                btnReset.Text = "Herstel";
+                btnEditAccept.Text = "Aanvaar";
+                btnEditCancel.Text = "Kanseleer";
+                tabAddJob.Text = "Voeg Werkinlighting by";
+                tabEditJob.Text = "Wysig Werkinligting";
+            }
+            else if (isAfrikaans == false)
+            {
+                lblAddRate.Text = "Job Rate: ";
+                lblAddTitle.Text = "Job Title: ";
+                lblEditRate.Text = "Job Rate: ";
+                lblEditTitle.Text = "Job Title: ";
+                lblJobID.Text = "Job ID: ";
+                lblJobRate.Text = "Job Rate: ";
+                lblJobTitle.Text = "Job Title: ";
+                lblSearchJob.Text = "Search Job: ";
+                lblSelectedID.Text = "Selected ID: ";
+                lblSelectRecords.Text = "Select Records Below";
+                btnAcceptNewJob.Text = "Accept";
+                btnAddCancel.Text = "Cancel";
+                btnAddJob.Text = "Add Job";
+                btnDeleteJob.Text = "Delete Selected Job";
+                btnEditJob.Text = "Edit Job";
+                btnReset.Text = "Reset";
+                btnEditAccept.Text = "Accept";
+                btnEditCancel.Text = "Cancel";
+                tabAddJob.Text = "Add Job Info";
+                tabEditJob.Text = "Edit Job Info";
+            }
         }
 
         private void loadData()
@@ -62,7 +110,13 @@ namespace HotelManagementSystem
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    if (isAfrikaans) {
+                        MessageBox.Show("Fout het voorgekom: " + ex.Message);
+                    }
+                    else if(isAfrikaans == false){ 
+                        MessageBox.Show("An error occurred: " + ex.Message); 
+                    }
+                    
                 }
             }
         }
@@ -96,7 +150,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid Alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                     MessageBox.Show("Voer asseblief 'n geldige alfabetiese letter in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (isAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid Alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtAddJobTitle.Text = sJobTitle;
                 txtAddJobTitle.Select(txtAddJobTitle.Text.Length, 0);
 
@@ -118,7 +179,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige alfabetiese letter in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (isAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid Alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtAddJobRate.Text = sJobRate;
                 txtAddJobRate.Select(txtAddJobRate.Text.Length, 0);
 
@@ -184,7 +252,16 @@ namespace HotelManagementSystem
             string jobrate = txtAddJobRate.Text;
             if (jobtitle != "" && jobrate != "")
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to Add this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = System.Windows.Forms.DialogResult.Yes;
+                if (isAfrikaans)
+                {
+                    result = MessageBox.Show("Is jy seker jy wil hierdie rekord byvoeg", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+                else if (isAfrikaans == false)
+                {
+                    result = MessageBox.Show("Are you sure you want to Add this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+               
                 if (result == DialogResult.Yes)
                 {
                     string query = "INSERT INTO Job (Job_Title, Job_Rate) VALUES (@Value2, @Value3)";
@@ -203,17 +280,39 @@ namespace HotelManagementSystem
                             int rowsAffected = command.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
-                                Console.WriteLine("Insert successful.");
+                                if (isAfrikaans)
+                                {
+                                    Console.WriteLine("Invoeging was suksesvol.");
+                                }
+                                else if (isAfrikaans == false)
+                                {
+                                    Console.WriteLine("Insert successful.");
+                                }
                                 loadData();
                             }
                             else
                             {
-                                Console.WriteLine("Insert failed.");
+                                if (isAfrikaans)
+                                {
+                                    Console.WriteLine("Invoeging het misluk.");
+                                }
+                                else if (isAfrikaans == false)
+                                {
+                                    Console.WriteLine("Insert failed.");
+                                }
+                                
                             }
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("An error occurred: " + ex.Message);
+                            if (isAfrikaans)
+                            {
+                                MessageBox.Show("Fout het voorgekom: " + ex.Message);
+                            }
+                            else if (isAfrikaans == false)
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
                         }
                     }
                     lblSelectedID.Visible = false;
@@ -224,7 +323,15 @@ namespace HotelManagementSystem
             }
             else
             {
-                MessageBox.Show("Fields cannot be Empty");
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("veld kan nie leeg wees nie");
+                }
+                else if (isAfrikaans == false)
+                {
+                    MessageBox.Show("Fields cannot be Empty");
+                }
+                
             }
         }
 
@@ -241,14 +348,28 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
-                lblSelectedID.Text = "Selected ID: " + selectedId;
+                if (isAfrikaans)
+                {
+                    lblSelectedID.Text = "Geselekteerde ID: " + selectedId;
+                }
+                else if (isAfrikaans == false)
+                {
+                    lblSelectedID.Text = "Selected ID: " + selectedId;
+                }
                 tabcontrol.Visible = true;
                 tabcontrol.SelectedTab = tabEditJob;
                 lblSelectedID.Visible = true;
             }
             else
             {
-                MessageBox.Show("No record selected. Please select which job you would like to edit");
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Geen rekord gekies nie Kies asseblief watter werk you wil wysig");
+                }
+                else if (isAfrikaans == false)
+                {
+                    MessageBox.Show("No records selected. Please select which job you would like to edit");
+                }
             }
         }
 
@@ -297,7 +418,16 @@ namespace HotelManagementSystem
             if (jobtitle != "" && jobrate != "")
             {
 
-                DialogResult result = MessageBox.Show("Are you sure you want to edit this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = System.Windows.Forms.DialogResult.Yes;
+                if (isAfrikaans)
+                {
+                    result = MessageBox.Show("Is jy seker jy wil hierdie rekord wysig", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+                else if (isAfrikaans == false)
+                {
+                    result = MessageBox.Show("Are you sure you want to edit this record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+
                 if (result == DialogResult.Yes)
                 {
 
@@ -316,17 +446,39 @@ namespace HotelManagementSystem
                             int rowsAffected = command.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
-                                Console.WriteLine("Insert successful.");
+
+                                if (isAfrikaans)
+                                {
+                                    Console.WriteLine("Invoeging was suksesvol.");
+                                }
+                                else if (isAfrikaans == false)
+                                {
+                                    Console.WriteLine("Insert successful.");
+                                }
                                 loadData();
                             }
                             else
                             {
-                                Console.WriteLine("Insert failed.");
+                                if (isAfrikaans)
+                                {
+                                    Console.WriteLine("Invoeging het misluk.");
+                                }
+                                else if (isAfrikaans == false)
+                                {
+                                    Console.WriteLine("Insert failed.");
+                                }
                             }
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("An error occurred: " + ex.Message);
+                            if (isAfrikaans)
+                            {
+                                MessageBox.Show("Fout het voorgekom: " + ex.Message);
+                            }
+                            else if (isAfrikaans == false)
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
                         }
                     }
 
@@ -337,7 +489,14 @@ namespace HotelManagementSystem
             }
             else
             {
-                MessageBox.Show("Fields cannot be Empty");
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("veld kan nie leeg wees nie");
+                }
+                else if (isAfrikaans == false)
+                {
+                    MessageBox.Show("Fields cannot be Empty");
+                }
             }
             loadData();
         }
@@ -354,7 +513,16 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this job and all associated employees? \nJob ID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                DialogResult result = System.Windows.Forms.DialogResult.Yes;
+                if (isAfrikaans)
+                {
+                    result = MessageBox.Show("Is jy seker jy wil hierdie werk en alle geassosieerde werknemers uitvee? \nWerk ID:" + selectedId, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+                else if (isAfrikaans == false)
+                {
+                    result = MessageBox.Show("Are you sure you want to delete this job and all associated employees? \nJob ID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
 
                 if (result == DialogResult.Yes)
                 {
@@ -378,26 +546,59 @@ namespace HotelManagementSystem
                                 command.Parameters.AddWithValue("@JobID", selectedId);
 
                                 int rowsAffected = command.ExecuteNonQuery();
-                                MessageBox.Show(rowsAffected > 0
-                                    ? "Job and associated employees deleted successfully."
-                                    : "No record found with the specified Job ID.");
+                                if (isAfrikaans)
+                                {
+                                    MessageBox.Show(rowsAffected > 0
+                                        ? "Werk en geassosieerde werknemers suksesvol uitgevee."
+                                        : "Geen rekord gevind met die gespesifiseerde Werk ID nie.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show(rowsAffected > 0
+                                        ? "Job and associated employees deleted successfully."
+                                        : "No record found with the specified Job ID.");
+                                }
+
                             }
                             loadData();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("An error occurred: " + ex.Message);
+                            if (isAfrikaans)
+                            {
+                                MessageBox.Show("Fout het voorgekom: " + ex.Message);
+                            }
+                            else if (isAfrikaans == false)
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Action canceled.");
+                    if (isAfrikaans)
+                    {
+                        MessageBox.Show("Aksie gekanselleer.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Action canceled.");
+                    }
+
                 }
             }
             else
             {
-                MessageBox.Show("No record selected. Please select a job to delete.");
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Geen rekord gekies nie. Kies asseblief 'n werk om uit te vee.");
+                }
+                else
+                {
+                    MessageBox.Show("No record selected. Please select a job to delete.");
+                }
+
             }
         }
 
@@ -441,7 +642,15 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 txtJobID.Text = sJobID;
                 txtJobID.Select(txtJobID.Text.Length, 0);
 
@@ -482,7 +691,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid Alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige alfabetiese letter in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtJobTitle.Text = sJobTitle;
                 txtJobTitle.Select(txtJobTitle.Text.Length, 0);
 
@@ -501,7 +717,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtJobRate.Text = sJobRate;
                 txtJobRate.Select(txtJobRate.Text.Length, 0);
 
@@ -518,7 +741,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid Alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige alfabetiese letter in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid alphabetical letter.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtEditJobTitle.Text = sJobTitle;
                 txtEditJobTitle.Select(txtEditJobTitle.Text.Length, 0);
 
@@ -535,7 +765,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtEditJobRate.Text = sJobRate;
                 txtEditJobRate.Select(txtEditJobRate.Text.Length, 0);
 
@@ -553,7 +790,15 @@ namespace HotelManagementSystem
             txtJobRate.Text = "";
             txtJobTitle.Text = "";
             txtJobID.Text = "";
-            lblSelectedID.Text = "Selected ID: ";
+            if (isAfrikaans)
+            {
+                lblSelectedID.Text = "Geselekteerde ID: ";
+            }
+            else
+            {
+                lblSelectedID.Text = "Selected ID: ";
+            }
+
         }
 
         private void lblSelectedID_Click(object sender, EventArgs e)
@@ -567,13 +812,24 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
-                lblSelectedID.Text = "Selected ID: " + selectedId;
+                if (isAfrikaans) {
+                    lblSelectedID.Text = "Geselekteerde ID: " + selectedId;
+                }
+                else if (isAfrikaans == false) {
+                    lblSelectedID.Text = "Selected ID: " + selectedId;
+                }
+                
                 tabcontrol.SelectedTab = tabEditJob;
                 lblSelectedID.Visible = true;
             }
         }
 
         private void PanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabEditJob_Click(object sender, EventArgs e)
         {
 
         }

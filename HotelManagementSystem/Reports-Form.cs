@@ -16,13 +16,35 @@ namespace HotelManagementSystem
     {
         DateTime startDate;
         DateTime endDate;
+        Boolean isAfrikaans = false;
         string connectionString = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
-        public ReportsForm()
+        public ReportsForm(Boolean isAfrikaans)
         {
+            this.isAfrikaans=isAfrikaans;
             InitializeComponent();
             loadData();
             startDate = dtpStart.Value;
-            endDate = dtpEnd.Value; 
+            endDate = dtpEnd.Value;
+            if (isAfrikaans) {
+                lblEndDate.Text = "Einddatum:";
+                lblReportType.Text = "Verslagtipe: ";
+                lblStartDate.Text = "Begin datum: ";
+                cbReports.Items.Clear();
+                cbReports.Items.Add("Gaste Het Uitgecheck");
+                cbReports.Items.Add("Top 10 Week Verkeer");
+                btnCancel.Text = "Kanselleer";
+                btnGenerateReport.Text = "Genereer Verslag";
+            }
+            else {
+                lblEndDate.Text = "End Date:";
+                lblReportType.Text = "Report Type: ";
+                lblStartDate.Text = "Start Date: ";
+                cbReports.Items.Clear();
+                cbReports.Items.Add("Guests Checked Out");
+                cbReports.Items.Add("Top 10 Week Traffic");
+                btnCancel.Text = "Cancel";
+                btnGenerateReport.Text = "Generate Report";
+            }
         }
 
         private void loadData()
@@ -51,7 +73,15 @@ namespace HotelManagementSystem
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    if (isAfrikaans)
+                    {
+                        MessageBox.Show("Daar het 'n fout voorgekom: " + ex.Message);
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+
                 }
             }
         }
@@ -96,7 +126,15 @@ namespace HotelManagementSystem
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("An error occurred: " + ex.Message);
+                            if (isAfrikaans)
+                            {
+                                MessageBox.Show("Daar het 'n fout voorgekom: " + ex.Message);
+                            }
+                            else
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
+
                         }
                     }
                 } 
@@ -152,14 +190,30 @@ namespace HotelManagementSystem
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("An error occurred: " + ex.Message);
+                            if (isAfrikaans)
+                            {
+                                MessageBox.Show("Daar het 'n fout voorgekom: " + ex.Message);
+                            }
+                            else
+                            {
+                                MessageBox.Show("An error occurred: " + ex.Message);
+                            }
+
                         }
                     }
 
                 }
             }
             else {
-                MessageBox.Show("Please select which report you would like.");
+                if (isAfrikaans)
+                {
+                    MessageBox.Show("Kies asseblief watter verslag jy wil hê.");
+                }
+                else
+                {
+                    MessageBox.Show("Please select which report you would like.");
+                }
+
             }
         }
 

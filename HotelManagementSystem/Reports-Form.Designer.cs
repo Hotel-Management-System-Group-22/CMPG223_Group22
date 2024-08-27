@@ -35,7 +35,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblReportType = new System.Windows.Forms.Label();
             this.dgvBookings = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
             this.SuspendLayout();
@@ -106,14 +106,14 @@
             this.lblEndDate.TabIndex = 7;
             this.lblEndDate.Text = "End Date:";
             // 
-            // label3
+            // lblReportType
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 426);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Report type:";
+            this.lblReportType.AutoSize = true;
+            this.lblReportType.Location = new System.Drawing.Point(237, 426);
+            this.lblReportType.Name = "lblReportType";
+            this.lblReportType.Size = new System.Drawing.Size(80, 16);
+            this.lblReportType.TabIndex = 8;
+            this.lblReportType.Text = "Report type:";
             // 
             // dgvBookings
             // 
@@ -132,7 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 531);
             this.Controls.Add(this.dgvBookings);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblReportType);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.btnCancel);
@@ -157,7 +157,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblReportType;
         private System.Windows.Forms.DataGridView dgvBookings;
     }
 }
