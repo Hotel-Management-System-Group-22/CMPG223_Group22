@@ -37,22 +37,14 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtUpdateSearch = new System.Windows.Forms.TextBox();
-            this.cmbUpdateJob = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtUpdateFName = new System.Windows.Forms.TextBox();
             this.btnUpdateReset = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
-            this.txtUpdateLName = new System.Windows.Forms.TextBox();
-            this.cmbUpdateRole = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDeleteReset = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDeparture = new System.Windows.Forms.TextBox();
+            this.txtArrival = new System.Windows.Forms.TextBox();
             this.txtBookingID_Delete = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.txtGuestLName_Delete = new System.Windows.Forms.TextBox();
@@ -89,8 +81,19 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtArrival = new System.Windows.Forms.TextBox();
-            this.txtDeparture = new System.Windows.Forms.TextBox();
+            this.txtRoomNr_Update = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtArrival_Update = new System.Windows.Forms.DateTimePicker();
+            this.dtDeparture_Update = new System.Windows.Forms.DateTimePicker();
+            this.txtBookingID_Update = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGuestFName_Update = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtGuestLName_Update = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -100,6 +103,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bookingsDataGridView
@@ -176,18 +180,15 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.txtUpdateSearch);
-            this.tabPage1.Controls.Add(this.cmbUpdateJob);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.txtUpdateFName);
-            this.tabPage1.Controls.Add(this.btnUpdateReset);
+            this.tabPage1.Controls.Add(this.dtDeparture_Update);
+            this.tabPage1.Controls.Add(this.dtArrival_Update);
+            this.tabPage1.Controls.Add(this.txtRoomNr_Update);
             this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.btnUpdateReset);
             this.tabPage1.Controls.Add(this.btnUpdateEmp);
-            this.tabPage1.Controls.Add(this.txtUpdateLName);
-            this.tabPage1.Controls.Add(this.cmbUpdateRole);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -195,39 +196,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // txtUpdateSearch
-            // 
-            this.txtUpdateSearch.Location = new System.Drawing.Point(289, 23);
-            this.txtUpdateSearch.Name = "txtUpdateSearch";
-            this.txtUpdateSearch.Size = new System.Drawing.Size(180, 22);
-            this.txtUpdateSearch.TabIndex = 11;
-            // 
-            // cmbUpdateJob
-            // 
-            this.cmbUpdateJob.DisplayMember = "Job_Title";
-            this.cmbUpdateJob.FormattingEnabled = true;
-            this.cmbUpdateJob.Location = new System.Drawing.Point(289, 160);
-            this.cmbUpdateJob.Name = "cmbUpdateJob";
-            this.cmbUpdateJob.Size = new System.Drawing.Size(180, 24);
-            this.cmbUpdateJob.TabIndex = 6;
-            this.cmbUpdateJob.ValueMember = "Job_ID";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(102, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Search Guest:";
-            // 
-            // txtUpdateFName
-            // 
-            this.txtUpdateFName.Location = new System.Drawing.Point(289, 63);
-            this.txtUpdateFName.Name = "txtUpdateFName";
-            this.txtUpdateFName.Size = new System.Drawing.Size(180, 22);
-            this.txtUpdateFName.TabIndex = 0;
             // 
             // btnUpdateReset
             // 
@@ -238,15 +206,6 @@
             this.btnUpdateReset.Text = "RESET";
             this.btnUpdateReset.UseVisualStyleBackColor = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(102, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "First name:";
-            // 
             // btnUpdateEmp
             // 
             this.btnUpdateEmp.Location = new System.Drawing.Point(105, 247);
@@ -256,52 +215,6 @@
             this.btnUpdateEmp.Text = "UPDATE";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
-            // 
-            // txtUpdateLName
-            // 
-            this.txtUpdateLName.Location = new System.Drawing.Point(289, 110);
-            this.txtUpdateLName.Name = "txtUpdateLName";
-            this.txtUpdateLName.Size = new System.Drawing.Size(180, 22);
-            this.txtUpdateLName.TabIndex = 3;
-            // 
-            // cmbUpdateRole
-            // 
-            this.cmbUpdateRole.FormattingEnabled = true;
-            this.cmbUpdateRole.Items.AddRange(new object[] {
-            "Administrator",
-            "Clerk",
-            "Other"});
-            this.cmbUpdateRole.Location = new System.Drawing.Point(289, 202);
-            this.cmbUpdateRole.Name = "cmbUpdateRole";
-            this.cmbUpdateRole.Size = new System.Drawing.Size(180, 24);
-            this.cmbUpdateRole.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(102, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Last name:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(102, 202);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Role";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Job Title:";
             // 
             // tabPage2
             // 
@@ -356,6 +269,22 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Verify Booking Details";
+            // 
+            // txtDeparture
+            // 
+            this.txtDeparture.Location = new System.Drawing.Point(187, 210);
+            this.txtDeparture.Name = "txtDeparture";
+            this.txtDeparture.ReadOnly = true;
+            this.txtDeparture.Size = new System.Drawing.Size(180, 22);
+            this.txtDeparture.TabIndex = 21;
+            // 
+            // txtArrival
+            // 
+            this.txtArrival.Location = new System.Drawing.Point(187, 177);
+            this.txtArrival.Name = "txtArrival";
+            this.txtArrival.ReadOnly = true;
+            this.txtArrival.Size = new System.Drawing.Size(180, 22);
+            this.txtArrival.TabIndex = 20;
             // 
             // txtBookingID_Delete
             // 
@@ -702,21 +631,122 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // txtArrival
+            // txtRoomNr_Update
             // 
-            this.txtArrival.Location = new System.Drawing.Point(187, 177);
-            this.txtArrival.Name = "txtArrival";
-            this.txtArrival.ReadOnly = true;
-            this.txtArrival.Size = new System.Drawing.Size(180, 22);
-            this.txtArrival.TabIndex = 20;
+            this.txtRoomNr_Update.Location = new System.Drawing.Point(252, 133);
+            this.txtRoomNr_Update.Name = "txtRoomNr_Update";
+            this.txtRoomNr_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtRoomNr_Update.TabIndex = 26;
+            this.txtRoomNr_Update.TextChanged += new System.EventHandler(this.txtRoomNr_Update_TextChanged);
             // 
-            // txtDeparture
+            // label10
             // 
-            this.txtDeparture.Location = new System.Drawing.Point(187, 210);
-            this.txtDeparture.Name = "txtDeparture";
-            this.txtDeparture.ReadOnly = true;
-            this.txtDeparture.Size = new System.Drawing.Size(180, 22);
-            this.txtDeparture.TabIndex = 21;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(100, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 16);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Room Number:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(100, 204);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 16);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Departure Date:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(100, 178);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 16);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "Arrival Date:";
+            // 
+            // dtArrival_Update
+            // 
+            this.dtArrival_Update.Location = new System.Drawing.Point(252, 172);
+            this.dtArrival_Update.Name = "dtArrival_Update";
+            this.dtArrival_Update.Size = new System.Drawing.Size(227, 22);
+            this.dtArrival_Update.TabIndex = 30;
+            this.dtArrival_Update.ValueChanged += new System.EventHandler(this.dtArrival_Update_ValueChanged);
+            // 
+            // dtDeparture_Update
+            // 
+            this.dtDeparture_Update.Location = new System.Drawing.Point(252, 213);
+            this.dtDeparture_Update.Name = "dtDeparture_Update";
+            this.dtDeparture_Update.Size = new System.Drawing.Size(227, 22);
+            this.dtDeparture_Update.TabIndex = 31;
+            this.dtDeparture_Update.ValueChanged += new System.EventHandler(this.dtDeparture_Update_ValueChanged);
+            // 
+            // txtBookingID_Update
+            // 
+            this.txtBookingID_Update.Location = new System.Drawing.Point(180, 26);
+            this.txtBookingID_Update.Name = "txtBookingID_Update";
+            this.txtBookingID_Update.ReadOnly = true;
+            this.txtBookingID_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtBookingID_Update.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Booking ID:";
+            // 
+            // txtGuestFName_Update
+            // 
+            this.txtGuestFName_Update.Location = new System.Drawing.Point(180, 61);
+            this.txtGuestFName_Update.Name = "txtGuestFName_Update";
+            this.txtGuestFName_Update.ReadOnly = true;
+            this.txtGuestFName_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestFName_Update.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Guest First Name:";
+            // 
+            // txtGuestLName_Update
+            // 
+            this.txtGuestLName_Update.Location = new System.Drawing.Point(180, 89);
+            this.txtGuestLName_Update.Name = "txtGuestLName_Update";
+            this.txtGuestLName_Update.ReadOnly = true;
+            this.txtGuestLName_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestLName_Update.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 16);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Guest First Name:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.txtGuestLName_Update);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.txtBookingID_Update);
+            this.groupBox3.Controls.Add(this.txtGuestFName_Update);
+            this.groupBox3.Location = new System.Drawing.Point(72, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(398, 117);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Booking Details to be updated";
             // 
             // Bookings
             // 
@@ -742,6 +772,8 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -756,18 +788,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox txtUpdateSearch;
-        private System.Windows.Forms.ComboBox cmbUpdateJob;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtUpdateFName;
         private System.Windows.Forms.Button btnUpdateReset;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUpdateEmp;
-        private System.Windows.Forms.TextBox txtUpdateLName;
-        private System.Windows.Forms.ComboBox cmbUpdateRole;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDeleteReset;
         private System.Windows.Forms.TextBox txtGuestFName_Delete;
@@ -810,5 +832,18 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox txtDeparture;
         private System.Windows.Forms.TextBox txtArrival;
+        private System.Windows.Forms.DateTimePicker dtDeparture_Update;
+        private System.Windows.Forms.DateTimePicker dtArrival_Update;
+        private System.Windows.Forms.TextBox txtRoomNr_Update;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtGuestLName_Update;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBookingID_Update;
+        private System.Windows.Forms.TextBox txtGuestFName_Update;
     }
 }
