@@ -876,5 +876,27 @@ namespace HotelManagementSystem
                 errorProvider1.SetError(txtRoomNrAdd, string.Empty);
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bttnSearch_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        
+        private void txtBookingID_Search_TextChanged(object sender, EventArgs e)
+        {
+            searchCriteria = true;
+        }
+    }
     }
 }

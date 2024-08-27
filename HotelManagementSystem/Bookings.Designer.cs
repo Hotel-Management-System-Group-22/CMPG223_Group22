@@ -37,8 +37,21 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dtDeparture_Update = new System.Windows.Forms.DateTimePicker();
+            this.dtArrival_Update = new System.Windows.Forms.DateTimePicker();
+            this.txtRoomNr_Update = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.btnUpdateReset = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGuestLName_Update = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBookingID_Update = new System.Windows.Forms.TextBox();
+            this.txtGuestFName_Update = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDeleteReset = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
@@ -71,39 +84,36 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnSearchReset = new System.Windows.Forms.Button();
-            this.rdoStaff = new System.Windows.Forms.RadioButton();
-            this.rdoDes = new System.Windows.Forms.RadioButton();
-            this.rdoAsc = new System.Windows.Forms.RadioButton();
-            this.rdoClerk = new System.Windows.Forms.RadioButton();
-            this.rdoAdmin = new System.Windows.Forms.RadioButton();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtRoomNr_Update = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dtArrival_Update = new System.Windows.Forms.DateTimePicker();
-            this.dtDeparture_Update = new System.Windows.Forms.DateTimePicker();
-            this.txtBookingID_Update = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGuestFName_Update = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtGuestLName_Update = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtGuestLName_Search = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBookingID_Search = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.txtGuestFName_Search = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.bttnSearch = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // bookingsDataGridView
@@ -175,7 +185,7 @@
             this.tabControl1.Location = new System.Drawing.Point(344, 310);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 335);
+            this.tabControl1.Size = new System.Drawing.Size(843, 446);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -197,6 +207,57 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dtDeparture_Update
+            // 
+            this.dtDeparture_Update.Location = new System.Drawing.Point(252, 213);
+            this.dtDeparture_Update.Name = "dtDeparture_Update";
+            this.dtDeparture_Update.Size = new System.Drawing.Size(227, 22);
+            this.dtDeparture_Update.TabIndex = 31;
+            this.dtDeparture_Update.ValueChanged += new System.EventHandler(this.dtDeparture_Update_ValueChanged);
+            // 
+            // dtArrival_Update
+            // 
+            this.dtArrival_Update.Location = new System.Drawing.Point(252, 172);
+            this.dtArrival_Update.Name = "dtArrival_Update";
+            this.dtArrival_Update.Size = new System.Drawing.Size(227, 22);
+            this.dtArrival_Update.TabIndex = 30;
+            this.dtArrival_Update.ValueChanged += new System.EventHandler(this.dtArrival_Update_ValueChanged);
+            // 
+            // txtRoomNr_Update
+            // 
+            this.txtRoomNr_Update.Location = new System.Drawing.Point(252, 133);
+            this.txtRoomNr_Update.Name = "txtRoomNr_Update";
+            this.txtRoomNr_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtRoomNr_Update.TabIndex = 26;
+            this.txtRoomNr_Update.TextChanged += new System.EventHandler(this.txtRoomNr_Update_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(100, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 16);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Room Number:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(100, 204);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 16);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Departure Date:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(100, 178);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(80, 16);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "Arrival Date:";
+            // 
             // btnUpdateReset
             // 
             this.btnUpdateReset.Location = new System.Drawing.Point(526, 99);
@@ -215,6 +276,72 @@
             this.btnUpdateEmp.Text = "UPDATE";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.txtGuestLName_Update);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.txtBookingID_Update);
+            this.groupBox3.Controls.Add(this.txtGuestFName_Update);
+            this.groupBox3.Location = new System.Drawing.Point(72, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(398, 117);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Booking Details to be updated";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 16);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Guest First Name:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Booking ID:";
+            // 
+            // txtGuestLName_Update
+            // 
+            this.txtGuestLName_Update.Location = new System.Drawing.Point(180, 89);
+            this.txtGuestLName_Update.Name = "txtGuestLName_Update";
+            this.txtGuestLName_Update.ReadOnly = true;
+            this.txtGuestLName_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestLName_Update.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Guest First Name:";
+            // 
+            // txtBookingID_Update
+            // 
+            this.txtBookingID_Update.Location = new System.Drawing.Point(180, 26);
+            this.txtBookingID_Update.Name = "txtBookingID_Update";
+            this.txtBookingID_Update.ReadOnly = true;
+            this.txtBookingID_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtBookingID_Update.TabIndex = 34;
+            // 
+            // txtGuestFName_Update
+            // 
+            this.txtGuestFName_Update.Location = new System.Drawing.Point(180, 61);
+            this.txtGuestFName_Update.Name = "txtGuestFName_Update";
+            this.txtGuestFName_Update.ReadOnly = true;
+            this.txtGuestFName_Update.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestFName_Update.TabIndex = 32;
             // 
             // tabPage2
             // 
@@ -511,248 +638,190 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Controls.Add(this.bttnSearch);
+            this.tabPage4.Controls.Add(this.groupBox6);
             this.tabPage4.Controls.Add(this.btnSearchReset);
-            this.tabPage4.Controls.Add(this.rdoStaff);
-            this.tabPage4.Controls.Add(this.rdoDes);
-            this.tabPage4.Controls.Add(this.rdoAsc);
-            this.tabPage4.Controls.Add(this.rdoClerk);
-            this.tabPage4.Controls.Add(this.rdoAdmin);
-            this.tabPage4.Controls.Add(this.txtSearch);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label7);
+            this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 306);
+            this.tabPage4.Size = new System.Drawing.Size(835, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // btnSearchReset
             // 
-            this.btnSearchReset.Location = new System.Drawing.Point(454, 36);
+            this.btnSearchReset.Location = new System.Drawing.Point(548, 116);
             this.btnSearchReset.Name = "btnSearchReset";
-            this.btnSearchReset.Size = new System.Drawing.Size(303, 43);
+            this.btnSearchReset.Size = new System.Drawing.Size(230, 28);
             this.btnSearchReset.TabIndex = 10;
             this.btnSearchReset.Text = "RESET";
             this.btnSearchReset.UseVisualStyleBackColor = true;
-            // 
-            // rdoStaff
-            // 
-            this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoStaff.AutoSize = true;
-            this.rdoStaff.Location = new System.Drawing.Point(197, 169);
-            this.rdoStaff.Name = "rdoStaff";
-            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
-            this.rdoStaff.TabIndex = 9;
-            this.rdoStaff.Text = "Employee staff only";
-            this.rdoStaff.UseVisualStyleBackColor = true;
-            // 
-            // rdoDes
-            // 
-            this.rdoDes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoDes.AutoSize = true;
-            this.rdoDes.Location = new System.Drawing.Point(197, 256);
-            this.rdoDes.Name = "rdoDes";
-            this.rdoDes.Size = new System.Drawing.Size(101, 20);
-            this.rdoDes.TabIndex = 7;
-            this.rdoDes.Text = "Descending";
-            this.rdoDes.UseVisualStyleBackColor = true;
-            // 
-            // rdoAsc
-            // 
-            this.rdoAsc.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoAsc.AutoSize = true;
-            this.rdoAsc.Location = new System.Drawing.Point(197, 221);
-            this.rdoAsc.Name = "rdoAsc";
-            this.rdoAsc.Size = new System.Drawing.Size(92, 20);
-            this.rdoAsc.TabIndex = 6;
-            this.rdoAsc.Text = "Ascending";
-            this.rdoAsc.UseVisualStyleBackColor = true;
-            // 
-            // rdoClerk
-            // 
-            this.rdoClerk.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoClerk.AutoSize = true;
-            this.rdoClerk.Location = new System.Drawing.Point(197, 138);
-            this.rdoClerk.Name = "rdoClerk";
-            this.rdoClerk.Size = new System.Drawing.Size(123, 20);
-            this.rdoClerk.TabIndex = 5;
-            this.rdoClerk.Text = "Clerk users only";
-            this.rdoClerk.UseVisualStyleBackColor = true;
-            // 
-            // rdoAdmin
-            // 
-            this.rdoAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(197, 104);
-            this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Size = new System.Drawing.Size(130, 20);
-            this.rdoAdmin.TabIndex = 4;
-            this.rdoAdmin.Text = "Admin users only";
-            this.rdoAdmin.UseVisualStyleBackColor = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(197, 33);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(202, 22);
-            this.txtSearch.TabIndex = 3;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(39, 223);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 16);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Sort by Username:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(39, 100);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 16);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Filter Admin Users:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Search by ID number:";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // txtRoomNr_Update
+            // label12
             // 
-            this.txtRoomNr_Update.Location = new System.Drawing.Point(252, 133);
-            this.txtRoomNr_Update.Name = "txtRoomNr_Update";
-            this.txtRoomNr_Update.Size = new System.Drawing.Size(180, 22);
-            this.txtRoomNr_Update.TabIndex = 26;
-            this.txtRoomNr_Update.TextChanged += new System.EventHandler(this.txtRoomNr_Update_TextChanged);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 16);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Search by Guest Last name:";
             // 
-            // label10
+            // txtGuestLName_Search
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(100, 136);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 16);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Room Number:";
+            this.txtGuestLName_Search.Location = new System.Drawing.Point(193, 33);
+            this.txtGuestLName_Search.Name = "txtGuestLName_Search";
+            this.txtGuestLName_Search.Size = new System.Drawing.Size(202, 22);
+            this.txtGuestLName_Search.TabIndex = 5;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 204);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 16);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Departure Date:";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(140, 16);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Search by Booking ID:";
             // 
-            // label19
+            // txtBookingID_Search
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(100, 178);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 16);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Arrival Date:";
+            this.txtBookingID_Search.Location = new System.Drawing.Point(193, 35);
+            this.txtBookingID_Search.Name = "txtBookingID_Search";
+            this.txtBookingID_Search.Size = new System.Drawing.Size(196, 22);
+            this.txtBookingID_Search.TabIndex = 7;
+            this.txtBookingID_Search.TextChanged += new System.EventHandler(this.txtBookingID_Search_TextChanged);
             // 
-            // dtArrival_Update
+            // groupBox5
             // 
-            this.dtArrival_Update.Location = new System.Drawing.Point(252, 172);
-            this.dtArrival_Update.Name = "dtArrival_Update";
-            this.dtArrival_Update.Size = new System.Drawing.Size(227, 22);
-            this.dtArrival_Update.TabIndex = 30;
-            this.dtArrival_Update.ValueChanged += new System.EventHandler(this.dtArrival_Update_ValueChanged);
+            this.groupBox5.Controls.Add(this.txtGuestFName_Search);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.radioButton4);
+            this.groupBox5.Controls.Add(this.radioButton3);
+            this.groupBox5.Controls.Add(this.txtGuestLName_Search);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Location = new System.Drawing.Point(25, 109);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(418, 166);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Search by Guest";
             // 
-            // dtDeparture_Update
+            // radioButton3
             // 
-            this.dtDeparture_Update.Location = new System.Drawing.Point(252, 213);
-            this.dtDeparture_Update.Name = "dtDeparture_Update";
-            this.dtDeparture_Update.Size = new System.Drawing.Size(227, 22);
-            this.dtDeparture_Update.TabIndex = 31;
-            this.dtDeparture_Update.ValueChanged += new System.EventHandler(this.dtDeparture_Update_ValueChanged);
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(16, 102);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(92, 20);
+            this.radioButton3.TabIndex = 6;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Ascending";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // txtBookingID_Update
+            // radioButton4
             // 
-            this.txtBookingID_Update.Location = new System.Drawing.Point(180, 26);
-            this.txtBookingID_Update.Name = "txtBookingID_Update";
-            this.txtBookingID_Update.ReadOnly = true;
-            this.txtBookingID_Update.Size = new System.Drawing.Size(180, 22);
-            this.txtBookingID_Update.TabIndex = 34;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(16, 128);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(101, 20);
+            this.radioButton4.TabIndex = 7;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Descending";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // txtGuestFName_Search
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Booking ID:";
+            this.txtGuestFName_Search.Location = new System.Drawing.Point(193, 61);
+            this.txtGuestFName_Search.Name = "txtGuestFName_Search";
+            this.txtGuestFName_Search.Size = new System.Drawing.Size(202, 22);
+            this.txtGuestFName_Search.TabIndex = 9;
             // 
-            // txtGuestFName_Update
+            // label20
             // 
-            this.txtGuestFName_Update.Location = new System.Drawing.Point(180, 61);
-            this.txtGuestFName_Update.Name = "txtGuestFName_Update";
-            this.txtGuestFName_Update.ReadOnly = true;
-            this.txtGuestFName_Update.Size = new System.Drawing.Size(180, 22);
-            this.txtGuestFName_Update.TabIndex = 32;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(13, 61);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(160, 16);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Filter by Guest First name:";
             // 
-            // label6
+            // groupBox6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 16);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Guest First Name:";
+            this.groupBox6.Controls.Add(this.dateTimePicker2);
+            this.groupBox6.Controls.Add(this.dateTimePicker1);
+            this.groupBox6.Controls.Add(this.label21);
+            this.groupBox6.Controls.Add(this.label22);
+            this.groupBox6.Location = new System.Drawing.Point(25, 299);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(475, 108);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Search for Avalible rooms for time period";
             // 
-            // txtGuestLName_Update
+            // label21
             // 
-            this.txtGuestLName_Update.Location = new System.Drawing.Point(180, 89);
-            this.txtGuestLName_Update.Name = "txtGuestLName_Update";
-            this.txtGuestLName_Update.ReadOnly = true;
-            this.txtGuestLName_Update.Size = new System.Drawing.Size(180, 22);
-            this.txtGuestLName_Update.TabIndex = 36;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(15, 67);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(108, 16);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Guest Departure:";
             // 
-            // label9
+            // label22
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 16);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Guest First Name:";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 39);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(86, 16);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Guest Arrival:";
             // 
-            // groupBox3
+            // dateTimePicker1
             // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txtGuestLName_Update);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.txtBookingID_Update);
-            this.groupBox3.Controls.Add(this.txtGuestFName_Update);
-            this.groupBox3.Location = new System.Drawing.Point(72, 10);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(398, 117);
-            this.groupBox3.TabIndex = 38;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Booking Details to be updated";
+            this.dateTimePicker1.Location = new System.Drawing.Point(209, 39);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(209, 67);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(260, 22);
+            this.dateTimePicker2.TabIndex = 13;
+            // 
+            // bttnSearch
+            // 
+            this.bttnSearch.Location = new System.Drawing.Point(548, 173);
+            this.bttnSearch.Name = "bttnSearch";
+            this.bttnSearch.Size = new System.Drawing.Size(230, 28);
+            this.bttnSearch.TabIndex = 14;
+            this.bttnSearch.Text = "SEARCH";
+            this.bttnSearch.UseVisualStyleBackColor = true;
+            this.bttnSearch.Click += new System.EventHandler(this.bttnSearch_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.Controls.Add(this.txtBookingID_Search);
+            this.groupBox7.Location = new System.Drawing.Point(25, 18);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(418, 75);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Genearl Search";
             // 
             // Bookings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 656);
+            this.ClientSize = new System.Drawing.Size(1248, 757);
             this.Controls.Add(this.bookingsDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -764,16 +833,21 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -804,15 +878,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnSearchReset;
-        private System.Windows.Forms.RadioButton rdoStaff;
-        private System.Windows.Forms.RadioButton rdoDes;
-        private System.Windows.Forms.RadioButton rdoAsc;
-        private System.Windows.Forms.RadioButton rdoClerk;
-        private System.Windows.Forms.RadioButton rdoAdmin;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtCheckout;
@@ -845,5 +910,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBookingID_Update;
         private System.Windows.Forms.TextBox txtGuestFName_Update;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtGuestLName_Search;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtBookingID_Search;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TextBox txtGuestFName_Search;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button bttnSearch;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
