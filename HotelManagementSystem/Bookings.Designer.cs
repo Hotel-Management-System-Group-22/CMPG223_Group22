@@ -83,24 +83,17 @@
             this.txtGuestLNameAdd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnSearchReset = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtGuestLName_Search = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBookingID_Search = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.txtGuestFName_Search = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.bttnSearch = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btnSearchReset = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -110,10 +103,9 @@
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // bookingsDataGridView
@@ -148,6 +140,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -157,6 +150,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -166,6 +160,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSearch
             // 
@@ -175,6 +170,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tabControl1
             // 
@@ -185,7 +181,7 @@
             this.tabControl1.Location = new System.Drawing.Point(344, 310);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 446);
+            this.tabControl1.Size = new System.Drawing.Size(843, 350);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -202,7 +198,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 306);
+            this.tabPage1.Size = new System.Drawing.Size(835, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -351,7 +347,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 306);
+            this.tabPage2.Size = new System.Drawing.Size(835, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -526,7 +522,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(835, 306);
+            this.tabPage3.Size = new System.Drawing.Size(835, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -639,47 +635,27 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox7);
-            this.tabPage4.Controls.Add(this.bttnSearch);
             this.tabPage4.Controls.Add(this.groupBox6);
             this.tabPage4.Controls.Add(this.btnSearchReset);
-            this.tabPage4.Controls.Add(this.groupBox5);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 417);
+            this.tabPage4.Size = new System.Drawing.Size(835, 321);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // btnSearchReset
+            // groupBox7
             // 
-            this.btnSearchReset.Location = new System.Drawing.Point(548, 116);
-            this.btnSearchReset.Name = "btnSearchReset";
-            this.btnSearchReset.Size = new System.Drawing.Size(230, 28);
-            this.btnSearchReset.TabIndex = 10;
-            this.btnSearchReset.Text = "RESET";
-            this.btnSearchReset.UseVisualStyleBackColor = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 33);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 16);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Search by Guest Last name:";
-            // 
-            // txtGuestLName_Search
-            // 
-            this.txtGuestLName_Search.Location = new System.Drawing.Point(193, 33);
-            this.txtGuestLName_Search.Name = "txtGuestLName_Search";
-            this.txtGuestLName_Search.Size = new System.Drawing.Size(202, 22);
-            this.txtGuestLName_Search.TabIndex = 5;
+            this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.Controls.Add(this.txtBookingID_Search);
+            this.groupBox7.Location = new System.Drawing.Point(25, 18);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(418, 75);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Genearl Search";
             // 
             // label13
             // 
@@ -698,71 +674,43 @@
             this.txtBookingID_Search.TabIndex = 7;
             this.txtBookingID_Search.TextChanged += new System.EventHandler(this.txtBookingID_Search_TextChanged);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtGuestFName_Search);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.radioButton4);
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.txtGuestLName_Search);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Location = new System.Drawing.Point(25, 109);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(418, 166);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Search by Guest";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(16, 102);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(92, 20);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Ascending";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(16, 128);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 20);
-            this.radioButton4.TabIndex = 7;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Descending";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // txtGuestFName_Search
-            // 
-            this.txtGuestFName_Search.Location = new System.Drawing.Point(193, 61);
-            this.txtGuestFName_Search.Name = "txtGuestFName_Search";
-            this.txtGuestFName_Search.Size = new System.Drawing.Size(202, 22);
-            this.txtGuestFName_Search.TabIndex = 9;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(13, 61);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(160, 16);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "Filter by Guest First name:";
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dateTimePicker2);
+            this.groupBox6.Controls.Add(this.bttnSearch);
             this.groupBox6.Controls.Add(this.dateTimePicker1);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.label22);
-            this.groupBox6.Location = new System.Drawing.Point(25, 299);
+            this.groupBox6.Location = new System.Drawing.Point(25, 176);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(475, 108);
+            this.groupBox6.Size = new System.Drawing.Size(639, 115);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Search for Avalible rooms for time period";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(209, 67);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(260, 22);
+            this.dateTimePicker2.TabIndex = 13;
+            // 
+            // bttnSearch
+            // 
+            this.bttnSearch.Location = new System.Drawing.Point(411, 91);
+            this.bttnSearch.Name = "bttnSearch";
+            this.bttnSearch.Size = new System.Drawing.Size(222, 24);
+            this.bttnSearch.TabIndex = 14;
+            this.bttnSearch.Text = "SEARCH";
+            this.bttnSearch.UseVisualStyleBackColor = true;
+            this.bttnSearch.Click += new System.EventHandler(this.bttnSearch_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(209, 39);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
+            this.dateTimePicker1.TabIndex = 12;
             // 
             // label21
             // 
@@ -782,40 +730,19 @@
             this.label22.TabIndex = 10;
             this.label22.Text = "Guest Arrival:";
             // 
-            // dateTimePicker1
+            // btnSearchReset
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(209, 39);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
-            this.dateTimePicker1.TabIndex = 12;
+            this.btnSearchReset.Location = new System.Drawing.Point(548, 116);
+            this.btnSearchReset.Name = "btnSearchReset";
+            this.btnSearchReset.Size = new System.Drawing.Size(230, 28);
+            this.btnSearchReset.TabIndex = 10;
+            this.btnSearchReset.Text = "RESET";
+            this.btnSearchReset.UseVisualStyleBackColor = true;
+            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click_1);
             // 
-            // dateTimePicker2
+            // errorProvider1
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(209, 67);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(260, 22);
-            this.dateTimePicker2.TabIndex = 13;
-            // 
-            // bttnSearch
-            // 
-            this.bttnSearch.Location = new System.Drawing.Point(548, 173);
-            this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.Size = new System.Drawing.Size(230, 28);
-            this.bttnSearch.TabIndex = 14;
-            this.bttnSearch.Text = "SEARCH";
-            this.bttnSearch.UseVisualStyleBackColor = true;
-            this.bttnSearch.Click += new System.EventHandler(this.bttnSearch_Click);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.txtBookingID_Search);
-            this.groupBox7.Location = new System.Drawing.Point(25, 18);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(418, 75);
-            this.groupBox7.TabIndex = 14;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Genearl Search";
+            this.errorProvider1.ContainerControl = this;
             // 
             // Bookings
             // 
@@ -841,13 +768,11 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,15 +835,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBookingID_Update;
         private System.Windows.Forms.TextBox txtGuestFName_Update;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtGuestLName_Search;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBookingID_Search;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox txtGuestFName_Search;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

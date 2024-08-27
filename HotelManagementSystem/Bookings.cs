@@ -889,14 +889,145 @@ namespace HotelManagementSystem
 
         private void bttnSearch_Click(object sender, EventArgs e)
         {
+            DateTime arrivalDate = dateTimePicker1.Value;
+            DateTime departureDate = dateTimePicker2.Value;
+
+            string query = @"
+        SELECT Room_ID, Room_Status 
+        FROM Room 
+        WHERE Room_ID NOT IN (
+            SELECT Room_ID 
+            FROM Booking 
+            WHERE (@arrivalDate <= Guest_Departure AND @departureDate >= Guest_Arrival)
+        )";
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@arrivalDate", arrivalDate);
+                    cmd.Parameters.AddWithValue("@departureDate", departureDate);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    bookingsDataGridView.DataSource = dt;
+                }
+            }
+
+        }
+
+
+        private void txtBookingID_Search_TextChanged(object sender, EventArgs e)
+        {
+            string searchValue = txtBookingID_Search.Text.Trim();
+            FilterDataGridView(searchValue);
+        }
+
+        private void FilterDataGridView(string searchValue)
+        {
+            string query = @"SELECT * FROM Booking
+                     WHERE Booking_ID LIKE @searchValue
+                     ORDER BY Booking_ID ASC";
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@searchValue", "%" + searchValue + "%");
+
+                    DataTable dt = new DataTable();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+
+                    if (dt.Rows.Count == 0)
+                    {
+                        // Show a message if no records are found
+                        MessageBox.Show("No bookings found for the given Booking ID.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    bookingsDataGridView.DataSource = dt;
+                }
+            }
+        }
+
+
+        private void btnSearchReset_Click(object sender, EventArgs e)
+        {
            
         }
 
-        
-        private void txtBookingID_Search_TextChanged(object sender, EventArgs e)
+       
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            searchCriteria = true;
+            tabControl1.SelectedTab = tabPage3;
         }
-    }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+       
+        private void FilterDataGridViewByGuestFName(string searchValue)
+        {
+            // Ensure that the DataGridView has the correct column
+            string columnName = "Guest_FName"; // Replace with the actual column name if different
+
+            // Check if the column exists in the DataGridView
+            if (!bookingsDataGridView.Columns.Contains(columnName))
+            {
+                MessageBox.Show($"Column '{columnName}' not found in DataGridView.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Filter the rows based on the search value
+            foreach (DataGridViewRow row in bookingsDataGridView.Rows)
+            {
+                // Skip the new row if it's not committed yet
+                if (row.IsNewRow)
+                {
+                    continue;
+                }
+
+                if (row.Cells[columnName].Value != null)
+                {
+                    string cellValue = row.Cells[columnName].Value.ToString();
+                    row.Visible = cellValue.IndexOf(searchValue, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else
+                {
+                    row.Visible = false;
+                }
+            }
+        }
+
+        private void btnSearchReset_Click_1(object sender, EventArgs e)
+        {
+            LoadBookingData();
+            txtBookingID_Search.Text = " ";
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
