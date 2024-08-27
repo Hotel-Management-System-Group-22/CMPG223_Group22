@@ -133,7 +133,6 @@ namespace HotelManagementSystem
             btnAddRoom.Visible = true;
             txtRoomID.Visible = false;
             lblRoomID.Visible = false;
-            LoadData();
             ResetTabPages();
         }
 
@@ -145,7 +144,6 @@ namespace HotelManagementSystem
             btnUpdateRoom.Visible = true;
             btnAddRoom.Visible = false;
             btnUpdateRoom.Location = new Point(btnAddRoom.Location.X, btnAddRoom.Location.Y);
-            LoadData();
             ResetTabPages();
         }
 
