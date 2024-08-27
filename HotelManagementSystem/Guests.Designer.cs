@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guests));
             this.grpBoxMenu = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.BtnDeleteGuest = new System.Windows.Forms.Button();
             this.BtnUpdatePage = new System.Windows.Forms.Button();
             this.BtnAddPage = new System.Windows.Forms.Button();
@@ -57,14 +59,7 @@
             this.TxtFName_Update = new System.Windows.Forms.TextBox();
             this.LblFName_Update = new System.Windows.Forms.Label();
             this.tbDeleteGuest = new System.Windows.Forms.TabPage();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.tbSearchGuest = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdoLName = new System.Windows.Forms.RadioButton();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.DgvGuests = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbConfirmation = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,29 +69,35 @@
             this.txtEmail_Delete = new System.Windows.Forms.TextBox();
             this.txtFName_Delete = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbConfirmation = new System.Windows.Forms.CheckBox();
-            this.txtFName_Search = new System.Windows.Forms.TextBox();
-            this.txtLName_Search = new System.Windows.Forms.TextBox();
-            this.rdoFName = new System.Windows.Forms.RadioButton();
-            this.txtContact_Search = new System.Windows.Forms.TextBox();
-            this.rdoContact = new System.Windows.Forms.RadioButton();
-            this.txtEmail_Search = new System.Windows.Forms.TextBox();
-            this.rdoEmail = new System.Windows.Forms.RadioButton();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.tbSearchGuest = new System.Windows.Forms.TabPage();
+            this.btnResetSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdoDsc = new System.Windows.Forms.RadioButton();
             this.rdoAsc = new System.Windows.Forms.RadioButton();
-            this.btnResetSearch = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEmail_Search = new System.Windows.Forms.TextBox();
+            this.rdoEmail = new System.Windows.Forms.RadioButton();
+            this.txtContact_Search = new System.Windows.Forms.TextBox();
+            this.rdoContact = new System.Windows.Forms.RadioButton();
+            this.txtLName_Search = new System.Windows.Forms.TextBox();
+            this.rdoFName = new System.Windows.Forms.RadioButton();
+            this.txtFName_Search = new System.Windows.Forms.TextBox();
+            this.rdoLName = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.DgvGuests = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpBoxMenu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbAddGuest.SuspendLayout();
             this.tbUpdateGuest.SuspendLayout();
             this.tbDeleteGuest.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tbSearchGuest.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBoxMenu
@@ -105,18 +106,28 @@
             this.grpBoxMenu.Controls.Add(this.BtnDeleteGuest);
             this.grpBoxMenu.Controls.Add(this.BtnUpdatePage);
             this.grpBoxMenu.Controls.Add(this.BtnAddPage);
-            this.grpBoxMenu.Location = new System.Drawing.Point(937, 12);
+            this.grpBoxMenu.Location = new System.Drawing.Point(79, 183);
             this.grpBoxMenu.Name = "grpBoxMenu";
-            this.grpBoxMenu.Size = new System.Drawing.Size(268, 325);
+            this.grpBoxMenu.Size = new System.Drawing.Size(226, 238);
             this.grpBoxMenu.TabIndex = 0;
             this.grpBoxMenu.TabStop = false;
             this.grpBoxMenu.Text = "Menu";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(11, 175);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(203, 48);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "SEARCH GUEST";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // BtnDeleteGuest
             // 
-            this.BtnDeleteGuest.Location = new System.Drawing.Point(11, 176);
+            this.BtnDeleteGuest.Location = new System.Drawing.Point(11, 123);
             this.BtnDeleteGuest.Name = "BtnDeleteGuest";
-            this.BtnDeleteGuest.Size = new System.Drawing.Size(243, 62);
+            this.BtnDeleteGuest.Size = new System.Drawing.Size(203, 46);
             this.BtnDeleteGuest.TabIndex = 3;
             this.BtnDeleteGuest.Text = "DELETE GUEST";
             this.BtnDeleteGuest.UseVisualStyleBackColor = true;
@@ -124,9 +135,9 @@
             // 
             // BtnUpdatePage
             // 
-            this.BtnUpdatePage.Location = new System.Drawing.Point(6, 99);
+            this.BtnUpdatePage.Location = new System.Drawing.Point(11, 64);
             this.BtnUpdatePage.Name = "BtnUpdatePage";
-            this.BtnUpdatePage.Size = new System.Drawing.Size(243, 51);
+            this.BtnUpdatePage.Size = new System.Drawing.Size(203, 45);
             this.BtnUpdatePage.TabIndex = 2;
             this.BtnUpdatePage.Text = "UPDATE GUEST";
             this.BtnUpdatePage.UseVisualStyleBackColor = true;
@@ -136,7 +147,7 @@
             // 
             this.BtnAddPage.Location = new System.Drawing.Point(11, 18);
             this.BtnAddPage.Name = "BtnAddPage";
-            this.BtnAddPage.Size = new System.Drawing.Size(243, 50);
+            this.BtnAddPage.Size = new System.Drawing.Size(203, 40);
             this.BtnAddPage.TabIndex = 0;
             this.BtnAddPage.Text = "ADD GUEST";
             this.BtnAddPage.UseVisualStyleBackColor = true;
@@ -148,10 +159,10 @@
             this.tabControl1.Controls.Add(this.tbUpdateGuest);
             this.tabControl1.Controls.Add(this.tbDeleteGuest);
             this.tabControl1.Controls.Add(this.tbSearchGuest);
-            this.tabControl1.Location = new System.Drawing.Point(38, 30);
+            this.tabControl1.Location = new System.Drawing.Point(413, 183);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(762, 279);
+            this.tabControl1.Size = new System.Drawing.Size(693, 238);
             this.tabControl1.TabIndex = 1;
             // 
             // tbAddGuest
@@ -168,14 +179,14 @@
             this.tbAddGuest.Location = new System.Drawing.Point(4, 25);
             this.tbAddGuest.Name = "tbAddGuest";
             this.tbAddGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tbAddGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbAddGuest.Size = new System.Drawing.Size(685, 209);
             this.tbAddGuest.TabIndex = 0;
             this.tbAddGuest.Text = "ADD GUEST";
             this.tbAddGuest.UseVisualStyleBackColor = true;
             // 
             // BtnAddGuest
             // 
-            this.BtnAddGuest.Location = new System.Drawing.Point(23, 197);
+            this.BtnAddGuest.Location = new System.Drawing.Point(500, 24);
             this.BtnAddGuest.Name = "BtnAddGuest";
             this.BtnAddGuest.Size = new System.Drawing.Size(160, 23);
             this.BtnAddGuest.TabIndex = 3;
@@ -370,93 +381,15 @@
             this.tbDeleteGuest.Text = "DELETE GUEST";
             this.tbDeleteGuest.UseVisualStyleBackColor = true;
             // 
-            // BtnDelete
+            // cbConfirmation
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(72, 201);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(202, 46);
-            this.BtnDelete.TabIndex = 0;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.UseVisualStyleBackColor = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // tbSearchGuest
-            // 
-            this.tbSearchGuest.AccessibleName = "tbPgSearch";
-            this.tbSearchGuest.Controls.Add(this.btnResetSearch);
-            this.tbSearchGuest.Controls.Add(this.groupBox3);
-            this.tbSearchGuest.Controls.Add(this.groupBox2);
-            this.tbSearchGuest.Controls.Add(this.btnSearch);
-            this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbSearchGuest.Name = "tbSearchGuest";
-            this.tbSearchGuest.Size = new System.Drawing.Size(754, 250);
-            this.tbSearchGuest.TabIndex = 4;
-            this.tbSearchGuest.Text = "SEARCH GUEST";
-            this.tbSearchGuest.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtEmail_Search);
-            this.groupBox2.Controls.Add(this.rdoEmail);
-            this.groupBox2.Controls.Add(this.txtContact_Search);
-            this.groupBox2.Controls.Add(this.rdoContact);
-            this.groupBox2.Controls.Add(this.txtLName_Search);
-            this.groupBox2.Controls.Add(this.rdoFName);
-            this.groupBox2.Controls.Add(this.txtFName_Search);
-            this.groupBox2.Controls.Add(this.rdoLName);
-            this.groupBox2.Location = new System.Drawing.Point(26, 21);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(381, 157);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Search by:";
-            // 
-            // rdoLName
-            // 
-            this.rdoLName.AutoSize = true;
-            this.rdoLName.Location = new System.Drawing.Point(20, 34);
-            this.rdoLName.Name = "rdoLName";
-            this.rdoLName.Size = new System.Drawing.Size(131, 20);
-            this.rdoLName.TabIndex = 3;
-            this.rdoLName.TabStop = true;
-            this.rdoLName.Text = "Guest Last Name";
-            this.rdoLName.UseVisualStyleBackColor = true;
-            this.rdoLName.CheckedChanged += new System.EventHandler(this.rdoLName_CheckedChanged);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(471, 150);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(145, 42);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.Submit_Click);
-            // 
-            // DgvGuests
-            // 
-            this.DgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGuests.Location = new System.Drawing.Point(38, 343);
-            this.DgvGuests.Name = "DgvGuests";
-            this.DgvGuests.RowHeadersWidth = 51;
-            this.DgvGuests.RowTemplate.Height = 24;
-            this.DgvGuests.Size = new System.Drawing.Size(1167, 215);
-            this.DgvGuests.TabIndex = 2;
-            this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(11, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(243, 62);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "SEARCH GUEST";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.cbConfirmation.AutoSize = true;
+            this.cbConfirmation.Location = new System.Drawing.Point(469, 201);
+            this.cbConfirmation.Name = "cbConfirmation";
+            this.cbConfirmation.Size = new System.Drawing.Size(238, 20);
+            this.cbConfirmation.TabIndex = 24;
+            this.cbConfirmation.Text = "Is this the Guest you want to delete?";
+            this.cbConfirmation.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -548,79 +481,39 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "First Name:";
             // 
-            // cbConfirmation
+            // BtnDelete
             // 
-            this.cbConfirmation.AutoSize = true;
-            this.cbConfirmation.Location = new System.Drawing.Point(469, 201);
-            this.cbConfirmation.Name = "cbConfirmation";
-            this.cbConfirmation.Size = new System.Drawing.Size(238, 20);
-            this.cbConfirmation.TabIndex = 24;
-            this.cbConfirmation.Text = "Is this the Guest you want to delete?";
-            this.cbConfirmation.UseVisualStyleBackColor = true;
+            this.BtnDelete.Location = new System.Drawing.Point(72, 201);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(202, 46);
+            this.BtnDelete.TabIndex = 0;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // txtFName_Search
+            // tbSearchGuest
             // 
-            this.txtFName_Search.Location = new System.Drawing.Point(192, 64);
-            this.txtFName_Search.Name = "txtFName_Search";
-            this.txtFName_Search.Size = new System.Drawing.Size(167, 22);
-            this.txtFName_Search.TabIndex = 5;
+            this.tbSearchGuest.AccessibleName = "tbPgSearch";
+            this.tbSearchGuest.Controls.Add(this.btnResetSearch);
+            this.tbSearchGuest.Controls.Add(this.groupBox3);
+            this.tbSearchGuest.Controls.Add(this.groupBox2);
+            this.tbSearchGuest.Controls.Add(this.btnSearch);
+            this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
+            this.tbSearchGuest.Name = "tbSearchGuest";
+            this.tbSearchGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbSearchGuest.TabIndex = 4;
+            this.tbSearchGuest.Text = "SEARCH GUEST";
+            this.tbSearchGuest.UseVisualStyleBackColor = true;
             // 
-            // txtLName_Search
+            // btnResetSearch
             // 
-            this.txtLName_Search.Location = new System.Drawing.Point(192, 32);
-            this.txtLName_Search.Name = "txtLName_Search";
-            this.txtLName_Search.Size = new System.Drawing.Size(167, 22);
-            this.txtLName_Search.TabIndex = 7;
-            // 
-            // rdoFName
-            // 
-            this.rdoFName.AutoSize = true;
-            this.rdoFName.Location = new System.Drawing.Point(20, 66);
-            this.rdoFName.Name = "rdoFName";
-            this.rdoFName.Size = new System.Drawing.Size(131, 20);
-            this.rdoFName.TabIndex = 6;
-            this.rdoFName.TabStop = true;
-            this.rdoFName.Text = "Guest First Name";
-            this.rdoFName.UseVisualStyleBackColor = true;
-            this.rdoFName.CheckedChanged += new System.EventHandler(this.rdoFName_CheckedChanged);
-            // 
-            // txtContact_Search
-            // 
-            this.txtContact_Search.Location = new System.Drawing.Point(192, 101);
-            this.txtContact_Search.Name = "txtContact_Search";
-            this.txtContact_Search.Size = new System.Drawing.Size(167, 22);
-            this.txtContact_Search.TabIndex = 9;
-            // 
-            // rdoContact
-            // 
-            this.rdoContact.AutoSize = true;
-            this.rdoContact.Location = new System.Drawing.Point(20, 101);
-            this.rdoContact.Name = "rdoContact";
-            this.rdoContact.Size = new System.Drawing.Size(162, 20);
-            this.rdoContact.TabIndex = 8;
-            this.rdoContact.TabStop = true;
-            this.rdoContact.Text = "Guest Contact Number";
-            this.rdoContact.UseVisualStyleBackColor = true;
-            this.rdoContact.CheckedChanged += new System.EventHandler(this.rdoContact_CheckedChanged);
-            // 
-            // txtEmail_Search
-            // 
-            this.txtEmail_Search.Location = new System.Drawing.Point(192, 129);
-            this.txtEmail_Search.Name = "txtEmail_Search";
-            this.txtEmail_Search.Size = new System.Drawing.Size(167, 22);
-            this.txtEmail_Search.TabIndex = 11;
-            // 
-            // rdoEmail
-            // 
-            this.rdoEmail.AutoSize = true;
-            this.rdoEmail.Location = new System.Drawing.Point(20, 129);
-            this.rdoEmail.Name = "rdoEmail";
-            this.rdoEmail.Size = new System.Drawing.Size(100, 20);
-            this.rdoEmail.TabIndex = 10;
-            this.rdoEmail.TabStop = true;
-            this.rdoEmail.Text = "Guest Email";
-            this.rdoEmail.UseVisualStyleBackColor = true;
-            this.rdoEmail.CheckedChanged += new System.EventHandler(this.rdoEmail_CheckedChanged);
+            this.btnResetSearch.Location = new System.Drawing.Point(471, 201);
+            this.btnResetSearch.Name = "btnResetSearch";
+            this.btnResetSearch.Size = new System.Drawing.Size(145, 42);
+            this.btnResetSearch.TabIndex = 13;
+            this.btnResetSearch.Text = "Reset";
+            this.btnResetSearch.UseVisualStyleBackColor = true;
+            this.btnResetSearch.Click += new System.EventHandler(this.btnResetSearch_Click);
             // 
             // groupBox3
             // 
@@ -655,24 +548,135 @@
             this.rdoAsc.Text = "Ascending";
             this.rdoAsc.UseVisualStyleBackColor = true;
             // 
-            // btnResetSearch
+            // groupBox2
             // 
-            this.btnResetSearch.Location = new System.Drawing.Point(471, 201);
-            this.btnResetSearch.Name = "btnResetSearch";
-            this.btnResetSearch.Size = new System.Drawing.Size(145, 42);
-            this.btnResetSearch.TabIndex = 13;
-            this.btnResetSearch.Text = "Reset";
-            this.btnResetSearch.UseVisualStyleBackColor = true;
-            this.btnResetSearch.Click += new System.EventHandler(this.btnResetSearch_Click);
+            this.groupBox2.Controls.Add(this.txtEmail_Search);
+            this.groupBox2.Controls.Add(this.rdoEmail);
+            this.groupBox2.Controls.Add(this.txtContact_Search);
+            this.groupBox2.Controls.Add(this.rdoContact);
+            this.groupBox2.Controls.Add(this.txtLName_Search);
+            this.groupBox2.Controls.Add(this.rdoFName);
+            this.groupBox2.Controls.Add(this.txtFName_Search);
+            this.groupBox2.Controls.Add(this.rdoLName);
+            this.groupBox2.Location = new System.Drawing.Point(26, 21);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(381, 157);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search by:";
+            // 
+            // txtEmail_Search
+            // 
+            this.txtEmail_Search.Location = new System.Drawing.Point(192, 129);
+            this.txtEmail_Search.Name = "txtEmail_Search";
+            this.txtEmail_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtEmail_Search.TabIndex = 11;
+            // 
+            // rdoEmail
+            // 
+            this.rdoEmail.AutoSize = true;
+            this.rdoEmail.Location = new System.Drawing.Point(20, 129);
+            this.rdoEmail.Name = "rdoEmail";
+            this.rdoEmail.Size = new System.Drawing.Size(100, 20);
+            this.rdoEmail.TabIndex = 10;
+            this.rdoEmail.TabStop = true;
+            this.rdoEmail.Text = "Guest Email";
+            this.rdoEmail.UseVisualStyleBackColor = true;
+            this.rdoEmail.CheckedChanged += new System.EventHandler(this.rdoEmail_CheckedChanged);
+            // 
+            // txtContact_Search
+            // 
+            this.txtContact_Search.Location = new System.Drawing.Point(192, 101);
+            this.txtContact_Search.Name = "txtContact_Search";
+            this.txtContact_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtContact_Search.TabIndex = 9;
+            // 
+            // rdoContact
+            // 
+            this.rdoContact.AutoSize = true;
+            this.rdoContact.Location = new System.Drawing.Point(20, 101);
+            this.rdoContact.Name = "rdoContact";
+            this.rdoContact.Size = new System.Drawing.Size(162, 20);
+            this.rdoContact.TabIndex = 8;
+            this.rdoContact.TabStop = true;
+            this.rdoContact.Text = "Guest Contact Number";
+            this.rdoContact.UseVisualStyleBackColor = true;
+            this.rdoContact.CheckedChanged += new System.EventHandler(this.rdoContact_CheckedChanged);
+            // 
+            // txtLName_Search
+            // 
+            this.txtLName_Search.Location = new System.Drawing.Point(192, 32);
+            this.txtLName_Search.Name = "txtLName_Search";
+            this.txtLName_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtLName_Search.TabIndex = 7;
+            // 
+            // rdoFName
+            // 
+            this.rdoFName.AutoSize = true;
+            this.rdoFName.Location = new System.Drawing.Point(20, 66);
+            this.rdoFName.Name = "rdoFName";
+            this.rdoFName.Size = new System.Drawing.Size(131, 20);
+            this.rdoFName.TabIndex = 6;
+            this.rdoFName.TabStop = true;
+            this.rdoFName.Text = "Guest First Name";
+            this.rdoFName.UseVisualStyleBackColor = true;
+            this.rdoFName.CheckedChanged += new System.EventHandler(this.rdoFName_CheckedChanged);
+            // 
+            // txtFName_Search
+            // 
+            this.txtFName_Search.Location = new System.Drawing.Point(192, 64);
+            this.txtFName_Search.Name = "txtFName_Search";
+            this.txtFName_Search.Size = new System.Drawing.Size(167, 22);
+            this.txtFName_Search.TabIndex = 5;
+            // 
+            // rdoLName
+            // 
+            this.rdoLName.AutoSize = true;
+            this.rdoLName.Location = new System.Drawing.Point(20, 34);
+            this.rdoLName.Name = "rdoLName";
+            this.rdoLName.Size = new System.Drawing.Size(131, 20);
+            this.rdoLName.TabIndex = 3;
+            this.rdoLName.TabStop = true;
+            this.rdoLName.Text = "Guest Last Name";
+            this.rdoLName.UseVisualStyleBackColor = true;
+            this.rdoLName.CheckedChanged += new System.EventHandler(this.rdoLName_CheckedChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(471, 150);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(145, 42);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.Submit_Click);
+            // 
+            // DgvGuests
+            // 
+            this.DgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvGuests.Location = new System.Drawing.Point(79, 427);
+            this.DgvGuests.Name = "DgvGuests";
+            this.DgvGuests.RowHeadersWidth = 51;
+            this.DgvGuests.RowTemplate.Height = 24;
+            this.DgvGuests.Size = new System.Drawing.Size(1043, 221);
+            this.DgvGuests.TabIndex = 2;
+            this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Guests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 592);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1231, 648);
             this.Controls.Add(this.DgvGuests);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.grpBoxMenu);
+            this.DoubleBuffered = true;
             this.Name = "Guests";
             this.Text = "Guests";
             this.Load += new System.EventHandler(this.Guests_Load);
@@ -684,15 +688,15 @@
             this.tbUpdateGuest.PerformLayout();
             this.tbDeleteGuest.ResumeLayout(false);
             this.tbDeleteGuest.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tbSearchGuest.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
