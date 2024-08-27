@@ -72,19 +72,48 @@ namespace HotelManagementSystem
             int status = isBooked ? 1 : 0;
 
             // Update the room status in the database
-            string updateStatusQuery = @"UPDATE RoomSET Status = @statusWHERE Room_ID = @roomId AND EXISTS (SELECT 1 FROM Booking WHERE Room_ID = @roomId AND Guest_Arrival <= @departureDate AND Guest_Departure >= @arrivalDat)";
-            SqlConnection conn = new SqlConnection(connection);
-            conn.Open();
-            using (SqlCommand cmd = new SqlCommand(updateStatusQuery, conn))
-            {
-                cmd.Parameters.AddWithValue("@status", status);
-                cmd.Parameters.AddWithValue("@roomId", roomId);
-                cmd.Parameters.AddWithValue("@arrivalDate", arrivalDate);
-                cmd.Parameters.AddWithValue("@departureDate", departureDate);
+            string updateStatusQuery = @"
+        UPDATE Room
+        SET Status = @status
+        WHERE Room_ID = @roomId
+        AND EXISTS (
+            SELECT 1
+            FROM Booking
+            WHERE Room_ID = @roomId
+            AND Guest_Arrival <= @departureDate
+            AND Guest_Departure >= @arrivalDate
+        )";
 
-                cmd.ExecuteNonQuery();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(updateStatusQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@status", status);
+                        cmd.Parameters.AddWithValue("@roomId", roomId);
+                        cmd.Parameters.AddWithValue("@arrivalDate", arrivalDate);
+                        cmd.Parameters.AddWithValue("@departureDate", departureDate);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        // Optionally handle the result
+                        if (rowsAffected == 0)
+                        {
+                            // Handle the case where no rows were updated
+                            Console.WriteLine("No matching room found or status was not updated.");
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Log or handle the exception as needed
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
@@ -108,8 +137,8 @@ namespace HotelManagementSystem
             string guestLName = txtGuestLNameAdd.Text;
             int guestId = -1;
 
-            
-            if (string.IsNullOrEmpty(errorProvider1.GetError(txtGuestFNameAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(txtGuestLNameAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(txtRoomNrAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(dtCheckin)) && string.IsNullOrEmpty(errorProvider1.GetError(dtCheckout))){
+
+            if (string.IsNullOrEmpty(errorProvider1.GetError(txtGuestFNameAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(txtGuestLNameAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(txtRoomNrAdd)) && string.IsNullOrEmpty(errorProvider1.GetError(dtCheckin)) && string.IsNullOrEmpty(errorProvider1.GetError(dtCheckout))) {
 
                 // Get Guest_ID based on Guest Name
                 string searchGuestQuery = "SELECT Guest_ID FROM Guest WHERE Guest_FName = @guestFName AND Guest_LName = @guestLName";
@@ -209,7 +238,7 @@ namespace HotelManagementSystem
 
             if (selectedCheckinDate < currentDate)
             {
-                errorProvider1.SetError(dtCheckin,"The check-in date cannot be in the past. Please select a valid date.");
+                errorProvider1.SetError(dtCheckin, "The check-in date cannot be in the past. Please select a valid date.");
                 // Optionally, reset the date picker to the current date
                 dtCheckin.Value = currentDate;
             }
@@ -218,14 +247,14 @@ namespace HotelManagementSystem
         private void dtCheckout_ValueChanged(object sender, EventArgs e)
         {
             int maxBookingDuration = 30;
-            
+
             DateTime selectedCheckoutDate = dtCheckout.Value.Date;
             DateTime selectedCheckinDate = dtCheckin.Value.Date;
             TimeSpan duration = selectedCheckoutDate - selectedCheckinDate;
 
             if (selectedCheckoutDate == selectedCheckinDate)
             {
-                errorProvider1.SetError(dtCheckout,"Booking has to be for at least one day");
+                errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
             }
             if (duration.Days > maxBookingDuration)
             {
@@ -349,6 +378,355 @@ namespace HotelManagementSystem
         private void Bookings_Load(object sender, EventArgs e)
         {
             LoadBookingData();
+        }
+        private void PopulateBookingDeleteFields(int bookingId)
+        {
+            // First query to get guest details using the Guest_ID from the Booking table
+            string guestQuery = @"SELECT g.Guest_FName, g.Guest_LName 
+                          FROM Guest g
+                          INNER JOIN Booking b ON g.Guest_ID = b.Guest_ID
+                          WHERE b.Booking_ID = @bookingId";
+
+            // Second query to get booking details
+            string bookingQuery = @"SELECT Booking_ID, Room_ID, Guest_Arrival, Guest_Departure 
+                            FROM Booking 
+                            WHERE Booking_ID = @bookingId";
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                // Execute the first query to get guest details
+                using (SqlCommand guestCommand = new SqlCommand(guestQuery, conn))
+                {
+                    guestCommand.Parameters.AddWithValue("@bookingId", bookingId);
+
+                    using (SqlDataReader reader = guestCommand.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtGuestFName_Delete.Text = reader["Guest_FName"].ToString();
+                            txtGuestLName_Delete.Text = reader["Guest_LName"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Guest not found for the selected booking ID. Please ensure the Booking ID is correct.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+
+                // Execute the second query to get booking details
+                using (SqlCommand bookingCommand = new SqlCommand(bookingQuery, conn))
+                {
+                    bookingCommand.Parameters.AddWithValue("@bookingId", bookingId);
+
+                    using (SqlDataReader reader = bookingCommand.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            label.Text = reader["Booking_ID"].ToString();
+                            txtRoomNr_Delete.Text = reader["Room_ID"].ToString();
+                            if (reader["Guest_Arrival"] != DBNull.Value)
+                            {
+                                DateTime arrivalDate = Convert.ToDateTime(reader["Guest_Arrival"]);
+                                txtArrival.Text = arrivalDate.ToString("yyyy-MM-dd"); // Or another format
+                            }
+                            else
+                            {
+                                txtArrival.Text = "N/A"; // Or another default value
+                            }
+
+                            if (reader["Guest_Departure"] != DBNull.Value)
+                            {
+                                DateTime departureDate = Convert.ToDateTime(reader["Guest_Departure"]);
+                                txtDeparture.Text = departureDate.ToString("yyyy-MM-dd"); // Or another format
+                            }
+                            else
+                            {
+                                txtDeparture.Text = "N/A"; // Or another default value
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Booking not found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        private int selectedBookingId = -1;
+        private void btnDeleteEmp_Click(object sender, EventArgs e)
+        {
+            // Check if a booking is selected
+            if (selectedBookingId == -1)
+            {
+                MessageBox.Show("No booking selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Ensure the confirmation checkbox is checked
+            if (!cmbConfirm.Checked)
+            {
+                MessageBox.Show("Please confirm that you want to delete this booking by checking the confirmation box.", "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Retrieve guest name and booking details for confirmation
+            string guestQuery = @"SELECT g.Guest_FName, g.Guest_LName 
+                      FROM Guest g 
+                      INNER JOIN Booking b ON g.Guest_ID = b.Guest_ID 
+                      WHERE b.Booking_ID = @bookingId";
+
+            string bookingQuery = @"SELECT b.Room_ID, b.Guest_Arrival, b.Guest_Departure 
+                            FROM Booking b 
+                            WHERE b.Booking_ID = @bookingId";
+
+            string guestName = "";
+            int roomId = -1;
+            DateTime arrivalDate = DateTime.MinValue;
+            DateTime departureDate = DateTime.MinValue;
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                // Retrieve guest details
+                using (SqlCommand command = new SqlCommand(guestQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@bookingId", selectedBookingId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtGuestFName_Delete.Text = reader["Guest_FName"].ToString() ;
+                            txtGuestLName_Delete.Text = reader["Guest_LName"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No guest found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+
+                // Retrieve booking details
+                using (SqlCommand command = new SqlCommand(bookingQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@bookingId", selectedBookingId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            roomId = Convert.ToInt32(reader["Room_ID"]);
+                            arrivalDate = Convert.ToDateTime(reader["Guest_Arrival"]);
+                            departureDate = Convert.ToDateTime(reader["Guest_Departure"]);
+
+                            // Populate form fields with booking details
+                            txtRoomNr_Delete.Text = roomId.ToString();
+                            txtDeparture.Text = departureDate.ToString();
+                            txtArrival.Text = arrivalDate.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No booking details found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Prepare confirmation message with booking details
+            string confirmationMessage = $"Are you sure you want to delete the booking for {guestName} in Room {roomId} from {arrivalDate.ToShortDateString()} to {departureDate.ToShortDateString()}?";
+
+            // Confirm deletion
+            DialogResult result = MessageBox.Show(confirmationMessage, "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            // Proceed to delete the booking
+            string deleteQuery = "DELETE FROM Booking WHERE Booking_ID = @bookingId";
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(deleteQuery, conn))
+                {
+                    command.Parameters.AddWithValue("@bookingId", selectedBookingId);
+
+                    try
+                    {
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            // Update room status for the duration of the booking
+                            UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
+
+                            MessageBox.Show("Booking has been successfully deleted.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Reload the bookings list to reflect changes
+                            LoadBookingData();
+
+                            // Clear the form fields
+                            ClearBookingDeleteFields();
+
+                            // Reset the selected booking ID and uncheck confirmation checkbox
+                            selectedBookingId = -1;
+                            cmbConfirm.Checked = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete the booking. Please try again.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while deleting the booking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void bookingsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the click is on a valid row
+            if (e.RowIndex >= 0)
+            {
+                // Get the selected row
+                DataGridViewRow row = bookingsDataGridView.Rows[e.RowIndex];
+
+                // Ensure the necessary cell values are not null
+                if (row.Cells["Booking_ID"].Value != null)
+                {
+                    // Retrieve the booking ID
+                    selectedBookingId = Convert.ToInt32(row.Cells["Booking_ID"].Value);
+
+                    // Update the label with the booking ID
+                    txtBookingID_Delete.Text = selectedBookingId.ToString();
+
+                    // Clear text fields before populating with data
+                    txtGuestFName_Delete.Text = "";
+                    txtGuestLName_Delete.Text = "";
+                    txtRoomNr_Delete.Text = "";
+                    txtArrival.Text = "";
+                    txtDeparture.Text = "";
+
+                    // Define the SQL queries to get booking and guest details
+                    string guestQuery = @"SELECT g.Guest_FName, g.Guest_LName 
+                                  FROM Guest g 
+                                  INNER JOIN Booking b ON g.Guest_ID = b.Guest_ID 
+                                  WHERE b.Booking_ID = @bookingId";
+
+                    string bookingQuery = @"SELECT b.Room_ID, b.Guest_Arrival, b.Guest_Departure 
+                                    FROM Booking b 
+                                    WHERE b.Booking_ID = @bookingId";
+
+                    try
+                    {
+                        using (SqlConnection conn = new SqlConnection(connection))
+                        {
+                            conn.Open();
+
+                            // Retrieve guest details
+                            using (SqlCommand cmd = new SqlCommand(guestQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@bookingId", selectedBookingId);
+
+                                using (SqlDataReader reader = cmd.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        // Populate guest name fields
+                                        txtGuestFName_Delete.Text = reader["Guest_FName"].ToString();
+                                        txtGuestLName_Delete.Text = reader["Guest_LName"].ToString();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No guest details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+
+                            // Retrieve booking details
+                            using (SqlCommand cmd = new SqlCommand(bookingQuery, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@bookingId", selectedBookingId);
+
+                                using (SqlDataReader reader = cmd.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        // Populate booking details
+                                        txtRoomNr_Delete.Text = reader["Room_ID"].ToString();
+                                        if (reader["Guest_Arrival"] != DBNull.Value)
+                                        {
+                                            DateTime arrivalDate = Convert.ToDateTime(reader["Guest_Arrival"]);
+                                            txtArrival.Text = arrivalDate.ToString("yyyy-MM-dd"); // Or another format
+                                        }
+                                        else
+                                        {
+                                            txtArrival.Text = "N/A"; // Or another default value
+                                        }
+
+                                        if (reader["Guest_Departure"] != DBNull.Value)
+                                        {
+                                            DateTime departureDate = Convert.ToDateTime(reader["Guest_Departure"]);
+                                            txtDeparture.Text = departureDate.ToString("yyyy-MM-dd"); // Or another format
+                                        }
+                                        else
+                                        {
+                                            txtDeparture.Text = "N/A"; // Or another default value
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No booking details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Handle SQL exceptions
+                        MessageBox.Show($"An error occurred while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle general exceptions
+                        MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    // Display an error message if booking ID is missing
+                    MessageBox.Show("No booking details found for the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+
+
+
+        private void ClearBookingDeleteFields()
+        {
+            // Clear all the fields in the deletion form
+            txtBookingID_Delete.Clear();
+            txtGuestFName_Delete.Clear();
+            txtGuestLName_Delete.Clear();
+            txtRoomNr_Delete.Clear();
+            txtDeparture.Clear();
+            txtArrival.Clear();
         }
     }
 }

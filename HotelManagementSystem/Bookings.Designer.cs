@@ -51,10 +51,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDeleteReset = new System.Windows.Forms.Button();
-            this.txtDeleteSerach = new System.Windows.Forms.TextBox();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBookingID_Delete = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.txtGuestLName_Delete = new System.Windows.Forms.TextBox();
+            this.txtGuestFName_Delete = new System.Windows.Forms.TextBox();
+            this.txtRoomNr_Delete = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbConfirm = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtCheckout = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckin = new System.Windows.Forms.DateTimePicker();
+            this.txtRoomNrAdd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAddReset = new System.Windows.Forms.Button();
             this.btnAddBooking = new System.Windows.Forms.Button();
             this.txtGuestFNameAdd = new System.Windows.Forms.TextBox();
@@ -72,18 +88,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtRoomNrAdd = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtCheckin = new System.Windows.Forms.DateTimePicker();
-            this.dtCheckout = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtArrival = new System.Windows.Forms.TextBox();
+            this.txtDeparture = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -98,6 +111,7 @@
             this.bookingsDataGridView.RowTemplate.Height = 24;
             this.bookingsDataGridView.Size = new System.Drawing.Size(1130, 282);
             this.bookingsDataGridView.TabIndex = 18;
+            this.bookingsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookingsDataGridView_CellContentClick);
             // 
             // groupBox1
             // 
@@ -292,9 +306,8 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnDeleteReset);
-            this.tabPage2.Controls.Add(this.txtDeleteSerach);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
-            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -312,30 +325,133 @@
             this.btnDeleteReset.Text = "RESET";
             this.btnDeleteReset.UseVisualStyleBackColor = true;
             // 
-            // txtDeleteSerach
-            // 
-            this.txtDeleteSerach.Location = new System.Drawing.Point(299, 86);
-            this.txtDeleteSerach.Name = "txtDeleteSerach";
-            this.txtDeleteSerach.Size = new System.Drawing.Size(180, 22);
-            this.txtDeleteSerach.TabIndex = 0;
-            // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(243, 181);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(512, 173);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
+            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtDeparture);
+            this.groupBox2.Controls.Add(this.txtArrival);
+            this.groupBox2.Controls.Add(this.txtBookingID_Delete);
+            this.groupBox2.Controls.Add(this.label);
+            this.groupBox2.Controls.Add(this.txtGuestLName_Delete);
+            this.groupBox2.Controls.Add(this.txtGuestFName_Delete);
+            this.groupBox2.Controls.Add(this.txtRoomNr_Delete);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.cmbConfirm);
+            this.groupBox2.Location = new System.Drawing.Point(74, 17);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(405, 264);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Verify Booking Details";
+            // 
+            // txtBookingID_Delete
+            // 
+            this.txtBookingID_Delete.Location = new System.Drawing.Point(187, 29);
+            this.txtBookingID_Delete.Name = "txtBookingID_Delete";
+            this.txtBookingID_Delete.ReadOnly = true;
+            this.txtBookingID_Delete.Size = new System.Drawing.Size(180, 22);
+            this.txtBookingID_Delete.TabIndex = 18;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(24, 32);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(76, 16);
+            this.label.TabIndex = 19;
+            this.label.Text = "Booking ID:";
+            // 
+            // txtGuestLName_Delete
+            // 
+            this.txtGuestLName_Delete.Location = new System.Drawing.Point(187, 92);
+            this.txtGuestLName_Delete.Name = "txtGuestLName_Delete";
+            this.txtGuestLName_Delete.ReadOnly = true;
+            this.txtGuestLName_Delete.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestLName_Delete.TabIndex = 10;
+            // 
+            // txtGuestFName_Delete
+            // 
+            this.txtGuestFName_Delete.Location = new System.Drawing.Point(187, 61);
+            this.txtGuestFName_Delete.Name = "txtGuestFName_Delete";
+            this.txtGuestFName_Delete.ReadOnly = true;
+            this.txtGuestFName_Delete.Size = new System.Drawing.Size(180, 22);
+            this.txtGuestFName_Delete.TabIndex = 0;
+            // 
+            // txtRoomNr_Delete
+            // 
+            this.txtRoomNr_Delete.Location = new System.Drawing.Point(187, 138);
+            this.txtRoomNr_Delete.Name = "txtRoomNr_Delete";
+            this.txtRoomNr_Delete.ReadOnly = true;
+            this.txtRoomNr_Delete.Size = new System.Drawing.Size(180, 22);
+            this.txtRoomNr_Delete.TabIndex = 12;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 95);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 16);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Guest Last Name:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 86);
+            this.label8.Location = new System.Drawing.Point(24, 64);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 16);
+            this.label8.Size = new System.Drawing.Size(113, 16);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Search Employee Username:";
+            this.label8.Text = "Guest First Name:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(24, 141);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 16);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Room Number:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(24, 209);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(102, 16);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "Departure Date:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(24, 183);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Arrival Date:";
+            // 
+            // cmbConfirm
+            // 
+            this.cmbConfirm.AutoSize = true;
+            this.cmbConfirm.Location = new System.Drawing.Point(27, 238);
+            this.cmbConfirm.Name = "cmbConfirm";
+            this.cmbConfirm.Size = new System.Drawing.Size(280, 20);
+            this.cmbConfirm.TabIndex = 0;
+            this.cmbConfirm.Text = "Confirm that details to be deleted is correct";
+            this.cmbConfirm.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -358,6 +474,57 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(465, 197);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(102, 16);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Departure Date:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Arrival Date:";
+            // 
+            // dtCheckout
+            // 
+            this.dtCheckout.Location = new System.Drawing.Point(569, 192);
+            this.dtCheckout.Name = "dtCheckout";
+            this.dtCheckout.Size = new System.Drawing.Size(232, 22);
+            this.dtCheckout.TabIndex = 13;
+            this.dtCheckout.ValueChanged += new System.EventHandler(this.dtCheckout_ValueChanged);
+            // 
+            // dtCheckin
+            // 
+            this.dtCheckin.Location = new System.Drawing.Point(204, 192);
+            this.dtCheckin.Name = "dtCheckin";
+            this.dtCheckin.Size = new System.Drawing.Size(229, 22);
+            this.dtCheckin.TabIndex = 12;
+            this.dtCheckin.ValueChanged += new System.EventHandler(this.dtCheckin_ValueChanged);
+            // 
+            // txtRoomNrAdd
+            // 
+            this.txtRoomNrAdd.Location = new System.Drawing.Point(224, 143);
+            this.txtRoomNrAdd.Name = "txtRoomNrAdd";
+            this.txtRoomNrAdd.Size = new System.Drawing.Size(180, 22);
+            this.txtRoomNrAdd.TabIndex = 10;
+            this.txtRoomNrAdd.TextChanged += new System.EventHandler(this.txtRoomNrAdd_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 16);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Room number";
             // 
             // btnAddReset
             // 
@@ -531,60 +698,25 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Search by ID number:";
             // 
-            // txtRoomNrAdd
-            // 
-            this.txtRoomNrAdd.Location = new System.Drawing.Point(224, 143);
-            this.txtRoomNrAdd.Name = "txtRoomNrAdd";
-            this.txtRoomNrAdd.Size = new System.Drawing.Size(180, 22);
-            this.txtRoomNrAdd.TabIndex = 10;
-            this.txtRoomNrAdd.TextChanged += new System.EventHandler(this.txtRoomNrAdd_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 16);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Room number";
-            // 
-            // dtCheckin
-            // 
-            this.dtCheckin.Location = new System.Drawing.Point(204, 192);
-            this.dtCheckin.Name = "dtCheckin";
-            this.dtCheckin.Size = new System.Drawing.Size(229, 22);
-            this.dtCheckin.TabIndex = 12;
-            this.dtCheckin.ValueChanged += new System.EventHandler(this.dtCheckin_ValueChanged);
-            // 
-            // dtCheckout
-            // 
-            this.dtCheckout.Location = new System.Drawing.Point(569, 192);
-            this.dtCheckout.Name = "dtCheckout";
-            this.dtCheckout.Size = new System.Drawing.Size(232, 22);
-            this.dtCheckout.TabIndex = 13;
-            this.dtCheckout.ValueChanged += new System.EventHandler(this.dtCheckout_ValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Arrival Date:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(465, 197);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 16);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Departure Date:";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // txtArrival
+            // 
+            this.txtArrival.Location = new System.Drawing.Point(187, 177);
+            this.txtArrival.Name = "txtArrival";
+            this.txtArrival.ReadOnly = true;
+            this.txtArrival.Size = new System.Drawing.Size(180, 22);
+            this.txtArrival.TabIndex = 20;
+            // 
+            // txtDeparture
+            // 
+            this.txtDeparture.Location = new System.Drawing.Point(187, 210);
+            this.txtDeparture.Name = "txtDeparture";
+            this.txtDeparture.ReadOnly = true;
+            this.txtDeparture.Size = new System.Drawing.Size(180, 22);
+            this.txtDeparture.TabIndex = 21;
             // 
             // Bookings
             // 
@@ -603,7 +735,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -637,7 +770,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDeleteReset;
-        private System.Windows.Forms.TextBox txtDeleteSerach;
+        private System.Windows.Forms.TextBox txtGuestFName_Delete;
         private System.Windows.Forms.Button btnDeleteEmp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage3;
@@ -665,5 +798,17 @@
         private System.Windows.Forms.TextBox txtRoomNrAdd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtRoomNr_Delete;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtGuestLName_Delete;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox cmbConfirm;
+        private System.Windows.Forms.TextBox txtBookingID_Delete;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox txtDeparture;
+        private System.Windows.Forms.TextBox txtArrival;
     }
 }
