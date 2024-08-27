@@ -31,13 +31,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpSearch = new System.Windows.Forms.TabPage();
             this.txtSearchEmployee = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSearchEmployeeID = new System.Windows.Forms.Label();
             this.cbxSearchStatus = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSearchRoomStatus = new System.Windows.Forms.Label();
             this.rdbDescending = new System.Windows.Forms.RadioButton();
             this.rdbAscending = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSearchSortRoomID = new System.Windows.Forms.Label();
+            this.lblSearchRoomID = new System.Windows.Forms.Label();
             this.btnSearchReset = new System.Windows.Forms.Button();
             this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.tbpAdd_Update = new System.Windows.Forms.TabPage();
@@ -48,13 +48,13 @@
             this.btnAddReset = new System.Windows.Forms.Button();
             this.cbxRoomStatus = new System.Windows.Forms.ComboBox();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRoomStatus = new System.Windows.Forms.Label();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.tbpDelete = new System.Windows.Forms.TabPage();
             this.btnDeleteReset = new System.Windows.Forms.Button();
             this.btnDeleteRoom = new System.Windows.Forms.Button();
             this.txtDeleteRoomID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblDeleteRoomID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnMenuDelete = new System.Windows.Forms.Button();
             this.btnMenuAdd = new System.Windows.Forms.Button();
@@ -62,6 +62,7 @@
             this.btnMenuUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLanguage = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbpSearch.SuspendLayout();
             this.tbpAdd_Update.SuspendLayout();
@@ -84,13 +85,13 @@
             // tbpSearch
             // 
             this.tbpSearch.Controls.Add(this.txtSearchEmployee);
-            this.tbpSearch.Controls.Add(this.label5);
+            this.tbpSearch.Controls.Add(this.lblSearchEmployeeID);
             this.tbpSearch.Controls.Add(this.cbxSearchStatus);
-            this.tbpSearch.Controls.Add(this.label4);
+            this.tbpSearch.Controls.Add(this.lblSearchRoomStatus);
             this.tbpSearch.Controls.Add(this.rdbDescending);
             this.tbpSearch.Controls.Add(this.rdbAscending);
-            this.tbpSearch.Controls.Add(this.label2);
-            this.tbpSearch.Controls.Add(this.label1);
+            this.tbpSearch.Controls.Add(this.lblSearchSortRoomID);
+            this.tbpSearch.Controls.Add(this.lblSearchRoomID);
             this.tbpSearch.Controls.Add(this.btnSearchReset);
             this.tbpSearch.Controls.Add(this.txtSearchRoom);
             this.tbpSearch.Location = new System.Drawing.Point(4, 22);
@@ -109,15 +110,15 @@
             this.txtSearchEmployee.TabIndex = 2;
             this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
-            // label5
+            // lblSearchEmployeeID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Employee ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblSearchEmployeeID.AutoSize = true;
+            this.lblSearchEmployeeID.Location = new System.Drawing.Point(13, 65);
+            this.lblSearchEmployeeID.Name = "lblSearchEmployeeID";
+            this.lblSearchEmployeeID.Size = new System.Drawing.Size(104, 13);
+            this.lblSearchEmployeeID.TabIndex = 11;
+            this.lblSearchEmployeeID.Text = "Search Employee ID";
+            this.lblSearchEmployeeID.Click += new System.EventHandler(this.label5_Click);
             // 
             // cbxSearchStatus
             // 
@@ -131,15 +132,15 @@
             this.cbxSearchStatus.TabIndex = 3;
             this.cbxSearchStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label4
+            // lblSearchRoomStatus
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Room status";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblSearchRoomStatus.AutoSize = true;
+            this.lblSearchRoomStatus.Location = new System.Drawing.Point(13, 90);
+            this.lblSearchRoomStatus.Name = "lblSearchRoomStatus";
+            this.lblSearchRoomStatus.Size = new System.Drawing.Size(66, 13);
+            this.lblSearchRoomStatus.TabIndex = 9;
+            this.lblSearchRoomStatus.Text = "Room status";
+            this.lblSearchRoomStatus.Click += new System.EventHandler(this.label4_Click);
             // 
             // rdbDescending
             // 
@@ -165,23 +166,23 @@
             this.rdbAscending.UseVisualStyleBackColor = true;
             this.rdbAscending.CheckedChanged += new System.EventHandler(this.rdbAscending_CheckedChanged);
             // 
-            // label2
+            // lblSearchSortRoomID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Sort by Room ID";
+            this.lblSearchSortRoomID.AutoSize = true;
+            this.lblSearchSortRoomID.Location = new System.Drawing.Point(12, 117);
+            this.lblSearchSortRoomID.Name = "lblSearchSortRoomID";
+            this.lblSearchSortRoomID.Size = new System.Drawing.Size(85, 13);
+            this.lblSearchSortRoomID.TabIndex = 3;
+            this.lblSearchSortRoomID.Text = "Sort by Room ID";
             // 
-            // label1
+            // lblSearchRoomID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search Room ID";
+            this.lblSearchRoomID.AutoSize = true;
+            this.lblSearchRoomID.Location = new System.Drawing.Point(13, 37);
+            this.lblSearchRoomID.Name = "lblSearchRoomID";
+            this.lblSearchRoomID.Size = new System.Drawing.Size(86, 13);
+            this.lblSearchRoomID.TabIndex = 2;
+            this.lblSearchRoomID.Text = "Search Room ID";
             // 
             // btnSearchReset
             // 
@@ -210,8 +211,8 @@
             this.tbpAdd_Update.Controls.Add(this.btnAddReset);
             this.tbpAdd_Update.Controls.Add(this.cbxRoomStatus);
             this.tbpAdd_Update.Controls.Add(this.txtEmployeeID);
-            this.tbpAdd_Update.Controls.Add(this.label6);
-            this.tbpAdd_Update.Controls.Add(this.label3);
+            this.tbpAdd_Update.Controls.Add(this.lblRoomStatus);
+            this.tbpAdd_Update.Controls.Add(this.lblEmployeeID);
             this.tbpAdd_Update.Location = new System.Drawing.Point(4, 22);
             this.tbpAdd_Update.Name = "tbpAdd_Update";
             this.tbpAdd_Update.Padding = new System.Windows.Forms.Padding(3);
@@ -226,7 +227,7 @@
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(108, 23);
             this.btnUpdateRoom.TabIndex = 5;
-            this.btnUpdateRoom.Text = "Update room";
+            this.btnUpdateRoom.Text = "Update Room";
             this.btnUpdateRoom.UseVisualStyleBackColor = true;
             this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
             // 
@@ -254,7 +255,7 @@
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(75, 23);
             this.btnAddRoom.TabIndex = 4;
-            this.btnAddRoom.Text = "Add room";
+            this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
@@ -288,30 +289,30 @@
             this.txtEmployeeID.TabIndex = 2;
             this.txtEmployeeID.TextChanged += new System.EventHandler(this.txtEmployeeID_TextChanged);
             // 
-            // label6
+            // lblRoomStatus
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Room status";
+            this.lblRoomStatus.AutoSize = true;
+            this.lblRoomStatus.Location = new System.Drawing.Point(12, 91);
+            this.lblRoomStatus.Name = "lblRoomStatus";
+            this.lblRoomStatus.Size = new System.Drawing.Size(66, 13);
+            this.lblRoomStatus.TabIndex = 3;
+            this.lblRoomStatus.Text = "Room status";
             // 
-            // label3
+            // lblEmployeeID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Employee ID";
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Location = new System.Drawing.Point(12, 65);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(67, 13);
+            this.lblEmployeeID.TabIndex = 0;
+            this.lblEmployeeID.Text = "Employee ID";
             // 
             // tbpDelete
             // 
             this.tbpDelete.Controls.Add(this.btnDeleteReset);
             this.tbpDelete.Controls.Add(this.btnDeleteRoom);
             this.tbpDelete.Controls.Add(this.txtDeleteRoomID);
-            this.tbpDelete.Controls.Add(this.label8);
+            this.tbpDelete.Controls.Add(this.lblDeleteRoomID);
             this.tbpDelete.Location = new System.Drawing.Point(4, 22);
             this.tbpDelete.Name = "tbpDelete";
             this.tbpDelete.Size = new System.Drawing.Size(531, 225);
@@ -347,14 +348,14 @@
             this.txtDeleteRoomID.TabIndex = 16;
             this.txtDeleteRoomID.TextChanged += new System.EventHandler(this.txtDeleteRoomID_TextChanged);
             // 
-            // label8
+            // lblDeleteRoomID
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 39);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Search by room ID";
+            this.lblDeleteRoomID.AutoSize = true;
+            this.lblDeleteRoomID.Location = new System.Drawing.Point(12, 39);
+            this.lblDeleteRoomID.Name = "lblDeleteRoomID";
+            this.lblDeleteRoomID.Size = new System.Drawing.Size(95, 13);
+            this.lblDeleteRoomID.TabIndex = 0;
+            this.lblDeleteRoomID.Text = "Search by room ID";
             // 
             // groupBox1
             // 
@@ -428,11 +429,22 @@
             this.panel1.Size = new System.Drawing.Size(1014, 21);
             this.panel1.TabIndex = 4;
             // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Location = new System.Drawing.Point(796, 518);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.TabIndex = 5;
+            this.btnLanguage.Text = "Afrikaans";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
             // MaintainRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 629);
+            this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
@@ -468,14 +480,14 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rdbAscending;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSearchSortRoomID;
+        private System.Windows.Forms.Label lblSearchRoomID;
         private System.Windows.Forms.Button btnSearchReset;
         private System.Windows.Forms.TextBox txtSearchRoom;
         private System.Windows.Forms.RadioButton rdbDescending;
         private System.Windows.Forms.TextBox txtEmployeeID;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRoomStatus;
+        private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Button btnAddReset;
         private System.Windows.Forms.ComboBox cbxRoomStatus;
@@ -483,12 +495,13 @@
         private System.Windows.Forms.Label lblRoomID;
         private System.Windows.Forms.Button btnUpdateRoom;
         private System.Windows.Forms.TextBox txtDeleteRoomID;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblDeleteRoomID;
         private System.Windows.Forms.Button btnDeleteRoom;
         private System.Windows.Forms.Button btnDeleteReset;
         private System.Windows.Forms.ComboBox cbxSearchStatus;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSearchRoomStatus;
         private System.Windows.Forms.TextBox txtSearchEmployee;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSearchEmployeeID;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }

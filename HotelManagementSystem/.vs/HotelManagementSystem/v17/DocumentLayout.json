@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Duimp\\Documents\\SQL Server Management Studio\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
@@ -39,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "dbo.Booking [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Cmpg223/True/SqlTable/dbo.Booking.sql",
               "ToolTip": "dbo.Booking [Data]",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SQLQuery1.sql",
               "DocumentMoniker": "C:\\Users\\Duimp\\Documents\\SQL Server Management Studio\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "..\\..\\..\\Documents\\SQL Server Management Studio\\SQLQuery1.sql",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CheckOut.cs",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
               "RelativeDocumentMoniker": "CheckOut.cs",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CheckIn.cs",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
               "RelativeDocumentMoniker": "CheckIn.cs",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CheckIn.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
               "RelativeDocumentMoniker": "CheckIn.cs",
@@ -117,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CheckOut.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
               "RelativeDocumentMoniker": "CheckOut.cs",
@@ -134,7 +134,7 @@
               "RelativeDocumentMoniker": "MaintainRooms.cs",
               "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs",
               "RelativeToolTip": "MaintainRooms.cs",
-              "ViewState": "AQIAANAAAAAAAAAAAAAiwOcAAAAXAAAA",
+              "ViewState": "AQIAAOkBAAAAAAAAAAAqwAECAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T08:35:22.109Z",
               "EditorCaption": ""
@@ -153,14 +153,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T07:30:07.914Z"
+              "WhenOpened": "2024-07-21T07:30:07.914Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -172,11 +173,12 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T08:39:36.703Z"
+              "WhenOpened": "2024-08-03T08:39:36.703Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "dbo.Room [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Cmpg223/True/SqlTable/dbo.Room.sql",
               "ToolTip": "dbo.Room [Data]",
@@ -185,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dbo.Guest [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Cmpg223/True/SqlTable/dbo.Guest.sql",
               "ToolTip": "dbo.Guest [Data]",

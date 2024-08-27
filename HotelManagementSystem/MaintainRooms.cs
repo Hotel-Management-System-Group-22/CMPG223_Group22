@@ -31,6 +31,7 @@ namespace HotelManagementSystem
         int selectedId;
         string sRoomID = "";
         string sEmployeeID = "";
+        bool bAfrikaans = false;
 
         public void ResetTabPages()
         {
@@ -171,7 +172,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Sit Asseblief 'n heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtRoomID.Text = sRoomID;
                 txtRoomID.Select(txtRoomID.Text.Length, 0);
 
@@ -227,7 +235,7 @@ namespace HotelManagementSystem
         {
             txtSearchRoom.Text = string.Empty;
             rdbAscending.Checked = true;
-            cbxSearchStatus.SelectedIndex = -1;
+            cbxSearchStatus.SelectedIndex = 0;
             txtSearchEmployee.Text = string.Empty;
             LoadData();
 
@@ -273,7 +281,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Sit Asseblief 'n heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtSearchRoom.Text = sRoomID;
                 txtSearchRoom.Select(txtSearchRoom.Text.Length, 0);
 
@@ -287,7 +302,16 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Room_ID"].Value);
-                DialogResult result = MessageBox.Show("Are you sure you want to Delete this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result;
+                if (bAfrikaans == false)
+                {
+                     result = MessageBox.Show("Are you sure you want to Delete this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                }
+                else
+                {
+                    result = MessageBox.Show("Is jy seker jy wil die record verwyder? \nID: " + selectedId, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
                 if (result == DialogResult.Yes)
                 {
                     string query = "DELETE FROM Room WHERE Room_ID = " + selectedId;
@@ -317,12 +341,26 @@ namespace HotelManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("Action Canceled");
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("Action Canceled");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aksie is gekanselleer");
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete");
+                }
+                else
+                {
+                    MessageBox.Show("Geen record is gekies nie. Kies asseblief watse kamer jy wil verwyder in die tabel");
+                }
             }
 
         }
@@ -339,7 +377,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Sit Asseblief 'n heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtDeleteRoomID.Text = sRoomID;
                 txtDeleteRoomID.Select(txtDeleteRoomID.Text.Length, 0);
 
@@ -359,7 +404,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Sit Asseblief 'n heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtEmployeeID.Text = sEmployeeID;
                 txtEmployeeID.Select(txtEmployeeID.Text.Length, 0);
 
@@ -381,7 +433,15 @@ namespace HotelManagementSystem
                         {
                             DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                             int iSelectedID = Convert.ToInt32(selectedRow.Cells["Room_ID"].Value);
-                            DialogResult result = MessageBox.Show("Are you sure you want to edit this record? \nID: " + iSelectedID, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result;
+                        if (bAfrikaans == false)
+                        {
+                             result = MessageBox.Show("Are you sure you want to edit this record? \nID: " + iSelectedID, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        }
+                        else
+                        {
+                            result = MessageBox.Show("Is jy seker jy wil die record byvoeg \nID: " + iSelectedID, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        }
                             if (result == DialogResult.Yes)
                             {
 
@@ -400,6 +460,14 @@ namespace HotelManagementSystem
                                         int rowsAffected = command.ExecuteNonQuery();
                                         if (rowsAffected > 0)
                                         {
+                                        if (bAfrikaans == false)
+                                        {
+                                            MessageBox.Show("Room Updated");
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Kamer Opgedateer");
+                                        }
                                             Console.WriteLine("Insert successful.");
                                             LoadData();
                                         }
@@ -415,10 +483,39 @@ namespace HotelManagementSystem
                                 }
 
                             }
-                        }else { MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete"); }
+                        }else 
+                    { 
+                        if (bAfrikaans == false)
+                        {
+                            MessageBox.Show("No record selected. Please select on data grid which room you would like to Update");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Geen record is gekies nie. Kies asseblief watse kamer jy wil opdateer in die tabel");
+                        }
 
-                    }else{MessageBox.Show("Employee ID does not exist");}                
-            }else { MessageBox.Show("Fields cannot be Empty"); }
+                    }
+
+                    }else{
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("Employee ID does not exist.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Werknemer ID bestaan nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }                
+            }else {
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Fields cannot be Empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else 
+                {
+                    MessageBox.Show("Velde mag nie leeg wees nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
            
 
         }
@@ -436,8 +533,16 @@ namespace HotelManagementSystem
             {
                 if (IsValueInRoomTable("Employee_ID", int.Parse(sEmployeeID)))
                 {
-
-                    DialogResult result = MessageBox.Show("Are you sure you want to Add this record? \nEmployeeID: " + sEmployeeID + "\nRoom Status: " + sRoomStatus, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result;
+                    if (bAfrikaans == false)
+                    {
+                         result = MessageBox.Show("Are you sure you want to Add this record? \nEmployeeID: " + sEmployeeID + "\nRoom Status: " + sRoomStatus, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    }
+                    else
+                    {
+                         result = MessageBox.Show("Is jy seker jy wil die record byvoeg \nEmployeeID: " + sEmployeeID + "\nRoom Status: " + sRoomStatus, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    }
+                   
                     if (result == DialogResult.Yes)
                     {
                         if (result == DialogResult.Yes)
@@ -459,27 +564,70 @@ namespace HotelManagementSystem
                                     // Step 6: Check if the insert was successful
                                     if (rowsAffected > 0)
                                     {
-                                        MessageBox.Show("New room added successfully.");
+                                        
+                                        if (bAfrikaans == false)
+                                        {
+                                            MessageBox.Show("New room added successfully.");
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Nuwe kamer is suksesvol bygevoeg.");
+                                        }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Failed to add the new room.");
+                                        if (bAfrikaans == false)
+                                        {
+                                            MessageBox.Show("Failed to add the new room.");
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Kon nie die nuwe kamer byvoeg nie.");
+                                        }
+                                        
                                     }
                                 }
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Action Canceled");
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Action Canceled");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Aksie is gekanselleer");
+                            }
+                            
                         }
                     }
                    
                     
                     
 
-                }else { MessageBox.Show("Employee ID does not exist"); }
+                }else {
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("Employee ID does not exist.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Werknemer ID bestaan nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                   }
                 
-            }else { MessageBox.Show("Fields cannot be Empty"); }
+            }else { 
+                
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Fields cannot be Empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Velde mag nie leeg wees nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
             LoadData();          
             
         }
@@ -523,7 +671,15 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Sit Asseblief 'n heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                    
                 txtSearchEmployee.Text =sEmployeeID;
                 txtSearchEmployee.Select(txtSearchEmployee.Text.Length, 0);
 
@@ -534,6 +690,82 @@ namespace HotelManagementSystem
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+           
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+                btnLanguage.Text = "English";
+                //Menu
+                btnMenuSearch.Text = "Soek";
+                btnMenuAdd.Text = "Voeg by";
+                btnMenuUpdate.Text = "Opdateer";
+                btnMenuDelete.Text = "Verwyder";
+                //Search
+                lblSearchRoomID.Text = "Soek Kamer ID";
+                lblSearchEmployeeID.Text = "Soek Werknemer ID";
+                lblSearchRoomStatus.Text = "Kamer status";
+                lblSearchSortRoomID.Text = "Sorteer by kamer ID";
+                rdbAscending.Text = "Stygend";
+                rdbDescending.Text = "Dalend";
+                btnSearchReset.Text = "Herstel";
+                cbxSearchStatus.Items.Clear();
+                cbxSearchStatus.Items.Add("Onbeset");
+                cbxSearchStatus.Items.Add("Beset");
+                //Update and delete page
+                lblRoomID.Text = "Kamer ID";
+                lblEmployeeID.Text = "Werknemer ID";
+                lblRoomStatus.Text = "Kamer status";
+                cbxRoomStatus.Items.Clear();
+                cbxRoomStatus.Items.Add("Onbeset");
+                cbxRoomStatus.Items.Add("Beset");
+                btnAddReset.Text = "Herstel";
+                btnAddRoom.Text = "Voeg Kamer by";
+                btnUpdateRoom.Text = "Opdateer Kamer";
+                //Delete
+                btnDeleteReset.Text = "Herstel";
+                btnDeleteRoom.Text = "Verwyder Kamer";
+                lblDeleteRoomID.Text = "Soek volgens kamer ID";
+
+            }
+            else
+            {
+                bAfrikaans = false;
+                btnLanguage.Text = "Afrikaans";
+                //Menu
+                btnMenuSearch.Text = "Search";
+                btnMenuAdd.Text = "Add";
+                btnMenuUpdate.Text = "Update";
+                btnMenuDelete.Text = "Delete";
+                //Search
+                lblSearchRoomID.Text = "Search Room ID";
+                lblSearchEmployeeID.Text = "Search Employee ID";
+                lblSearchRoomStatus.Text = "Room status";
+                lblSearchSortRoomID.Text = "Sort by Room ID";
+                rdbAscending.Text = "Ascending";
+                rdbDescending.Text = "Descending";
+                btnSearchReset.Text = "Reset";
+                cbxSearchStatus.Items.Clear();
+                cbxSearchStatus.Items.Add("Unoccupied");
+                cbxSearchStatus.Items.Add("Occupied");
+                //Update and delete page
+                lblRoomID.Text = "Room ID";
+                lblEmployeeID.Text = "Empluyee ID";
+                lblRoomStatus.Text = "Room status";
+                cbxRoomStatus.Items.Clear();
+                cbxRoomStatus.Items.Add("Unoccupied");
+                cbxRoomStatus.Items.Add("Occupied");
+                btnAddReset.Text = "Reset";
+                btnAddRoom.Text = "Add Room";
+                btnUpdateRoom.Text = "Update Room";
+                //Delete
+                btnDeleteReset.Text = "Reset";
+                btnDeleteRoom.Text = "Delete Room";
+                lblDeleteRoomID.Text = "Search by Room ID";
+            }
         }
     }
 }
