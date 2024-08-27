@@ -32,9 +32,7 @@ namespace HotelManagementSystem
         private void ManageJobsForm_Load(object sender, EventArgs e)
         {
             loadData();
-            groupBox1.Visible = false;
-            groupBox2.Visible = false;
-            lblSelectedID.Visible = false;
+            tabcontrol.Visible = false;
         }
 
         private void loadData()
@@ -219,7 +217,6 @@ namespace HotelManagementSystem
                         }
                     }
                     lblSelectedID.Visible = false;
-                    //groupBox1.Visible = false;
                     txtAddJobTitle.Text = "";
                     txtAddJobRate.Text = "";
 
@@ -233,19 +230,20 @@ namespace HotelManagementSystem
 
         private void btnAddJob_Click_1(object sender, EventArgs e)
         {
-            groupBox1.Visible = true;
-            groupBox2.Visible = false;
+            tabcontrol.Visible = true;
+            tabcontrol.SelectedTab = tabAddJob;
         }
 
         private void btnEditJob_Click(object sender, EventArgs e)
         {
+            
             if (dgvJobList.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
                 selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
                 lblSelectedID.Text = "Selected ID: " + selectedId;
-                groupBox2.Visible = true;
-                groupBox1.Visible = false;
+                tabcontrol.Visible = true;
+                tabcontrol.SelectedTab = tabEditJob;
                 lblSelectedID.Visible = true;
             }
             else
@@ -256,6 +254,7 @@ namespace HotelManagementSystem
 
         private void dgvJobList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
         }
         private void dgvJobList_SelectionChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -274,8 +273,6 @@ namespace HotelManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lblSelectedID.Visible = false;
-            groupBox2.Visible = false;
             txtEditJobTitle.Text = "";
             txtEditJobRate.Text = "";
         }
@@ -334,8 +331,6 @@ namespace HotelManagementSystem
                     }
 
                 }
-                groupBox1.Visible = false;
-                groupBox2.Visible = false;
                 lblSelectedID.Visible = false;
                 txtEditJobTitle.Text = "";
                 txtEditJobRate.Text = "";
@@ -349,8 +344,6 @@ namespace HotelManagementSystem
 
         private void btnAddCancel_Click_1(object sender, EventArgs e)
         {
-            lblSelectedID.Visible = false;
-            groupBox1.Visible = false;
             txtAddJobTitle.Text = "";
             txtAddJobRate.Text = "";
         }
@@ -551,8 +544,8 @@ namespace HotelManagementSystem
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
-            groupBox2.Visible = false;
+
+            tabcontrol.Visible = false;
             txtAddJobRate.Text = "";
             txtAddJobTitle.Text = "";
             txtEditJobRate.Text = "";
@@ -560,6 +553,29 @@ namespace HotelManagementSystem
             txtJobRate.Text = "";
             txtJobTitle.Text = "";
             txtJobID.Text = "";
+            lblSelectedID.Text = "Selected ID: ";
+        }
+
+        private void lblSelectedID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvJobList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvJobList.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
+                selectedId = Convert.ToInt32(selectedRow.Cells["Job_ID"].Value);
+                lblSelectedID.Text = "Selected ID: " + selectedId;
+                tabcontrol.SelectedTab = tabEditJob;
+                lblSelectedID.Visible = true;
+            }
+        }
+
+        private void PanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
