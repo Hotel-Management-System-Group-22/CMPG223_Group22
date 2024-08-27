@@ -2,7 +2,6 @@ C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelMa
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.pdb
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.AssemblyReference.cache
-C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.Form1.resources
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.Properties.Resources.resources
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.GenerateResource.cache
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
@@ -21,3 +20,4 @@ C:\Users\Thando\Desktop\CMPG\CMPG 223\Project\Cloned repository\CMPG223_Group22\
 C:\Users\Thando\Desktop\CMPG\CMPG 223\Project\Cloned repository\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Thando\Desktop\CMPG\CMPG 223\Project\Cloned repository\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
 C:\Users\Thando\Desktop\CMPG\CMPG 223\Project\Cloned repository\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.Bookings.resources
