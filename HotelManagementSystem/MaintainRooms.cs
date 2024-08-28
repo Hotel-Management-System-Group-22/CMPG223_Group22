@@ -729,6 +729,25 @@ namespace HotelManagementSystem
                 btnDeleteReset.Text = "Herstel";
                 btnDeleteRoom.Text = "Verwyder Kamer";
                 lblDeleteRoomID.Text = "Soek volgens kamer ID";
+                // Buttons
+                toolTip1.SetToolTip(btnAddReset, "");
+                toolTip1.SetToolTip(btnAddRoom, "");
+                toolTip1.SetToolTip(btnDeleteReset, "");
+                toolTip1.SetToolTip(btnDeleteRoom, "");
+                toolTip1.SetToolTip(btnLanguage, "");
+                toolTip1.SetToolTip(btnMenuAdd, "");
+                toolTip1.SetToolTip(btnMenuDelete, "");
+                toolTip1.SetToolTip(btnMenuSearch, "");
+                toolTip1.SetToolTip(btnMenuUpdate, "");
+                toolTip1.SetToolTip(btnSearchReset, "");
+                toolTip1.SetToolTip(btnUpdateRoom, "");
+
+                // TextBoxes
+                toolTip1.SetToolTip(txtDeleteRoomID, "");
+                toolTip1.SetToolTip(txtEmployeeID, "");
+                toolTip1.SetToolTip(txtRoomID, "");
+                toolTip1.SetToolTip(txtSearchEmployee, "");
+                toolTip1.SetToolTip(txtSearchRoom, "");
 
             }
             else
@@ -765,6 +784,26 @@ namespace HotelManagementSystem
                 btnDeleteReset.Text = "Reset";
                 btnDeleteRoom.Text = "Delete Room";
                 lblDeleteRoomID.Text = "Search by Room ID";
+                // Buttons
+                toolTip1.SetToolTip(btnAddReset, "Reset the form to its default state before adding a new entry.");
+                toolTip1.SetToolTip(btnAddRoom, "Add a new room to the system.");
+                toolTip1.SetToolTip(btnDeleteReset, "Clear the current selection and reset the delete form.");
+                toolTip1.SetToolTip(btnDeleteRoom, "Delete the selected room from the system.");
+                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
+                toolTip1.SetToolTip(btnMenuAdd, "Open the menu to add new items.");
+                toolTip1.SetToolTip(btnMenuDelete, "Open the menu to delete existing items.");
+                toolTip1.SetToolTip(btnMenuSearch, "Open the menu to search for items.");
+                toolTip1.SetToolTip(btnMenuUpdate, "Open the menu to update existing items.");
+                toolTip1.SetToolTip(btnSearchReset, "Reset the search filters and criteria.");
+                toolTip1.SetToolTip(btnUpdateRoom, "Update the details of the selected room.");
+                // TextBoxes
+                toolTip1.SetToolTip(txtDeleteRoomID, "Enter the Room ID to delete.");
+                toolTip1.SetToolTip(txtEmployeeID, "Enter the Employee ID.");
+                toolTip1.SetToolTip(txtRoomID, "Enter the Room ID.");
+                toolTip1.SetToolTip(txtSearchEmployee, "Enter the Employee ID or name to search.");
+                toolTip1.SetToolTip(txtSearchRoom, "Enter the Room ID or name to search.");
+
+
             }
         }
     }
