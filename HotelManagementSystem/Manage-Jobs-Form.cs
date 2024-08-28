@@ -49,28 +49,28 @@ namespace HotelManagementSystem
                 lblJobID.Text = "Werk ID";
                 lblJobRate.Text = "Werkskoers: ";
                 lblJobTitle.Text = "Werkstitel";
-                lblSearchJob.Text = "Werk Soek";
+                lblSearchJob.Text = "Soek Werk";
                 lblSelectedID.Text = "Geselekteerde ID";
                 lblSelectRecords.Text = "Kies Rekords Hieronder";
                 btnAcceptNewJob.Text = "Aanvaar";
                 btnAddCancel.Text = "Kanseleer";
-                btnAddJob.Text = "Werk Byvoeg";
+                btnAddJob.Text = "Voeg Werk By ";
                 btnDeleteJob.Text = "Vee Geselekteerde Werk Uit";
-                btnEditJob.Text = "Werk Redigeer";
+                btnEditJob.Text = "Opdateer Werk ";
                 btnReset.Text = "Herstel";
                 btnEditAccept.Text = "Aanvaar";
                 btnEditCancel.Text = "Kanseleer";
                 tabAddJob.Text = "Voeg Werkinlighting by";
                 tabEditJob.Text = "Wysig Werkinligting";
 
-                toolTip1.SetToolTip(btnAcceptNewJob, "Klik om die nuwe werk te aanvaar.");
-                toolTip1.SetToolTip(btnAddCancel, "Klik om die toevoeging van werk te kanselleer.");
-                toolTip1.SetToolTip(btnAddJob, "Klik om 'n nuwe werk by te voeg.");
-                toolTip1.SetToolTip(btnDeleteJob, "Klik om die geselekteerde werk uit te vee.");
-                toolTip1.SetToolTip(btnEditJob, "Klik om die geselekteerde werk te wysig.");
-                toolTip1.SetToolTip(btnReset, "Klik om die soekveld terug te stel.");
-                toolTip1.SetToolTip(btnEditAccept, "Klik om die gewysigde werk te aanvaar.");
-                toolTip1.SetToolTip(btnEditCancel, "Klik om die wysiging van die werk te kanselleer.");
+                toolTip1.SetToolTip(btnAcceptNewJob, "Kliek om die nuwe werk te aanvaar.");
+                toolTip1.SetToolTip(btnAddCancel, "Kliek om die toevoeging van werk te kanselleer.");
+                toolTip1.SetToolTip(btnAddJob, "Kliek om 'n nuwe werk by te voeg.");
+                toolTip1.SetToolTip(btnDeleteJob, "Kliek om die geselekteerde werk uit te vee.");
+                toolTip1.SetToolTip(btnEditJob, "Kliek om die geselekteerde werk op te dateer.");
+                toolTip1.SetToolTip(btnReset, "Kliek om die soekveld terug te stel.");
+                toolTip1.SetToolTip(btnEditAccept, "Kliek om die gewysigde werk te aanvaar.");
+                toolTip1.SetToolTip(btnEditCancel, "Kliek om die gewysigde van die werk te kanselleer.");
 
                 toolTip1.SetToolTip(txtAddJobRate, "Voer die tarief vir die nuwe werk in.");
                 toolTip1.SetToolTip(txtAddJobTitle, "Voer die titel vir die nuwe werk in.");
@@ -98,7 +98,7 @@ namespace HotelManagementSystem
                 btnAddCancel.Text = "Cancel";
                 btnAddJob.Text = "Add Job";
                 btnDeleteJob.Text = "Delete Selected Job";
-                btnEditJob.Text = "Edit Job";
+                btnEditJob.Text = "Update Job";
                 btnReset.Text = "Reset";
                 btnEditAccept.Text = "Accept";
                 btnEditCancel.Text = "Cancel";
@@ -367,7 +367,7 @@ namespace HotelManagementSystem
             {
                 if (isAfrikaans)
                 {
-                    MessageBox.Show("veld kan nie leeg wees nie");
+                    MessageBox.Show("Veld kan nie leeg wees nie");
                 }
                 else if (isAfrikaans == false)
                 {
@@ -533,7 +533,7 @@ namespace HotelManagementSystem
             {
                 if (isAfrikaans)
                 {
-                    MessageBox.Show("veld kan nie leeg wees nie");
+                    MessageBox.Show("Veld kan nie leeg wees nie");
                 }
                 else if (isAfrikaans == false)
                 {
