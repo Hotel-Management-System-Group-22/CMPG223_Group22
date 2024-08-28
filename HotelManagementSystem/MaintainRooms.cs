@@ -25,6 +25,13 @@ namespace HotelManagementSystem
             btnAddReset.Click += new EventHandler(btnAddReset_Click);
             btnDeleteReset.Click += new EventHandler(btnDeleteReset_Click);
             btnSearchReset.Click += new EventHandler(btnDeleteReset_Click);
+            btnLanguage.Click += new EventHandler(btnDeleteReset_Click);
+
+
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
         }
 
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
@@ -733,24 +740,24 @@ namespace HotelManagementSystem
                 btnDeleteRoom.Text = "Verwyder Kamer";
                 lblDeleteRoomID.Text = "Soek volgens kamer ID";
                 // Buttons
-                toolTip1.SetToolTip(btnAddReset, "");
-                toolTip1.SetToolTip(btnAddRoom, "");
-                toolTip1.SetToolTip(btnDeleteReset, "");
-                toolTip1.SetToolTip(btnDeleteRoom, "");
-                toolTip1.SetToolTip(btnLanguage, "");
-                toolTip1.SetToolTip(btnMenuAdd, "");
-                toolTip1.SetToolTip(btnMenuDelete, "");
-                toolTip1.SetToolTip(btnMenuSearch, "");
-                toolTip1.SetToolTip(btnMenuUpdate, "");
-                toolTip1.SetToolTip(btnSearchReset, "");
-                toolTip1.SetToolTip(btnUpdateRoom, "");
+                toolTip1.SetToolTip(btnAddReset, "Kliek om die velde terug te stel.");
+                toolTip1.SetToolTip(btnAddRoom, "Kliek om 'n nuwe kamer by te voeg.");
+                toolTip1.SetToolTip(btnDeleteReset, "Kliek om die velde terug te stel.");
+                toolTip1.SetToolTip(btnDeleteRoom, "Kliek om die geselekteerde kamer uit te vee.");
+                toolTip1.SetToolTip(btnLanguage, "Kliek om die form se taal te verander");
+                toolTip1.SetToolTip(btnMenuAdd, "Kliek om die byvoeg bladsy oop te maak");
+                toolTip1.SetToolTip(btnMenuDelete, "Kliek om die verwyder bladsy oop te maak");
+                toolTip1.SetToolTip(btnMenuSearch, "Kliek om die soek bladsy oop te maak");
+                toolTip1.SetToolTip(btnMenuUpdate, "Kliek om die opdateer bladsy oop te maak");
+                toolTip1.SetToolTip(btnSearchReset, "Kliek om die velde terug te stel.");
+                toolTip1.SetToolTip(btnUpdateRoom, "Kliek om die kamer op te dateer");
 
                 // TextBoxes
-                toolTip1.SetToolTip(txtDeleteRoomID, "");
-                toolTip1.SetToolTip(txtEmployeeID, "");
-                toolTip1.SetToolTip(txtRoomID, "");
-                toolTip1.SetToolTip(txtSearchEmployee, "");
-                toolTip1.SetToolTip(txtSearchRoom, "");
+                toolTip1.SetToolTip(txtDeleteRoomID, "Voer die Kamer ID wat jy wil verwyder in");
+                toolTip1.SetToolTip(txtEmployeeID, "Voer die Werknemer ID in");
+                toolTip1.SetToolTip(txtRoomID, "Voer die Kamer ID in");
+                toolTip1.SetToolTip(txtSearchEmployee, "Voer die Werknemer ID in waarvoor jy soek");
+                toolTip1.SetToolTip(txtSearchRoom, "Voer die Kamer ID in waarvoor jy soek");
 
             }
             else
