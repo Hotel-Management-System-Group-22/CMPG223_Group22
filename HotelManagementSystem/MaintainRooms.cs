@@ -694,7 +694,10 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-           
+            toolTip1.AutoPopDelay = 4000; // 4 seconds
+            toolTip1.InitialDelay = 700; // 0.7 seconds
+            toolTip1.ReshowDelay = 500;   // 0.5 seconds
+
             if (bAfrikaans == false)
             {
                 bAfrikaans = true;
