@@ -15,6 +15,7 @@ namespace HotelManagementSystem
     public partial class CheckIn : Form
     {
         string sRoomId = "", sGuestId = "", sBookingId = "";
+        bool bAfrikaans = false;
         public CheckIn()
         {
             InitializeComponent();
@@ -83,16 +84,39 @@ namespace HotelManagementSystem
                         //Compare the stored arrival date with the user-provided date
                         if (storedArrivalDate.Date == userProvidedArrivalDate.Date)
                         {
-                            MessageBox.Show("The arrival date matches the booking record.");
+                           
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("The arrival date matches the booking record.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Die aankomsdatum stem ooreen met die besprekingsrekord.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show($"The arrival date does not match. Expected: {storedArrivalDate.ToShortDateString()}");
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show($"The arrival date does not match. Expected: {storedArrivalDate.ToShortDateString()}");
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Die aankomsdatum stem nie ooreen nie. Verwag: {storedArrivalDate.ToShortDateString()}");
+                            }
+                            
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No booking found with the specified ID.");
+                        if (bAfrikaans == false)
+                        {
+                            MessageBox.Show("Booking ID does not exist.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bespreking ID bestaan nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }
@@ -154,16 +178,42 @@ namespace HotelManagementSystem
             if (txtBookingID.Text != "" )
             {
                 if (IsValueInTable("Booking_ID",txtBookingID.Text))
-                {                    
-                    DialogResult result = MessageBox.Show("Are you sure you want to check in? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
+                {
+                    DialogResult result;
+                    if (bAfrikaans == false)
+                    {
+                        result = MessageBox.Show("Are you sure you want to check in? \nBooking ID: " + txtBookingID.Text, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    }
+                    else
+                    {
+                        result = MessageBox.Show("Is jy seker jy wil inteken? \nBooking ID: " + txtBookingID.Text, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    }
+                    if (result == DialogResult.Yes)
                         {
                             ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
 
                          }                        
-                }else { MessageBox.Show("Booking ID does not exist"); }
+                }else {
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("Booking ID does not exist.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bespreking ID bestaan nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
 
-            }else { MessageBox.Show("Fields cannot be Empty"); }
+            }else {
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Fields cannot be Empty.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Velde mag nie leeg wees nie.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
             
         }
 
@@ -191,7 +241,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtBookingID.Text = sBookingId;
                 txtBookingID.Select(txtBookingID.Text.Length, 0);
 
@@ -211,12 +268,47 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtGuestID.Text = sGuestId;
                 txtGuestID.Select(txtGuestID.Text.Length, 0);
 
             }
            
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+                btnLanguage.Text = "English";
+                lblBookingID.Text = "Bespreking ID";
+                lblGuestID.Text = "Gas ID";
+                lblRoomID.Text = "Kamer ID";
+                btnBookingUpdate.Text = "Opdateer bespreking";
+                btnCheckIn.Text = "Teken uit";
+                btnCancel.Text = "Kanselleer";
+
+
+            }
+            else
+            {
+                bAfrikaans = false;
+                btnLanguage.Text = "Afrikaans";
+                lblBookingID.Text = "Booking ID";
+                lblGuestID.Text = "Guest ID";
+                lblRoomID.Text = "Room ID";
+                btnBookingUpdate.Text = "Update Booking ID";
+                btnCheckIn.Text = "Check Out";
+                btnCancel.Text = "Cancel";
+            }
         }
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)
@@ -231,7 +323,14 @@ namespace HotelManagementSystem
             else
             {
                 // The input is not a valid integer
-                MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Voer asseblief 'n geldige heelgetal in.", "Ongeldige Invoer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 txtRoomID.Text = sRoomId;
                 txtRoomID.Select(txtRoomID.Text.Length, 0);
 

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRoomID = new System.Windows.Forms.Label();
+            this.lblGuestID = new System.Windows.Forms.Label();
+            this.lblBookingID = new System.Windows.Forms.Label();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnCheckOutCancel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -39,45 +39,42 @@
             this.txtBookingID = new System.Windows.Forms.TextBox();
             this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnLanguage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // lblRoomID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 260);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Room ID";
+            this.lblRoomID.AutoSize = true;
+            this.lblRoomID.Location = new System.Drawing.Point(83, 169);
+            this.lblRoomID.Name = "lblRoomID";
+            this.lblRoomID.Size = new System.Drawing.Size(49, 13);
+            this.lblRoomID.TabIndex = 17;
+            this.lblRoomID.Text = "Room ID";
             // 
-            // label2
+            // lblGuestID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 177);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Guest ID";
+            this.lblGuestID.AutoSize = true;
+            this.lblGuestID.Location = new System.Drawing.Point(83, 115);
+            this.lblGuestID.Name = "lblGuestID";
+            this.lblGuestID.Size = new System.Drawing.Size(49, 13);
+            this.lblGuestID.TabIndex = 16;
+            this.lblGuestID.Text = "Guest ID";
             // 
-            // label1
+            // lblBookingID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 103);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Booking ID";
+            this.lblBookingID.AutoSize = true;
+            this.lblBookingID.Location = new System.Drawing.Point(83, 67);
+            this.lblBookingID.Name = "lblBookingID";
+            this.lblBookingID.Size = new System.Drawing.Size(60, 13);
+            this.lblBookingID.TabIndex = 15;
+            this.lblBookingID.Text = "Booking ID";
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Location = new System.Drawing.Point(572, 346);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCheckOut.Location = new System.Drawing.Point(381, 216);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(112, 35);
+            this.btnCheckOut.Size = new System.Drawing.Size(80, 32);
             this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Check Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -85,10 +82,9 @@
             // 
             // btnCheckOutCancel
             // 
-            this.btnCheckOutCancel.Location = new System.Drawing.Point(734, 346);
-            this.btnCheckOutCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCheckOutCancel.Location = new System.Drawing.Point(489, 216);
             this.btnCheckOutCancel.Name = "btnCheckOutCancel";
-            this.btnCheckOutCancel.Size = new System.Drawing.Size(112, 35);
+            this.btnCheckOutCancel.Size = new System.Drawing.Size(75, 32);
             this.btnCheckOutCancel.TabIndex = 5;
             this.btnCheckOutCancel.Text = "Cancel";
             this.btnCheckOutCancel.UseVisualStyleBackColor = true;
@@ -96,46 +92,41 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 345);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(86, 224);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(328, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(220, 20);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtRoomID
             // 
-            this.txtRoomID.Location = new System.Drawing.Point(309, 249);
-            this.txtRoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRoomID.Location = new System.Drawing.Point(206, 162);
             this.txtRoomID.Name = "txtRoomID";
-            this.txtRoomID.Size = new System.Drawing.Size(148, 26);
+            this.txtRoomID.Size = new System.Drawing.Size(100, 20);
             this.txtRoomID.TabIndex = 2;
             this.txtRoomID.TextChanged += new System.EventHandler(this.txtRoomID_TextChanged);
             // 
             // txtGuestID
             // 
-            this.txtGuestID.Location = new System.Drawing.Point(309, 177);
-            this.txtGuestID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGuestID.Location = new System.Drawing.Point(206, 115);
             this.txtGuestID.Name = "txtGuestID";
-            this.txtGuestID.Size = new System.Drawing.Size(148, 26);
+            this.txtGuestID.Size = new System.Drawing.Size(100, 20);
             this.txtGuestID.TabIndex = 1;
             this.txtGuestID.TextChanged += new System.EventHandler(this.txtGuestID_TextChanged);
             // 
             // txtBookingID
             // 
-            this.txtBookingID.Location = new System.Drawing.Point(309, 103);
-            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBookingID.Location = new System.Drawing.Point(206, 67);
             this.txtBookingID.Name = "txtBookingID";
-            this.txtBookingID.Size = new System.Drawing.Size(148, 26);
+            this.txtBookingID.Size = new System.Drawing.Size(100, 20);
             this.txtBookingID.TabIndex = 0;
             this.txtBookingID.TextChanged += new System.EventHandler(this.txtBookingID_TextChanged);
             // 
             // btnBookingUpdate
             // 
-            this.btnBookingUpdate.Location = new System.Drawing.Point(885, 332);
-            this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBookingUpdate.Location = new System.Drawing.Point(590, 216);
             this.btnBookingUpdate.Name = "btnBookingUpdate";
-            this.btnBookingUpdate.Size = new System.Drawing.Size(219, 49);
+            this.btnBookingUpdate.Size = new System.Drawing.Size(146, 32);
             this.btnBookingUpdate.TabIndex = 6;
             this.btnBookingUpdate.Text = "Update Booking Info";
             this.btnBookingUpdate.UseVisualStyleBackColor = true;
@@ -144,31 +135,40 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(129, 391);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(86, 254);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(975, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 150);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Location = new System.Drawing.Point(661, 410);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.TabIndex = 20;
+            this.btnLanguage.Text = "Afrikaans";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
             // CheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBookingUpdate);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRoomID);
+            this.Controls.Add(this.lblGuestID);
+            this.Controls.Add(this.lblBookingID);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnCheckOutCancel);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtRoomID);
             this.Controls.Add(this.txtGuestID);
             this.Controls.Add(this.txtBookingID);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
             this.Load += new System.EventHandler(this.CheckOut_Load);
@@ -180,9 +180,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRoomID;
+        private System.Windows.Forms.Label lblGuestID;
+        private System.Windows.Forms.Label lblBookingID;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnCheckOutCancel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -191,5 +191,6 @@
         private System.Windows.Forms.TextBox txtBookingID;
         private System.Windows.Forms.Button btnBookingUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }
