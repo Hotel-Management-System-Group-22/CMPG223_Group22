@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guests));
             this.grpBoxMenu = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.BtnDeleteGuest = new System.Windows.Forms.Button();
@@ -87,6 +86,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.DgvGuests = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpBoxMenu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbAddGuest.SuspendLayout();
@@ -98,26 +98,30 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxMenu
             // 
+            this.grpBoxMenu.BackColor = System.Drawing.Color.PapayaWhip;
             this.grpBoxMenu.Controls.Add(this.button2);
             this.grpBoxMenu.Controls.Add(this.BtnDeleteGuest);
             this.grpBoxMenu.Controls.Add(this.BtnUpdatePage);
             this.grpBoxMenu.Controls.Add(this.BtnAddPage);
-            this.grpBoxMenu.Location = new System.Drawing.Point(79, 183);
+            this.grpBoxMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxMenu.Location = new System.Drawing.Point(32, 104);
             this.grpBoxMenu.Name = "grpBoxMenu";
-            this.grpBoxMenu.Size = new System.Drawing.Size(226, 238);
+            this.grpBoxMenu.Size = new System.Drawing.Size(285, 262);
             this.grpBoxMenu.TabIndex = 0;
             this.grpBoxMenu.TabStop = false;
             this.grpBoxMenu.Text = "Menu";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(11, 175);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(11, 203);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 48);
+            this.button2.Size = new System.Drawing.Size(254, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "SEARCH GUEST";
             this.button2.UseVisualStyleBackColor = true;
@@ -125,9 +129,10 @@
             // 
             // BtnDeleteGuest
             // 
-            this.BtnDeleteGuest.Location = new System.Drawing.Point(11, 123);
+            this.BtnDeleteGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteGuest.Location = new System.Drawing.Point(11, 148);
             this.BtnDeleteGuest.Name = "BtnDeleteGuest";
-            this.BtnDeleteGuest.Size = new System.Drawing.Size(203, 46);
+            this.BtnDeleteGuest.Size = new System.Drawing.Size(254, 46);
             this.BtnDeleteGuest.TabIndex = 3;
             this.BtnDeleteGuest.Text = "DELETE GUEST";
             this.BtnDeleteGuest.UseVisualStyleBackColor = true;
@@ -135,9 +140,10 @@
             // 
             // BtnUpdatePage
             // 
-            this.BtnUpdatePage.Location = new System.Drawing.Point(11, 64);
+            this.BtnUpdatePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdatePage.Location = new System.Drawing.Point(11, 96);
             this.BtnUpdatePage.Name = "BtnUpdatePage";
-            this.BtnUpdatePage.Size = new System.Drawing.Size(203, 45);
+            this.BtnUpdatePage.Size = new System.Drawing.Size(254, 45);
             this.BtnUpdatePage.TabIndex = 2;
             this.BtnUpdatePage.Text = "UPDATE GUEST";
             this.BtnUpdatePage.UseVisualStyleBackColor = true;
@@ -145,9 +151,10 @@
             // 
             // BtnAddPage
             // 
-            this.BtnAddPage.Location = new System.Drawing.Point(11, 18);
+            this.BtnAddPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddPage.Location = new System.Drawing.Point(11, 33);
             this.BtnAddPage.Name = "BtnAddPage";
-            this.BtnAddPage.Size = new System.Drawing.Size(203, 40);
+            this.BtnAddPage.Size = new System.Drawing.Size(254, 47);
             this.BtnAddPage.TabIndex = 0;
             this.BtnAddPage.Text = "ADD GUEST";
             this.BtnAddPage.UseVisualStyleBackColor = true;
@@ -159,14 +166,15 @@
             this.tabControl1.Controls.Add(this.tbUpdateGuest);
             this.tabControl1.Controls.Add(this.tbDeleteGuest);
             this.tabControl1.Controls.Add(this.tbSearchGuest);
-            this.tabControl1.Location = new System.Drawing.Point(413, 183);
+            this.tabControl1.Location = new System.Drawing.Point(387, 127);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(693, 238);
+            this.tabControl1.Size = new System.Drawing.Size(754, 238);
             this.tabControl1.TabIndex = 1;
             // 
             // tbAddGuest
             // 
+            this.tbAddGuest.BackColor = System.Drawing.Color.PapayaWhip;
             this.tbAddGuest.Controls.Add(this.BtnAddGuest);
             this.tbAddGuest.Controls.Add(this.TxtFName_Add);
             this.tbAddGuest.Controls.Add(this.TxtLName_Add);
@@ -179,16 +187,16 @@
             this.tbAddGuest.Location = new System.Drawing.Point(4, 25);
             this.tbAddGuest.Name = "tbAddGuest";
             this.tbAddGuest.Padding = new System.Windows.Forms.Padding(3);
-            this.tbAddGuest.Size = new System.Drawing.Size(685, 209);
+            this.tbAddGuest.Size = new System.Drawing.Size(746, 209);
             this.tbAddGuest.TabIndex = 0;
             this.tbAddGuest.Text = "ADD GUEST";
-            this.tbAddGuest.UseVisualStyleBackColor = true;
             // 
             // BtnAddGuest
             // 
-            this.BtnAddGuest.Location = new System.Drawing.Point(500, 24);
+            this.BtnAddGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddGuest.Location = new System.Drawing.Point(532, 158);
             this.BtnAddGuest.Name = "BtnAddGuest";
-            this.BtnAddGuest.Size = new System.Drawing.Size(160, 23);
+            this.BtnAddGuest.Size = new System.Drawing.Size(194, 45);
             this.BtnAddGuest.TabIndex = 3;
             this.BtnAddGuest.Text = "Add Guest";
             this.BtnAddGuest.UseVisualStyleBackColor = true;
@@ -196,69 +204,73 @@
             // 
             // TxtFName_Add
             // 
-            this.TxtFName_Add.Location = new System.Drawing.Point(114, 21);
+            this.TxtFName_Add.Location = new System.Drawing.Point(136, 20);
             this.TxtFName_Add.Name = "TxtFName_Add";
-            this.TxtFName_Add.Size = new System.Drawing.Size(100, 22);
+            this.TxtFName_Add.Size = new System.Drawing.Size(187, 22);
             this.TxtFName_Add.TabIndex = 10;
             this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
             // TxtLName_Add
             // 
-            this.TxtLName_Add.Location = new System.Drawing.Point(114, 58);
+            this.TxtLName_Add.Location = new System.Drawing.Point(136, 62);
             this.TxtLName_Add.Name = "TxtLName_Add";
-            this.TxtLName_Add.Size = new System.Drawing.Size(100, 22);
+            this.TxtLName_Add.Size = new System.Drawing.Size(187, 22);
             this.TxtLName_Add.TabIndex = 9;
             this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
             // TxtContactNo_Add
             // 
-            this.TxtContactNo_Add.Location = new System.Drawing.Point(127, 100);
+            this.TxtContactNo_Add.Location = new System.Drawing.Point(191, 104);
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
-            this.TxtContactNo_Add.Size = new System.Drawing.Size(100, 22);
+            this.TxtContactNo_Add.Size = new System.Drawing.Size(187, 22);
             this.TxtContactNo_Add.TabIndex = 8;
             this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
             // TxtEmail_Add
             // 
-            this.TxtEmail_Add.Location = new System.Drawing.Point(127, 136);
+            this.TxtEmail_Add.Location = new System.Drawing.Point(163, 137);
             this.TxtEmail_Add.Name = "TxtEmail_Add";
-            this.TxtEmail_Add.Size = new System.Drawing.Size(100, 22);
+            this.TxtEmail_Add.Size = new System.Drawing.Size(187, 22);
             this.TxtEmail_Add.TabIndex = 7;
             this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
             // 
             // lblFNameAdd
             // 
             this.lblFNameAdd.AutoSize = true;
-            this.lblFNameAdd.Location = new System.Drawing.Point(20, 24);
+            this.lblFNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFNameAdd.Location = new System.Drawing.Point(18, 17);
             this.lblFNameAdd.Name = "lblFNameAdd";
-            this.lblFNameAdd.Size = new System.Drawing.Size(75, 16);
+            this.lblFNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblFNameAdd.TabIndex = 3;
             this.lblFNameAdd.Text = "First Name:\r\n";
             // 
             // lblLNameAdd
             // 
             this.lblLNameAdd.AutoSize = true;
-            this.lblLNameAdd.Location = new System.Drawing.Point(20, 61);
+            this.lblLNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLNameAdd.Location = new System.Drawing.Point(18, 58);
             this.lblLNameAdd.Name = "lblLNameAdd";
-            this.lblLNameAdd.Size = new System.Drawing.Size(75, 16);
+            this.lblLNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblLNameAdd.TabIndex = 4;
             this.lblLNameAdd.Text = "Last Name:";
             // 
             // LblContactNo
             // 
             this.LblContactNo.AutoSize = true;
-            this.LblContactNo.Location = new System.Drawing.Point(20, 100);
+            this.LblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblContactNo.Location = new System.Drawing.Point(18, 100);
             this.LblContactNo.Name = "LblContactNo";
-            this.LblContactNo.Size = new System.Drawing.Size(109, 16);
+            this.LblContactNo.Size = new System.Drawing.Size(165, 25);
             this.LblContactNo.TabIndex = 5;
             this.LblContactNo.Text = "Contact Number: ";
             // 
             // LblEmailAddress
             // 
             this.LblEmailAddress.AutoSize = true;
-            this.LblEmailAddress.Location = new System.Drawing.Point(20, 136);
+            this.LblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmailAddress.Location = new System.Drawing.Point(18, 133);
             this.LblEmailAddress.Name = "LblEmailAddress";
-            this.LblEmailAddress.Size = new System.Drawing.Size(101, 16);
+            this.LblEmailAddress.Size = new System.Drawing.Size(149, 25);
             this.LblEmailAddress.TabIndex = 6;
             this.LblEmailAddress.Text = "Email Address: ";
             // 
@@ -276,7 +288,7 @@
             this.tbUpdateGuest.Controls.Add(this.LblFName_Update);
             this.tbUpdateGuest.Location = new System.Drawing.Point(4, 25);
             this.tbUpdateGuest.Name = "tbUpdateGuest";
-            this.tbUpdateGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbUpdateGuest.Size = new System.Drawing.Size(746, 209);
             this.tbUpdateGuest.TabIndex = 2;
             this.tbUpdateGuest.Text = "UPDATE GUEST";
             this.tbUpdateGuest.UseVisualStyleBackColor = true;
@@ -376,7 +388,7 @@
             this.tbDeleteGuest.Controls.Add(this.BtnDelete);
             this.tbDeleteGuest.Location = new System.Drawing.Point(4, 25);
             this.tbDeleteGuest.Name = "tbDeleteGuest";
-            this.tbDeleteGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbDeleteGuest.Size = new System.Drawing.Size(746, 209);
             this.tbDeleteGuest.TabIndex = 3;
             this.tbDeleteGuest.Text = "DELETE GUEST";
             this.tbDeleteGuest.UseVisualStyleBackColor = true;
@@ -500,7 +512,7 @@
             this.tbSearchGuest.Controls.Add(this.btnSearch);
             this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
             this.tbSearchGuest.Name = "tbSearchGuest";
-            this.tbSearchGuest.Size = new System.Drawing.Size(754, 250);
+            this.tbSearchGuest.Size = new System.Drawing.Size(746, 209);
             this.tbSearchGuest.TabIndex = 4;
             this.tbSearchGuest.Text = "SEARCH GUEST";
             this.tbSearchGuest.UseVisualStyleBackColor = true;
@@ -653,12 +665,13 @@
             // 
             // DgvGuests
             // 
+            this.DgvGuests.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.DgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGuests.Location = new System.Drawing.Point(79, 427);
+            this.DgvGuests.Location = new System.Drawing.Point(37, 391);
             this.DgvGuests.Name = "DgvGuests";
             this.DgvGuests.RowHeadersWidth = 51;
             this.DgvGuests.RowTemplate.Height = 24;
-            this.DgvGuests.Size = new System.Drawing.Size(1043, 221);
+            this.DgvGuests.Size = new System.Drawing.Size(1134, 221);
             this.DgvGuests.TabIndex = 2;
             this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
             // 
@@ -666,16 +679,28 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BackgroundImage = global::HotelManagementSystem.Properties.Resources.Maintain_Guests___1_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(-26, -59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1274, 707);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Guests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1231, 648);
             this.Controls.Add(this.DgvGuests);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.grpBoxMenu);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "Guests";
             this.Text = "Guests";
@@ -697,6 +722,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -760,6 +786,7 @@
         private System.Windows.Forms.RadioButton rdoDsc;
         private System.Windows.Forms.RadioButton rdoAsc;
         private System.Windows.Forms.Button btnResetSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
