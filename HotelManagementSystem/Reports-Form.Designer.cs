@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbReports = new System.Windows.Forms.ComboBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
@@ -37,6 +38,7 @@
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblReportType = new System.Windows.Forms.Label();
             this.dgvBookings = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,5 +161,6 @@
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblReportType;
         private System.Windows.Forms.DataGridView dgvBookings;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

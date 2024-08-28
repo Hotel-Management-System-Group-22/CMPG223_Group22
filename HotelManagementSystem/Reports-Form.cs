@@ -34,6 +34,11 @@ namespace HotelManagementSystem
                 cbReports.Items.Add("Top 10 Week Verkeer");
                 btnCancel.Text = "Kanselleer";
                 btnGenerateReport.Text = "Genereer Verslag";
+                toolTip1.SetToolTip(cbReports, "Kies 'n verslag uit die lys.");
+                toolTip1.SetToolTip(btnCancel, "Klik om die operasie te kanselleer.");
+                toolTip1.SetToolTip(btnGenerateReport, "Klik om die geselekteerde verslag te genereer.");
+                toolTip1.SetToolTip(dtpStart, "Kies die begindatum.");
+                toolTip1.SetToolTip(dtpEnd, "Kies die einddatum.");
             }
             else {
                 lblEndDate.Text = "End Date:";
@@ -44,6 +49,12 @@ namespace HotelManagementSystem
                 cbReports.Items.Add("Top 10 Week Traffic");
                 btnCancel.Text = "Cancel";
                 btnGenerateReport.Text = "Generate Report";
+                toolTip1.SetToolTip(cbReports, "Select a report from the list.");
+                toolTip1.SetToolTip(btnCancel, "Click to cancel the operation.");
+                toolTip1.SetToolTip(btnGenerateReport, "Click to generate the selected report.");
+                toolTip1.SetToolTip(dtpStart, "Select the start date.");
+                toolTip1.SetToolTip(dtpEnd, "Select the end date.");
+
             }
         }
 

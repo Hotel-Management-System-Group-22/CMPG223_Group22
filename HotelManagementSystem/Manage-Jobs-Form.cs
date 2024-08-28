@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace HotelManagementSystem
@@ -34,6 +35,10 @@ namespace HotelManagementSystem
         private void ManageJobsForm_Load(object sender, EventArgs e)
         {
             loadData();
+            toolTip1.AutoPopDelay = 5000;   //5 seconds
+            toolTip1.InitialDelay = 700;    //0.7 seconds
+            toolTip1.ReshowDelay = 2000;     //2 seconds
+            toolTip1.ShowAlways = true;
             tabcontrol.Visible = false;
             if (isAfrikaans)
             {
@@ -57,6 +62,25 @@ namespace HotelManagementSystem
                 btnEditCancel.Text = "Kanseleer";
                 tabAddJob.Text = "Voeg Werkinlighting by";
                 tabEditJob.Text = "Wysig Werkinligting";
+
+                toolTip1.SetToolTip(btnAcceptNewJob, "Klik om die nuwe werk te aanvaar.");
+                toolTip1.SetToolTip(btnAddCancel, "Klik om die toevoeging van werk te kanselleer.");
+                toolTip1.SetToolTip(btnAddJob, "Klik om 'n nuwe werk by te voeg.");
+                toolTip1.SetToolTip(btnDeleteJob, "Klik om die geselekteerde werk uit te vee.");
+                toolTip1.SetToolTip(btnEditJob, "Klik om die geselekteerde werk te wysig.");
+                toolTip1.SetToolTip(btnReset, "Klik om die soekveld terug te stel.");
+                toolTip1.SetToolTip(btnEditAccept, "Klik om die gewysigde werk te aanvaar.");
+                toolTip1.SetToolTip(btnEditCancel, "Klik om die wysiging van die werk te kanselleer.");
+
+                toolTip1.SetToolTip(txtAddJobRate, "Voer die tarief vir die nuwe werk in.");
+                toolTip1.SetToolTip(txtAddJobTitle, "Voer die titel vir die nuwe werk in.");
+                toolTip1.SetToolTip(txtEditJobRate, "Voer die nuwe tarief vir die geselekteerde werk in.");
+                toolTip1.SetToolTip(txtEditJobTitle, "Voer die nuwe titel vir die geselekteerde werk in.");
+                toolTip1.SetToolTip(txtJobID, "Voer die Job ID in waarna jy soek.");
+                toolTip1.SetToolTip(txtJobRate, "Voer die tarief in waarna jy soek.");
+                toolTip1.SetToolTip(txtJobTitle, "Voer die titel in waarna jy soek.");
+
+
             }
             else if (isAfrikaans == false)
             {
@@ -80,6 +104,24 @@ namespace HotelManagementSystem
                 btnEditCancel.Text = "Cancel";
                 tabAddJob.Text = "Add Job Info";
                 tabEditJob.Text = "Edit Job Info";
+
+                toolTip1.SetToolTip(btnAcceptNewJob, "Click to accept the new job.");
+                toolTip1.SetToolTip(btnAddCancel, "Click to cancel adding the job.");
+                toolTip1.SetToolTip(btnAddJob, "Click to add a new job.");
+                toolTip1.SetToolTip(btnDeleteJob, "Click to delete the selected job.");
+                toolTip1.SetToolTip(btnEditJob, "Click to edit the selected job.");
+                toolTip1.SetToolTip(btnReset, "Click to reset the search field.");
+                toolTip1.SetToolTip(btnEditAccept, "Click to accept the modified job.");
+                toolTip1.SetToolTip(btnEditCancel, "Click to cancel editing the job.");
+
+                toolTip1.SetToolTip(txtAddJobRate, "Enter the rate for the new job.");
+                toolTip1.SetToolTip(txtAddJobTitle, "Enter the title for the new job.");
+                toolTip1.SetToolTip(txtEditJobRate, "Enter the new rate for the selected job.");
+                toolTip1.SetToolTip(txtEditJobTitle, "Enter the new title for the selected job.");
+                toolTip1.SetToolTip(txtJobID, "Enter the Job ID you seek");
+                toolTip1.SetToolTip(txtJobRate, "Enter the Rate you seek ");
+                toolTip1.SetToolTip(txtJobTitle, "Enter the Title you seek");
+
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvJobList = new System.Windows.Forms.DataGridView();
             this.txtJobID = new System.Windows.Forms.TextBox();
             this.lblJobID = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.tabAddJob = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSelectRecords = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).BeginInit();
             this.tabcontrol.SuspendLayout();
             this.tabEditJob.SuspendLayout();
@@ -428,5 +430,6 @@
         private System.Windows.Forms.TabPage tabAddJob;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblSelectRecords;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
