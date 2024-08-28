@@ -14,7 +14,7 @@ namespace HotelManagementSystem
         [STAThread]
         static void Main()
         {
-            Boolean isAfrikaans = false;
+            Boolean isAfrikaans = true;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ManageJobsForm(isAfrikaans));
