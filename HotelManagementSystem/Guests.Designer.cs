@@ -196,9 +196,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(532, 32);
+            this.button1.Location = new System.Drawing.Point(483, 87);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 45);
+            this.button1.Size = new System.Drawing.Size(243, 45);
             this.button1.TabIndex = 11;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
@@ -207,9 +207,9 @@
             // BtnAddGuest
             // 
             this.BtnAddGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddGuest.Location = new System.Drawing.Point(532, 158);
+            this.BtnAddGuest.Location = new System.Drawing.Point(483, 158);
             this.BtnAddGuest.Name = "BtnAddGuest";
-            this.BtnAddGuest.Size = new System.Drawing.Size(194, 45);
+            this.BtnAddGuest.Size = new System.Drawing.Size(243, 45);
             this.BtnAddGuest.TabIndex = 3;
             this.BtnAddGuest.Text = "Add Guest";
             this.BtnAddGuest.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@
             // 
             this.TxtFName_Add.Location = new System.Drawing.Point(193, 45);
             this.TxtFName_Add.Name = "TxtFName_Add";
-            this.TxtFName_Add.Size = new System.Drawing.Size(187, 22);
+            this.TxtFName_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtFName_Add.TabIndex = 10;
             this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
@@ -227,7 +227,7 @@
             // 
             this.TxtLName_Add.Location = new System.Drawing.Point(193, 87);
             this.TxtLName_Add.Name = "TxtLName_Add";
-            this.TxtLName_Add.Size = new System.Drawing.Size(187, 22);
+            this.TxtLName_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtLName_Add.TabIndex = 9;
             this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
@@ -235,7 +235,7 @@
             // 
             this.TxtContactNo_Add.Location = new System.Drawing.Point(193, 132);
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
-            this.TxtContactNo_Add.Size = new System.Drawing.Size(187, 22);
+            this.TxtContactNo_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtContactNo_Add.TabIndex = 8;
             this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
@@ -243,7 +243,7 @@
             // 
             this.TxtEmail_Add.Location = new System.Drawing.Point(193, 168);
             this.TxtEmail_Add.Name = "TxtEmail_Add";
-            this.TxtEmail_Add.Size = new System.Drawing.Size(187, 22);
+            this.TxtEmail_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtEmail_Add.TabIndex = 7;
             this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
             // 
@@ -251,7 +251,7 @@
             // 
             this.lblFNameAdd.AutoSize = true;
             this.lblFNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNameAdd.Location = new System.Drawing.Point(20, 42);
+            this.lblFNameAdd.Location = new System.Drawing.Point(73, 48);
             this.lblFNameAdd.Name = "lblFNameAdd";
             this.lblFNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblFNameAdd.TabIndex = 3;
@@ -261,7 +261,7 @@
             // 
             this.lblLNameAdd.AutoSize = true;
             this.lblLNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLNameAdd.Location = new System.Drawing.Point(20, 83);
+            this.lblLNameAdd.Location = new System.Drawing.Point(73, 87);
             this.lblLNameAdd.Name = "lblLNameAdd";
             this.lblLNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblLNameAdd.TabIndex = 4;
@@ -281,7 +281,7 @@
             // 
             this.LblEmailAddress.AutoSize = true;
             this.LblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailAddress.Location = new System.Drawing.Point(20, 168);
+            this.LblEmailAddress.Location = new System.Drawing.Point(38, 168);
             this.LblEmailAddress.Name = "LblEmailAddress";
             this.LblEmailAddress.Size = new System.Drawing.Size(149, 25);
             this.LblEmailAddress.TabIndex = 6;
@@ -310,7 +310,7 @@
             // 
             this.LblEmail_Update.AutoSize = true;
             this.LblEmail_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail_Update.Location = new System.Drawing.Point(18, 119);
+            this.LblEmail_Update.Location = new System.Drawing.Point(34, 141);
             this.LblEmail_Update.Name = "LblEmail_Update";
             this.LblEmail_Update.Size = new System.Drawing.Size(144, 25);
             this.LblEmail_Update.TabIndex = 14;
@@ -320,7 +320,7 @@
             // 
             this.LblContactNo_Update.AutoSize = true;
             this.LblContactNo_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactNo_Update.Location = new System.Drawing.Point(18, 90);
+            this.LblContactNo_Update.Location = new System.Drawing.Point(18, 107);
             this.LblContactNo_Update.Name = "LblContactNo_Update";
             this.LblContactNo_Update.Size = new System.Drawing.Size(160, 25);
             this.LblContactNo_Update.TabIndex = 13;
@@ -330,7 +330,7 @@
             // 
             this.LblLName_Update.AutoSize = true;
             this.LblLName_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLName_Update.Location = new System.Drawing.Point(18, 57);
+            this.LblLName_Update.Location = new System.Drawing.Point(66, 67);
             this.LblLName_Update.Name = "LblLName_Update";
             this.LblLName_Update.Size = new System.Drawing.Size(112, 25);
             this.LblLName_Update.TabIndex = 12;
@@ -338,34 +338,34 @@
             // 
             // TxtLName_Update
             // 
-            this.TxtLName_Update.Location = new System.Drawing.Point(196, 65);
+            this.TxtLName_Update.Location = new System.Drawing.Point(196, 71);
             this.TxtLName_Update.Name = "TxtLName_Update";
-            this.TxtLName_Update.Size = new System.Drawing.Size(190, 22);
+            this.TxtLName_Update.Size = new System.Drawing.Size(214, 22);
             this.TxtLName_Update.TabIndex = 10;
             this.TxtLName_Update.TextChanged += new System.EventHandler(this.TxtLName_Update_TextChanged);
             // 
             // TxtContactNo_Update
             // 
-            this.TxtContactNo_Update.Location = new System.Drawing.Point(196, 93);
+            this.TxtContactNo_Update.Location = new System.Drawing.Point(196, 111);
             this.TxtContactNo_Update.Name = "TxtContactNo_Update";
-            this.TxtContactNo_Update.Size = new System.Drawing.Size(190, 22);
+            this.TxtContactNo_Update.Size = new System.Drawing.Size(214, 22);
             this.TxtContactNo_Update.TabIndex = 9;
             this.TxtContactNo_Update.TextChanged += new System.EventHandler(this.TxtContactNo_Update_TextChanged);
             // 
             // TxtBoxEmail_Update
             // 
-            this.TxtBoxEmail_Update.Location = new System.Drawing.Point(196, 121);
+            this.TxtBoxEmail_Update.Location = new System.Drawing.Point(196, 145);
             this.TxtBoxEmail_Update.Name = "TxtBoxEmail_Update";
-            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(190, 22);
+            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(214, 22);
             this.TxtBoxEmail_Update.TabIndex = 8;
             this.TxtBoxEmail_Update.TextChanged += new System.EventHandler(this.TxtBoxEmail_Update_TextChanged);
             // 
             // BtnUpdate
             // 
             this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdate.Location = new System.Drawing.Point(455, 157);
+            this.BtnUpdate.Location = new System.Drawing.Point(475, 157);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(205, 43);
+            this.BtnUpdate.Size = new System.Drawing.Size(224, 43);
             this.BtnUpdate.TabIndex = 3;
             this.BtnUpdate.Text = "Update ";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -374,9 +374,9 @@
             // BtnReset
             // 
             this.BtnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReset.Location = new System.Drawing.Point(14, 168);
+            this.BtnReset.Location = new System.Drawing.Point(475, 90);
             this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(205, 43);
+            this.BtnReset.Size = new System.Drawing.Size(224, 43);
             this.BtnReset.TabIndex = 4;
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
@@ -386,7 +386,7 @@
             // 
             this.TxtFName_Update.Location = new System.Drawing.Point(196, 32);
             this.TxtFName_Update.Name = "TxtFName_Update";
-            this.TxtFName_Update.Size = new System.Drawing.Size(190, 22);
+            this.TxtFName_Update.Size = new System.Drawing.Size(214, 22);
             this.TxtFName_Update.TabIndex = 3;
             this.TxtFName_Update.TextChanged += new System.EventHandler(this.TxtFName_Update_TextChanged);
             // 
@@ -394,7 +394,7 @@
             // 
             this.LblFName_Update.AutoSize = true;
             this.LblFName_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFName_Update.Location = new System.Drawing.Point(18, 32);
+            this.LblFName_Update.Location = new System.Drawing.Point(66, 29);
             this.LblFName_Update.Name = "LblFName_Update";
             this.LblFName_Update.Size = new System.Drawing.Size(112, 25);
             this.LblFName_Update.TabIndex = 0;
@@ -436,7 +436,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 185);
+            this.groupBox1.Size = new System.Drawing.Size(405, 200);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Confirm Values";
@@ -446,7 +446,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 149);
+            this.label2.Location = new System.Drawing.Point(22, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 30;
@@ -456,7 +456,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 106);
+            this.label3.Location = new System.Drawing.Point(6, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 25);
             this.label3.TabIndex = 29;
@@ -466,7 +466,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 68);
+            this.label5.Location = new System.Drawing.Point(54, 77);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 25);
             this.label5.TabIndex = 28;
@@ -474,6 +474,7 @@
             // 
             // txtLName_delete
             // 
+            this.txtLName_delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtLName_delete.Location = new System.Drawing.Point(183, 74);
             this.txtLName_delete.Name = "txtLName_delete";
             this.txtLName_delete.ReadOnly = true;
@@ -483,6 +484,7 @@
             // 
             // txtCellNr_Delete
             // 
+            this.txtCellNr_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtCellNr_Delete.Location = new System.Drawing.Point(183, 110);
             this.txtCellNr_Delete.Name = "txtCellNr_Delete";
             this.txtCellNr_Delete.ReadOnly = true;
@@ -492,6 +494,7 @@
             // 
             // txtEmail_Delete
             // 
+            this.txtEmail_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtEmail_Delete.Location = new System.Drawing.Point(183, 155);
             this.txtEmail_Delete.Name = "txtEmail_Delete";
             this.txtEmail_Delete.ReadOnly = true;
@@ -501,6 +504,7 @@
             // 
             // txtFName_Delete
             // 
+            this.txtFName_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtFName_Delete.Location = new System.Drawing.Point(183, 32);
             this.txtFName_Delete.Name = "txtFName_Delete";
             this.txtFName_Delete.ReadOnly = true;
@@ -512,7 +516,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 32);
+            this.label6.Location = new System.Drawing.Point(54, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 25);
             this.label6.TabIndex = 23;
@@ -521,9 +525,9 @@
             // BtnDelete
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(440, 164);
+            this.BtnDelete.Location = new System.Drawing.Point(522, 165);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(202, 46);
+            this.BtnDelete.Size = new System.Drawing.Size(210, 46);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -546,7 +550,7 @@
             // btnResetSearch
             // 
             this.btnResetSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetSearch.Location = new System.Drawing.Point(255, 184);
+            this.btnResetSearch.Location = new System.Drawing.Point(492, 184);
             this.btnResetSearch.Name = "btnResetSearch";
             this.btnResetSearch.Size = new System.Drawing.Size(239, 42);
             this.btnResetSearch.TabIndex = 13;
@@ -561,7 +565,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(543, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(154, 163);
+            this.groupBox3.Size = new System.Drawing.Size(154, 173);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sort by:";
@@ -605,7 +609,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(505, 165);
+            this.groupBox2.Size = new System.Drawing.Size(505, 175);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search by:";
@@ -613,7 +617,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 125);
+            this.label8.Location = new System.Drawing.Point(123, 142);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 25);
             this.label8.TabIndex = 28;
@@ -621,16 +625,16 @@
             // 
             // txtEmail_Search
             // 
-            this.txtEmail_Search.Location = new System.Drawing.Point(291, 129);
+            this.txtEmail_Search.Location = new System.Drawing.Point(252, 139);
             this.txtEmail_Search.Name = "txtEmail_Search";
-            this.txtEmail_Search.Size = new System.Drawing.Size(167, 30);
+            this.txtEmail_Search.Size = new System.Drawing.Size(206, 30);
             this.txtEmail_Search.TabIndex = 11;
             this.txtEmail_Search.TextChanged += new System.EventHandler(this.txtEmail_Search_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 96);
+            this.label7.Location = new System.Drawing.Point(29, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 25);
             this.label7.TabIndex = 27;
@@ -638,16 +642,16 @@
             // 
             // txtContact_Search
             // 
-            this.txtContact_Search.Location = new System.Drawing.Point(291, 93);
+            this.txtContact_Search.Location = new System.Drawing.Point(252, 104);
             this.txtContact_Search.Name = "txtContact_Search";
-            this.txtContact_Search.Size = new System.Drawing.Size(167, 30);
+            this.txtContact_Search.Size = new System.Drawing.Size(206, 30);
             this.txtContact_Search.TabIndex = 9;
             this.txtContact_Search.TextChanged += new System.EventHandler(this.txtContact_Search_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 65);
+            this.label4.Location = new System.Drawing.Point(77, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 25);
             this.label4.TabIndex = 26;
@@ -655,16 +659,16 @@
             // 
             // txtLName_Search
             // 
-            this.txtLName_Search.Location = new System.Drawing.Point(291, 29);
+            this.txtLName_Search.Location = new System.Drawing.Point(252, 29);
             this.txtLName_Search.Name = "txtLName_Search";
-            this.txtLName_Search.Size = new System.Drawing.Size(167, 30);
+            this.txtLName_Search.Size = new System.Drawing.Size(206, 30);
             this.txtLName_Search.TabIndex = 7;
             this.txtLName_Search.TextChanged += new System.EventHandler(this.txtLName_Search_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 40);
+            this.label1.Location = new System.Drawing.Point(77, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 25);
             this.label1.TabIndex = 12;
@@ -672,9 +676,9 @@
             // 
             // txtFName_Search
             // 
-            this.txtFName_Search.Location = new System.Drawing.Point(291, 60);
+            this.txtFName_Search.Location = new System.Drawing.Point(252, 65);
             this.txtFName_Search.Name = "txtFName_Search";
-            this.txtFName_Search.Size = new System.Drawing.Size(167, 30);
+            this.txtFName_Search.Size = new System.Drawing.Size(206, 30);
             this.txtFName_Search.TabIndex = 5;
             this.txtFName_Search.TextChanged += new System.EventHandler(this.txtFName_Search_TextChanged);
             // 
@@ -709,7 +713,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(391, 127);
+            this.panel1.Location = new System.Drawing.Point(391, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(746, 28);
             this.panel1.TabIndex = 25;
