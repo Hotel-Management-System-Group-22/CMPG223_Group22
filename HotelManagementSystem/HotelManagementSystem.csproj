@@ -52,6 +52,11 @@
     <Compile Include="Guests.Designer.cs">
       <DependentUpon>Guests.cs</DependentUpon>
     </Compile>
+    <Compile Include="HotelManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Guests.resx">
@@ -67,6 +72,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="HotelManagementSystemDataSet.xsc">
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelManagementSystemDataSet.xss">
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

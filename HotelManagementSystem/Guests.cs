@@ -75,9 +75,12 @@ namespace HotelManagementSystem
 
         private bool IsValidPhoneNumber(string phoneNumber)
         {
-            // Simple phone number validation regex (e.g., (123) 456-7890 or 123-456-7890)
-            string phonePattern = @"^(\+27\s?)?(\(?0[1-9]\d{1,2}\)?[\s-]?)?\d{3}[\s-]?\d{4}$";
-            return Regex.IsMatch(phoneNumber, phonePattern);
+            string phonePattern = @"^(\(?0[1-9]\d{1,2}\)?[\s-]?)?\d{3}[\s-]?\d{4}$";
+
+            // Ensure the phone number is exactly 10 digits long after removing non-numeric characters
+            string digitsOnly = Regex.Replace(phoneNumber, @"\D", "");
+
+            return digitsOnly.Length == 10 && Regex.IsMatch(phoneNumber, phonePattern);
         }
 
         private void PopulateUpdateFields(int guestId)
@@ -173,17 +176,17 @@ namespace HotelManagementSystem
 
         private void BtnAddPage_Click(object sender, EventArgs e)
         {
-            tbAddGuest.Show();
+            tabControl1.SelectedTab = tbAddGuest;
         }
 
         private void BtnUpdatePage_Click(object sender, EventArgs e)
         {
-            tbUpdateGuest.Show();
+            tabControl1.SelectedTab = tbUpdateGuest;
         }
 
         private void BtnDeleteGuest_Click(object sender, EventArgs e)
         {
-            tbDeleteGuest.Show();
+            tabControl1.SelectedTab = tbDeleteGuest;
         }
 
         private void BtnReset_Delet_Click(object sender, EventArgs e)
@@ -221,63 +224,91 @@ namespace HotelManagementSystem
         }
         private void BtnAddGuest_Click(object sender, EventArgs e)
         {
-           
             // Check for validation errors
-            if (string.IsNullOrEmpty(errorProvider1.GetError(TxtFName_Add)) && string.IsNullOrEmpty(errorProvider1.GetError(TxtLName_Add)) && string.IsNullOrEmpty(errorProvider1.GetError(TxtContactNo_Add)) && string.IsNullOrEmpty(errorProvider1.GetError(TxtEmail_Add)))
+            if (string.IsNullOrEmpty(errorProvider1.GetError(TxtFName_Add)) &&
+                string.IsNullOrEmpty(errorProvider1.GetError(TxtLName_Add)) &&
+                string.IsNullOrEmpty(errorProvider1.GetError(TxtContactNo_Add)) &&
+                string.IsNullOrEmpty(errorProvider1.GetError(TxtEmail_Add)))
             {
-                string name = TxtFName_Add.Text;
-                string surname = TxtLName_Add.Text;
-                string contactNo = TxtContactNo_Add.Text;
-                string email = TxtEmail_Add.Text;
-
-                if (IsContactNoOrEmailExists(contactNo, email))
+                if (!string.IsNullOrEmpty(TxtFName_Add.Text) &&
+                    !string.IsNullOrEmpty(TxtLName_Add.Text) &&
+                    !string.IsNullOrEmpty(TxtContactNo_Add.Text) &&
+                    !string.IsNullOrEmpty(TxtEmail_Add.Text))
                 {
-                    MessageBox.Show("A guest with this contact number or email already exists.");
-                    return; // Exit method to prevent further processing
-                }
+                    string name = TxtFName_Add.Text;
+                    string surname = TxtLName_Add.Text;
+                    string contactNo = TxtContactNo_Add.Text;
+                    string email = TxtEmail_Add.Text;
 
-                if (alreadyInDatabase(name, surname))
-                {
-                    DialogResult result = MessageBox.Show("A guest with this name and surname already exists. Are you sure you want to add this guest?",
-                        "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.No)
+                    if (IsContactNoOrEmailExists(contactNo, email))
                     {
-                        return;
+                        MessageBox.Show("A guest with this contact number or email already exists.");
+                        return; // Exit method to prevent further processing
                     }
-                }
 
-                string query = "INSERT INTO Guest (Guest_FName, Guest_LName, Guest_ContactNo, Guest_Email) VALUES (@name, @surname, @contactNo, @email)";
-
-                using (SqlConnection conn = new SqlConnection(connection))
-                {
-                    conn.Open();
-
-                    using (SqlCommand command = new SqlCommand(query, conn))
+                    if (alreadyInDatabase(name, surname))
                     {
-                        command.Parameters.AddWithValue("@name", name);
-                        command.Parameters.AddWithValue("@surname", surname);
-                        command.Parameters.AddWithValue("@contactNo", contactNo);
-                        command.Parameters.AddWithValue("@email", email);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        DialogResult result = MessageBox.Show(
+                            "A guest with this name and surname already exists. Are you sure you want to add this guest?",
+                            "Warning",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Warning
+                        );
+                        if (result == DialogResult.No)
                         {
-                            MessageBox.Show("Guest has been added.");
-                            LoadGuests();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to add guest. Please try again.");
+                            return;
                         }
                     }
+
+                    string query = "INSERT INTO Guest (Guest_FName, Guest_LName, Guest_ContactNo, Guest_Email) VALUES (@name, @surname, @contactNo, @email)";
+
+                    try
+                    {
+                        using (SqlConnection conn = new SqlConnection(connection))
+                        {
+                            conn.Open();
+
+                            using (SqlCommand command = new SqlCommand(query, conn))
+                            {
+                                command.Parameters.AddWithValue("@name", name);
+                                command.Parameters.AddWithValue("@surname", surname);
+                                command.Parameters.AddWithValue("@contactNo", contactNo);
+                                command.Parameters.AddWithValue("@email", email);
+
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Guest has been added.");
+                                    TxtEmail_Add.Clear();
+                                    TxtFName_Add.Clear();
+                                    TxtLName_Add.Clear();
+                                    TxtContactNo_Add.Clear();
+                                    LoadGuests();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Failed to add guest. Please try again.");
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred: {ex.Message}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please complete all fields.");
                 }
             }
             else
             {
-                MessageBox.Show("Please complete all fields and ensure all errors are corrected.");
+                MessageBox.Show("Please ensure all errors are corrected.");
             }
         }
+
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -384,7 +415,7 @@ namespace HotelManagementSystem
 
             if (hasErrors)
             {
-                MessageBox.Show("Please complete all fields and ensure all errors are corrected.");
+                MessageBox.Show("Please ensure all errors are corrected.");
                 return;
             }
 
@@ -464,8 +495,7 @@ namespace HotelManagementSystem
 
         private void TxtFName_Add_TextChanged(object sender, EventArgs e)
         {
-            ValidateTextBox(TxtFName_Add);
-            
+ ValidateTextBox(TxtFName_Add);
         }
 
         private void TxtLName_Add_TextChanged(object sender, EventArgs e)
@@ -487,12 +517,12 @@ namespace HotelManagementSystem
         {
             if (!IsValidPhoneNumber(TxtContactNo_Update.Text))
             {
-                errorProvider1.SetError(TxtContactNo_Add, "Invalid phone number format.");
+                errorProvider1.SetError(TxtContactNo_Update, "Invalid phone number format.");
                 //hasErrors = true;
             }
             else
             {
-                errorProvider1.SetError(TxtContactNo_Add, string.Empty);
+                errorProvider1.SetError(TxtContactNo_Update, string.Empty);
             }
         }
 
@@ -500,13 +530,14 @@ namespace HotelManagementSystem
         {
             if (!IsValidEmail(TxtBoxEmail_Update.Text))
             {
-                errorProvider1.SetError(TxtEmail_Add, "Invalid email format.");
+                errorProvider1.SetError(TxtBoxEmail_Update, "Invalid email format.");
                 //hasErrors = true;
             }
             else
             {
-                errorProvider1.SetError(TxtEmail_Add, string.Empty);
+                errorProvider1.SetError(TxtBoxEmail_Update, string.Empty);
             }
+
         }
 
         private void TxtContactNo_Add_TextChanged(object sender, EventArgs e)
@@ -559,7 +590,7 @@ namespace HotelManagementSystem
             
 
             // Determine which radio button is checked and set the searchBy and searchValue accordingly
-            if (rdoLName.Checked)
+            /*if (rdoLName.Checked)
             {
                // txtLName_Search.Visible = true;
                 searchBy = "Guest_LName";
@@ -584,7 +615,7 @@ namespace HotelManagementSystem
                 searchBy = "Guest_Email";
                 searchValue = txtEmail_Search.Text.Trim();
             }
-
+            */
             // Determine the sort order based on the selected radio button
             if (rdoAsc.Checked)
             {
@@ -692,10 +723,10 @@ namespace HotelManagementSystem
 
         private void btnResetSearch_Click(object sender, EventArgs e)
         {
-            txtFName_Delete.Text = " ";
-            txtLName_delete.Text = " ";
-            txtCellNr_Delete.Text = " ";
-            txtEmail_Delete.Text = " ";
+            txtEmail_Search.Text = " ";
+            txtFName_Search.Text = " ";
+            txtLName_Search.Text = " ";
+            txtContact_Search.Text = " ";
 
             LoadGuests();
         }
@@ -703,6 +734,107 @@ namespace HotelManagementSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtLName_Search_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail_Search.Text = string.Empty;
+            txtFName_Search.Text = string.Empty;
+            txtContact_Search.Text = string.Empty;
+
+            DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+            if (dataTable != null)
+            {
+                // Apply the filter to the DataTable based on the text in txtLName_Search
+                string filterExpression = $"Guest_LName LIKE '%{txtLName_Search.Text}%'";
+                dataTable.DefaultView.RowFilter = filterExpression;
+            }
+        }
+
+        private void txtFName_Search_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail_Search.Text = string.Empty;
+            txtLName_Search.Text = string.Empty;
+            txtContact_Search.Text = string.Empty;
+
+            DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+            if (dataTable != null)
+            {
+                // Apply the filter to the DataTable based on the text in txtLName_Search
+                string filterExpression = $"Guest_FName LIKE '%{txtFName_Search.Text}%'";
+                dataTable.DefaultView.RowFilter = filterExpression;
+            }
+        }
+
+        private void txtContact_Search_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail_Search.Text = string.Empty;
+            txtLName_Search.Text = string.Empty;
+            txtFName_Search.Text = string.Empty;
+
+            DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+            if (dataTable != null)
+            {
+                // Apply the filter to the DataTable based on the text in txtLName_Search
+                string filterExpression = $"Guest_ContactNo LIKE '%{txtContact_Search.Text}%'";
+                dataTable.DefaultView.RowFilter = filterExpression;
+            }
+        }
+
+        private void txtEmail_Search_TextChanged(object sender, EventArgs e)
+        {
+            txtFName_Search.Text = string.Empty;
+            txtLName_Search.Text = string.Empty;
+            txtContact_Search.Text = string.Empty;
+
+            DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+            if (dataTable != null)
+            {
+                // Apply the filter to the DataTable based on the text in txtLName_Search
+                string filterExpression = $"Guest_Email LIKE '%{txtEmail_Search.Text}%'";
+                dataTable.DefaultView.RowFilter = filterExpression;
+            }
+        }
+
+        private void rdoAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoAsc.Checked)
+            {
+                DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+                if (dataTable != null)
+                {
+                    string sortExpression = "Guest_LName ASC";
+                    dataTable.DefaultView.Sort = sortExpression;
+                }
+            }
+        }
+
+        private void rdoDsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoAsc.Checked)
+            {
+                DataTable dataTable = (DataTable)DgvGuests.DataSource;
+
+                if (dataTable != null)
+                {
+                    // Assuming you want to sort by Guest's last name, you can change the column name accordingly
+                    string sortExpression = "Guest_LName DESC";
+                    dataTable.DefaultView.Sort = sortExpression;
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            TxtEmail_Add.Text = " ";
+            TxtFName_Add.Text = " ";
+            TxtLName_Add.Text = " ";
+            TxtContactNo_Add.Text = " ";
         }
     }
 }
