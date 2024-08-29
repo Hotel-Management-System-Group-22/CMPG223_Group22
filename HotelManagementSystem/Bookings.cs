@@ -71,18 +71,8 @@ namespace HotelManagementSystem
             // Define the status based on the booking state
             int status = isBooked ? 1 : 0;
 
-            // Update the room status in the database
-            string updateStatusQuery = @"
-        UPDATE Room
-        SET Status = @status
-        WHERE Room_ID = @roomId
-        AND EXISTS (
-            SELECT 1
-            FROM Booking
-            WHERE Room_ID = @roomId
-            AND Guest_Arrival <= @departureDate
-            AND Guest_Departure >= @arrivalDate
-        )";
+            //StackOverFLow TEST IF IT WORKS!!
+            string updateStatusQuery = @"UPDATE Room SET Status = CASE WHEN @isBooked = 1 THEN 1 WHEN @departureDate = CAST(GETDATE() AS DATE) THEN 0 ELSE Status ENDWHERE Room_ID = @roomIdAND EXISTS (SELECT 1FROM BookingWHERE Room_ID = @roomIdAND Guest_Arrival <= @departureDateAND Guest_Departure >= @arrivalDate)";
 
             try
             {
@@ -91,7 +81,7 @@ namespace HotelManagementSystem
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(updateStatusQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@status", status);
+                        cmd.Parameters.AddWithValue("@isBooked", isBooked);
                         cmd.Parameters.AddWithValue("@roomId", roomId);
                         cmd.Parameters.AddWithValue("@arrivalDate", arrivalDate);
                         cmd.Parameters.AddWithValue("@departureDate", departureDate);
@@ -113,6 +103,7 @@ namespace HotelManagementSystem
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
 
 
         private void btnAddEmp_Click(object sender, EventArgs e)
@@ -226,7 +217,7 @@ namespace HotelManagementSystem
             }
             else
             {
-                MessageBox.Show("Please complete all fields and ensure all errors are corrected");
+                MessageBox.Show("Please ensure all errors are corrected");
             }
 
         }
@@ -239,8 +230,6 @@ namespace HotelManagementSystem
             if (selectedCheckinDate < currentDate)
             {
                 errorProvider1.SetError(dtCheckin, "The check-in date cannot be in the past. Please select a valid date.");
-                // Optionally, reset the date picker to the current date
-                dtCheckin.Value = currentDate;
             }
         }
 
@@ -305,7 +294,7 @@ namespace HotelManagementSystem
 
         private void btnUpdateEmp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(errorProvider1.GetError(txtRoomNr_Update)) && string.IsNullOrEmpty(errorProvider1.GetError(dtArrival_Update)))
+            if (string.IsNullOrEmpty(errorProvider1.GetError(txtRoomNr_Update)) && string.IsNullOrEmpty(errorProvider1.GetError(dtArrival_Update)) && string.IsNullOrEmpty(errorProvider1.GetError(dtDeparture_Update)))
             {
 
                 if (selectedBookingId == -1)
@@ -320,7 +309,7 @@ namespace HotelManagementSystem
                     MessageBox.Show("Please enter a valid room number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
+                
                 DateTime newArrivalDate = dtArrival_Update.Value;
                 DateTime newDepartureDate = dtDeparture_Update.Value;
 
@@ -328,6 +317,19 @@ namespace HotelManagementSystem
                 using (SqlConnection conn = new SqlConnection(connection))
                 {
                     conn.Open();
+                    string checkRoomExistenceQuery = "SELECT COUNT(*) FROM Room WHERE Room_ID = @roomId";
+
+                    using (SqlCommand cmdExistence = new SqlCommand(checkRoomExistenceQuery, conn))
+                    {
+                        cmdExistence.Parameters.AddWithValue("@roomId", roomId);
+
+                        int roomExists = Convert.ToInt32(cmdExistence.ExecuteScalar());
+                        if (roomExists == 0)
+                        {
+                            MessageBox.Show("The selected room does not exist.");
+                            return;
+                        }
+                    }
                     SqlTransaction transaction = conn.BeginTransaction();
 
                     try
@@ -383,6 +385,7 @@ namespace HotelManagementSystem
                         // Commit the transaction if everything is okay
                         transaction.Commit();
                         MessageBox.Show("Booking updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UpdateRoomStatus(roomId, newArrivalDate, newDepartureDate, true);
                         LoadBookingData(); // Refresh booking data
                     }
                     catch (Exception ex)
@@ -601,6 +604,7 @@ namespace HotelManagementSystem
                             UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
 
                             MessageBox.Show("Booking has been successfully deleted.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
 
                             // Reload the bookings list to reflect changes
                             LoadBookingData();
@@ -833,9 +837,7 @@ namespace HotelManagementSystem
 
             if (selectedCheckinDate < currentDate)
             {
-                errorProvider1.SetError(dtCheckin, "The check-in date cannot be in the past. Please select a valid date.");
-                // Optionally, reset the date picker to the current date
-                dtCheckin.Value = currentDate;
+                errorProvider1.SetError(dtArrival_Update, "The check-in date cannot be in the past. Please select a valid date.");
             }
         }
 
@@ -865,15 +867,11 @@ namespace HotelManagementSystem
         {
             if (!IsTextDigitsValid(txtRoomNr_Update.Text))
             {
-                if (txtRoomNrAdd.Text == null)
-                {
-                    errorProvider1.SetError(txtRoomNrAdd, "Please add room number");
-                }
-                errorProvider1.SetError(txtRoomNrAdd, "Room number can only contain digits");
+                errorProvider1.SetError(txtRoomNr_Update, "Room number can only contain digits");
             }
             else
             {
-                errorProvider1.SetError(txtRoomNrAdd, string.Empty);
+                errorProvider1.SetError(txtRoomNr_Update, string.Empty);
             }
         }
 
@@ -1029,5 +1027,58 @@ namespace HotelManagementSystem
         {
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Guest";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    conn.Open();
+
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn))
+                    {
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        bookingsDataGridView.DataSource = dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtGuestId_TextChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Guest WHERE Guest_ID LIKE @GuestId";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    conn.Open();
+
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, conn))
+                    {
+                        dataAdapter.SelectCommand.Parameters.AddWithValue("@GuestId", "%" + txtGuestId.Text + "%");
+
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        bookingsDataGridView.DataSource = dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

@@ -94,6 +94,10 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnSearchReset = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGuestId = new System.Windows.Forms.TextBox();
+            this.btnDisplayGuests = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -106,6 +110,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // bookingsDataGridView
@@ -181,7 +186,7 @@
             this.tabControl1.Location = new System.Drawing.Point(344, 310);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 350);
+            this.tabControl1.Size = new System.Drawing.Size(843, 412);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -198,14 +203,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 417);
+            this.tabPage1.Size = new System.Drawing.Size(835, 321);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dtDeparture_Update
             // 
-            this.dtDeparture_Update.Location = new System.Drawing.Point(252, 213);
+            this.dtDeparture_Update.Location = new System.Drawing.Point(247, 228);
             this.dtDeparture_Update.Name = "dtDeparture_Update";
             this.dtDeparture_Update.Size = new System.Drawing.Size(227, 22);
             this.dtDeparture_Update.TabIndex = 31;
@@ -213,7 +218,7 @@
             // 
             // dtArrival_Update
             // 
-            this.dtArrival_Update.Location = new System.Drawing.Point(252, 172);
+            this.dtArrival_Update.Location = new System.Drawing.Point(247, 187);
             this.dtArrival_Update.Name = "dtArrival_Update";
             this.dtArrival_Update.Size = new System.Drawing.Size(227, 22);
             this.dtArrival_Update.TabIndex = 30;
@@ -221,7 +226,7 @@
             // 
             // txtRoomNr_Update
             // 
-            this.txtRoomNr_Update.Location = new System.Drawing.Point(252, 133);
+            this.txtRoomNr_Update.Location = new System.Drawing.Point(247, 148);
             this.txtRoomNr_Update.Name = "txtRoomNr_Update";
             this.txtRoomNr_Update.Size = new System.Drawing.Size(180, 22);
             this.txtRoomNr_Update.TabIndex = 26;
@@ -230,7 +235,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(100, 136);
+            this.label10.Location = new System.Drawing.Point(95, 151);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 16);
             this.label10.TabIndex = 27;
@@ -239,7 +244,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 204);
+            this.label11.Location = new System.Drawing.Point(95, 219);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 16);
             this.label11.TabIndex = 29;
@@ -248,7 +253,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(100, 178);
+            this.label19.Location = new System.Drawing.Point(95, 193);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(80, 16);
             this.label19.TabIndex = 28;
@@ -256,7 +261,7 @@
             // 
             // btnUpdateReset
             // 
-            this.btnUpdateReset.Location = new System.Drawing.Point(526, 99);
+            this.btnUpdateReset.Location = new System.Drawing.Point(521, 114);
             this.btnUpdateReset.Name = "btnUpdateReset";
             this.btnUpdateReset.Size = new System.Drawing.Size(303, 43);
             this.btnUpdateReset.TabIndex = 9;
@@ -265,7 +270,7 @@
             // 
             // btnUpdateEmp
             // 
-            this.btnUpdateEmp.Location = new System.Drawing.Point(105, 247);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(100, 262);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(332, 43);
             this.btnUpdateEmp.TabIndex = 6;
@@ -347,7 +352,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 417);
+            this.tabPage2.Size = new System.Drawing.Size(835, 321);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -522,7 +527,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(835, 417);
+            this.tabPage3.Size = new System.Drawing.Size(835, 321);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -634,13 +639,14 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Controls.Add(this.groupBox6);
             this.tabPage4.Controls.Add(this.btnSearchReset);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 321);
+            this.tabPage4.Size = new System.Drawing.Size(835, 383);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -681,7 +687,7 @@
             this.groupBox6.Controls.Add(this.dateTimePicker1);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.label22);
-            this.groupBox6.Location = new System.Drawing.Point(25, 176);
+            this.groupBox6.Location = new System.Drawing.Point(25, 252);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(639, 115);
             this.groupBox6.TabIndex = 13;
@@ -732,7 +738,7 @@
             // 
             // btnSearchReset
             // 
-            this.btnSearchReset.Location = new System.Drawing.Point(548, 116);
+            this.btnSearchReset.Location = new System.Drawing.Point(599, 82);
             this.btnSearchReset.Name = "btnSearchReset";
             this.btnSearchReset.Size = new System.Drawing.Size(230, 28);
             this.btnSearchReset.TabIndex = 10;
@@ -743,6 +749,45 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnDisplayGuests);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.txtGuestId);
+            this.groupBox4.Location = new System.Drawing.Point(25, 99);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(517, 147);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Guest Search";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(125, 16);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Search by Guest ID:";
+            // 
+            // txtGuestId
+            // 
+            this.txtGuestId.Location = new System.Drawing.Point(209, 80);
+            this.txtGuestId.Name = "txtGuestId";
+            this.txtGuestId.Size = new System.Drawing.Size(196, 22);
+            this.txtGuestId.TabIndex = 7;
+            this.txtGuestId.TextChanged += new System.EventHandler(this.txtGuestId_TextChanged);
+            // 
+            // btnDisplayGuests
+            // 
+            this.btnDisplayGuests.Location = new System.Drawing.Point(25, 21);
+            this.btnDisplayGuests.Name = "btnDisplayGuests";
+            this.btnDisplayGuests.Size = new System.Drawing.Size(210, 31);
+            this.btnDisplayGuests.TabIndex = 8;
+            this.btnDisplayGuests.Text = "Display all Guests";
+            this.btnDisplayGuests.UseVisualStyleBackColor = true;
+            this.btnDisplayGuests.Click += new System.EventHandler(this.button1_Click);
             // 
             // Bookings
             // 
@@ -773,6 +818,8 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -844,5 +891,9 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button bttnSearch;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnDisplayGuests;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtGuestId;
     }
 }
