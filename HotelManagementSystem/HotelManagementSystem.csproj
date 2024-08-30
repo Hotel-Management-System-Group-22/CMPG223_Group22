@@ -46,22 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reports-Form.cs">
+    <Compile Include="CheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports-Form.Designer.cs">
-      <DependentUpon>Reports-Form.cs</DependentUpon>
+    <Compile Include="CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage-Jobs-Form.cs">
+    <Compile Include="CheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage-Jobs-Form.Designer.cs">
-      <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintainRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintainRooms.Designer.cs">
+      <DependentUpon>MaintainRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Manage-Jobs-Form.resx">
-      <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintainRooms.resx">
+      <DependentUpon>MaintainRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,11 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports-Form.resx">
-      <DependentUpon>Reports-Form.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,9 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-vector-question-mark-icon-png-image_515448.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

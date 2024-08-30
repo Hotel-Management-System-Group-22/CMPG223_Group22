@@ -16,5 +16,16 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+          MaintainRooms maintainRooms = new MaintainRooms();
+           maintainRooms.ShowDialog();
+            CheckIn checkIn = new CheckIn();
+           checkIn.ShowDialog();
+            CheckOut checkOut = new CheckOut();
+         checkOut.ShowDialog();
+        }
     }
 }
