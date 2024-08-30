@@ -20,7 +20,7 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
         }
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
 
         private void LoadData()
         {
