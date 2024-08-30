@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbReports = new System.Windows.Forms.ComboBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
@@ -35,8 +36,9 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblReportType = new System.Windows.Forms.Label();
             this.dgvBookings = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +82,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(452, 481);
+            this.btnCancel.Location = new System.Drawing.Point(485, 481);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
@@ -106,20 +108,21 @@
             this.lblEndDate.TabIndex = 7;
             this.lblEndDate.Text = "End Date:";
             // 
-            // label3
+            // lblReportType
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 426);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Report type:";
+            this.lblReportType.AutoSize = true;
+            this.lblReportType.Location = new System.Drawing.Point(237, 426);
+            this.lblReportType.Name = "lblReportType";
+            this.lblReportType.Size = new System.Drawing.Size(80, 16);
+            this.lblReportType.TabIndex = 8;
+            this.lblReportType.Text = "Report type:";
             // 
             // dgvBookings
             // 
             this.dgvBookings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookings.Location = new System.Drawing.Point(22, 29);
             this.dgvBookings.Name = "dgvBookings";
+            this.dgvBookings.ReadOnly = true;
             this.dgvBookings.RowHeadersWidth = 51;
             this.dgvBookings.RowTemplate.Height = 24;
             this.dgvBookings.Size = new System.Drawing.Size(777, 306);
@@ -131,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 531);
             this.Controls.Add(this.dgvBookings);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblReportType);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.btnCancel);
@@ -156,7 +159,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblReportType;
         private System.Windows.Forms.DataGridView dgvBookings;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
