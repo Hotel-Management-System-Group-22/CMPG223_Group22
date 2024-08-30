@@ -38,7 +38,7 @@ namespace HotelManagementSystem
         int selectedId;
         string sRoomID = "";
         string sEmployeeID = "";
-        bool bAfrikaans = false;
+        bool bAfrikaans = true;
 
         public void ResetTabPages()
         {
@@ -334,9 +334,19 @@ namespace HotelManagementSystem
                             using (SqlCommand command = new SqlCommand(query, conn))
                             {
                                 int rowsAffected = command.ExecuteNonQuery();
-                                MessageBox.Show(rowsAffected > 0
+                                
+                                if (bAfrikaans)
+                                {
+                                    MessageBox.Show(rowsAffected > 0
+                                        ? "Rekord is suksesvol uitgevee."
+                                        : "Geen rekord gevind met die gespesifiseerde ID nie.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show(rowsAffected > 0
                                     ? "Record deleted successfully."
                                     : "No record found with the specified ID.");
+                                }
                             }
                             LoadData();
                         }
