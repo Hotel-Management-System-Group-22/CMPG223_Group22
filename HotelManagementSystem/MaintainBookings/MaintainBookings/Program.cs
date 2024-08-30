@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelManagementSystem
+namespace MaintainBookings
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace HotelManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bookings());
+            Application.Run(new Form1());
         }
     }
 }
