@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
@@ -43,6 +44,21 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\guests.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> parent of 5652a9e (Merge branch 'Caitlin')
     }
   ],
   "DocumentGroupContainers": [
@@ -52,6 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -77,10 +94,27 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Duimp\\Documents\\SQL Server Management Studio\\SQLQuery1.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2024-08-17T19:58:29.109Z"
+=======
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Guests.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.Designer.cs",
+              "RelativeDocumentMoniker": "Guests.Designer.cs",
+              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.Designer.cs",
+              "RelativeToolTip": "Guests.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T11:59:26.817Z",
+              "EditorCaption": ""
+>>>>>>> parent of 5652a9e (Merge branch 'Caitlin')
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "CheckOut.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
               "RelativeDocumentMoniker": "CheckOut.cs",
@@ -89,10 +123,22 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwBYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-14T21:05:03.253Z"
+=======
+              "Title": "Guests.cs",
+              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
+              "RelativeDocumentMoniker": "Guests.cs",
+              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
+              "RelativeToolTip": "Guests.cs",
+              "ViewState": "AQIAAAcCAAAAAAAAAAAgwBICAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T11:52:38.768Z",
+              "EditorCaption": ""
+>>>>>>> parent of 5652a9e (Merge branch 'Caitlin')
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "CheckIn.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
               "RelativeDocumentMoniker": "CheckIn.cs",
@@ -189,6 +235,16 @@
               "ToolTip": "dbo.Guest [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2024-08-18T13:08:51.532Z"
+=======
+              "Title": "Guests.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
+              "RelativeDocumentMoniker": "Guests.cs",
+              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs [Design]",
+              "RelativeToolTip": "Guests.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T07:30:07.914Z",
+              "EditorCaption": " [Design]"
+>>>>>>> parent of 5652a9e (Merge branch 'Caitlin')
             }
           ]
         }
