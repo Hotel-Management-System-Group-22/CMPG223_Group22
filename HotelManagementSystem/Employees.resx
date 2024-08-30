@@ -141,9 +141,6 @@
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>736, 17</value>
   </metadata>
-  <metadata name="Employee_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="jobTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>728, 58</value>
   </metadata>
@@ -154,7 +151,7 @@
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA8EAAAITCAYAAAAnyR6QAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cQAAEnEB89x6jgAA/7JJREFUeF7snXWcXNX5h2d33H3d3d3dPSvR3bi7khCCS4tTtEDxtpRSHAoELe5O
+        cgAAEnIBXmVb4wAA/7JJREFUeF7snXWcXNX5h2d33H3d3d3dPSvR3bi7khCCS4tTtEDxtpRSHAoELe5O
         sRrtr7SFUkpLaSmW5Pt737t7N5PJTTIzu2wonD+ez9jVc4+8z5xzz1V5rGYIBAKBQCAQCAQCgUDwbUBI
         sEAgEAgEAoFAIBAIvjUICRYIBAKBQCAQCAQCwbeGQ0pwbXIEunMS0Jgag5rkGNRnJKM5NxOtedloyc1G
         c1YqWrKS0ZiegrKERKR7IhBtscBh0MJm0sBsDIfJoIZBr4NRb4BJZ4JJaxyF3hv1ZhgNMhYYjFYJE322
@@ -2284,8 +2281,5 @@
   </data>
   <metadata name="errorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1054, 58</value>
-  </metadata>
-  <metadata name="Employee_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
 </root>
