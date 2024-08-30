@@ -333,34 +333,7 @@ namespace HotelManagementSystem
             string Deletequery = "DELETE FROM Employee WHERE Employee_Username = @employeeUsername";
             //string username = txtDeleteSerach.Text;
 
-            using (SqlConnection conn = new SqlConnection(connection))
-            {
-                conn.Open();
-
-                using (SqlCommand command = new SqlCommand(Selectquery, conn))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            // Populate the text boxes with the retrieved data
-                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
-                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
-                            txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
-                            txtVerifyClerk.Text = Convert.ToBoolean(reader["Is_Clerk_YN"]) ? "Yes" : "No";
-                            txtVerifyJob.Text = reader["Job_Id"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No employee found with the provided username.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return;
-                            //ClearVerifyFields(); // Optionally clear fields if no employee is found
-                        }
-                    }
-                }
-            }
+            
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -694,6 +667,89 @@ namespace HotelManagementSystem
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            string username = txtDeleteSerach.Text;
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(Selectquery, conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Populate the text boxes with the retrieved data
+                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
+                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
+                            txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
+                            txtVerifyClerk.Text = Convert.ToBoolean(reader["Is_Clerk_YN"]) ? "Yes" : "No";
+                            txtVerifyJob.Text = reader["Job_Id"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided username.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                            //ClearVerifyFields(); // Optionally clear fields if no employee is found
+                        }
+                    }
+                }
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string username = txtUpdateSearch.Text;
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(Selectquery, conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Populate the text boxes with the retrieved data
+                            txtUpdateFName.Text = reader["Employee_FName"].ToString();
+                            txtUpdateLName.Text = reader["Employee_LName"].ToString();
+                            bool isAdmin = Convert.ToBoolean(reader["Is_Admin_YN"]);
+                            bool isClerk = Convert.ToBoolean(reader["Is_Clerk_YN"]);
+
+                            // Update the ComboBox based on the values retrieved
+                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; // Example: 0 for Admin, 1 for Clerk (adjust as needed)
+
+                            // Populate the job ComboBox
+                            int jobId = Convert.ToInt32(reader["Job_Id"]);
+                            cmbUpdateJob.SelectedValue = jobId;
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided username.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                            //ClearVerifyFields(); // Optionally clear fields if no employee is found
+                        }
+                    }
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           rdoAdmin.Checked = false;
+           rdoStaff.Checked = false;
+           rdoClerk.Checked = false;
         }
     }
     }
