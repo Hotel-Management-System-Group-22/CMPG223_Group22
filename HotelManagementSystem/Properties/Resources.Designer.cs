@@ -63,9 +63,9 @@ namespace HotelManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngtree_vector_question_mark_icon_png_image_515448 {
+        internal static System.Drawing.Bitmap Maintain_Guests___1_ {
             get {
-                object obj = ResourceManager.GetObject("pngtree-vector-question-mark-icon-png-image_515448", resourceCulture);
+                object obj = ResourceManager.GetObject("Maintain Guests  (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
