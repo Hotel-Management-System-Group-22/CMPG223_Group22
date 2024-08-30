@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblGuestID = new System.Windows.Forms.Label();
             this.txtBookingID = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.txtGuestID = new System.Windows.Forms.TextBox();
             this.lblRoomID = new System.Windows.Forms.Label();
             this.btnLanguage = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,5 +194,6 @@
         private System.Windows.Forms.TextBox txtGuestID;
         private System.Windows.Forms.Label lblRoomID;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
