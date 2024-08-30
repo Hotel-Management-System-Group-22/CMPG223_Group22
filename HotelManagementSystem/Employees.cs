@@ -223,7 +223,7 @@ namespace HotelManagementSystem
 
         private void btnDeleteReset_Click(object sender, EventArgs e)
         {
-            txtDeleteSerach.Clear();
+            //txtDeleteSerach.Clear();
         }
 
         private void btnSearchReset_Click(object sender, EventArgs e)
@@ -321,16 +321,15 @@ namespace HotelManagementSystem
         {
             //PopulateDeleteFields(selectedEmployeeID);
 
-            string username = txtDeleteSerach.Text; // Assuming txtDeleteSearch is the TextBox for username input
-            if (string.IsNullOrWhiteSpace(username))
+            if (selectedEmployeeID == -1)
             {
-                MessageBox.Show("Please enter a username to search.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
 
             string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
-            string Deletequery = "DELETE FROM Employee WHERE Employee_Username = @employeeUsername";
+            string Deletequery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
             //string username = txtDeleteSerach.Text;
 
             
@@ -340,7 +339,7 @@ namespace HotelManagementSystem
                 conn.Open();
                 using (SqlCommand command = new SqlCommand(Deletequery, conn))
                 {
-                    command.Parameters.AddWithValue("@employeeUsername", username);
+                    command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
 
                     if (!cbConfirm.Checked)
                     {
@@ -356,6 +355,11 @@ namespace HotelManagementSystem
                         {
                             command.ExecuteNonQuery();
                             MessageBox.Show("Employee sucessfully deleted");
+                            txtVerifyClerk.Text = " ";
+                            txtVerifyAdmin.Text = " ";
+                            txtVerifyFName.Text = " ";
+                            txtVerifyLName.Text = " ";
+                            txtVerifyJob.Text = " ";
                         }
                         else
                         {
@@ -369,6 +373,11 @@ namespace HotelManagementSystem
 
         private void btnUpdateEmp_Click(object sender, EventArgs e)
         {
+            if (selectedEmployeeID == -1)
+            {
+                MessageBox.Show("No employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ValidateTextBox(txtUpdateFName);
             ValidateTextBox(txtUpdateLName);
             if (cmbUpdateJob.SelectedIndex == -1)
@@ -415,7 +424,7 @@ namespace HotelManagementSystem
                            "Is_Admin_YN = @isAdmin, " +
                            "Is_Clerk_YN = @isClerk, " +
                            "Job_ID = @jobId " +
-                           "WHERE Employee_Username = @username";
+                           "WHERE Employee_ID = @EmployeeId";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -471,6 +480,7 @@ namespace HotelManagementSystem
                 {
                     using (SqlCommand command = new SqlCommand(query, conn))
                     {
+                        command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
                         command.Parameters.AddWithValue("@username", username);
                         command.Parameters.AddWithValue("@newFirstName", newFirstName);
                         command.Parameters.AddWithValue("@newLastName", newLastName);
@@ -490,6 +500,11 @@ namespace HotelManagementSystem
                                     MessageBox.Show("Employees new username: " + username);
                                 }
                                 MessageBox.Show("Employee has been successfully updated.");
+                                txtUpdateFName.Text = " ";
+                                txtUpdateLName.Text = " ";
+                                txtUpdateSearch.Text = " ";
+                                cmbUpdateJob.SelectedIndex = -1;
+                                cmbUpdateRole.SelectedIndex = -1;  
                             }
                         }
                         else
@@ -549,12 +564,12 @@ namespace HotelManagementSystem
 
         private void txtDeleteSerach_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtDeleteSerach.Text, employeeDataGridView, "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm");
+            //UpdateEmployeeDataGridView(txtDeleteSerach.Text, employeeDataGridView, "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm");
         }
 
         private void txtUpdateSearch_TextChanged(object sender, EventArgs e)
         {
-            UpdateEmployeeDataGridView(txtUpdateSearch.Text, employeeDataGridView, "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm");
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -658,11 +673,106 @@ namespace HotelManagementSystem
         {
 
         }
-        //private int selectedEmployeeID = -1;
+        private int selectedEmployeeID = -1;
+        private void populateDeleteFields(int employeeID)
+        {
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_ID = @EmployeeId";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(Selectquery, conn))
+                {
+                    command.Parameters.AddWithValue("@EmployeeId", employeeID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Populate the text boxes with the retrieved data
+                            txtVerifyFName.Text = reader["Employee_FName"].ToString();
+                            txtVerifyLName.Text = reader["Employee_LName"].ToString();
+                            txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
+                            txtVerifyClerk.Text = Convert.ToBoolean(reader["Is_Clerk_YN"]) ? "Yes" : "No";
+                            txtVerifyJob.Text = reader["Job_Id"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided ID.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //ClearVerifyFields(); // Optionally clear fields if no employee is found
+                        }
+                    }
+                }
+            }
+        }
+
+        private void populateUpdateFields(int employeeID)
+        {
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id, Employee_Username FROM Employee WHERE Employee_ID = @EmployeeId";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(Selectquery, conn))
+                {
+                    command.Parameters.AddWithValue("@EmployeeId", employeeID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Populate the text boxes with the retrieved data
+                            txtUpdateSearch.Text = reader["Employee_Username"].ToString();
+                            txtUpdateFName.Text = reader["Employee_FName"].ToString();
+                            txtUpdateLName.Text = reader["Employee_LName"].ToString();
+                            bool isAdmin = Convert.ToBoolean(reader["Is_Admin_YN"]);
+                            bool isClerk = Convert.ToBoolean(reader["Is_Clerk_YN"]);
+
+                            // Update the ComboBox based on the values retrieved
+                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; // Example: 0 for Admin, 1 for Clerk (adjust as needed)
+
+                            // Populate the job ComboBox
+                            int jobId = Convert.ToInt32(reader["Job_Id"]);
+                            cmbUpdateJob.SelectedValue = jobId;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided ID.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+        }
+
         private void employeeDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Ensure valid row and column index
+            {
+                DataGridViewRow row = employeeDataGridView.Rows[e.RowIndex];
 
+                // Ensure the correct column name is used
+                if (row.Cells["Employee_ID"] != null && row.Cells["Employee_ID"].Value != DBNull.Value)
+                {
+                    selectedEmployeeID = Convert.ToInt32(row.Cells["Employee_ID"].Value);
+
+                    // Check which tab or mode is active and populate fields accordingly
+                    if (tabControl1.SelectedTab == tabPage1)
+                    {
+                        populateUpdateFields(selectedEmployeeID);
+                    }
+                    else if (tabControl1.SelectedTab == tabPage2)
+                    {
+                        populateDeleteFields(selectedEmployeeID);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Employee_ID not found or missing in the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    selectedEmployeeID = -1; // Default to invalid ID if cell value is not present
+                }
+            }
         }
+
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -671,15 +781,17 @@ namespace HotelManagementSystem
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            string username = txtDeleteSerach.Text;
-            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
+            /*
+            //string username = txtDeleteSerach.Text;
+            
+            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_ID = @EmployeeId";
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
 
                 using (SqlCommand command = new SqlCommand(Selectquery, conn))
                 {
-                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -701,11 +813,12 @@ namespace HotelManagementSystem
                     }
                 }
             }
+            */
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string username = txtUpdateSearch.Text;
+            /*string username = txtUpdateSearch.Text;
             string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -743,6 +856,7 @@ namespace HotelManagementSystem
                     }
                 }
             }
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
