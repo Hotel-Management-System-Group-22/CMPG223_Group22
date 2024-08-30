@@ -47,13 +47,9 @@
             this.txtAddLName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddFName = new System.Windows.Forms.TextBox();
-            this.btnDeleteReset = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDeleteSerach = new System.Windows.Forms.TextBox();
             this.txtUpdateSearch = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnUpdateReset = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.cmbUpdateRole = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -80,27 +76,34 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.bttnSearch = new System.Windows.Forms.Button();
-            this.txtSearchLName = new System.Windows.Forms.TextBox();
-            this.txtSearchFName = new System.Windows.Forms.TextBox();
-            this.btnSearchReset = new System.Windows.Forms.Button();
-            this.rdoStaff = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rdoDes = new System.Windows.Forms.RadioButton();
             this.rdoAsc = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.rdoStaff = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
             this.rdoClerk = new System.Windows.Forms.RadioButton();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.bttnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSearchReset = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtSearchFName = new System.Windows.Forms.TextBox();
+            this.txtSearchLName = new System.Windows.Forms.TextBox();
             this.hotelManagementSystemDataSet = new HotelManagementSystem.HotelManagementSystemDataSet();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.EmployeeTableAdapter();
             this.tableAdapterManager = new HotelManagementSystem.HotelManagementSystemDataSetTableAdapters.TableAdapterManager();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSet1TableAdapters.JobTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Employee_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,15 +111,6 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.jobTableAdapter = new HotelManagementSystem.HotelManagementSystemDataSet1TableAdapters.JobTableAdapter();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -126,6 +120,8 @@
             this.groupBox3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -133,8 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -302,19 +296,9 @@
             this.txtAddFName.TabIndex = 0;
             this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
             // 
-            // btnDeleteReset
-            // 
-            this.btnDeleteReset.Location = new System.Drawing.Point(484, 41);
-            this.btnDeleteReset.Name = "btnDeleteReset";
-            this.btnDeleteReset.Size = new System.Drawing.Size(298, 32);
-            this.btnDeleteReset.TabIndex = 9;
-            this.btnDeleteReset.Text = "RESET";
-            this.btnDeleteReset.UseVisualStyleBackColor = true;
-            this.btnDeleteReset.Click += new System.EventHandler(this.btnDeleteReset_Click);
-            // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(123, 202);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(468, 26);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
@@ -322,27 +306,11 @@
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 51);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 16);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Search Employee Username:";
-            // 
-            // txtDeleteSerach
-            // 
-            this.txtDeleteSerach.Location = new System.Drawing.Point(220, 51);
-            this.txtDeleteSerach.Name = "txtDeleteSerach";
-            this.txtDeleteSerach.Size = new System.Drawing.Size(180, 22);
-            this.txtDeleteSerach.TabIndex = 0;
-            this.txtDeleteSerach.TextChanged += new System.EventHandler(this.txtDeleteSerach_TextChanged);
-            // 
             // txtUpdateSearch
             // 
             this.txtUpdateSearch.Location = new System.Drawing.Point(301, 36);
             this.txtUpdateSearch.Name = "txtUpdateSearch";
+            this.txtUpdateSearch.ReadOnly = true;
             this.txtUpdateSearch.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateSearch.TabIndex = 11;
             this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
@@ -351,23 +319,12 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 32);
+            this.label11.Location = new System.Drawing.Point(74, 32);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(262, 25);
+            this.label11.Size = new System.Drawing.Size(200, 25);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Search Employee Username";
+            this.label11.Text = "Employee Username:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // btnUpdateReset
-            // 
-            this.btnUpdateReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateReset.Location = new System.Drawing.Point(553, 126);
-            this.btnUpdateReset.Name = "btnUpdateReset";
-            this.btnUpdateReset.Size = new System.Drawing.Size(224, 43);
-            this.btnUpdateReset.TabIndex = 9;
-            this.btnUpdateReset.Text = "RESET";
-            this.btnUpdateReset.UseVisualStyleBackColor = true;
-            this.btnUpdateReset.Click += new System.EventHandler(this.btnUpdateReset_Click);
             // 
             // btnUpdateEmp
             // 
@@ -474,12 +431,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.txtUpdateSearch);
             this.tabPage1.Controls.Add(this.cmbUpdateJob);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.txtUpdateFName);
-            this.tabPage1.Controls.Add(this.btnUpdateReset);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.btnUpdateEmp);
             this.tabPage1.Controls.Add(this.txtUpdateLName);
@@ -491,22 +446,17 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(823, 256);
+            this.tabPage1.Size = new System.Drawing.Size(823, 272);
             this.tabPage1.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.cbConfirm);
             this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.btnDeleteReset);
-            this.tabPage2.Controls.Add(this.txtDeleteSerach);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
-            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(823, 256);
+            this.tabPage2.Size = new System.Drawing.Size(823, 272);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -514,7 +464,7 @@
             // cbConfirm
             // 
             this.cbConfirm.AutoSize = true;
-            this.cbConfirm.Location = new System.Drawing.Point(91, 170);
+            this.cbConfirm.Location = new System.Drawing.Point(18, 204);
             this.cbConfirm.Name = "cbConfirm";
             this.cbConfirm.Size = new System.Drawing.Size(360, 20);
             this.cbConfirm.TabIndex = 11;
@@ -523,6 +473,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbConfirm);
             this.groupBox3.Controls.Add(this.txtVerifyJob);
             this.groupBox3.Controls.Add(this.txtVerifyClerk);
             this.groupBox3.Controls.Add(this.txtVerifyAdmin);
@@ -533,9 +484,9 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(484, 88);
+            this.groupBox3.Location = new System.Drawing.Point(20, 15);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(298, 215);
+            this.groupBox3.Size = new System.Drawing.Size(407, 230);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Verfify Employee details";
@@ -640,7 +591,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(823, 256);
+            this.tabPage3.Size = new System.Drawing.Size(823, 272);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -659,77 +610,16 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // label16
+            // groupBox5
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(36, 91);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 16);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Last Name:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(36, 63);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 16);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "First Name:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(36, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 16);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Username:";
-            // 
-            // bttnSearch
-            // 
-            this.bttnSearch.Location = new System.Drawing.Point(455, 190);
-            this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
-            this.bttnSearch.TabIndex = 18;
-            this.bttnSearch.Text = "SEARCH";
-            this.bttnSearch.UseVisualStyleBackColor = true;
-            this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // txtSearchLName
-            // 
-            this.txtSearchLName.Location = new System.Drawing.Point(119, 85);
-            this.txtSearchLName.Name = "txtSearchLName";
-            this.txtSearchLName.Size = new System.Drawing.Size(202, 22);
-            this.txtSearchLName.TabIndex = 17;
-            // 
-            // txtSearchFName
-            // 
-            this.txtSearchFName.Location = new System.Drawing.Point(119, 57);
-            this.txtSearchFName.Name = "txtSearchFName";
-            this.txtSearchFName.Size = new System.Drawing.Size(202, 22);
-            this.txtSearchFName.TabIndex = 16;
-            // 
-            // btnSearchReset
-            // 
-            this.btnSearchReset.Location = new System.Drawing.Point(119, 113);
-            this.btnSearchReset.Name = "btnSearchReset";
-            this.btnSearchReset.Size = new System.Drawing.Size(201, 22);
-            this.btnSearchReset.TabIndex = 10;
-            this.btnSearchReset.Text = "RESET";
-            this.btnSearchReset.UseVisualStyleBackColor = true;
-            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
-            // 
-            // rdoStaff
-            // 
-            this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.rdoStaff.AutoSize = true;
-            this.rdoStaff.Location = new System.Drawing.Point(6, 67);
-            this.rdoStaff.Name = "rdoStaff";
-            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
-            this.rdoStaff.TabIndex = 9;
-            this.rdoStaff.Text = "Employee staff only";
-            this.rdoStaff.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.rdoDes);
+            this.groupBox5.Controls.Add(this.rdoAsc);
+            this.groupBox5.Location = new System.Drawing.Point(399, 13);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(359, 135);
+            this.groupBox5.TabIndex = 23;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Sort by:";
             // 
             // rdoDes
             // 
@@ -753,6 +643,50 @@
             this.rdoAsc.Text = "Ascending";
             this.rdoAsc.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.rdoStaff);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.rdoClerk);
+            this.groupBox4.Controls.Add(this.rdoAdmin);
+            this.groupBox4.Location = new System.Drawing.Point(15, 157);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(359, 115);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Filter by:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(152, 87);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(201, 22);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "RESET";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // rdoStaff
+            // 
+            this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.rdoStaff.AutoSize = true;
+            this.rdoStaff.Location = new System.Drawing.Point(6, 67);
+            this.rdoStaff.Name = "rdoStaff";
+            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
+            this.rdoStaff.TabIndex = 9;
+            this.rdoStaff.Text = "Employee staff only";
+            this.rdoStaff.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(29, -15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 16);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Filter Users:";
+            // 
             // rdoClerk
             // 
             this.rdoClerk.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -775,22 +709,15 @@
             this.rdoAdmin.Text = "Admin users only";
             this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
-            // txtUsername
+            // bttnSearch
             // 
-            this.txtUsername.Location = new System.Drawing.Point(119, 28);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(202, 22);
-            this.txtUsername.TabIndex = 3;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, -15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 16);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Filter Users:";
+            this.bttnSearch.Location = new System.Drawing.Point(455, 190);
+            this.bttnSearch.Name = "bttnSearch";
+            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
+            this.bttnSearch.TabIndex = 18;
+            this.bttnSearch.Text = "SEARCH";
+            this.bttnSearch.UseVisualStyleBackColor = true;
+            this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // groupBox2
             // 
@@ -807,6 +734,65 @@
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search by:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(36, 91);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 16);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Last Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 34);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 16);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Username:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(36, 63);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 16);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "First Name:";
+            // 
+            // btnSearchReset
+            // 
+            this.btnSearchReset.Location = new System.Drawing.Point(119, 113);
+            this.btnSearchReset.Name = "btnSearchReset";
+            this.btnSearchReset.Size = new System.Drawing.Size(201, 22);
+            this.btnSearchReset.TabIndex = 10;
+            this.btnSearchReset.Text = "RESET";
+            this.btnSearchReset.UseVisualStyleBackColor = true;
+            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(119, 28);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(202, 22);
+            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // txtSearchFName
+            // 
+            this.txtSearchFName.Location = new System.Drawing.Point(119, 57);
+            this.txtSearchFName.Name = "txtSearchFName";
+            this.txtSearchFName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchFName.TabIndex = 16;
+            // 
+            // txtSearchLName
+            // 
+            this.txtSearchLName.Location = new System.Drawing.Point(119, 85);
+            this.txtSearchLName.Name = "txtSearchLName";
+            this.txtSearchLName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchLName.TabIndex = 17;
             // 
             // hotelManagementSystemDataSet
             // 
@@ -838,7 +824,7 @@
             this.employeeDataGridView.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.Employee_ID,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -847,7 +833,7 @@
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
-            this.employeeDataGridView.Location = new System.Drawing.Point(74, 438);
+            this.employeeDataGridView.Location = new System.Drawing.Point(72, 434);
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.RowHeadersWidth = 51;
             this.employeeDataGridView.RowTemplate.Height = 24;
@@ -855,14 +841,36 @@
             this.employeeDataGridView.TabIndex = 12;
             this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // jobTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Employee_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Employee_ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.jobTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1278, 713);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Employee_ID
+            // 
+            this.Employee_ID.DataPropertyName = "Employee_ID";
+            this.Employee_ID.HeaderText = "Employee_ID";
+            this.Employee_ID.MinimumWidth = 6;
+            this.Employee_ID.Name = "Employee_ID";
+            this.Employee_ID.ReadOnly = true;
+            this.Employee_ID.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -921,84 +929,6 @@
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             this.dataGridViewCheckBoxColumn2.Width = 125;
             // 
-            // jobTableAdapter
-            // 
-            this.jobTableAdapter.ClearBeforeFill = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1278, 713);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(325, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(553, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 43);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "SEARCH";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.rdoStaff);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.rdoClerk);
-            this.groupBox4.Controls.Add(this.rdoAdmin);
-            this.groupBox4.Location = new System.Drawing.Point(15, 157);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(359, 115);
-            this.groupBox4.TabIndex = 23;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Filter by:";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.rdoDes);
-            this.groupBox5.Controls.Add(this.rdoAsc);
-            this.groupBox5.Location = new System.Drawing.Point(399, 13);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(359, 135);
-            this.groupBox5.TabIndex = 23;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Sort by:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(152, 87);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 22);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "RESET";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1018,12 +948,15 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).EndInit();
@@ -1032,10 +965,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1055,11 +984,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbAddJob;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnDeleteReset;
         private System.Windows.Forms.Button btnDeleteEmp;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDeleteSerach;
-        private System.Windows.Forms.Button btnUpdateReset;
         private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.ComboBox cmbUpdateRole;
         private System.Windows.Forms.Label label5;
@@ -1092,14 +1017,6 @@
         private HotelManagementSystemDataSet1TableAdapters.JobTableAdapter jobTableAdapter;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.Button bttnSearch;
         private System.Windows.Forms.TextBox txtSearchLName;
         private System.Windows.Forms.TextBox txtSearchFName;
@@ -1123,10 +1040,16 @@
         private System.Windows.Forms.TextBox txtVerifyFName;
         private System.Windows.Forms.CheckBox cbConfirm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Employee_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
     }
 }
