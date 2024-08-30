@@ -823,7 +823,8 @@ namespace HotelManagementSystem
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            CheckIn newform = new CheckIn();
+            newform.Show();
             tabcontrol.Visible = false;
             txtAddJobRate.Text = "";
             txtAddJobTitle.Text = "";

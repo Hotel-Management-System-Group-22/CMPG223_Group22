@@ -17,7 +17,7 @@ namespace HotelManagementSystem
     {
         public Bookings()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
