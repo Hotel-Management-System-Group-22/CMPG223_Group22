@@ -63,9 +63,19 @@ namespace HotelManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngtree_vector_question_mark_icon_png_image_515448 {
+        internal static System.Drawing.Bitmap OIP {
             get {
-                object obj = ResourceManager.GetObject("pngtree-vector-question-mark-icon-png-image_515448", resourceCulture);
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap preview_show_interface_icon_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("preview-show-interface-icon-free-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
