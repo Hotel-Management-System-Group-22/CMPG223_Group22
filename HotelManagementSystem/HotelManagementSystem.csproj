@@ -64,12 +64,24 @@
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guests.Designer.cs">
       <DependentUpon>Guests.cs</DependentUpon>
     </Compile>
+    <Compile Include="HotelManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelManagementSystemDataSet1.Designer.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,9 @@
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guests.resx">
       <DependentUpon>Guests.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +176,24 @@
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
     <None Include="bin\Debug\HotelManagementSystem.exe.config" />
+    <None Include="HotelManagementSystemDataSet.xsc">
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelManagementSystemDataSet.xss">
+      <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementSystemDataSet1.xsc">
+      <DependentUpon>HotelManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementSystemDataSet1.xsd" />
+    <None Include="HotelManagementSystemDataSet1.xss">
+      <DependentUpon>HotelManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="MaintainBookings\.vs\MaintainBookings\v17\.suo" />
     <None Include="MaintainBookings\.vs\MaintainBookings\v17\DocumentLayout.json" />
     <None Include="MaintainBookings\MaintainBookings\App.config" />
