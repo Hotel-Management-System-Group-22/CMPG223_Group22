@@ -25,6 +25,7 @@ namespace HotelManagementSystem
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        bool bAfrikaans = false;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -835,6 +836,95 @@ namespace HotelManagementSystem
             TxtFName_Add.Text = " ";
             TxtLName_Add.Text = " ";
             TxtContactNo_Add.Text = " ";
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+                //Buttons
+                btnLanguage.Text = "English";
+                btnAddReset.Text = " ";
+                btnReset.Text = " ";
+                btnResetSearch.Text = " ";
+                btnSearch.Text = " ";
+                BtnAddGuest.Text = " ";
+                BtnAddGuest.Text = " ";
+                BtnDelete.Text = " ";
+                BtnDeleteGuest.Text = " ";
+                BtnUpdate.Text = " ";
+                BtnUpdatePage.Text = " ";
+                //labels
+                lblFNameAdd.Text = " ";
+                lblLNameAdd.Text = " ";
+                LblContactNo.Text = " ";
+                LblContactNo_Update.Text = " ";
+                LblEmailAddress.Text = " ";
+                LblEmail_Update.Text = " ";
+                LblFName_Update.Text = " ";
+                LblLName_Update.Text = " ";                
+                lblDeleteEmail.Text = " ";
+                lblDeleteNumber.Text = " ";               
+                lblDeleteLName.Text = " ";
+                lblDeleteFName.Text = " ";
+                lblSearchNumber.Text = " ";
+                lblSearchEmail.Text = " ";
+                lblSearchFName.Text = " ";
+                lblSearchLName.Text = " ";
+                //Other
+                cbConfirmation.Text = " ";
+                rdoAsc.Text = " ";
+                rdoDsc.Text = " ";
+                groupBox1.Text  = " ";
+                groupBox2.Text = " ";
+                groupBox3.Text = " ";
+                grpBoxMenu.Text = " ";  
+
+
+            }
+            else
+            {
+                bAfrikaans = false;
+                //Buttons
+                btnLanguage.Text = "English";
+                btnAddReset.Text = " ";
+                btnReset.Text = " ";
+                btnResetSearch.Text = " ";
+                btnSearch.Text = " ";
+                BtnAddGuest.Text = " ";
+                BtnAddGuest.Text = " ";
+                BtnDelete.Text = " ";
+                BtnDeleteGuest.Text = " ";
+                BtnUpdate.Text = " ";
+                BtnUpdatePage.Text = " ";
+                //labels
+                lblFNameAdd.Text = " ";
+                lblLNameAdd.Text = " ";
+                LblContactNo.Text = " ";
+                LblContactNo_Update.Text = " ";
+                LblEmailAddress.Text = " ";
+                LblEmail_Update.Text = " ";
+                LblFName_Update.Text = " ";
+                LblLName_Update.Text = " ";
+                lblDeleteEmail.Text = " ";
+                lblDeleteNumber.Text = " ";
+                lblDeleteLName.Text = " ";
+                lblDeleteFName.Text = " ";
+                lblSearchNumber.Text = " ";
+                lblSearchEmail.Text = " ";
+                lblSearchFName.Text = " ";
+                lblSearchLName.Text = " ";
+                //Other
+                cbConfirmation.Text = " ";
+                rdoAsc.Text = " ";
+                rdoDsc.Text = " ";
+                groupBox1.Text = " ";
+                groupBox2.Text = " ";
+                groupBox3.Text = " ";
+                grpBoxMenu.Text = " ";
+
+            }
         }
     }
 }
