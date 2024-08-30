@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caitlin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Caitlin.Designer.cs">
-      <DependentUpon>Caitlin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports-Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,9 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Caitlin.resx">
-      <DependentUpon>Caitlin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manage-Jobs-Form.resx">
       <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
     </EmbeddedResource>
