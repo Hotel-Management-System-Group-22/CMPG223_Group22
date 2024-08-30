@@ -85,7 +85,7 @@
             // 
             // pbNotView
             // 
-            this.pbNotView.Image = global::HotelManagementSystem.Properties.Resources.OIP;
+            //this.pbNotView.Image = global::HotelManagementSystem.Properties.Resources.OIP;
             this.pbNotView.Location = new System.Drawing.Point(374, 167);
             this.pbNotView.Name = "pbNotView";
             this.pbNotView.Size = new System.Drawing.Size(45, 47);
@@ -104,7 +104,7 @@
             // 
             // pbViewPassword
             // 
-            this.pbViewPassword.Image = global::HotelManagementSystem.Properties.Resources.preview_show_interface_icon_free_vector;
+            //this.pbViewPassword.Image = global::HotelManagementSystem.Properties.Resources.preview_show_interface_icon_free_vector;
             this.pbViewPassword.Location = new System.Drawing.Point(374, 167);
             this.pbViewPassword.Name = "pbViewPassword";
             this.pbViewPassword.Size = new System.Drawing.Size(45, 48);
