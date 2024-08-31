@@ -505,7 +505,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel2.Location = new System.Drawing.Point(454, 163);
+            this.panel2.Location = new System.Drawing.Point(480, 121);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 35);
             this.panel2.TabIndex = 12;

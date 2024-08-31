@@ -321,11 +321,32 @@ namespace HotelManagementSystem
                 }
                 if (result == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM Room WHERE Room_ID = " + selectedId;
+                    string query = "DELETE FROM Booking WHERE Room_ID = " + selectedId;
 
                     // Use a SqlConnection to connect to the database
                     using (SqlConnection conn = new SqlConnection(connection))
                     {
+                        //Referencial intergrity D:R so need to check if room has any bookings, if so, need to restrict the deletion of room. INTEGRITY of Data!!
+                        string checkGuests = "SELECT COUNT(*) FROM Room WHERE Room_ID = @id";
+                        using (SqlCommand checkCmd = new SqlCommand(checkGuests, conn))
+                        {
+                            checkCmd.Parameters.AddWithValue("@id", txtDeleteRoomID.Text);
+                            int bookingCount = (int)checkCmd.ExecuteScalar();
+
+                            if (bookingCount > 0)
+                            {
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("Cannot delete room as there are existing bookings associated with this room.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Kan nie ruimte uitvee nie, aangesien daar bestaande besprekings met hierdie kamer verband hou.", "Verwyder beperk", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                            }
+                        }
                         try
                         {
                             conn.Open();

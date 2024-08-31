@@ -582,6 +582,27 @@ namespace HotelManagementSystem
                         try
                         {
                             connection.Open();
+                            //Referencial intergrity D:R so need to check if guest has any bookings, if so, need to restrict the deletion of guest. INTEGRITY of Data!!
+                            string checkEmployeeJobQuery = "SELECT COUNT(*) FROM Employee WHERE Job_ID = @id";
+                            using (SqlCommand checkCmd = new SqlCommand(checkEmployeeJobQuery, connection))
+                            {
+                                checkCmd.Parameters.AddWithValue("@id", selectedId);
+                                int bookingCount = (int)checkCmd.ExecuteScalar();
+
+                                if (bookingCount > 0)
+                                {
+                                    if (isAfrikaans == false)
+                                    {
+                                        MessageBox.Show("Cannot delete job as there are existing employees associated with this job.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Kan nie die posisie verwyder nie, aangesien daar bestaande werknemers aan hierdie posisie verbind is", "Verwyder Beperk", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+                                }
+                            }
 
                             using (SqlCommand command = new SqlCommand(query, connection))
                             {

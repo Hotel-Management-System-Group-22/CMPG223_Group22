@@ -348,7 +348,7 @@
             this.tabAddJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAddJob.Name = "tabAddJob";
             this.tabAddJob.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAddJob.Size = new System.Drawing.Size(341, 213);
+            this.tabAddJob.Size = new System.Drawing.Size(373, 213);
             this.tabAddJob.TabIndex = 1;
             this.tabAddJob.Text = "Add Job Info";
             // 
@@ -413,7 +413,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(348, 128);
+            this.panel1.Location = new System.Drawing.Point(356, 83);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 30);

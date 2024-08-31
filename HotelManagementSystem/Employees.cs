@@ -391,15 +391,20 @@ namespace HotelManagementSystem
             }
 
 
-            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
             string Deletequery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
+            //D:SN
+            string setNull = "UPDATE Room SET Employee_ID = NULL WHERE Employee_ID = @EmployeeID";
             //string username = txtDeleteSerach.Text;
-
-            
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
+                //Referencial integrity if employee is deleted, must be set to null in room
+                using (SqlCommand referencialintegrity = new SqlCommand(setNull, conn))
+                {
+                    referencialintegrity.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
+                    referencialintegrity.ExecuteNonQuery();
+                }
                 using (SqlCommand command = new SqlCommand(Deletequery, conn))
                 {
                     command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);

@@ -351,6 +351,27 @@ namespace HotelManagementSystem
                 using (SqlConnection conn = new SqlConnection(connection))
                 {
                     conn.Open();
+                    //Referencial intergrity D:R so need to check if guest has any bookings, if so, need to restrict the deletion of guest. INTEGRITY of Data!!
+                    string checkBookingsQuery = "SELECT COUNT(*) FROM Booking WHERE Guest_ID = @id";
+                    using (SqlCommand checkCmd = new SqlCommand(checkBookingsQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@id", selectedGuestId);
+                        int bookingCount = (int)checkCmd.ExecuteScalar();
+
+                        if (bookingCount > 0)
+                        {
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Cannot delete guest as there are existing bookings associated with this guest.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kan nie gas uitvee nie, want daar is bestaande besprekings wat met hierdie gas verband hou.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+                    }
 
                     using (SqlCommand command = new SqlCommand(deleteQuery, conn))
                     {
