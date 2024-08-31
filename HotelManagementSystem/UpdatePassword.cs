@@ -15,10 +15,13 @@ namespace HotelManagementSystem
     public partial class UpdatePassword : Form
     {
         private string username;
+        private bool bAfrikaans = false;
+
         public UpdatePassword(string userName)
         {
             InitializeComponent();
             this.username = userName;  // Initialize with the username passed from the LogIn form
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         
@@ -49,21 +52,42 @@ namespace HotelManagementSystem
 
             if (specialCharFound < 1)
             {
-                errorProvider1.SetError(txtNewPassword, "Password must contain at least one special character.");
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(txtNewPassword, "Password must contain at least one special character.");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtNewPassword, "Wagwoord moet ten minste een spesiale karakter bevat.");
+                }
             }
             else
             {
                 errorProvider1.Clear();
                 if (numFound < 2)
                 {
-                    errorProvider2.SetError(txtNewPassword, "Password must contain at least 2 digits.");
+                    if (bAfrikaans)
+                    {
+                        errorProvider2.SetError(txtNewPassword, "Password must contain at least 2 digits.");
+                    }
+                    else
+                    {
+                        errorProvider2.SetError(txtNewPassword, "Wagwoord moet ten minste 2 syfers bevat.");
+                    }
                 }
                 else
                 {
                     errorProvider2.Clear();
                     if (newPassword.Length < 8 || newPassword.Length > 12)
                     {
-                        errorProvider3.SetError(txtNewPassword, "Password must be between 8 and 12 characters.");
+                        if (bAfrikaans)
+                        {
+                            errorProvider3.SetError(txtNewPassword, "Password must be between 8 and 12 characters.");
+                        }
+                        else
+                        {
+                            errorProvider3.SetError(txtNewPassword, "Wagwoord moet tussen 8 en 12 karakters wees.");
+                        }
                     }
                     else
                     {
@@ -81,15 +105,31 @@ namespace HotelManagementSystem
                                     command.Parameters.AddWithValue("@username", this.username);
 
                                     command.ExecuteNonQuery();
-                                    MessageBox.Show("Password has been changed.");
-                                    login.Show();
-                                    this.Hide();
+                                    if (bAfrikaans)
+                                    {
+                                        MessageBox.Show("Password has been changed.");
+                                        login.Show();
+                                        this.Hide();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Wagwoord is verander.");
+                                        login.Show();
+                                        this.Hide();
+                                    }
                                 }
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Passwords do not match.");
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Passwords do not match.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wagwoorde stem nie ooreen nie.");
+                            }
                         }
                     }
                 }
@@ -104,6 +144,23 @@ namespace HotelManagementSystem
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                lblNewPassword.Text = "Nuwe wagwoord";
+                lblConfirmNewPassword.Text = "Bevestig nuwe wagwoord";
+                btnUpdatePassword.Text = "DATEER WAGWOORD OP";
+                btnLanguage.Text = "TAAL";
+            }
+            else
+            {
+                lblNewPassword.Text = "New Password";
+                lblConfirmNewPassword.Text = "Confirm new password";
+                btnUpdatePassword.Text = "UPDATE";
+                btnLanguage.Text = "LANGUAGE";
+            }
         }
     }
 }

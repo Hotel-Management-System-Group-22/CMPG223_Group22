@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using BCrypt.Net;
 
 namespace HotelManagementSystem
@@ -15,11 +17,12 @@ namespace HotelManagementSystem
     public partial class LogIn : Form
     {
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-
+        private bool bAfrikaans = false;
         public LogIn()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '•';
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -62,12 +65,26 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("Invalid password.");
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Invalid password.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ongeldige wagwoord.");
+                            }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username.");
+                        if (bAfrikaans)
+                        {
+                            MessageBox.Show("Invalid username.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ongeldige gebruikernaam.");
+                        }
                     }
                 }
             }
@@ -96,6 +113,33 @@ namespace HotelManagementSystem
         public string GetUsername()
         {
             return txtUsername.Text.Trim();
+        }
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                lblUsername.Text = "Gebruikersnaam";
+                lblPassword.Text = "Wagwoord";
+                btnLogin.Text = "AANMEL";
+                btnLanguage.Text = "TAAL";
+            }
+            else
+            {
+                lblUsername.Text = "Username";
+                lblPassword.Text = "Password";
+                btnLogin.Text = "LOGIN";
+                btnLanguage.Text = "LANGUAGE";
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
