@@ -22,14 +22,52 @@ namespace HotelManagementSystem
 {
     public partial class Employees : Form
     {
+        private bool bAfrikaans = false;
         public Employees()
         {
             InitializeComponent();
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            bAfrikaans = !bAfrikaans;
+
+            if (bAfrikaans)
+            {
+                // Set text for Afrikaans
+                lblEmployeeID.Text = "Soek werknemer gebruikersnaam:";
+                lblFirstName.Text = "Voornaam:";
+                lblLastName.Text = "Van:";
+                lblJob.Text = "Werkstitel:";
+                lblRole.Text = "Rol:";
+                btnUpdateEmp.Text = "OPDATEER";
+                btnUpdateReset.Text = "STEL TERUG";
+                btnSearch.Text = "SOEK";
+                btnAdd.Text = "VOEG BY";
+                btnUpdate.Text = "OPDATEER";
+                btnDelete.Text = "VEE UIT";
+                btnLanguage.Text = "TAAL";
+            }
+            else
+            {
+                // Set text for English
+                lblEmployeeID.Text = "Search Employee Username:";
+                lblFirstName.Text = "First Name:";
+                lblLastName.Text = "Last name:";
+                lblJob.Text = "Job Title:";
+                lblRole.Text = "Role:";
+                btnUpdateEmp.Text = "UPDATE";
+                btnUpdateReset.Text = "RESET";
+                btnSearch.Text = "SEARCH";
+                btnAdd.Text = "ADD";
+                btnUpdate.Text = "UPDATE";
+                btnDelete.Text = "DELETE";
+                btnLanguage.Text = "LANGUAGE";
+            }
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-
-
         private void Employees_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelManagementSystemDataSet1.Job' table. You can move, or remove it, as needed.
@@ -59,8 +97,6 @@ namespace HotelManagementSystem
             }
             dataGridView.DataSource = dataTable;
         }
-
-
 
         private void LoadData()
         {
@@ -117,6 +153,7 @@ namespace HotelManagementSystem
                 return GenerateRandomString(length, passwordChars);
             }
         }
+
         /* public bool checkNames(string name)
          {
              if (string.IsNullOrEmpty(name))
@@ -143,6 +180,50 @@ namespace HotelManagementSystem
          }
          */
 
+        //KUHLE
+        //private string currentLanguage = "English"; // Default language
+
+        // Method to get error messages based on the selected language
+        /*private string GetErrorMessage(string key)
+        {
+            if (currentLanguage == "Afrikaans")
+            {
+                switch (key)
+                {
+                    case "EmptyTextBox":
+                        return "Vul asseblief die teksvlak in.";
+                    case "InvalidText":
+                        return "Invoer moet slegs letters bevat en die eerste letter moet hoofletter wees.";
+                    case "SelectJob":
+                        return "Kies asseblief 'n werk.";
+                    case "SelectRole":
+                        return "Kies asseblief 'n rol.";
+                    case "CompleteFields":
+                        return "Voltooi asseblief al die velde en verseker dat alle foute reggestel is.";
+                    default:
+                        return "Onbekende fout.";
+                }
+            }
+            else // Default to English
+            {
+                switch (key)
+                {
+                    case "EmptyTextBox":
+                        return "Please fill the textbox.";
+                    case "InvalidText":
+                        return "Input must contain only letters and first letter must be capitalized.";
+                    case "SelectJob":
+                        return "Please select job.";
+                    case "SelectRole":
+                        return "Please select role.";
+                    case "CompleteFields":
+                        return "Please complete all fields and ensure all errors are corrected.";
+                    default:
+                        return "Unknown error.";
+                }
+            }*/
+    }
+
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
             if (textBox != null)
@@ -150,7 +231,7 @@ namespace HotelManagementSystem
                 string input = textBox.Text;
                 if (!IsTextValid(input))
                 {
-                    errorProvider1.SetError(textBox, "Input must contain only letters and first letter must be capitilized.");
+                    errorProvider1.SetError(textBox,"Input must contain only letters and first letter must be capitilized.");
                 }
                 else
                 {
@@ -159,7 +240,7 @@ namespace HotelManagementSystem
             }
             else
             {
-                errorProvider1.SetError(textBox, "Please fill the textbox");
+                errorProvider1.SetError(textBox,"Please fill the textbox");
             }
         }
 
@@ -247,11 +328,11 @@ namespace HotelManagementSystem
             ValidateTextBox(txtAddLName);
             if (cmbAddJob.SelectedIndex == -1)
             {
-                errorProvider1.SetError(cmbAddJob, "Please select job");
+                errorProvider1.SetError(cmbAddJob,"Please select job");
             }
             else if (cmbAddRole.SelectedIndex == -1)
             {
-                errorProvider1.SetError(cmbAddRole, "Please select role");
+                errorProvider1.SetError(cmbAddRole,"Please select role");
             }
             if (string.IsNullOrEmpty(errorProvider1.GetError(txtAddFName)) && string.IsNullOrEmpty(errorProvider1.GetError(txtAddLName)) && cmbAddRole.SelectedItem != null && cmbAddJob.SelectedItem != null)
             {
@@ -260,21 +341,22 @@ namespace HotelManagementSystem
                 string name = txtAddFName.Text;
                 string surname = txtAddLName.Text;
 
-                if (cmbAddRole.SelectedItem != null)
+                /*if (cmbAddRole.SelectedItem != null)
                 {
                     string selectedRole = cmbAddRole.SelectedItem.ToString();
+                    string translatedRole = GetRoleTranslation(selectedRole); // Get translated role
 
-                    if (selectedRole == "Administrator")
+                    if (translatedRole == "Administrateur")
                     {
                         admin = 1;
                         clerk = 0;
                     }
-                    else if (selectedRole == "Clerk")
+                    else if (translatedRole == "Klerk")
                     {
                         admin = 0;
                         clerk = 1;
                     }
-                }
+                }*/
                 int selectedJobID = (int)cmbAddJob.SelectedValue;
                 string username = RandomGenerator.GenerateUsername(txtAddFName.Text, txtAddLName.Text);
                 string password = RandomGenerator.GenerateRandomPassword();
@@ -310,12 +392,59 @@ namespace HotelManagementSystem
             }
         }
 
-
+        /*private string GetRoleTranslation(string role)
+        {
+            if (isAfrikaans)
+            {
+                switch (role)
+                {
+                    case "Administrator":
+                        return "Administrateur";
+                    case "Clerk":
+                        return "Klerk";
+                    default:
+                        return role; // Return the original role if no translation is found
+                }
+            }
+            else // Default to English
+            {
+                return role;
+            }
+        }*/
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
+
+        /*private string GetLocalizedMessage(string key)
+        {
+            // Example: Determine language based on a setting or user preference
+            bool isAfrikaans = true; // Set this dynamically based on your application's language setting
+
+            var messages = new Dictionary<string, string>
+            {
+                {"CheckboxNotChecked", isAfrikaans ? "Merk asseblief die blokkie as die inligting in 'Bevestig Werknemerbesonderhede' ooreenstem met die werknemer wat jy wil verwyder" : "Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete"},
+                {"DeleteConfirmation", isAfrikaans ? "Is jy seker jy wil hierdie gebruiker verwyder?" : "Are you sure you would like to delete this user?"},
+                {"DeleteUserTitle", isAfrikaans ? "Verwyder Gebruiker Bevestiging" : "Delete User Confirmation"},
+                {"EmployeeDeleted", isAfrikaans ? "Werknemer suksesvol verwyder" : "Employee successfully deleted"},
+                {"NoEmployeeFound", isAfrikaans ? "Geen werknemer met die verskafde gebruikersnaam gevind nie." : "No employee found with the provided username."},
+                {"SelectJobError", isAfrikaans ? "Kies asseblief 'n werk" : "Please select a job"},
+                {"SelectRoleError", isAfrikaans ? "Kies asseblief 'n rol" : "Please select a role"},
+                {"EnterUsernameError", isAfrikaans ? "Voer asseblief die gebruikersnaam in om na die werknemer te soek." : "Please enter the username to search for the employee."},
+                {"ConfirmUpdate", isAfrikaans ? "Is jy seker jy wil hierdie werknemer se besonderhede opdateer?" : "Are you sure you want to update this employee's details?"},
+                {"UpdateCancelled", isAfrikaans ? "Opdatering gekanselleer." : "Update cancelled."},
+                {"NoUpdatesApplied", isAfrikaans ? "Geen opdaterings toegepas nie. Maak asseblief ten minste een verandering." : "No updates applied. Please make at least one change."},
+                {"EnterLastNameError", isAfrikaans ? "Voer asseblief 'n ooreenstemmende van in" : "Please enter a corresponding last name"},
+                {"EnterFirstNameError", isAfrikaans ? "Voer asseblief 'n ooreenstemmende voornaam in" : "Please enter a corresponding first name"},
+                {"EmployeeUpdated", isAfrikaans ? "Werknemer is suksesvol opdateer." : "Employee has been successfully updated."},
+                {"FixErrorsBeforeUpdating", isAfrikaans ? "Los asseblief foute op voordat u opdateer" : "Please fix errors before updating"},
+                {"NewUsername", isAfrikaans ? "Werknemer se nuwe gebruikersnaam: " : "Employee's new username: "}
+            };
+
+            return messages[key];
+        }*/
+
 
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
@@ -324,7 +453,7 @@ namespace HotelManagementSystem
             string username = txtDeleteSerach.Text; // Assuming txtDeleteSearch is the TextBox for username input
             if (string.IsNullOrWhiteSpace(username))
             {
-                MessageBox.Show("Please enter a username to search.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a username to search."), "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -386,7 +515,7 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No employee found with the provided username.");
+                            MessageBox.Show("No employee found with the provided username."));
                         }
                     }
                     LoadData();
@@ -398,6 +527,7 @@ namespace HotelManagementSystem
         {
             ValidateTextBox(txtUpdateFName);
             ValidateTextBox(txtUpdateLName);
+
             if (cmbUpdateJob.SelectedIndex == -1)
             {
                 errorProvider1.SetError(cmbUpdateJob, "Please select job");
@@ -691,8 +821,7 @@ namespace HotelManagementSystem
 
         }
 
-        
-        }
-    }
+
+}
 
 

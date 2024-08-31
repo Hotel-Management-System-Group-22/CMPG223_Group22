@@ -15,10 +15,12 @@ namespace HotelManagementSystem
     public partial class UpdatePassword : Form
     {
         private string username;
+        private bool bAfrikaans = false;
         public UpdatePassword(string userName)
         {
             InitializeComponent();
             this.username = userName;  // Initialize with the username passed from the LogIn form
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         
@@ -93,6 +95,26 @@ namespace HotelManagementSystem
                         }
                     }
                 }
+            }
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            bAfrikaans = !bAfrikaans;
+
+            if (bAfrikaans)
+            {
+                lblNewPassword.Text = "Nuwe wagwoord:";
+                lblConfirmNewPassword.Text = "Bevestig wagwoord";
+                btnUpdate.Text = "OPDATEER WAGWOORD";
+                btnLanguage.Text = "TAAL";
+            }
+            else
+            {
+                lblNewPassword.Text = "New password:";
+                lblConfirmNewPassword.Text = "Confirm password:";
+                btnUpdate.Text = "UPDATE PASSWORD";
+                btnLanguage.Text = "LANGUAGE";
             }
         }
     }

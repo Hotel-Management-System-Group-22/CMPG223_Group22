@@ -52,20 +52,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtDeleteSerach = new System.Windows.Forms.TextBox();
             this.txtUpdateSearch = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.btnUpdateReset = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.cmbUpdateRole = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.cmbUpdateJob = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblJob = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
             this.txtUpdateLName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.txtUpdateFName = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbConfirm = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtVerifyJob = new System.Windows.Forms.TextBox();
             this.txtVerifyClerk = new System.Windows.Forms.TextBox();
@@ -122,7 +123,7 @@
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbConfirm = new System.Windows.Forms.CheckBox();
+            this.btnLanguage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -147,72 +148,80 @@
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Location = new System.Drawing.Point(37, 387);
+            this.groupBox1.Location = new System.Drawing.Point(28, 314);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 262);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(184, 213);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MENU";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(16, 213);
+            this.btnDelete.Location = new System.Drawing.Point(12, 173);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(198, 43);
+            this.btnDelete.Size = new System.Drawing.Size(148, 35);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            //this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(16, 158);
+            this.btnUpdate.Location = new System.Drawing.Point(12, 128);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(198, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(148, 35);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            //this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(16, 99);
+            this.btnAdd.Location = new System.Drawing.Point(12, 80);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(198, 43);
+            this.btnAdd.Size = new System.Drawing.Size(148, 35);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            //this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(16, 36);
+            this.btnSearch.Location = new System.Drawing.Point(12, 29);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(198, 43);
+            this.btnSearch.Size = new System.Drawing.Size(148, 35);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.button1_Click);
+            //this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAddReset
             // 
-            this.btnAddReset.Location = new System.Drawing.Point(450, 40);
+            this.btnAddReset.Location = new System.Drawing.Point(338, 32);
+            this.btnAddReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddReset.Name = "btnAddReset";
-            this.btnAddReset.Size = new System.Drawing.Size(303, 43);
+            this.btnAddReset.Size = new System.Drawing.Size(227, 35);
             this.btnAddReset.TabIndex = 9;
             this.btnAddReset.Text = "RESET";
             this.btnAddReset.UseVisualStyleBackColor = true;
-            this.btnAddReset.Click += new System.EventHandler(this.button2_Click);
+            //this.btnAddReset.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddEmp
             // 
-            this.btnAddEmp.Location = new System.Drawing.Point(101, 230);
+            this.btnAddEmp.Location = new System.Drawing.Point(76, 187);
+            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(303, 43);
+            this.btnAddEmp.Size = new System.Drawing.Size(227, 35);
             this.btnAddEmp.TabIndex = 6;
             this.btnAddEmp.Text = "ADD";
             this.btnAddEmp.UseVisualStyleBackColor = true;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            //this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // cmbAddRole
             // 
@@ -221,17 +230,19 @@
             "Administrator",
             "Clerk",
             "Other"});
-            this.cmbAddRole.Location = new System.Drawing.Point(224, 185);
+            this.cmbAddRole.Location = new System.Drawing.Point(168, 150);
+            this.cmbAddRole.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAddRole.Name = "cmbAddRole";
-            this.cmbAddRole.Size = new System.Drawing.Size(180, 24);
+            this.cmbAddRole.Size = new System.Drawing.Size(136, 21);
             this.cmbAddRole.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 188);
+            this.label4.Location = new System.Drawing.Point(74, 153);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Role";
             // 
@@ -240,12 +251,13 @@
             this.cmbAddJob.DataSource = this.jobBindingSource;
             this.cmbAddJob.DisplayMember = "Job_Title";
             this.cmbAddJob.FormattingEnabled = true;
-            this.cmbAddJob.Location = new System.Drawing.Point(224, 143);
+            this.cmbAddJob.Location = new System.Drawing.Point(168, 116);
+            this.cmbAddJob.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAddJob.Name = "cmbAddJob";
-            this.cmbAddJob.Size = new System.Drawing.Size(180, 24);
+            this.cmbAddJob.Size = new System.Drawing.Size(136, 21);
             this.cmbAddJob.TabIndex = 6;
             this.cmbAddJob.ValueMember = "Job_ID";
-            this.cmbAddJob.SelectedIndexChanged += new System.EventHandler(this.cmbAddJob_SelectedIndexChanged);
+            //this.cmbAddJob.SelectedIndexChanged += new System.EventHandler(this.cmbAddJob_SelectedIndexChanged);
             // 
             // jobBindingSource
             // 
@@ -260,119 +272,132 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 143);
+            this.label3.Location = new System.Drawing.Point(74, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Job Title:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 99);
+            this.label2.Location = new System.Drawing.Point(74, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last name:";
             // 
             // txtAddLName
             // 
-            this.txtAddLName.Location = new System.Drawing.Point(224, 93);
+            this.txtAddLName.Location = new System.Drawing.Point(168, 76);
+            this.txtAddLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddLName.Name = "txtAddLName";
-            this.txtAddLName.Size = new System.Drawing.Size(180, 22);
+            this.txtAddLName.Size = new System.Drawing.Size(136, 20);
             this.txtAddLName.TabIndex = 3;
-            this.txtAddLName.TextChanged += new System.EventHandler(this.txtAddLName_TextChanged);
+            //this.txtAddLName.TextChanged += new System.EventHandler(this.txtAddLName_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 53);
+            this.label1.Location = new System.Drawing.Point(74, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "First name:";
             // 
             // txtAddFName
             // 
-            this.txtAddFName.Location = new System.Drawing.Point(224, 46);
+            this.txtAddFName.Location = new System.Drawing.Point(168, 37);
+            this.txtAddFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddFName.Name = "txtAddFName";
-            this.txtAddFName.Size = new System.Drawing.Size(180, 22);
+            this.txtAddFName.Size = new System.Drawing.Size(136, 20);
             this.txtAddFName.TabIndex = 0;
-            this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
+            //this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
             // 
             // btnDeleteReset
             // 
-            this.btnDeleteReset.Location = new System.Drawing.Point(484, 41);
+            this.btnDeleteReset.Location = new System.Drawing.Point(363, 33);
+            this.btnDeleteReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteReset.Name = "btnDeleteReset";
-            this.btnDeleteReset.Size = new System.Drawing.Size(298, 32);
+            this.btnDeleteReset.Size = new System.Drawing.Size(224, 26);
             this.btnDeleteReset.TabIndex = 9;
             this.btnDeleteReset.Text = "RESET";
             this.btnDeleteReset.UseVisualStyleBackColor = true;
-            this.btnDeleteReset.Click += new System.EventHandler(this.btnDeleteReset_Click);
+            //this.btnDeleteReset.Click += new System.EventHandler(this.btnDeleteReset_Click);
             // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(123, 202);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(92, 164);
+            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
+            this.btnDeleteEmp.Size = new System.Drawing.Size(227, 35);
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
-            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
+            //this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(67, 46);
+            this.label8.Location = new System.Drawing.Point(50, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 16);
+            this.label8.Size = new System.Drawing.Size(144, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Search Employee Username:";
             // 
             // txtDeleteSerach
             // 
-            this.txtDeleteSerach.Location = new System.Drawing.Point(271, 46);
+            this.txtDeleteSerach.Location = new System.Drawing.Point(203, 37);
+            this.txtDeleteSerach.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeleteSerach.Name = "txtDeleteSerach";
-            this.txtDeleteSerach.Size = new System.Drawing.Size(180, 22);
+            this.txtDeleteSerach.Size = new System.Drawing.Size(136, 20);
             this.txtDeleteSerach.TabIndex = 0;
-            this.txtDeleteSerach.TextChanged += new System.EventHandler(this.txtDeleteSerach_TextChanged);
+            //this.txtDeleteSerach.TextChanged += new System.EventHandler(this.txtDeleteSerach_TextChanged);
             // 
             // txtUpdateSearch
             // 
-            this.txtUpdateSearch.Location = new System.Drawing.Point(289, 23);
+            this.txtUpdateSearch.Location = new System.Drawing.Point(217, 19);
+            this.txtUpdateSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateSearch.Name = "txtUpdateSearch";
-            this.txtUpdateSearch.Size = new System.Drawing.Size(180, 22);
+            this.txtUpdateSearch.Size = new System.Drawing.Size(136, 20);
             this.txtUpdateSearch.TabIndex = 11;
-            this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
+            //this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
             // 
-            // label11
+            // lblEmployeeID
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(102, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(181, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Search Employee Username";
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Location = new System.Drawing.Point(76, 21);
+            this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(141, 13);
+            this.lblEmployeeID.TabIndex = 10;
+            this.lblEmployeeID.Text = "Search Employee Username";
             // 
             // btnUpdateReset
             // 
-            this.btnUpdateReset.Location = new System.Drawing.Point(526, 99);
+            this.btnUpdateReset.Location = new System.Drawing.Point(394, 80);
+            this.btnUpdateReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateReset.Name = "btnUpdateReset";
-            this.btnUpdateReset.Size = new System.Drawing.Size(303, 43);
+            this.btnUpdateReset.Size = new System.Drawing.Size(227, 35);
             this.btnUpdateReset.TabIndex = 9;
             this.btnUpdateReset.Text = "RESET";
             this.btnUpdateReset.UseVisualStyleBackColor = true;
-            this.btnUpdateReset.Click += new System.EventHandler(this.btnUpdateReset_Click);
+            //this.btnUpdateReset.Click += new System.EventHandler(this.btnUpdateReset_Click);
             // 
             // btnUpdateEmp
             // 
-            this.btnUpdateEmp.Location = new System.Drawing.Point(105, 247);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(79, 201);
+            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
-            this.btnUpdateEmp.Size = new System.Drawing.Size(332, 43);
+            this.btnUpdateEmp.Size = new System.Drawing.Size(249, 35);
             this.btnUpdateEmp.TabIndex = 6;
             this.btnUpdateEmp.Text = "UPDATE";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
-            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
+            //this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
             // cmbUpdateRole
             // 
@@ -381,73 +406,81 @@
             "Administrator",
             "Clerk",
             "Other"});
-            this.cmbUpdateRole.Location = new System.Drawing.Point(289, 202);
+            this.cmbUpdateRole.Location = new System.Drawing.Point(217, 164);
+            this.cmbUpdateRole.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUpdateRole.Name = "cmbUpdateRole";
-            this.cmbUpdateRole.Size = new System.Drawing.Size(180, 24);
+            this.cmbUpdateRole.Size = new System.Drawing.Size(136, 21);
             this.cmbUpdateRole.TabIndex = 8;
             // 
-            // label5
+            // lblRole
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(102, 202);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Role";
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(76, 164);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(29, 13);
+            this.lblRole.TabIndex = 7;
+            this.lblRole.Text = "Role";
             // 
             // cmbUpdateJob
             // 
             this.cmbUpdateJob.DataSource = this.jobBindingSource;
             this.cmbUpdateJob.DisplayMember = "Job_Title";
             this.cmbUpdateJob.FormattingEnabled = true;
-            this.cmbUpdateJob.Location = new System.Drawing.Point(289, 160);
+            this.cmbUpdateJob.Location = new System.Drawing.Point(217, 130);
+            this.cmbUpdateJob.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUpdateJob.Name = "cmbUpdateJob";
-            this.cmbUpdateJob.Size = new System.Drawing.Size(180, 24);
+            this.cmbUpdateJob.Size = new System.Drawing.Size(136, 21);
             this.cmbUpdateJob.TabIndex = 6;
             this.cmbUpdateJob.ValueMember = "Job_ID";
             // 
-            // label6
+            // lblJob
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Job Title:";
+            this.lblJob.AutoSize = true;
+            this.lblJob.Location = new System.Drawing.Point(76, 128);
+            this.lblJob.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJob.Name = "lblJob";
+            this.lblJob.Size = new System.Drawing.Size(50, 13);
+            this.lblJob.TabIndex = 5;
+            this.lblJob.Text = "Job Title:";
             // 
-            // label9
+            // lblLastName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(102, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Last name:";
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(76, 92);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(59, 13);
+            this.lblLastName.TabIndex = 4;
+            this.lblLastName.Text = "Last name:";
             // 
             // txtUpdateLName
             // 
-            this.txtUpdateLName.Location = new System.Drawing.Point(289, 110);
+            this.txtUpdateLName.Location = new System.Drawing.Point(217, 89);
+            this.txtUpdateLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateLName.Name = "txtUpdateLName";
-            this.txtUpdateLName.Size = new System.Drawing.Size(180, 22);
+            this.txtUpdateLName.Size = new System.Drawing.Size(136, 20);
             this.txtUpdateLName.TabIndex = 3;
-            this.txtUpdateLName.TextChanged += new System.EventHandler(this.txtUpdateLName_TextChanged);
+            //this.txtUpdateLName.TextChanged += new System.EventHandler(this.txtUpdateLName_TextChanged);
             // 
-            // label10
+            // lblFirstName
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(102, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 16);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "First name:";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(76, 54);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(58, 13);
+            this.lblFirstName.TabIndex = 1;
+            this.lblFirstName.Text = "First name:";
             // 
             // txtUpdateFName
             // 
-            this.txtUpdateFName.Location = new System.Drawing.Point(289, 63);
+            this.txtUpdateFName.Location = new System.Drawing.Point(217, 51);
+            this.txtUpdateFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateFName.Name = "txtUpdateFName";
-            this.txtUpdateFName.Size = new System.Drawing.Size(180, 22);
+            this.txtUpdateFName.Size = new System.Drawing.Size(136, 20);
             this.txtUpdateFName.TabIndex = 0;
-            this.txtUpdateFName.TextChanged += new System.EventHandler(this.txtUpdateFName_TextChanged);
+            //this.txtUpdateFName.TextChanged += new System.EventHandler(this.txtUpdateFName_TextChanged);
             // 
             // tabControl1
             // 
@@ -455,31 +488,34 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(334, 362);
+            this.tabControl1.Location = new System.Drawing.Point(250, 294);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 335);
+            this.tabControl1.Size = new System.Drawing.Size(632, 272);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnLanguage);
             this.tabPage1.Controls.Add(this.txtUpdateSearch);
             this.tabPage1.Controls.Add(this.cmbUpdateJob);
-            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.lblEmployeeID);
             this.tabPage1.Controls.Add(this.txtUpdateFName);
             this.tabPage1.Controls.Add(this.btnUpdateReset);
-            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.lblFirstName);
             this.tabPage1.Controls.Add(this.btnUpdateEmp);
             this.tabPage1.Controls.Add(this.txtUpdateLName);
             this.tabPage1.Controls.Add(this.cmbUpdateRole);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.lblLastName);
+            this.tabPage1.Controls.Add(this.lblRole);
+            this.tabPage1.Controls.Add(this.lblJob);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 306);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(624, 246);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -491,13 +527,25 @@
             this.tabPage2.Controls.Add(this.txtDeleteSerach);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 306);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(624, 246);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            //this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // cbConfirm
+            // 
+            this.cbConfirm.AutoSize = true;
+            this.cbConfirm.Location = new System.Drawing.Point(68, 138);
+            this.cbConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.cbConfirm.Name = "cbConfirm";
+            this.cbConfirm.Size = new System.Drawing.Size(290, 17);
+            this.cbConfirm.TabIndex = 11;
+            this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+            this.cbConfirm.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -511,95 +559,107 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(484, 88);
+            this.groupBox3.Location = new System.Drawing.Point(363, 72);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(298, 215);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(224, 175);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Verfify Employee details";
             // 
             // txtVerifyJob
             // 
-            this.txtVerifyJob.Location = new System.Drawing.Point(178, 172);
+            this.txtVerifyJob.Location = new System.Drawing.Point(134, 140);
+            this.txtVerifyJob.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyJob.Name = "txtVerifyJob";
             this.txtVerifyJob.ReadOnly = true;
-            this.txtVerifyJob.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyJob.Size = new System.Drawing.Size(76, 20);
             this.txtVerifyJob.TabIndex = 9;
             // 
             // txtVerifyClerk
             // 
-            this.txtVerifyClerk.Location = new System.Drawing.Point(178, 135);
+            this.txtVerifyClerk.Location = new System.Drawing.Point(134, 110);
+            this.txtVerifyClerk.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyClerk.Name = "txtVerifyClerk";
             this.txtVerifyClerk.ReadOnly = true;
-            this.txtVerifyClerk.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyClerk.Size = new System.Drawing.Size(76, 20);
             this.txtVerifyClerk.TabIndex = 8;
             // 
             // txtVerifyAdmin
             // 
-            this.txtVerifyAdmin.Location = new System.Drawing.Point(178, 98);
+            this.txtVerifyAdmin.Location = new System.Drawing.Point(134, 80);
+            this.txtVerifyAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyAdmin.Name = "txtVerifyAdmin";
             this.txtVerifyAdmin.ReadOnly = true;
-            this.txtVerifyAdmin.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyAdmin.Size = new System.Drawing.Size(76, 20);
             this.txtVerifyAdmin.TabIndex = 7;
             // 
             // txtVerifyLName
             // 
-            this.txtVerifyLName.Location = new System.Drawing.Point(178, 70);
+            this.txtVerifyLName.Location = new System.Drawing.Point(134, 57);
+            this.txtVerifyLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyLName.Name = "txtVerifyLName";
             this.txtVerifyLName.ReadOnly = true;
-            this.txtVerifyLName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyLName.Size = new System.Drawing.Size(76, 20);
             this.txtVerifyLName.TabIndex = 6;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 178);
+            this.label20.Location = new System.Drawing.Point(11, 145);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 16);
+            this.label20.Size = new System.Drawing.Size(76, 13);
             this.label20.TabIndex = 5;
             this.label20.Text = "Employee Job:";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 138);
+            this.label19.Location = new System.Drawing.Point(11, 112);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(54, 16);
+            this.label19.Size = new System.Drawing.Size(45, 13);
             this.label19.TabIndex = 4;
             this.label19.Text = "Is Clerk:";
             // 
             // txtVerifyFName
             // 
-            this.txtVerifyFName.Location = new System.Drawing.Point(178, 35);
+            this.txtVerifyFName.Location = new System.Drawing.Point(134, 28);
+            this.txtVerifyFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerifyFName.Name = "txtVerifyFName";
             this.txtVerifyFName.ReadOnly = true;
-            this.txtVerifyFName.Size = new System.Drawing.Size(100, 22);
+            this.txtVerifyFName.Size = new System.Drawing.Size(76, 20);
             this.txtVerifyFName.TabIndex = 3;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(15, 106);
+            this.label18.Location = new System.Drawing.Point(11, 86);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 16);
+            this.label18.Size = new System.Drawing.Size(50, 13);
             this.label18.TabIndex = 2;
             this.label18.Text = "Is Admin:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 70);
+            this.label17.Location = new System.Drawing.Point(11, 57);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 16);
+            this.label17.Size = new System.Drawing.Size(110, 13);
             this.label17.TabIndex = 1;
             this.label17.Text = "Employee Last Name:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 38);
+            this.label7.Location = new System.Drawing.Point(11, 31);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 16);
+            this.label7.Size = new System.Drawing.Size(106, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Employee First Name";
             // 
@@ -615,13 +675,14 @@
             this.tabPage3.Controls.Add(this.cmbAddJob);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(835, 306);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(624, 246);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            //this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
@@ -641,82 +702,91 @@
             this.tabPage4.Controls.Add(this.label13);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 306);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(624, 246);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            //this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(473, 107);
+            this.label16.Location = new System.Drawing.Point(355, 87);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 16);
+            this.label16.Size = new System.Drawing.Size(61, 13);
             this.label16.TabIndex = 21;
             this.label16.Text = "Last Name:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(473, 79);
+            this.label15.Location = new System.Drawing.Point(355, 64);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 16);
+            this.label15.Size = new System.Drawing.Size(60, 13);
             this.label15.TabIndex = 20;
             this.label15.Text = "First Name:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(473, 50);
+            this.label14.Location = new System.Drawing.Point(355, 41);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 16);
+            this.label14.Size = new System.Drawing.Size(58, 13);
             this.label14.TabIndex = 19;
             this.label14.Text = "Username:";
             // 
             // bttnSearch
             // 
-            this.bttnSearch.Location = new System.Drawing.Point(495, 233);
+            this.bttnSearch.Location = new System.Drawing.Point(371, 189);
+            this.bttnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
+            this.bttnSearch.Size = new System.Drawing.Size(227, 35);
             this.bttnSearch.TabIndex = 18;
             this.bttnSearch.Text = "SEARCH";
             this.bttnSearch.UseVisualStyleBackColor = true;
-            this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
+            //this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtSearchLName
             // 
-            this.txtSearchLName.Location = new System.Drawing.Point(556, 101);
+            this.txtSearchLName.Location = new System.Drawing.Point(417, 82);
+            this.txtSearchLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchLName.Name = "txtSearchLName";
-            this.txtSearchLName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchLName.Size = new System.Drawing.Size(152, 20);
             this.txtSearchLName.TabIndex = 17;
             // 
             // txtSearchFName
             // 
-            this.txtSearchFName.Location = new System.Drawing.Point(556, 73);
+            this.txtSearchFName.Location = new System.Drawing.Point(417, 59);
+            this.txtSearchFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchFName.Name = "txtSearchFName";
-            this.txtSearchFName.Size = new System.Drawing.Size(202, 22);
+            this.txtSearchFName.Size = new System.Drawing.Size(152, 20);
             this.txtSearchFName.TabIndex = 16;
             // 
             // btnSearchReset
             // 
-            this.btnSearchReset.Location = new System.Drawing.Point(551, 160);
+            this.btnSearchReset.Location = new System.Drawing.Point(413, 130);
+            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchReset.Name = "btnSearchReset";
-            this.btnSearchReset.Size = new System.Drawing.Size(207, 28);
+            this.btnSearchReset.Size = new System.Drawing.Size(155, 23);
             this.btnSearchReset.TabIndex = 10;
             this.btnSearchReset.Text = "RESET";
             this.btnSearchReset.UseVisualStyleBackColor = true;
-            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
+            //this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
             // 
             // rdoStaff
             // 
             this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoStaff.AutoSize = true;
-            this.rdoStaff.Location = new System.Drawing.Point(177, 160);
+            this.rdoStaff.Location = new System.Drawing.Point(133, 130);
+            this.rdoStaff.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStaff.Name = "rdoStaff";
-            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
+            this.rdoStaff.Size = new System.Drawing.Size(116, 17);
             this.rdoStaff.TabIndex = 9;
             this.rdoStaff.Text = "Employee staff only";
             this.rdoStaff.UseVisualStyleBackColor = true;
@@ -725,9 +795,10 @@
             // 
             this.rdoDes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoDes.AutoSize = true;
-            this.rdoDes.Location = new System.Drawing.Point(177, 231);
+            this.rdoDes.Location = new System.Drawing.Point(133, 188);
+            this.rdoDes.Margin = new System.Windows.Forms.Padding(2);
             this.rdoDes.Name = "rdoDes";
-            this.rdoDes.Size = new System.Drawing.Size(101, 20);
+            this.rdoDes.Size = new System.Drawing.Size(82, 17);
             this.rdoDes.TabIndex = 7;
             this.rdoDes.Text = "Descending";
             this.rdoDes.UseVisualStyleBackColor = true;
@@ -736,9 +807,10 @@
             // 
             this.rdoAsc.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoAsc.AutoSize = true;
-            this.rdoAsc.Location = new System.Drawing.Point(177, 196);
+            this.rdoAsc.Location = new System.Drawing.Point(133, 159);
+            this.rdoAsc.Margin = new System.Windows.Forms.Padding(2);
             this.rdoAsc.Name = "rdoAsc";
-            this.rdoAsc.Size = new System.Drawing.Size(92, 20);
+            this.rdoAsc.Size = new System.Drawing.Size(75, 17);
             this.rdoAsc.TabIndex = 6;
             this.rdoAsc.Text = "Ascending";
             this.rdoAsc.UseVisualStyleBackColor = true;
@@ -747,9 +819,10 @@
             // 
             this.rdoClerk.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoClerk.AutoSize = true;
-            this.rdoClerk.Location = new System.Drawing.Point(177, 129);
+            this.rdoClerk.Location = new System.Drawing.Point(133, 105);
+            this.rdoClerk.Margin = new System.Windows.Forms.Padding(2);
             this.rdoClerk.Name = "rdoClerk";
-            this.rdoClerk.Size = new System.Drawing.Size(123, 20);
+            this.rdoClerk.Size = new System.Drawing.Size(99, 17);
             this.rdoClerk.TabIndex = 5;
             this.rdoClerk.Text = "Clerk users only";
             this.rdoClerk.UseVisualStyleBackColor = true;
@@ -758,55 +831,62 @@
             // 
             this.rdoAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(177, 95);
+            this.rdoAdmin.Location = new System.Drawing.Point(133, 77);
+            this.rdoAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Size = new System.Drawing.Size(130, 20);
+            this.rdoAdmin.Size = new System.Drawing.Size(104, 17);
             this.rdoAdmin.TabIndex = 4;
             this.rdoAdmin.Text = "Admin users only";
             this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(556, 44);
+            this.txtUsername.Location = new System.Drawing.Point(417, 36);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(202, 22);
+            this.txtUsername.Size = new System.Drawing.Size(152, 20);
             this.txtUsername.TabIndex = 3;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            //this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 198);
+            this.label13.Location = new System.Drawing.Point(14, 161);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 16);
+            this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 2;
             this.label13.Text = "Sort:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 98);
+            this.label12.Location = new System.Drawing.Point(14, 80);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 16);
+            this.label12.Size = new System.Drawing.Size(62, 13);
             this.label12.TabIndex = 1;
             this.label12.Text = "Filter Users:";
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(430, 13);
+            this.groupBox2.Location = new System.Drawing.Point(322, 11);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 141);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(269, 115);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search by:";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(314, 362);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(236, 294);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(418, 19);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(314, 15);
             this.flowLayoutPanel1.TabIndex = 12;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            //this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // hotelManagementSystemDataSet
             // 
@@ -846,13 +926,14 @@
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
-            this.employeeDataGridView.Location = new System.Drawing.Point(37, 74);
+            this.employeeDataGridView.Location = new System.Drawing.Point(28, 60);
+            this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.RowHeadersWidth = 51;
             this.employeeDataGridView.RowTemplate.Height = 24;
-            this.employeeDataGridView.Size = new System.Drawing.Size(1130, 282);
+            this.employeeDataGridView.Size = new System.Drawing.Size(848, 229);
             this.employeeDataGridView.TabIndex = 12;
-            this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
+            //this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -935,14 +1016,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 22);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -957,7 +1038,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -966,7 +1047,7 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
@@ -998,7 +1079,7 @@
             this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employeeBindingNavigator.Name = "employeeBindingNavigator";
             this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(1278, 27);
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(958, 27);
             this.employeeBindingNavigator.TabIndex = 12;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -1008,7 +1089,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1017,7 +1098,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // errorProvider1
@@ -1028,26 +1109,27 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // cbConfirm
+            // btnLanguage
             // 
-            this.cbConfirm.AutoSize = true;
-            this.cbConfirm.Location = new System.Drawing.Point(91, 170);
-            this.cbConfirm.Name = "cbConfirm";
-            this.cbConfirm.Size = new System.Drawing.Size(360, 20);
-            this.cbConfirm.TabIndex = 11;
-            this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
-            this.cbConfirm.UseVisualStyleBackColor = true;
+            this.btnLanguage.Location = new System.Drawing.Point(394, 127);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(225, 34);
+            this.btnLanguage.TabIndex = 12;
+            this.btnLanguage.Text = "LANGUAGE";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
             // Employees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 717);
+            this.ClientSize = new System.Drawing.Size(958, 583);
             this.Controls.Add(this.employeeDataGridView);
             this.Controls.Add(this.employeeBindingNavigator);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Employees";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
@@ -1100,15 +1182,15 @@
         private System.Windows.Forms.Button btnUpdateReset;
         private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.ComboBox cmbUpdateRole;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.ComboBox cmbUpdateJob;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblJob;
+        private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.TextBox txtUpdateLName;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtUpdateFName;
         private System.Windows.Forms.TextBox txtUpdateSearch;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.Button btnAddReset;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1172,5 +1254,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtVerifyFName;
         private System.Windows.Forms.CheckBox cbConfirm;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }

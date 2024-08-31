@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\caitlin calder\\onedrive\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\thando\\desktop\\cmpg\\cmpg 223\\project\\cloned repository\\cmpg223_group22\\hotelmanagementsystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,25 +41,29 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeToolTip": "Employees.cs",
-              "ViewState": "AQIAAHoBAAAAAAAAAIAwwJYBAAA1AAAA",
+              "ViewState": "AQIAADMAAAAAAM3MzMz8vy8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T14:20:34.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Employees.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
               "RelativeToolTip": "Employees.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T14:18:27.564Z",
@@ -67,61 +71,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeToolTip": "LogIn.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAiwFIAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:12:26.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdatePassword.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeToolTip": "UpdatePassword.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAYwFQAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T21:16:39.061Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "Title": "LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
               "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "RelativeToolTip": "LogIn.cs",
+              "ViewState": "AQIAAGUAAAAAzczMzMwYwG8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T14:12:26.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "RelativeDocumentMoniker": "LogIn.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
               "RelativeToolTip": "LogIn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:09:35.169Z"
+              "WhenOpened": "2024-08-04T14:09:35.169Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
+              "Title": "UpdatePassword.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "RelativeDocumentMoniker": "UpdatePassword.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "RelativeToolTip": "UpdatePassword.cs",
+              "ViewState": "AQIAAFgAAACAzczMzMwUwG8AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T11:58:08.1Z"
+              "WhenOpened": "2024-08-08T21:16:39.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdatePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "RelativeDocumentMoniker": "UpdatePassword.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
+              "RelativeToolTip": "UpdatePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T21:09:32.415Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UpdatePassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
-              "RelativeToolTip": "UpdatePassword.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T21:09:32.415Z"
+              "WhenOpened": "2024-08-08T11:58:08.1Z"
             }
           ]
         }
