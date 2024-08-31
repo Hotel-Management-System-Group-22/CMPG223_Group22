@@ -1,58 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\thando\\desktop\\cmpg\\cmpg 223\\project\\cloned repository\\cmpg223_group22\\hotelmanagementsystem\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\user\\documents\\uni\\2024\\github\\cmpg223_group22\\hotelmanagementsystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,163 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Manage-Jobs-Form.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
-              "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
-              "RelativeToolTip": "Manage-Jobs-Form.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:55:45.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Manage-Jobs-Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
-              "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs [Design]",
-              "RelativeToolTip": "Manage-Jobs-Form.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:55:42.265Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-27T10:11:02.601Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CheckIn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
-              "RelativeDocumentMoniker": "CheckIn.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
-              "RelativeToolTip": "CheckIn.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAIAwwBYAAABiAAAA",
+              "Title": "Bookings.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
+              "RelativeDocumentMoniker": "Bookings.cs",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
+              "RelativeToolTip": "Bookings.cs",
+              "ViewState": "AQIAAPcFAAAAAAAAAAAAADMGAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:55:24.565Z",
+              "WhenOpened": "2024-08-27T09:56:14.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CheckIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
-              "RelativeDocumentMoniker": "CheckIn.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs [Design]",
-              "RelativeToolTip": "CheckIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:53:03.922Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Bookings.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
+              "DocumentMoniker": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
               "RelativeDocumentMoniker": "Bookings.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs [Design]",
+              "ToolTip": "C:\\Users\\Thando\\Desktop\\CMPG\\CMPG 223\\Project\\Cloned repository\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs [Design]",
               "RelativeToolTip": "Bookings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:52:54.328Z",
+              "WhenOpened": "2024-08-27T09:41:35.653Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Bookings.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
-              "RelativeDocumentMoniker": "Bookings.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
-              "RelativeToolTip": "Bookings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAowBAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:52:39.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
-              "RelativeDocumentMoniker": "Employees.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
-              "RelativeToolTip": "Employees.cs",
-              "ViewState": "AQIAANgCAAAAAAAAAAArwO8CAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:20:34.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Employees.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
-              "RelativeDocumentMoniker": "Employees.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:18:27.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeToolTip": "LogIn.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAB+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:12:26.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdatePassword.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeToolTip": "UpdatePassword.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAvwGkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T21:16:39.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
-              "RelativeToolTip": "LogIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:09:35.169Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T11:58:08.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UpdatePassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Uni\\2024\\GitHub\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T21:09:32.415Z"
             }
           ]
         }
