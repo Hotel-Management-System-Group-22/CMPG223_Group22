@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using BCrypt.Net;
 
 namespace HotelManagementSystem
@@ -16,7 +17,7 @@ namespace HotelManagementSystem
     public partial class LogIn : Form
     {
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-
+        private bool bAfrikaans = false;
         public LogIn()
         {
             InitializeComponent();
@@ -63,12 +64,26 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("Invalid password.");
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Invalid password.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ongeldige wagwoord.");
+                            }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username.");
+                        if (bAfrikaans)
+                        {
+                            MessageBox.Show("Invalid username.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ongeldige gebruikernaam.");
+                        }
                     }
                 }
             }
@@ -97,6 +112,22 @@ namespace HotelManagementSystem
         public string GetUsername()
         {
             return txtUsername.Text.Trim();
+        }
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+                //Buttons
+                btnLanguage.Text = "English";
+
+            }
+            else
+            {
+                bAfrikaans = false;
+                //Buttons
+                btnLanguage.Text = "Afrikaans";
+            }
         }
     }
 }
