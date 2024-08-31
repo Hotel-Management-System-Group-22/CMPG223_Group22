@@ -182,7 +182,7 @@ namespace HotelManagementSystem
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            string query = "UPDATE Booking SET Guest_Departure= @Value1 WHERE Booking_ID = @ID";
+           // string query = "UPDATE Booking SET Guest_Departure= @Value1 WHERE Booking_ID = @ID";
             if (txtBookingID.Text != "" )
             {
                 if (IsValueInTable("Booking_ID", txtBookingID.Text))
