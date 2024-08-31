@@ -1577,7 +1577,7 @@ namespace HotelManagementSystem
                 gpGuestSearch.Text = "General Search";
                 btnDisplayGuests.Text = "DISPLAY ALL GUESTS";
                 lblGuestID.Text = "Search by Guest ID:";
-                gpAvailablity.Text = "Searchfor Avalible rooms for time period";
+                gpAvailablity.Text = "Search for Availible rooms for time period";
                 btnSearchReset.Text = "RESET";
                 lblFName.Text = "Guest First Name:";
                 lblLName.Text = "Guest Last Name:";
@@ -1609,6 +1609,11 @@ namespace HotelManagementSystem
         }
 
         private void txtGuestLName_Update_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
