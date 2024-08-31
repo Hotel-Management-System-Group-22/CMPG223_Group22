@@ -27,6 +27,7 @@ namespace HotelManagementSystem
         public Employees()
         {
             InitializeComponent();
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
@@ -1108,16 +1109,106 @@ namespace HotelManagementSystem
         {
             if (bAfrikaans == false)
             {
-                bAfrikaans = true;
-                //Buttons
-                btnLanguage.Text = "English";
+                //Main buttons
+                btnSearch.Text = "SEARCH";
+                btnAdd.Text = "ADD";
+                btnUpdate.Text = "UPDATE";
+                btnDelete.Text = "DELETE";
+                btnLanguage.Text = "LANGUAGE";
+
+                //Update labels
+                lblUpdateUsername.Text = "Employee Username:";
+                lblUpdateFirstName.Text = "First Name:";
+                lblUpdateLastName.Text = "Last Name:";
+                lblUpdateJobTitle.Text = "Job Title:";
+                lblUpdateRole.Text = "Role:";
+                btnUpdateEmp.Text = "UPDATE";
+
+                //Delete labels
+                gpVerifyDetails.Text = "Verify Employee Details";
+                lblDeleteFName.Text = "Employee First Name:";
+                lblDeleteLName.Text = "Employee Last Name:";
+                lblDeleteAdmin.Text = "Is Admin:";
+                lblDeleteClerk.Text = "Is Clerk:";
+                lblDeleteJob.Text = "Employee Job:";
+                cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+                btnDeleteEmp.Text = "DELETE";
+
+                //Add Employee
+                lblAddFName.Text = "First Name:";
+                lblAddLName.Text = "Last Name:";
+                lblAddTitle.Text = "Job Title:";
+                lblAddRole.Text = "Role:";
+                btnAddReset.Text = "RESET";
+                btnAdd.Text = "ADD";
+
+                //Search Employee
+                gpSearch.Text = "Search by:";
+                lblSearchUsername.Text = "Username:";
+                lblSearchFName.Text = "First Name:";
+                lblSearchLName.Text = "Last Name:";
+                btnSearchReset.Text = "RESET";
+                gpSort.Text = "Sort by:";
+                rdoAsc.Text = "Ascending";
+                rdoDes.Text = "Descending";
+                gpFilter.Text = "Filter by:";
+                rdoAdmin.Text = "Admin users only";
+                rdoClerk.Text = "Clerk users only";
+                rdoStaff.Text = "Employee staff only";
+                btnSearchReset.Text = "RESET";
+                btnSearch.Text = "SEARCH";
 
             }
             else
             {
-                bAfrikaans = false;
-                //Buttons
-                btnLanguage.Text = "Afrikaans";
+                //Hoofknoppies
+                btnSearch.Text = "SOEK";
+                btnAdd.Text = "VOEG TOE";
+                btnUpdate.Text = "OPDATERING";
+                btnDelete.Text = "VEE";
+                btnLanguage.Text = "TAAL";
+
+                //Dateer etikette op
+                lblUpdateUsername.Text = "Werknemer Gebruikersnaam:";
+                lblUpdateFirstName.Text = "Voornaam:";
+                lblUpdateLastName.Text = "Vannaam:";
+                lblUpdateJobTitle.Text = "Postitel:";
+                lblUpdateRole.Text = "Rol:";
+                btnUpdateEmp.Text = "OPDATERING";
+
+                //Vee etikette uit
+                gpVerifyDetails.Text = "Verifieer werknemerbesonderhede";
+                lblDeleteFName.Text = "Werknemer Voornaam:";
+                lblDeleteLName.Text = "Werknemer Van:";
+                lblDeleteAdmin.Text = "Is Admin:";
+                lblDeleteClerk.Text = "Is Klerk:";
+                lblDeleteJob.Text = "Werknemer Pos:";
+                cbConfirm.Text = "Bevestiging dat dit die korrekte werknemer is wat uitgevee moet word";
+                btnDeleteEmp.Text = "VEE UIT";
+
+                //Voeg werknemer by
+                lblAddFName.Text = "Voornaam:";
+                lblAddLName.Text = "Vannaam:";
+                lblAddTitle.Text = "Postitel:";
+                lblAddRole.Text = "Rol:";
+                btnAddReset.Text = "TERUGSTEL";
+                btnAdd.Text = "VOEG TOE";
+
+                //Soek Werknemer
+                gpSearch.Text = "Soek deur:";
+                lblSearchUsername.Text = "Gebruikernaam:";
+                lblSearchFName.Text = "Voornaam:";
+                lblSearchLName.Text = "Vannaam:";
+                btnSearchReset.Text = "TERUGSTEL";
+                gpSort.Text = "Sorteer volgens:";
+                rdoAsc.Text = "Stygend";
+                rdoDes.Text = "Daalend";
+                gpFilter.Text = "Filter volgens:";
+                rdoAdmin.Text = "Slegs administrateur gebruikers";
+                rdoClerk.Text = "Slegs klerkgebruikers";
+                rdoStaff.Text = "Slegs werknemerspersoneel";
+                btnSearchReset.Text = "TERUGSTEL";
+                btnSearch.Text = "SOEK";
             }
         }
     }
