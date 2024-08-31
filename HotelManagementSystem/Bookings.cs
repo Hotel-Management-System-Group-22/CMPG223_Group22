@@ -1607,5 +1607,10 @@ namespace HotelManagementSystem
                 btnUpdateEmp.Text = "UPDATE";
             }
         }
+
+        private void txtGuestLName_Update_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
