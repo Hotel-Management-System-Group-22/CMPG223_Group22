@@ -26,6 +26,7 @@ namespace HotelManagementSystem
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         bool bAfrikaans = false;
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -928,6 +929,11 @@ namespace HotelManagementSystem
         }
 
         private void lblDeleteEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
