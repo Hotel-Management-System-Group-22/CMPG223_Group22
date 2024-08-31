@@ -17,12 +17,10 @@ namespace HotelManagementSystem
     {
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
 
-        private bool bAfrikaans = false;
         public LogIn()
         {
             InitializeComponent();
             txtPassword.PasswordChar = '•';
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -51,7 +49,7 @@ namespace HotelManagementSystem
                             {
                                 // Redirect to password change form
                                 UpdatePassword changePasswordForm = new UpdatePassword(username);
-
+                                
                                 changePasswordForm.Show();
                                 this.Hide();
                             }
@@ -87,7 +85,7 @@ namespace HotelManagementSystem
             txtPassword.PasswordChar = '\0';
             pbViewPassword.Visible = false;
             pbNotView.Visible = true;
-
+            
         }
 
         private void pbNotView_Click(object sender, EventArgs e)
@@ -99,26 +97,6 @@ namespace HotelManagementSystem
         public string GetUsername()
         {
             return txtUsername.Text.Trim();
-        }
-
-        private void btnLanguage_Click(object sender, EventArgs e)
-        {
-            bAfrikaans = !bAfrikaans;
-
-            if (bAfrikaans)
-            {
-                lblUsername.Text = "Gebruikernaam:";
-                lblPassword.Text = "Wagwoord:";
-                btnLogin.Text = "TEKEN IN";
-                btnLanguage.Text = "TAAL";
-            }
-            else
-            {
-                lblUsername.Text = "Username:";
-                lblPassword.Text = "Password:";
-                btnLogin.Text = "LOGIN";
-                btnLanguage.Text = "LANGUAGE";
-            }
         }
     }
 }
