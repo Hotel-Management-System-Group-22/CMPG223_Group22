@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HotelManagementSystem.LogIn;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelManagementSystem
@@ -335,6 +336,12 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
                 toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+
         }
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)

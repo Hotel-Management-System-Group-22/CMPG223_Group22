@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HotelManagementSystem.LogIn;
 
 namespace HotelManagementSystem
 {
@@ -250,6 +251,12 @@ namespace HotelManagementSystem
 
         private void dgvBookings_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
 
         }
     }

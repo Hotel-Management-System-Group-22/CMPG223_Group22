@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using System.Diagnostics.Eventing.Reader;
 using System.Collections;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static HotelManagementSystem.LogIn;
 
 namespace HotelManagementSystem
 {
@@ -293,24 +294,27 @@ namespace HotelManagementSystem
                 if (cmbAddRole.SelectedItem != null)
                 {
                     string selectedRole = cmbAddRole.SelectedItem.ToString();
-                    if (bAfrikaans)
+                    if (selectedRole == "Administrator")
                     {
-                        if (selectedRole == "Administrator")
-                        {
-                            admin = 1;
-                            clerk = 0;
-                        }
-                        else if (selectedRole == "Clerk")
-                        {
-                            admin = 0;
-                            clerk = 1;
-                        }
+                        admin = 1;
+                        clerk = 0;
                     }
-                    else
+                    else if (selectedRole == "Clerk")
+                    {
+                        admin = 0;
+                        clerk = 1;
+                    }
+                }
+                else
+                {
+                    if (bAfrikaans)
                     {
                         errorProvider1.SetError(cmbAddRole, "Kies asseblief rol");
                     }
-                    
+                    else
+                    {
+                        errorProvider1.SetError(cmbAddRole, "Please choose a role");
+                    }
                 }
                 int selectedJobID = (int)cmbAddJob.SelectedValue;
                 string username = RandomGenerator.GenerateUsername(txtAddFName.Text, txtAddLName.Text);
@@ -1215,6 +1219,12 @@ namespace HotelManagementSystem
                 btnSearchReset.Text = "TERUGSTEL";
                 btnSearch.Text = "SOEK";
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+
         }
     }
     }

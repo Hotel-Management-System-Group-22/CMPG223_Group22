@@ -18,6 +18,8 @@ namespace HotelManagementSystem
     {
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         private bool bAfrikaans = false;
+        public static bool isAdmin = false;
+        public static bool isClerk = false;
         public LogIn()
         {
             InitializeComponent();
@@ -51,16 +53,34 @@ namespace HotelManagementSystem
                             {
                                 // Redirect to password change form
                                 UpdatePassword changePasswordForm = new UpdatePassword(username);
-                                
+
                                 changePasswordForm.Show();
                                 this.Hide();
                             }
                             else
                             {
                                 // Proceed to the main application
-                                Employees mainForm = new Employees();
-                                mainForm.Show();
-                                this.Hide();
+                                reader.Close(); // Close the reader before executing another command
+
+                                string roleQuery = "SELECT is_Admin_YN, is_Clerk_YN FROM Employee WHERE Employee_Username = @username AND Employee_Password = @password";
+
+                                using (SqlCommand roleCmd = new SqlCommand(roleQuery, conn))
+                                {
+                                    roleCmd.Parameters.AddWithValue("@username", username);
+                                    roleCmd.Parameters.AddWithValue("@password", password); // Ensure this is hashed if used
+
+                                    using (SqlDataReader roleReader = roleCmd.ExecuteReader())
+                                    {
+                                        if (roleReader.Read())
+                                        {
+                                            isAdmin = roleReader.GetBoolean(0); // is_Admin_YN
+                                            isClerk = roleReader.GetBoolean(1); // is_Clerk_YN
+                                        }
+                                    }
+                                }
+                                FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+
+
                             }
                         }
                         else
@@ -86,6 +106,29 @@ namespace HotelManagementSystem
                             MessageBox.Show("Ongeldige gebruikernaam.");
                         }
                     }
+                }
+            }
+        }
+        //Stack Overflow TEST!!!
+        public static class FormHelper
+        {
+            public static void ShowAppropriateForm(Form currentForm, bool isAdmin, bool isClerk)
+            {
+                if (isAdmin)
+                {
+                    AdminMenu adminMenu = new AdminMenu();
+                    adminMenu.Show();
+                    currentForm.Hide();
+                }
+                else if (isClerk)
+                {
+                    ClerkMenu clerkMenu = new ClerkMenu();
+                    clerkMenu.Show();
+                    currentForm.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Access denied. You do not have the necessary permissions.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

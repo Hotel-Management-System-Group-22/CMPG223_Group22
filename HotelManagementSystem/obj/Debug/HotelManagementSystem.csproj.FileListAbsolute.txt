@@ -36,3 +36,5 @@ C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelMa
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.exe
 C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
+C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.AdminMenu.resources
+C:\Users\Caitlin Calder\OneDrive\Desktop\CMPG223 Project\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.ClerkMenu.resources
