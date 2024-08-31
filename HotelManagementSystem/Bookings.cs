@@ -15,9 +15,11 @@ namespace HotelManagementSystem
 {
     public partial class Bookings : Form
     {
+        private bool bAfrikaans = false;
         public Bookings()
         {
             InitializeComponent();
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
@@ -456,7 +458,7 @@ namespace HotelManagementSystem
                     {
                         if (reader.Read())
                         {
-                            label.Text = reader["Booking_ID"].ToString();
+                            lblBooking.Text = reader["Booking_ID"].ToString();
                             txtRoomNr_Delete.Text = reader["Room_ID"].ToString();
                             if (reader["Guest_Arrival"] != DBNull.Value)
                             {
@@ -1080,5 +1082,92 @@ namespace HotelManagementSystem
             }
         }
 
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            bAfrikaans = !bAfrikaans;
+
+            if (bAfrikaans)
+            {
+                btnSearch.Text = "SOEK";
+                btnAdd.Text = "VOEG TOE";
+                btnUpdate.Text = "OPDATERING";
+                btnDelete.Text = "VEE";
+                btnLanguage.Text = "TAAL";
+                gpGeneralSearch.Text = "Algemene soektog";
+                lblBookingID.Text = "Soek volgens besprekings-ID:";
+                gpGuestSearch.Text = "Algemene soektog";
+                btnDisplayGuests.Text = "VERTOON ALLE GASTE";
+                lblGuestID.Text = "Soek volgens gas-ID:";
+                gpAvailablity.Text = "Soek vir beskikbare kamers vir tydperk";
+                btnSearchReset.Text = "STEL TERUG";
+                lblFName.Text = "Gas voornaam:";
+                lblLName.Text = "Gas Van:";
+                lblRoomNumber.Text = "Kamernommer:";
+                lblArrivalDate.Text = "Aankomsdatum:";
+                lblDepartureDate.Text = "Vertrekdatum:";
+                btnAddReset.Text = "TERUGSTEL";
+                btnAddBooking.Text = "VOEG TOE";
+                gpVerifyBooking.Text = "Verifieer besprekingsbesonderhede";
+                lblBooking.Text = "Besprekings-ID:";
+                lblName.Text = "Gas voornaam:";
+                lblSurname.Text = "Gas Van:";
+                lblRoom.Text = "Kamernommer:";
+                lblArrival.Text = "Aankomsdatum:";
+                lblDeparture.Text = "Vertrekdatum:";
+                cmbConfirm.Text = "Bevestig dat besonderhede wat uitgevee moet word korrek is";
+                btnDeleteReset.Text = "TERUGSTEL";
+                btnDeleteEmp.Text = "VEE UIT";
+                gpBookingDetails.Text = "Besprekingsbesonderhede moet opgedateer word";
+                lblIDBooking.Text = "Besprekings-ID:";
+                lblGFName.Text = "Gas voornaam:";
+                lblGLName.Text = "Gas Van:";
+                lblGRoomNumber.Text = "Kamernommer:";
+                lblGArrival.Text = "Aankomsdatum:";
+                lblGDeparture.Text = "Vertrekdatum:";
+                btnUpdateReset.Text = "TERUGSTEL";
+                btnUpdateEmp.Text = "OPDATERING";
+            }
+            else
+            {
+                btnSearch.Text = "SEARCH";
+                btnAdd.Text = "ADD";
+                btnUpdate.Text = "UPDATE";
+                btnDelete.Text = "DELETE";
+                btnLanguage.Text = "LANGUAGE";
+                gpGeneralSearch.Text = "General Search";
+                lblBookingID.Text = "Search by Booking ID:";
+                gpGuestSearch.Text = "General Search";
+                btnDisplayGuests.Text = "DISPLAY ALL GUESTS";
+                lblGuestID.Text = "Search by Guest ID:";
+                gpAvailablity.Text = "Searchfor Avalible rooms for time period";
+                btnSearchReset.Text = "RESET";
+                lblFName.Text = "Guest First Name:";
+                lblLName.Text = "Guest Last Name:";
+                lblRoomNumber.Text = "Room number:";
+                lblArrivalDate.Text = "Arrival Date:";
+                lblDepartureDate.Text = "Departure Date:";
+                btnAddReset.Text = "RESET";
+                btnAddBooking.Text = "ADD";
+                gpVerifyBooking.Text = "Verify Booking Details";
+                lblBooking.Text = "BookingID:";
+                lblName.Text = "Guest First Name:";
+                lblSurname.Text = "Guest Last Name:";
+                lblRoom.Text = "Room Number:";
+                lblArrival.Text = "Arrival Date:";
+                lblDeparture.Text = "Departure Date:";
+                cmbConfirm.Text = "Confirm that details to be deleted are correct";
+                btnDeleteReset.Text = "RESET";
+                btnDeleteEmp.Text = "DELETE";
+                gpBookingDetails.Text = "Booking Details to be Updated";
+                lblIDBooking.Text = "Booking ID:";
+                lblGFName.Text = "Guest First Name:";
+                lblGLName.Text = "Guest Last Name:";
+                lblGRoomNumber.Text = "Room Number:";
+                lblGArrival.Text = "Arrival Date:";
+                lblGDeparture.Text = "Departure Date:";
+                btnUpdateReset.Text = "RESET";
+                btnUpdateEmp.Text = "UPDATE";
+            }
+        }
     }
 }
