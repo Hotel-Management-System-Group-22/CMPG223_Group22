@@ -11,21 +11,24 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace HotelManagementSystem
 {
     public partial class Guests : Form
     {
+        bool bAfrikaans = false;
         public Guests()
         {
             InitializeComponent();
+            //this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        bool bAfrikaans = false;
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -39,7 +42,14 @@ namespace HotelManagementSystem
                 string input = textBox.Text;
                 if (!IsTextValid(input))
                 {
-                    errorProvider1.SetError(textBox, "Input must contain only letters and first letter must be capitilized.");
+                    if (bAfrikaans)
+                    {
+                        errorProvider1.SetError(textBox, "Input must contain only letters and first letter must be capitilized.");
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(textBox, "Invoer moet slegs letters bevat en die eerste letter moet gekapitaliseer word.");
+                    }
                 }
                 else
                 {
@@ -48,7 +58,14 @@ namespace HotelManagementSystem
             }
             else
             {
-                errorProvider1.SetError(textBox, "Please fill the textbox");
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(textBox, "Please fill the textbox");
+                }
+                else
+                {
+                    errorProvider1.SetError(textBox, "Vul asseblief die teksboks in");
+                }
             }
         }
         private bool IsTextValid(string text)
@@ -107,7 +124,14 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No guest found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("No guest found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Geen gas gevind met die geselekteerde ID nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -136,7 +160,14 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No guest found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("No guest found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Geen gas gevind met die geselekteerde ID nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -164,7 +195,14 @@ namespace HotelManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Fout met die laai van gasdata: " + ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -244,22 +282,36 @@ namespace HotelManagementSystem
 
                     if (IsContactNoOrEmailExists(contactNo, email))
                     {
-                        MessageBox.Show("A guest with this contact number or email already exists.");
-                        return; // Exit method to prevent further processing
-                    }
+                        if (bAfrikaans)
+                        {
+                            MessageBox.Show("A guest with this contact number or email already exists.");
+                            return; // Exit method to prevent further processing
+                        }
+                        else
+                        {
+                            MessageBox.Show("'n Gas met hierdie kontaknommer of e-pos bestaan ​​reeds.");
+                            return;
+                        }
 
-                    if (alreadyInDatabase(name, surname))
-                    {
-                        DialogResult result = MessageBox.Show(
-                            "A guest with this name and surname already exists. Are you sure you want to add this guest?",
-                            "Warning",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Warning
-                        );
+                        DialogResult result;
+                        if (alreadyInDatabase(name, surname))
+                        {
+                            if (bAfrikaans)
+                            {
+                                result = MessageBox.Show("A guest with this name and surname already exists. Are you sure you want to add this guest?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                result = MessageBox.Show("'n Gas met hierdie naam en van bestaan ​​reeds. Is jy seker jy wil hierdie gas byvoeg?", "Waarskuwing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            }
+
+                        }
+
                         if (result == DialogResult.No)
                         {
                             return;
                         }
+
                     }
 
                     string query = "INSERT INTO Guest (Guest_FName, Guest_LName, Guest_ContactNo, Guest_Email) VALUES (@name, @surname, @contactNo, @email)";
@@ -281,33 +333,75 @@ namespace HotelManagementSystem
 
                                 if (rowsAffected > 0)
                                 {
-                                    MessageBox.Show("Guest has been added.");
-                                    TxtEmail_Add.Clear();
-                                    TxtFName_Add.Clear();
-                                    TxtLName_Add.Clear();
-                                    TxtContactNo_Add.Clear();
-                                    LoadGuests();
+                                    if (bAfrikaans)
+                                    {
+                                        MessageBox.Show("Guest has been added.");
+                                        TxtEmail_Add.Clear();
+                                        TxtFName_Add.Clear();
+                                        TxtLName_Add.Clear();
+                                        TxtContactNo_Add.Clear();
+                                        LoadGuests();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Gas is bygevoeg.");
+                                        TxtEmail_Add.Clear();
+                                        TxtFName_Add.Clear();
+                                        TxtLName_Add.Clear();
+                                        TxtContactNo_Add.Clear();
+                                        LoadGuests();
+                                    }
+                                    
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Failed to add guest. Please try again.");
+                                    if (bAfrikaans)
+                                    {
+                                        MessageBox.Show("Failed to add guest. Please try again.");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Kon nie gas byvoeg nie. Probeer asseblief weer.");
+                                    }
+                                    
                                 }
                             }
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An error occurred: {ex.Message}");
+                        if (bAfrikaans)
+                        {
+                            MessageBox.Show($"An error occurred: {ex.Message}");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"'n Fout het voorgekom: {ex.Message}");
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please complete all fields.");
+                    if (bAfrikaans)
+                    {
+                        MessageBox.Show("Please complete all fields.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vul asseblief alle velde in.");
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Please ensure all errors are corrected.");
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Please ensure all errors are corrected.");
+                }
+                else
+                {
+                    MessageBox.Show("Maak asseblief seker dat alle foute reggestel word.");
+                }
             }
         }
 
@@ -317,15 +411,31 @@ namespace HotelManagementSystem
             // Check if a guest is selected
             if (selectedGuestId == -1)
             {
-                MessageBox.Show("No guest selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("No guest selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Geen gas gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             // Ensure the confirmation checkbox is checked
             if (!cbConfirmation.Checked)
             {
-                MessageBox.Show("Please check the checkbox to confirm this is the correct guest.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Please check the checkbox to confirm this is the correct guest.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Merk asseblief die merkblokkie om te bevestig dat dit die regte gas is.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
             // Retrieve guest details for confirmation
@@ -335,11 +445,17 @@ namespace HotelManagementSystem
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
-
             }
-
             // Confirm deletion
-            DialogResult result = MessageBox.Show("Are you sure you want to delete " + txtFName_Delete.Text + " " + txtLName_delete.Text +"?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result;
+            if (bAfrikaans)
+            {
+                result = MessageBox.Show("Are you sure you want to delete " + txtFName_Delete.Text + " " + txtLName_delete.Text + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                result = MessageBox.Show("Is jy seker jy wil " + txtFName_Delete.Text + " " + txtLName_delete.Text + "?", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
             if (result == DialogResult.No)
             {
                 return;
@@ -361,14 +477,32 @@ namespace HotelManagementSystem
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Guest has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadGuests(); // Reload the guest list to reflect changes
-                            ClearDeleteFields(); // Clear the deletion form fields
-                            selectedGuestId = -1; // Reset the selected guest ID
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Guest has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadGuests(); // Reload the guest list to reflect changes
+                                ClearDeleteFields(); // Clear the deletion form fields
+                                selectedGuestId = -1; // Reset the selected guest ID
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gas is uitgevee.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadGuests();
+                                ClearDeleteFields();
+                                selectedGuestId = -1;
+                            }
+                           
                         }
                         else
                         {
-                            MessageBox.Show("Failed to delete guest. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Failed to delete guest. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kon nie gas uitvee nie. Probeer asseblief weer.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -394,8 +528,16 @@ namespace HotelManagementSystem
         {
             if (selectedGuestId == -1)
             {
-                MessageBox.Show("No guest selected.");
-                return;
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("No guest selected.");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Geen gas gekies nie.");
+                    return;
+                }
             }
 
             // Populate fields if needed (e.g., when the user first selects a guest to update)
@@ -406,7 +548,16 @@ namespace HotelManagementSystem
             string contactNo = TxtContactNo_Update.Text.Trim();
             string email = TxtBoxEmail_Update.Text.Trim();
 
-            DialogResult result = MessageBox.Show($"Are you sure you want to change {name} {surname}'s details?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result;
+            if (bAfrikaans)
+            {
+                result = MessageBox.Show($"Are you sure you want to change {name} {surname}'s details?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                result = MessageBox.Show($"Is jy seker jy wil {name} {surname} se besonderhede verander?", "Waarskuwing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
             if (result == DialogResult.No)
             {
                 return;
@@ -417,8 +568,16 @@ namespace HotelManagementSystem
 
             if (hasErrors)
             {
-                MessageBox.Show("Please ensure all errors are corrected.");
-                return;
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Please ensure all errors are corrected.");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Maak asseblief seker dat alle foute reggestel word.");
+                    return;
+                }
             }
 
             // Prepare SQL query
@@ -442,12 +601,27 @@ namespace HotelManagementSystem
 
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Guest details have been updated.");
-                            LoadGuests(); // Reload the guest list to reflect changes
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Guest details have been updated.");
+                                LoadGuests(); // Reload the guest list to reflect changes
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gasbesonderhede is opgedateer.");
+                                LoadGuests();
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Failed to update guest details. Please try again.");
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("Failed to update guest details. Please try again.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kon nie gasbesonderhede opdateer nie. Probeer asseblief weer.");
+                            }
                         }
                     }
                 }
@@ -455,12 +629,26 @@ namespace HotelManagementSystem
             catch (SqlException ex)
             {
                 // Handle SQL exception
-                MessageBox.Show($"An error occurred while updating guest details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show($"An error occurred while updating guest details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"'n Fout het voorgekom tydens die opdatering van gasbesonderhede: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
                 // Handle other exceptions
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"'n Onverwagte fout het voorgekom: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -497,7 +685,7 @@ namespace HotelManagementSystem
 
         private void TxtFName_Add_TextChanged(object sender, EventArgs e)
         {
- ValidateTextBox(TxtFName_Add);
+            ValidateTextBox(TxtFName_Add);
         }
 
         private void TxtLName_Add_TextChanged(object sender, EventArgs e)
@@ -519,8 +707,16 @@ namespace HotelManagementSystem
         {
             if (!IsValidPhoneNumber(TxtContactNo_Update.Text))
             {
-                errorProvider1.SetError(TxtContactNo_Update, "Invalid phone number format.");
-                //hasErrors = true;
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(TxtContactNo_Update, "Invalid phone number format.");
+                    //hasErrors = true;
+
+                }
+                else
+                {
+                    errorProvider1.SetError(TxtContactNo_Update, "Ongeldige telefoonnommerformaat.");
+                }
             }
             else
             {
@@ -532,8 +728,16 @@ namespace HotelManagementSystem
         {
             if (!IsValidEmail(TxtBoxEmail_Update.Text))
             {
-                errorProvider1.SetError(TxtBoxEmail_Update, "Invalid email format.");
-                //hasErrors = true;
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(TxtBoxEmail_Update, "Invalid email format.");
+                    //hasErrors = true;
+
+                }
+                else
+                {
+                    errorProvider1.SetError(TxtBoxEmail_Update, "Ongeldige e-posformaat.");
+                }
             }
             else
             {
@@ -546,8 +750,16 @@ namespace HotelManagementSystem
         {
             if (!IsValidPhoneNumber(TxtContactNo_Add.Text))
             {
-                errorProvider1.SetError(TxtContactNo_Add, "Invalid phone number format.");
-                //hasErrors = true;
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(TxtContactNo_Add, "Invalid phone number format.");
+                    //hasErrors = true;
+
+                }
+                else
+                {
+                    errorProvider1.SetError(TxtContactNo_Add, "Ongeldige telefoonnommerformaat.");
+                }
             }
             else
             {
@@ -559,8 +771,15 @@ namespace HotelManagementSystem
         {
             if (!IsValidEmail(TxtEmail_Add.Text))
             {
-                errorProvider1.SetError(TxtEmail_Add, "Invalid email format.");
-                //hasErrors = true;
+                if (bAfrikaans)
+                {
+                    errorProvider1.SetError(TxtEmail_Add, "Invalid email format.");
+                    //hasErrors = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(TxtEmail_Add, "Ongeldige e-posformaat.");
+                }
             }
             else
             {
@@ -631,8 +850,16 @@ namespace HotelManagementSystem
             // If no search criterion is selected, show an error message
             if (string.IsNullOrEmpty(searchBy))
             {
-                MessageBox.Show("Please select a search criterion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("Please select a search criterion.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Kies asseblief 'n soekkriterium.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             // SQL query with the search criteria and sort order
@@ -660,15 +887,31 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No guests found matching the search criteria.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            DgvGuests.DataSource = null; // Clear the DataGridView
+                            if (bAfrikaans)
+                            {
+                                MessageBox.Show("No guests found matching the search criteria.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                DgvGuests.DataSource = null; // Clear the DataGridView
+                            }
+                            else
+                            {
+                                MessageBox.Show("Geen gaste gevind wat by die soekkriteria pas nie.", "Inligting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                DgvGuests.DataSource = null;
+                            }
+                           
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while searching: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans)
+                {
+                    MessageBox.Show("An error occurred while searching: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("'n Fout het voorgekom tydens soek: " + ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
