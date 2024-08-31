@@ -20,6 +20,11 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
@@ -27,18 +32,34 @@ namespace HotelManagementSystem
             if (textBox != null)
             {
                 string input = textBox.Text;
-                if (!IsTextValid(input))
                 {
-                    errorProvider1.SetError(textBox, "Input must contain only letters and first letter must be capitilized.");
-                }
-                else
-                {
-                    errorProvider1.SetError(textBox, string.Empty);
+                    if (!IsTextValid(input))
+                    {
+                        if (bAfrikaans == false)
+                        {
+                            errorProvider1.SetError(textBox, "Input must contain only letters and first letter must be capitilized.");
+                        }
+                        else
+                        {
+                            errorProvider1.SetError(textBox, "Invoer moet slegs letters bevat en die eerste letter moet gekapitaliseer word.");
+                        }
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(textBox, string.Empty);
+                    }
                 }
             }
             else
             {
-                errorProvider1.SetError(textBox, "Please fill the textbox");
+                if (bAfrikaans == false)
+                {
+                     errorProvider1.SetError(textBox, "Please fill the textbox");
+                }
+                else
+                {
+                     errorProvider1.SetError(textBox, "Vul asseblief die teksboks in");
+                }
             }
         }
 
@@ -94,7 +115,14 @@ namespace HotelManagementSystem
                         if (rowsAffected == 0)
                         {
                             // Handle the case where no rows were updated
-                            Console.WriteLine("No matching room found or status was not updated.");
+                            if (bAfrikaans == false)
+                            {
+                                Console.WriteLine("No matching room found or status was not updated.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Geen bypassende kamer gevind of status is nie opgedateer nie.");
+                            }
                         }
                     }
                 }
@@ -102,7 +130,14 @@ namespace HotelManagementSystem
             catch (SqlException ex)
             {
                 // Log or handle the exception as needed
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                if (bAfrikaans == false)
+                {
+                    Console.WriteLine($"An error occurred: {ex.Message}");
+                }
+                else
+                {
+                    Console.WriteLine($"'n Fout het voorgekom: {ex.Message}");
+                }
             }
         }
 
@@ -117,9 +152,23 @@ namespace HotelManagementSystem
             {
                 if (txtRoomNrAdd.Text == null)
                 {
-                    errorProvider1.SetError(txtRoomNrAdd, "Please add room number");
+                    if (bAfrikaans == false)
+                    {
+                        errorProvider1.SetError(txtRoomNrAdd, "Please add room number");
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(txtRoomNrAdd, "Voeg asseblief kamernommer by");
+                    }
                 }
-                errorProvider1.SetError(txtRoomNrAdd, "Room number can only contain digits");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(txtRoomNrAdd, "Room number can only contain digits");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtRoomNrAdd, "Kamernommer kan slegs syfers bevat");
+                }
             }
             else
             {
@@ -146,12 +195,27 @@ namespace HotelManagementSystem
                         {
                             if (reader.Read())
                             {
-                                guestId = Convert.ToInt32(reader["Guest_ID"]);
+                                if (bAfrikaans == false)
+                                {
+                                    guestId = Convert.ToInt32(reader["Guest_ID"]);
+                                }
+                                else
+                                {
+                                    guestId = Convert.ToInt32(reader["Gas_ID"]);
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Guest not found. Please add guest to system before completing booking");
-                                return;
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("Guest not found. Please add guest to system before completing booking");
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Gas nie gevind nie. Voeg asseblief gas by stelsel voor jy bespreking voltooi");
+                                    return;
+                                }
                             }
                         }
                     }
@@ -171,8 +235,16 @@ namespace HotelManagementSystem
                             int roomExists = Convert.ToInt32(cmdExistence.ExecuteScalar());
                             if (roomExists == 0)
                             {
-                                MessageBox.Show("The selected room does not exist.");
-                                return;
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("The selected room does not exist.");
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Die geselekteerde kamer bestaan ​​nie.");
+                                    return;
+                                }
                             }
                         }
 
@@ -205,12 +277,27 @@ namespace HotelManagementSystem
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
-                                MessageBox.Show("Booking added successfully.");
-                                UpdateRoomStatus(roomId, arrivalDate, departureDate, true);
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("Booking added successfully.");
+                                    UpdateRoomStatus(roomId, arrivalDate, departureDate, true);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Bespreking is suksesvol bygevoeg.");
+                                    UpdateRoomStatus(roomId, arrivalDate, departureDate, true);
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("Failed to add booking.");
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("Failed to add booking.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Kon nie bespreking byvoeg nie.");
+                                }
                             }
                         }
                     }
@@ -219,7 +306,14 @@ namespace HotelManagementSystem
             }
             else
             {
-                MessageBox.Show("Please ensure all errors are corrected");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please ensure all errors are corrected");
+                }
+                else
+                {
+                    MessageBox.Show("Verseker asseblief dat alle foute reggestel word");
+                }
             }
 
         }
@@ -231,7 +325,14 @@ namespace HotelManagementSystem
 
             if (selectedCheckinDate < currentDate)
             {
-                errorProvider1.SetError(dtCheckin, "The check-in date cannot be in the past. Please select a valid date.");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(dtCheckin, "The check-in date cannot be in the past. Please select a valid date.");
+                }
+                else
+                {
+                    errorProvider1.SetError(dtCheckin, "Die inklokdatum kan nie in die verlede wees nie. Kies asseblief 'n geldige datum.");
+                }
             }
         }
 
@@ -245,15 +346,36 @@ namespace HotelManagementSystem
 
             if (selectedCheckoutDate == selectedCheckinDate)
             {
-                errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
+                }
+                else
+                {
+                    errorProvider1.SetError(dtCheckout, "Bespreking moet vir ten minste een dag wees");
+                }
             }
             if (duration.Days > maxBookingDuration)
             {
-                MessageBox.Show("The maximum booking duration is 30 days. Please select a shorter stay.");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("The maximum booking duration is 30 days. Please select a shorter stay.");
+                }
+                else
+                {
+                    MessageBox.Show("Die maksimum besprekingsduur is 30 dae. Kies asseblief 'n korter verblyf.");
+                }
             }
             if (selectedCheckoutDate < selectedCheckinDate)
             {
-                MessageBox.Show("Departure date cannot be before Arrival date!");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Departure date cannot be before Arrival date!");
+                }
+                else
+                {
+                    MessageBox.Show("Vertrekdatum kan nie voor Aankomsdatum wees nie!");
+                }
             }
 
         }
@@ -274,9 +396,25 @@ namespace HotelManagementSystem
             {
                 if (txtRoomNrAdd.Text == null)
                 {
-                    errorProvider1.SetError(txtRoomNrAdd, "Please add room number");
+                    
+                    if (bAfrikaans == false)
+                    {
+                        errorProvider1.SetError(txtRoomNrAdd, "Please add room number");
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(txtRoomNrAdd, "Voeg asseblief kamernommer by");
+                    }
                 }
-                errorProvider1.SetError(txtRoomNrAdd, "Room number can only contain digits");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(txtRoomNrAdd, "Room number can only contain digits");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtRoomNrAdd, "Kamernommer kan slegs syfers bevat");
+                }
+                
             }
             else
             {
@@ -301,15 +439,31 @@ namespace HotelManagementSystem
 
                 if (selectedBookingId == -1)
                 {
-                    MessageBox.Show("No booking selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("No booking selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geen bespreking gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
 
                 int roomId;
                 if (!int.TryParse(txtRoomNr_Update.Text, out roomId))
                 {
-                    MessageBox.Show("Please enter a valid room number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("Please enter a valid room number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Voer asseblief 'n geldige kamernommer in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 
                 DateTime newArrivalDate = dtArrival_Update.Value;
@@ -328,8 +482,16 @@ namespace HotelManagementSystem
                         int roomExists = Convert.ToInt32(cmdExistence.ExecuteScalar());
                         if (roomExists == 0)
                         {
-                            MessageBox.Show("The selected room does not exist.");
-                            return;
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("The selected room does not exist.");
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Die geselekteerde kamer bestaan ​​nie.");
+                                return;
+                            }
                         }
                     }
                     SqlTransaction transaction = conn.BeginTransaction();
@@ -354,9 +516,18 @@ namespace HotelManagementSystem
                             int overlapCount = Convert.ToInt32(cmdCheckOverlap.ExecuteScalar());
                             if (overlapCount > 0)
                             {
-                                MessageBox.Show("The room is already booked for those dates.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                transaction.Rollback();
-                                return;
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("The room is already booked for those dates.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    transaction.Rollback();
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Die kamer is reeds vir daardie datums bespreek.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    transaction.Rollback();
+                                    return;
+                                }
                             }
                         }
 
@@ -378,35 +549,64 @@ namespace HotelManagementSystem
                             int rowsAffected = cmdUpdateBooking.ExecuteNonQuery();
                             if (rowsAffected == 0)
                             {
-                                MessageBox.Show("No booking was updated. Please check the booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                transaction.Rollback();
-                                return;
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("No booking was updated. Please check the booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    transaction.Rollback();
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Geen bespreking is opgedateer nie. Kontroleer asseblief die bespreking-ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    transaction.Rollback();
+                                    return;
+                                }
                             }
                         }
 
                         // Commit the transaction if everything is okay
                         transaction.Commit();
-                        MessageBox.Show("Booking updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        UpdateRoomStatus(roomId, newArrivalDate, newDepartureDate, true);
-                        LoadBookingData(); // Refresh booking data
+                        if (bAfrikaans == false)
+                        {
+                            MessageBox.Show("Booking updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            UpdateRoomStatus(roomId, newArrivalDate, newDepartureDate, true);
+                            LoadBookingData(); // Refresh booking data
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bespreking is suksesvol opgedateer.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            UpdateRoomStatus(roomId, newArrivalDate, newDepartureDate, true);
+                            LoadBookingData(); // Herlaai besprekingsdata
+                        }
                     }
                     catch (Exception ex)
                     {
                         // Rollback the transaction if something went wrong
-                        transaction.Rollback();
-                        MessageBox.Show("Error updating booking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (bAfrikaans == false)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error updating booking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Fout met die opdatering van bespreking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
             else 
             {
-                MessageBox.Show("Please complete all fields and ensure all errors are corrected");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please complete all fields and ensure all errors are corrected");
+                }
+                else
+                {
+                    MessageBox.Show("Vul asseblief alle velde in en maak seker dat alle foute reggestel word");
+                }
             }
         }
-
-
-
-
 
         private void Bookings_Load(object sender, EventArgs e)
         {
@@ -440,11 +640,20 @@ namespace HotelManagementSystem
                         {
                             txtGuestFName_Delete.Text = reader["Guest_FName"].ToString();
                             txtGuestLName_Delete.Text = reader["Guest_LName"].ToString();
+
                         }
                         else
                         {
-                            MessageBox.Show("Guest not found for the selected booking ID. Please ensure the Booking ID is correct.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Guest not found for the selected booking ID. Please ensure the Booking ID is correct.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Gas nie gevind vir die gekose besprekings-ID nie. Maak asseblief seker dat die besprekings-ID korrek is.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
                         }
                     }
                 }
@@ -482,7 +691,14 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("Booking not found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Booking not found with the selected ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Bespreking nie gevind met die geselekteerde ID nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -497,15 +713,31 @@ namespace HotelManagementSystem
             // Check if a booking is selected
             if (selectedBookingId == -1)
             {
-                MessageBox.Show("No booking selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("No booking selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Geen bespreking gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             // Ensure the confirmation checkbox is checked
             if (!cmbConfirm.Checked)
             {
-                MessageBox.Show("Please confirm that you want to delete this booking by checking the confirmation box.", "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Please confirm that you want to delete this booking by checking the confirmation box.", "Confirmation Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Bevestig asseblief dat jy hierdie bespreking wil uitvee deur die bevestigingblokkie te merk.", "Bevestiging vereis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
             // Retrieve guest name and booking details for confirmation
@@ -541,8 +773,16 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No guest found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("No guest found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Geen gas gevind met die gekose bespreking-ID nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
                         }
                     }
                 }
@@ -567,18 +807,45 @@ namespace HotelManagementSystem
                         }
                         else
                         {
-                            MessageBox.Show("No booking details found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("No booking details found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Geen besprekingbesonderhede gevind met die gekose besprekings-ID nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
                         }
                     }
                 }
             }
 
+            string confirmationMessage = "";
+            
             // Prepare confirmation message with booking details
-            string confirmationMessage = $"Are you sure you want to delete the booking for {guestName} in Room {roomId} from {arrivalDate.ToShortDateString()} to {departureDate.ToShortDateString()}?";
+            if (bAfrikaans == false)
+            {
+                confirmationMessage = $"Are you sure you want to delete the booking for {guestName} in Room {roomId} from {arrivalDate.ToShortDateString()} to {departureDate.ToShortDateString()}?";
+
+            }
+            else
+            {
+                confirmationMessage = $"Is jy seker jy wil die bespreking vir {guestName} in Kamer {roomId} van {arrivalDate.ToShortDateString()} na {departureDate.ToShortDateString()} uitvee?";
+            }
 
             // Confirm deletion
-            DialogResult result = MessageBox.Show(confirmationMessage, "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result;
+            if (bAfrikaans == false)
+            {
+                result = MessageBox.Show(confirmationMessage, "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                result = MessageBox.Show(confirmationMessage, "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            }
 
             if (result == DialogResult.No)
             {
@@ -605,27 +872,62 @@ namespace HotelManagementSystem
                             // Update room status for the duration of the booking
                             UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
 
-                            MessageBox.Show("Booking has been successfully deleted.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Booking has been successfully deleted.", "Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
 
-                            // Reload the bookings list to reflect changes
-                            LoadBookingData();
+                                // Reload the bookings list to reflect changes
+                                LoadBookingData();
 
-                            // Clear the form fields
-                            //ClearBookingDeleteFields();
+                                // Clear the form fields
+                                //ClearBookingDeleteFields();
 
-                            // Reset the selected booking ID and uncheck confirmation checkbox
-                            selectedBookingId = -1;
-                            cmbConfirm.Checked = false;
+                                // Reset the selected booking ID and uncheck confirmation checkbox
+                                selectedBookingId = -1;
+                                cmbConfirm.Checked = false;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Bespreking is suksesvol uitgevee.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                UpdateRoomStatus(roomId, arrivalDate, departureDate, false);
+
+                                // Reload the bookings list to reflect changes
+                                LoadBookingData();
+
+                                // Clear the form fields
+                                //ClearBookingDeleteFields();
+
+                                // Reset the selected booking ID and uncheck confirmation checkbox
+                                selectedBookingId = -1;
+                                cmbConfirm.Checked = false;
+                            } 
                         }
                         else
                         {
-                            MessageBox.Show("Failed to delete the booking. Please try again.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show("Failed to delete the booking. Please try again.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kon nie die bespreking uitvee nie. Probeer asseblief weer.", "Kon nie uitvee nie", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("An error occurred while deleting the booking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (bAfrikaans == false)
+                        {
+                            MessageBox.Show("An error occurred while deleting the booking: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("'n Fout het voorgekom tydens die verwydering van die bespreking: " + ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -683,7 +985,15 @@ namespace HotelManagementSystem
                                         }
                                         else
                                         {
-                                            MessageBox.Show("No guest details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            if (bAfrikaans == false)
+                                            {
+                                                MessageBox.Show("No guest details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Geen gasbesonderhede vir die geselekteerde besprekings-ID gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
                                 }
@@ -720,7 +1030,15 @@ namespace HotelManagementSystem
                                         }
                                         else
                                         {
-                                            MessageBox.Show("No booking details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            if (bAfrikaans == false)
+                                            {
+                                                MessageBox.Show("No guest details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Geen gasbesonderhede vir die geselekteerde besprekings-ID gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
                                 }
@@ -728,11 +1046,27 @@ namespace HotelManagementSystem
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show($"An error occurred while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show($"An error occurred while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show($"'n Fout het voorgekom tydens die herwinning van data: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show($"'n Onverwagte fout het voorgekom: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else if (tabControl1.SelectedTab == tabPage1)
@@ -772,7 +1106,15 @@ namespace HotelManagementSystem
                                         }
                                         else
                                         {
-                                            MessageBox.Show("No guest found with the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            if (bAfrikaans == false)
+                                            {
+                                                MessageBox.Show("No guest details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Geen gasbesonderhede vir die geselekteerde besprekings-ID gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
                                 }
@@ -795,7 +1137,15 @@ namespace HotelManagementSystem
                                         }
                                         else
                                         {
-                                            MessageBox.Show("No booking details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            if (bAfrikaans == false)
+                                            {
+                                                MessageBox.Show("No booking details found for the selected booking ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Geen besprekingbesonderhede vir die geselekteerde besprekings-ID gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            }
                                         }
                                     }
                                 }
@@ -803,17 +1153,41 @@ namespace HotelManagementSystem
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show($"An error occurred while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show($"An error occurred while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show($"'n Fout het voorgekom tydens die herwinning van data: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (bAfrikaans == false)
+                            {
+                                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show($"'n Onverwagte fout het voorgekom: {ex.Message}", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No booking details found for the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (bAfrikaans == false)
+                    {
+                        MessageBox.Show("No booking details found for the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Geen besprekingsbesonderhede vir die geselekteerde ry gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -839,7 +1213,14 @@ namespace HotelManagementSystem
 
             if (selectedCheckinDate < currentDate)
             {
-                errorProvider1.SetError(dtArrival_Update, "The check-in date cannot be in the past. Please select a valid date.");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(dtArrival_Update, "The check-in date cannot be in the past. Please select a valid date.");
+                }
+                else
+                {
+                    errorProvider1.SetError(dtArrival_Update, "Die inklokdatum kan nie in die verlede wees nie. Kies asseblief 'n geldige datum.");
+                }
             }
         }
 
@@ -853,15 +1234,36 @@ namespace HotelManagementSystem
 
             if (selectedCheckoutDate == selectedCheckinDate)
             {
-                errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
+                }
+                else
+                {
+                    errorProvider1.SetError(dtCheckout, "Bespreking moet vir ten minste een dag wees");
+                }
             }
             if (duration.Days > maxBookingDuration)
             {
-                MessageBox.Show("The maximum booking duration is 30 days. Please select a shorter stay.");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("The maximum booking duration is 30 days. Please select a shorter stay.");
+                }
+                else
+                {
+                    MessageBox.Show("Die maksimum besprekingsduur is 30 dae. Kies asseblief 'n korter verblyf.");
+                }
             }
             if (selectedCheckoutDate < selectedCheckinDate)
             {
-                MessageBox.Show("Departure date cannot be before Arrival date!");
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Departure date cannot be before Arrival date!");
+                }
+                else
+                {
+                    MessageBox.Show("Vertrekdatum kan nie voor Aankomsdatum wees nie!");
+                }
             }
         }
 
@@ -869,7 +1271,14 @@ namespace HotelManagementSystem
         {
             if (!IsTextDigitsValid(txtRoomNr_Update.Text))
             {
-                errorProvider1.SetError(txtRoomNr_Update, "Room number can only contain digits");
+                if (bAfrikaans == false)
+                {
+                    errorProvider1.SetError(txtRoomNr_Update, "Room number can only contain digits");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtRoomNr_Update, "Kamernommer kan slegs syfers bevat");
+                }
             }
             else
             {
@@ -947,7 +1356,14 @@ namespace HotelManagementSystem
                     if (dt.Rows.Count == 0)
                     {
                         // Show a message if no records are found
-                        MessageBox.Show("No bookings found for the given Booking ID.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (bAfrikaans == false)
+                        {
+                            MessageBox.Show("No bookings found for the given Booking ID.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Geen besprekings gevind vir die gegewe besprekings-ID nie.", "Geen resultate", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
 
                     bookingsDataGridView.DataSource = dt;
@@ -992,8 +1408,16 @@ namespace HotelManagementSystem
             // Check if the column exists in the DataGridView
             if (!bookingsDataGridView.Columns.Contains(columnName))
             {
-                MessageBox.Show($"Column '{columnName}' not found in DataGridView.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show($"Column '{columnName}' not found in DataGridView.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show($"Kolom '{columnName}' nie in DataGridView gevind nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             // Filter the rows based on the search value
@@ -1051,7 +1475,14 @@ namespace HotelManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Fout met die laai van gasdata: " + ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -1078,7 +1509,14 @@ namespace HotelManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (bAfrikaans == false)
+                {
+                    MessageBox.Show("Error loading guest data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Fout met die laai van gasdata: " + ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
