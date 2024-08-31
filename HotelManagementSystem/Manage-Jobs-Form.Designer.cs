@@ -60,8 +60,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblSelectedID = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobList)).BeginInit();
             this.tabcontrol.SuspendLayout();
             this.tabEditJob.SuspendLayout();
@@ -75,62 +75,59 @@
             // 
             this.dgvJobList.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dgvJobList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobList.Location = new System.Drawing.Point(51, 321);
-            this.dgvJobList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvJobList.Location = new System.Drawing.Point(56, 395);
+            this.dgvJobList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvJobList.Name = "dgvJobList";
             this.dgvJobList.ReadOnly = true;
             this.dgvJobList.RowHeadersWidth = 51;
             this.dgvJobList.RowTemplate.Height = 24;
-            this.dgvJobList.Size = new System.Drawing.Size(790, 239);
+            this.dgvJobList.Size = new System.Drawing.Size(1065, 294);
             this.dgvJobList.TabIndex = 1;
             this.dgvJobList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobList_CellClick);
             this.dgvJobList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJobList_CellContentClick);
             // 
             // txtJobID
             // 
-            this.txtJobID.Location = new System.Drawing.Point(90, 30);
-            this.txtJobID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJobID.Location = new System.Drawing.Point(120, 37);
+            this.txtJobID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobID.Name = "txtJobID";
-            this.txtJobID.Size = new System.Drawing.Size(112, 26);
+            this.txtJobID.Size = new System.Drawing.Size(168, 30);
             this.txtJobID.TabIndex = 2;
             this.txtJobID.TextChanged += new System.EventHandler(this.txtJobID_TextChanged);
             // 
             // lblJobID
             // 
             this.lblJobID.AutoSize = true;
-            this.lblJobID.Location = new System.Drawing.Point(15, 36);
-            this.lblJobID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJobID.Location = new System.Drawing.Point(6, 44);
             this.lblJobID.Name = "lblJobID";
-            this.lblJobID.Size = new System.Drawing.Size(60, 20);
+            this.lblJobID.Size = new System.Drawing.Size(75, 25);
             this.lblJobID.TabIndex = 5;
             this.lblJobID.Text = "Job ID:";
             // 
             // lblJobTitle
             // 
             this.lblJobTitle.AutoSize = true;
-            this.lblJobTitle.Location = new System.Drawing.Point(15, 65);
-            this.lblJobTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJobTitle.Location = new System.Drawing.Point(6, 81);
             this.lblJobTitle.Name = "lblJobTitle";
-            this.lblJobTitle.Size = new System.Drawing.Size(72, 20);
+            this.lblJobTitle.Size = new System.Drawing.Size(93, 25);
             this.lblJobTitle.TabIndex = 6;
             this.lblJobTitle.Text = "Job Title:";
             // 
             // lblJobRate
             // 
             this.lblJobRate.AutoSize = true;
-            this.lblJobRate.Location = new System.Drawing.Point(13, 98);
-            this.lblJobRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJobRate.Location = new System.Drawing.Point(6, 119);
             this.lblJobRate.Name = "lblJobRate";
-            this.lblJobRate.Size = new System.Drawing.Size(78, 20);
+            this.lblJobRate.Size = new System.Drawing.Size(96, 25);
             this.lblJobRate.TabIndex = 7;
             this.lblJobRate.Text = "Job Rate:";
             // 
             // btnDeleteJob
             // 
-            this.btnDeleteJob.Location = new System.Drawing.Point(14, 107);
-            this.btnDeleteJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteJob.Location = new System.Drawing.Point(19, 132);
+            this.btnDeleteJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteJob.Name = "btnDeleteJob";
-            this.btnDeleteJob.Size = new System.Drawing.Size(161, 33);
+            this.btnDeleteJob.Size = new System.Drawing.Size(215, 41);
             this.btnDeleteJob.TabIndex = 10;
             this.btnDeleteJob.Text = "Delete Selected Job";
             this.btnDeleteJob.UseVisualStyleBackColor = true;
@@ -138,10 +135,10 @@
             // 
             // btnAddCancel
             // 
-            this.btnAddCancel.Location = new System.Drawing.Point(146, 133);
-            this.btnAddCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCancel.Location = new System.Drawing.Point(195, 164);
+            this.btnAddCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCancel.Name = "btnAddCancel";
-            this.btnAddCancel.Size = new System.Drawing.Size(82, 33);
+            this.btnAddCancel.Size = new System.Drawing.Size(109, 41);
             this.btnAddCancel.TabIndex = 15;
             this.btnAddCancel.Text = "Cancel";
             this.btnAddCancel.UseVisualStyleBackColor = true;
@@ -149,10 +146,10 @@
             // 
             // btnAcceptNewJob
             // 
-            this.btnAcceptNewJob.Location = new System.Drawing.Point(19, 133);
-            this.btnAcceptNewJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAcceptNewJob.Location = new System.Drawing.Point(25, 164);
+            this.btnAcceptNewJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAcceptNewJob.Name = "btnAcceptNewJob";
-            this.btnAcceptNewJob.Size = new System.Drawing.Size(82, 33);
+            this.btnAcceptNewJob.Size = new System.Drawing.Size(109, 41);
             this.btnAcceptNewJob.TabIndex = 14;
             this.btnAcceptNewJob.Text = "Accept";
             this.btnAcceptNewJob.UseVisualStyleBackColor = true;
@@ -161,10 +158,9 @@
             // lblAddRate
             // 
             this.lblAddRate.AutoSize = true;
-            this.lblAddRate.Location = new System.Drawing.Point(4, 58);
-            this.lblAddRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddRate.Location = new System.Drawing.Point(5, 71);
             this.lblAddRate.Name = "lblAddRate";
-            this.lblAddRate.Size = new System.Drawing.Size(78, 20);
+            this.lblAddRate.Size = new System.Drawing.Size(96, 25);
             this.lblAddRate.TabIndex = 13;
             this.lblAddRate.Text = "Job Rate:";
             this.lblAddRate.Click += new System.EventHandler(this.label2_Click);
@@ -172,39 +168,38 @@
             // lblAddTitle
             // 
             this.lblAddTitle.AutoSize = true;
-            this.lblAddTitle.Location = new System.Drawing.Point(4, 20);
-            this.lblAddTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddTitle.Location = new System.Drawing.Point(5, 25);
             this.lblAddTitle.Name = "lblAddTitle";
-            this.lblAddTitle.Size = new System.Drawing.Size(72, 20);
+            this.lblAddTitle.Size = new System.Drawing.Size(93, 25);
             this.lblAddTitle.TabIndex = 12;
             this.lblAddTitle.Text = "Job Title:";
             this.lblAddTitle.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtAddJobRate
             // 
-            this.txtAddJobRate.Location = new System.Drawing.Point(84, 54);
-            this.txtAddJobRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddJobRate.Location = new System.Drawing.Point(112, 66);
+            this.txtAddJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddJobRate.Name = "txtAddJobRate";
-            this.txtAddJobRate.Size = new System.Drawing.Size(112, 26);
+            this.txtAddJobRate.Size = new System.Drawing.Size(148, 30);
             this.txtAddJobRate.TabIndex = 10;
             this.txtAddJobRate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtAddJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddJobRate_Validating);
             // 
             // txtAddJobTitle
             // 
-            this.txtAddJobTitle.Location = new System.Drawing.Point(84, 17);
-            this.txtAddJobTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddJobTitle.Location = new System.Drawing.Point(112, 21);
+            this.txtAddJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddJobTitle.Name = "txtAddJobTitle";
-            this.txtAddJobTitle.Size = new System.Drawing.Size(112, 26);
+            this.txtAddJobTitle.Size = new System.Drawing.Size(148, 30);
             this.txtAddJobTitle.TabIndex = 9;
             this.txtAddJobTitle.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnEditJob
             // 
-            this.btnEditJob.Location = new System.Drawing.Point(14, 66);
-            this.btnEditJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditJob.Location = new System.Drawing.Point(19, 81);
+            this.btnEditJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditJob.Name = "btnEditJob";
-            this.btnEditJob.Size = new System.Drawing.Size(161, 33);
+            this.btnEditJob.Size = new System.Drawing.Size(215, 41);
             this.btnEditJob.TabIndex = 15;
             this.btnEditJob.Text = "Update Job";
             this.btnEditJob.UseVisualStyleBackColor = true;
@@ -212,10 +207,10 @@
             // 
             // btnAddJob
             // 
-            this.btnAddJob.Location = new System.Drawing.Point(14, 24);
-            this.btnAddJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddJob.Location = new System.Drawing.Point(19, 30);
+            this.btnAddJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddJob.Name = "btnAddJob";
-            this.btnAddJob.Size = new System.Drawing.Size(161, 33);
+            this.btnAddJob.Size = new System.Drawing.Size(215, 41);
             this.btnAddJob.TabIndex = 14;
             this.btnAddJob.Text = "Add Job";
             this.btnAddJob.UseVisualStyleBackColor = true;
@@ -223,10 +218,10 @@
             // 
             // btnEditCancel
             // 
-            this.btnEditCancel.Location = new System.Drawing.Point(128, 127);
-            this.btnEditCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditCancel.Location = new System.Drawing.Point(171, 156);
+            this.btnEditCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditCancel.Name = "btnEditCancel";
-            this.btnEditCancel.Size = new System.Drawing.Size(76, 33);
+            this.btnEditCancel.Size = new System.Drawing.Size(101, 41);
             this.btnEditCancel.TabIndex = 15;
             this.btnEditCancel.Text = "Cancel";
             this.btnEditCancel.UseVisualStyleBackColor = true;
@@ -235,19 +230,18 @@
             // lblEditTitle
             // 
             this.lblEditTitle.AutoSize = true;
-            this.lblEditTitle.Location = new System.Drawing.Point(10, 17);
-            this.lblEditTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEditTitle.Location = new System.Drawing.Point(3, 21);
             this.lblEditTitle.Name = "lblEditTitle";
-            this.lblEditTitle.Size = new System.Drawing.Size(72, 20);
+            this.lblEditTitle.Size = new System.Drawing.Size(93, 25);
             this.lblEditTitle.TabIndex = 12;
             this.lblEditTitle.Text = "Job Title:";
             // 
             // btnEditAccept
             // 
-            this.btnEditAccept.Location = new System.Drawing.Point(20, 127);
-            this.btnEditAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditAccept.Location = new System.Drawing.Point(27, 156);
+            this.btnEditAccept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditAccept.Name = "btnEditAccept";
-            this.btnEditAccept.Size = new System.Drawing.Size(76, 33);
+            this.btnEditAccept.Size = new System.Drawing.Size(101, 41);
             this.btnEditAccept.TabIndex = 14;
             this.btnEditAccept.Text = "Accept";
             this.btnEditAccept.UseVisualStyleBackColor = true;
@@ -255,19 +249,19 @@
             // 
             // txtEditJobTitle
             // 
-            this.txtEditJobTitle.Location = new System.Drawing.Point(84, 15);
-            this.txtEditJobTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEditJobTitle.Location = new System.Drawing.Point(134, 18);
+            this.txtEditJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEditJobTitle.Name = "txtEditJobTitle";
-            this.txtEditJobTitle.Size = new System.Drawing.Size(121, 26);
+            this.txtEditJobTitle.Size = new System.Drawing.Size(160, 30);
             this.txtEditJobTitle.TabIndex = 9;
             this.txtEditJobTitle.TextChanged += new System.EventHandler(this.txtEditJobTitle_TextChanged);
             // 
             // txtEditJobRate
             // 
-            this.txtEditJobRate.Location = new System.Drawing.Point(84, 54);
-            this.txtEditJobRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEditJobRate.Location = new System.Drawing.Point(134, 66);
+            this.txtEditJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEditJobRate.Name = "txtEditJobRate";
-            this.txtEditJobRate.Size = new System.Drawing.Size(121, 26);
+            this.txtEditJobRate.Size = new System.Drawing.Size(160, 30);
             this.txtEditJobRate.TabIndex = 10;
             this.txtEditJobRate.TextChanged += new System.EventHandler(this.txtEditJobRate_TextChanged);
             this.txtEditJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtEditJobRate_Validating);
@@ -275,37 +269,36 @@
             // lblEditRate
             // 
             this.lblEditRate.AutoSize = true;
-            this.lblEditRate.Location = new System.Drawing.Point(8, 57);
-            this.lblEditRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEditRate.Location = new System.Drawing.Point(3, 71);
             this.lblEditRate.Name = "lblEditRate";
-            this.lblEditRate.Size = new System.Drawing.Size(78, 20);
+            this.lblEditRate.Size = new System.Drawing.Size(96, 25);
             this.lblEditRate.TabIndex = 13;
             this.lblEditRate.Text = "Job Rate:";
             // 
             // txtJobRate
             // 
-            this.txtJobRate.Location = new System.Drawing.Point(90, 93);
-            this.txtJobRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJobRate.Location = new System.Drawing.Point(120, 114);
+            this.txtJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobRate.Name = "txtJobRate";
-            this.txtJobRate.Size = new System.Drawing.Size(112, 26);
+            this.txtJobRate.Size = new System.Drawing.Size(168, 30);
             this.txtJobRate.TabIndex = 4;
             this.txtJobRate.TextChanged += new System.EventHandler(this.txtJobRate_TextChanged);
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(90, 63);
-            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtJobTitle.Location = new System.Drawing.Point(120, 78);
+            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(112, 26);
+            this.txtJobTitle.Size = new System.Drawing.Size(168, 30);
             this.txtJobTitle.TabIndex = 3;
             this.txtJobTitle.TextChanged += new System.EventHandler(this.txtJobTitle_TextChanged);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(14, 154);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Location = new System.Drawing.Point(19, 190);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(161, 33);
+            this.btnReset.Size = new System.Drawing.Size(215, 41);
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -315,11 +308,11 @@
             // 
             this.tabcontrol.Controls.Add(this.tabEditJob);
             this.tabcontrol.Controls.Add(this.tabAddJob);
-            this.tabcontrol.Location = new System.Drawing.Point(275, 109);
-            this.tabcontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabcontrol.Location = new System.Drawing.Point(344, 134);
+            this.tabcontrol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabcontrol.Name = "tabcontrol";
             this.tabcontrol.SelectedIndex = 0;
-            this.tabcontrol.Size = new System.Drawing.Size(262, 197);
+            this.tabcontrol.Size = new System.Drawing.Size(381, 242);
             this.tabcontrol.TabIndex = 20;
             // 
             // tabEditJob
@@ -332,11 +325,11 @@
             this.tabEditJob.Controls.Add(this.btnEditAccept);
             this.tabEditJob.Controls.Add(this.txtEditJobRate);
             this.tabEditJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEditJob.Location = new System.Drawing.Point(4, 22);
-            this.tabEditJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEditJob.Location = new System.Drawing.Point(4, 25);
+            this.tabEditJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabEditJob.Name = "tabEditJob";
-            this.tabEditJob.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabEditJob.Size = new System.Drawing.Size(254, 171);
+            this.tabEditJob.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabEditJob.Size = new System.Drawing.Size(373, 213);
             this.tabEditJob.TabIndex = 0;
             this.tabEditJob.Text = "Edit Job Info";
             this.tabEditJob.Click += new System.EventHandler(this.tabEditJob_Click);
@@ -351,11 +344,11 @@
             this.tabAddJob.Controls.Add(this.txtAddJobRate);
             this.tabAddJob.Controls.Add(this.txtAddJobTitle);
             this.tabAddJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAddJob.Location = new System.Drawing.Point(4, 22);
-            this.tabAddJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAddJob.Location = new System.Drawing.Point(4, 25);
+            this.tabAddJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAddJob.Name = "tabAddJob";
-            this.tabAddJob.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabAddJob.Size = new System.Drawing.Size(254, 171);
+            this.tabAddJob.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAddJob.Size = new System.Drawing.Size(341, 213);
             this.tabAddJob.TabIndex = 1;
             this.tabAddJob.Text = "Add Job Info";
             // 
@@ -367,11 +360,11 @@
             this.groupBox1.Controls.Add(this.btnEditJob);
             this.groupBox1.Controls.Add(this.btnDeleteJob);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(51, 109);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(56, 134);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(195, 197);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(265, 242);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MENU";
@@ -381,9 +374,9 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(882, 590);
+            this.pictureBox1.Size = new System.Drawing.Size(1176, 726);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -398,45 +391,46 @@
             this.groupBox2.Controls.Add(this.lblJobRate);
             this.groupBox2.Controls.Add(this.txtJobRate);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(579, 112);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(752, 138);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(262, 194);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(369, 239);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Job";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(278, 109);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 24);
-            this.panel1.TabIndex = 25;
-            // 
             // lblSelectedID
             // 
             this.lblSelectedID.AutoSize = true;
-            this.lblSelectedID.Location = new System.Drawing.Point(15, 135);
+            this.lblSelectedID.Location = new System.Drawing.Point(6, 166);
+            this.lblSelectedID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedID.Name = "lblSelectedID";
-            this.lblSelectedID.Size = new System.Drawing.Size(101, 20);
+            this.lblSelectedID.Size = new System.Drawing.Size(124, 25);
             this.lblSelectedID.TabIndex = 8;
             this.lblSelectedID.Text = "Selected ID: ";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Location = new System.Drawing.Point(348, 128);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(373, 30);
+            this.panel1.TabIndex = 25;
+            // 
             // ManageJobsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 587);
+            this.ClientSize = new System.Drawing.Size(1179, 722);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabcontrol);
             this.Controls.Add(this.dgvJobList);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManageJobsForm";
             this.Text = "Manage Jobs";
             this.Load += new System.EventHandler(this.ManageJobsForm_Load);

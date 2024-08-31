@@ -53,7 +53,7 @@
             this.cbReports.Items.AddRange(new object[] {
             "Guests Checked Out",
             "Top 10 Week Traffic"});
-            this.cbReports.Location = new System.Drawing.Point(129, 136);
+            this.cbReports.Location = new System.Drawing.Point(167, 136);
             this.cbReports.Name = "cbReports";
             this.cbReports.Size = new System.Drawing.Size(322, 33);
             this.cbReports.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             // dtpStart
             // 
-            this.dtpStart.Location = new System.Drawing.Point(129, 35);
+            this.dtpStart.Location = new System.Drawing.Point(167, 35);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(322, 30);
             this.dtpStart.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             // dtpEnd
             // 
-            this.dtpEnd.Location = new System.Drawing.Point(129, 89);
+            this.dtpEnd.Location = new System.Drawing.Point(167, 84);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(322, 30);
             this.dtpEnd.TabIndex = 2;
@@ -98,7 +98,7 @@
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(18, 35);
+            this.lblStartDate.Location = new System.Drawing.Point(6, 35);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(105, 25);
             this.lblStartDate.TabIndex = 6;
@@ -107,7 +107,7 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(24, 89);
+            this.lblEndDate.Location = new System.Drawing.Point(6, 89);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(99, 25);
             this.lblEndDate.TabIndex = 7;
