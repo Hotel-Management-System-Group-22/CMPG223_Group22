@@ -123,7 +123,7 @@
             // lblSearchEmployeeID
             // 
             this.lblSearchEmployeeID.AutoSize = true;
-            this.lblSearchEmployeeID.Location = new System.Drawing.Point(37, 83);
+            this.lblSearchEmployeeID.Location = new System.Drawing.Point(17, 83);
             this.lblSearchEmployeeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchEmployeeID.Name = "lblSearchEmployeeID";
             this.lblSearchEmployeeID.Size = new System.Drawing.Size(197, 25);
@@ -147,7 +147,7 @@
             // lblSearchRoomStatus
             // 
             this.lblSearchRoomStatus.AutoSize = true;
-            this.lblSearchRoomStatus.Location = new System.Drawing.Point(108, 147);
+            this.lblSearchRoomStatus.Location = new System.Drawing.Point(17, 142);
             this.lblSearchRoomStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchRoomStatus.Name = "lblSearchRoomStatus";
             this.lblSearchRoomStatus.Size = new System.Drawing.Size(126, 25);
@@ -184,7 +184,7 @@
             // lblSearchSortRoomID
             // 
             this.lblSearchSortRoomID.AutoSize = true;
-            this.lblSearchSortRoomID.Location = new System.Drawing.Point(54, 200);
+            this.lblSearchSortRoomID.Location = new System.Drawing.Point(17, 198);
             this.lblSearchSortRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchSortRoomID.Name = "lblSearchSortRoomID";
             this.lblSearchSortRoomID.Size = new System.Drawing.Size(160, 25);
@@ -194,7 +194,7 @@
             // lblSearchRoomID
             // 
             this.lblSearchRoomID.AutoSize = true;
-            this.lblSearchRoomID.Location = new System.Drawing.Point(73, 27);
+            this.lblSearchRoomID.Location = new System.Drawing.Point(17, 27);
             this.lblSearchRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchRoomID.Name = "lblSearchRoomID";
             this.lblSearchRoomID.Size = new System.Drawing.Size(161, 25);
@@ -265,7 +265,7 @@
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(94, 25);
+            this.lblRoomID.Location = new System.Drawing.Point(22, 25);
             this.lblRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomID.Name = "lblRoomID";
             this.lblRoomID.Size = new System.Drawing.Size(93, 25);
@@ -320,7 +320,7 @@
             // lblRoomStatus
             // 
             this.lblRoomStatus.AutoSize = true;
-            this.lblRoomStatus.Location = new System.Drawing.Point(61, 147);
+            this.lblRoomStatus.Location = new System.Drawing.Point(25, 147);
             this.lblRoomStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomStatus.Name = "lblRoomStatus";
             this.lblRoomStatus.Size = new System.Drawing.Size(126, 25);
@@ -330,7 +330,7 @@
             // lblEmployeeID
             // 
             this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Location = new System.Drawing.Point(58, 85);
+            this.lblEmployeeID.Location = new System.Drawing.Point(22, 85);
             this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
             this.lblEmployeeID.Size = new System.Drawing.Size(129, 25);
@@ -376,7 +376,7 @@
             // 
             // txtDeleteRoomID
             // 
-            this.txtDeleteRoomID.Location = new System.Drawing.Point(222, 45);
+            this.txtDeleteRoomID.Location = new System.Drawing.Point(230, 40);
             this.txtDeleteRoomID.Margin = new System.Windows.Forms.Padding(4);
             this.txtDeleteRoomID.Name = "txtDeleteRoomID";
             this.txtDeleteRoomID.Size = new System.Drawing.Size(199, 30);
@@ -386,7 +386,7 @@
             // lblDeleteRoomID
             // 
             this.lblDeleteRoomID.AutoSize = true;
-            this.lblDeleteRoomID.Location = new System.Drawing.Point(16, 48);
+            this.lblDeleteRoomID.Location = new System.Drawing.Point(4, 45);
             this.lblDeleteRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeleteRoomID.Name = "lblDeleteRoomID";
             this.lblDeleteRoomID.Size = new System.Drawing.Size(180, 25);
@@ -505,7 +505,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel2.Location = new System.Drawing.Point(458, 163);
+            this.panel2.Location = new System.Drawing.Point(454, 163);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 35);
             this.panel2.TabIndex = 12;
