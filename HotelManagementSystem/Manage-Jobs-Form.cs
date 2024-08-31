@@ -50,7 +50,7 @@ namespace HotelManagementSystem
                 lblJobRate.Text = "Werkskoers: ";
                 lblJobTitle.Text = "Werkstitel";
                 //lblSearchJob.Text = "Soek Werk";
-               // lblSelectedID.Text = "Geselekteerde ID";
+                lblSelectedID.Text = "Geselekteerde ID";
                 //lblSelectRecords.Text = "Kies Rekords Hieronder";
                 btnAcceptNewJob.Text = "Aanvaar";
                 btnAddCancel.Text = "Kanseleer";
