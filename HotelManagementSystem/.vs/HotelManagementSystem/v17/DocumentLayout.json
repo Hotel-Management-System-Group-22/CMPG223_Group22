@@ -1,50 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Manage-Jobs-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Reports-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\goitseone moalusi\\onedrive - north-west university\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Reports-Form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:LogIn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:UpdatePassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,12 +57,16 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Reports-Form.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
               "RelativeDocumentMoniker": "Reports-Form.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
               "RelativeToolTip": "Reports-Form.cs",
               "ViewState": "AQIAAOUAAAAAAAAAAIA2wPwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,24 +75,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Manage-Jobs-Form.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeToolTip": "Manage-Jobs-Form.cs",
-              "ViewState": "AQIAAIwBAAAAAAAAAIA2wKwBAAAAAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAASwF8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T12:55:26.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Manage-Jobs-Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs [Design]",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs [Design]",
               "RelativeToolTip": "Manage-Jobs-Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T12:30:06.541Z",
@@ -96,11 +100,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Reports-Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
               "RelativeDocumentMoniker": "Reports-Form.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs [Design]",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs [Design]",
               "RelativeToolTip": "Reports-Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T12:29:54.786Z",
@@ -108,36 +112,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeToolTip": "Employees.cs",
               "ViewState": "AQIAAE8BAAAAAAAAAAAlwGkBAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:20:34.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-04T14:20:34.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Employees.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
               "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
-              "RelativeToolTip": "Employees.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T14:18:27.564Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-04T14:18:27.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
               "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
               "RelativeToolTip": "LogIn.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAiwFIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,9 +149,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "UpdatePassword.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
               "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
               "RelativeToolTip": "UpdatePassword.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAvwGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -157,22 +159,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
               "RelativeDocumentMoniker": "LogIn.cs",
               "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
-              "RelativeToolTip": "LogIn.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T14:09:35.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -180,12 +182,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UpdatePassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
               "RelativeDocumentMoniker": "UpdatePassword.cs",
               "ToolTip": "C:\\Users\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
-              "RelativeToolTip": "UpdatePassword.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Goitseone Moalusi\\OneDrive - North-West University\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T21:09:32.415Z"
             }

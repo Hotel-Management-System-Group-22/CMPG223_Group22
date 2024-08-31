@@ -49,9 +49,9 @@ namespace HotelManagementSystem
                 lblJobID.Text = "Werk ID";
                 lblJobRate.Text = "Werkskoers: ";
                 lblJobTitle.Text = "Werkstitel";
-                lblSearchJob.Text = "Soek Werk";
-                lblSelectedID.Text = "Geselekteerde ID";
-                lblSelectRecords.Text = "Kies Rekords Hieronder";
+                //lblSearchJob.Text = "Soek Werk";
+               // lblSelectedID.Text = "Geselekteerde ID";
+                //lblSelectRecords.Text = "Kies Rekords Hieronder";
                 btnAcceptNewJob.Text = "Aanvaar";
                 btnAddCancel.Text = "Kanseleer";
                 btnAddJob.Text = "Voeg Werk By ";
@@ -91,9 +91,9 @@ namespace HotelManagementSystem
                 lblJobID.Text = "Job ID: ";
                 lblJobRate.Text = "Job Rate: ";
                 lblJobTitle.Text = "Job Title: ";
-                lblSearchJob.Text = "Search Job: ";
+                //lblSearchJob.Text = "Search Job: ";
                 lblSelectedID.Text = "Selected ID: ";
-                lblSelectRecords.Text = "Select Records Below";
+                //lblSelectRecords.Text = "Select Records Below";
                 btnAcceptNewJob.Text = "Accept";
                 btnAddCancel.Text = "Cancel";
                 btnAddJob.Text = "Add Job";
