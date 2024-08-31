@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelManagementSystem
 {
@@ -19,6 +20,13 @@ namespace HotelManagementSystem
         public CheckOut()
         {
             InitializeComponent();
+            btnLanguage.Click += new EventHandler(btnBookingUpdate_Click);
+
+
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
+            btnLanguage_Click(this, EventArgs.Empty);
+            btnLanguage.PerformClick();
         }
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void LoadData()
@@ -230,6 +238,7 @@ namespace HotelManagementSystem
         private void CheckOut_Load(object sender, EventArgs e)
         {
             LoadData();
+            
         }
 
         private void txtBookingID_TextChanged(object sender, EventArgs e)
@@ -298,6 +307,13 @@ namespace HotelManagementSystem
                 btnBookingUpdate.Text = "Opdateer bespreking";
                 btnCheckOut.Text = "Teken uit";
                 btnCheckOutCancel.Text = "Kanselleer";
+                toolTip1.SetToolTip(btnCheckOutCancel, "Stel die vorm terug na sy oorsprong.");
+                toolTip1.SetToolTip(btnCheckOut, "Teken die bespreking uit.");
+                toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
+                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
 
 
             }
@@ -311,6 +327,13 @@ namespace HotelManagementSystem
                 btnBookingUpdate.Text = "Update Booking ID";
                 btnCheckOut.Text = "Check Out";
                 btnCheckOutCancel.Text = "Cancel";
+                toolTip1.SetToolTip(btnCheckOutCancel, "Reset the form to its default state before adding a new entry.");
+                toolTip1.SetToolTip(btnCheckOut, "Check the customer out.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
+                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
+                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
+                toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
+                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
             }
         }
 
