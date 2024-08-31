@@ -25,6 +25,7 @@ namespace HotelManagementSystem
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        bool bAfrikaans = false;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -835,6 +836,100 @@ namespace HotelManagementSystem
             TxtFName_Add.Text = " ";
             TxtLName_Add.Text = " ";
             TxtContactNo_Add.Text = " ";
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+                //Buttons
+                btnLanguage.Text = "English";
+                btnAddReset.Text = "Herstel";
+                btnReset.Text = "Herstel";
+                btnResetSearch.Text = "Herstel";
+                btnSearchPage.Text = "SOEK GAS";
+                BtnAddPage.Text = "VOEGBY Gas";
+                BtnAddGuest.Text = "Voeg Gas by";
+                BtnDelete.Text = "Verwyder";
+                BtnDeleteGuestPage.Text = "VERWYDER GAS";
+                BtnUpdate.Text = "Opdateer";
+                BtnUpdatePage.Text = "OPDATEER GAS";
+                //labels
+                lblFNameAdd.Text = "Voornaam:";
+                lblLNameAdd.Text = "Van:";
+                LblContactNo.Text = "Kontak nommer:";
+                LblContactNo_Update.Text = "Kontak nommer:";
+                LblEmailAddress.Text = "E-pos:";
+                LblEmail_Update.Text = "E-pos:";
+                LblFName_Update.Text = "Voornaam:";
+                LblLName_Update.Text = "Van:";                
+                lblDeleteEmail.Text = "E-pos:";
+                lblDeleteNumber.Text = "Kontak nommer:";               
+                lblDeleteLName.Text = "Van:";
+                lblDeleteFName.Text = "Voornaam:";
+                lblSearchNumber.Text = "Kontak nommer:";
+                lblSearchEmail.Text = "E-pos:";
+                lblSearchFName.Text = "Voornaam:";
+                lblSearchLName.Text = "Van:";
+                //Other
+                cbConfirmation.Text = "Is dit die Gas wat jy wil verwyder?";
+                rdoAsc.Text = "Stygend";
+                rdoDsc.Text = "Dalend";
+                groupBox1.Text  = "Bevestig waardes";
+                groupBox2.Text = "Soek volgens:";
+                groupBox3.Text = "Sorteer by:";
+                grpBoxMenu.Text = "Kieslys";  
+
+
+            }
+            else
+            {
+                bAfrikaans = false;
+                //Buttons
+                btnLanguage.Text = "English";
+                btnAddReset.Text = "Reset";
+                btnReset.Text = "Reset";
+                btnResetSearch.Text = "Reset";
+                btnSearchPage.Text = "SEARCH GUEST";
+                BtnAddGuest.Text = "Add Guest";
+                BtnDelete.Text = "Delete";
+                BtnDeleteGuestPage.Text = "DELETE GUEST";
+                BtnAddPage.Text = "ADD GUEST";
+                BtnUpdate.Text = "Update";
+                BtnUpdatePage.Text = "UPDATE GUEST";
+                //labels
+                lblFNameAdd.Text = "First Name:";
+                lblLNameAdd.Text = "Last Name:";
+                LblContactNo.Text = "Contact Number:";
+                LblContactNo_Update.Text = "Contact Number:";
+                LblEmailAddress.Text = "Email Address:";
+                LblEmail_Update.Text = "Email Address:";
+                LblFName_Update.Text = "First Name:";
+                LblLName_Update.Text = "Last Name:";
+                lblDeleteEmail.Text = "Email Address:";
+                lblDeleteNumber.Text = "Contact Number:";
+                lblDeleteLName.Text = "Last Name:";
+                lblDeleteFName.Text = "First Name:";
+                lblSearchNumber.Text = "Contact Number:";
+                lblSearchEmail.Text = "Email Address:";
+                lblSearchFName.Text = "First Name:";
+                lblSearchLName.Text = "Last Name:";
+                //Other
+                cbConfirmation.Text = "Is this the Guest you want to delete?";
+                rdoAsc.Text = "Ascending";
+                rdoDsc.Text = "Descending";
+                groupBox1.Text = "Confirm Values";
+                groupBox2.Text = "Search by:";
+                groupBox3.Text = "Sort by:";
+                grpBoxMenu.Text = "Menu";
+
+            }
+        }
+
+        private void lblDeleteEmail_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
