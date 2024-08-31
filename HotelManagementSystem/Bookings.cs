@@ -15,11 +15,11 @@ namespace HotelManagementSystem
 {
     public partial class Bookings : Form
     {
-        private bool bAfrikaans = false;
+        
         public Bookings()
         {
             InitializeComponent();
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            this.btnLanguage.Click += new System.EventHandler(this.btnAddReset_Click);
 
             btnLanguage_Click(this, EventArgs.Empty);
             btnLanguage.PerformClick();
@@ -27,6 +27,7 @@ namespace HotelManagementSystem
             btnLanguage.PerformClick();
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        bool bAfrikaans = false;
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
             if (textBox != null)
@@ -77,6 +78,7 @@ namespace HotelManagementSystem
         }
         private void LoadBookingData()
         {
+            
             string query = "SELECT * FROM Booking";
 
             using (SqlConnection conn = new SqlConnection(connection))
@@ -88,6 +90,7 @@ namespace HotelManagementSystem
                 // Bind the DataTable to the DataGridView
                 bookingsDataGridView.DataSource = dataTable;
             }
+            
         }
         private void UpdateRoomStatus(int roomId, DateTime arrivalDate, DateTime departureDate, bool isBooked)
         {
@@ -259,8 +262,18 @@ namespace HotelManagementSystem
                             int count = Convert.ToInt32(cmdAvailability.ExecuteScalar());
                             if (count > 0)
                             {
-                                MessageBox.Show("The selected room is not available for the chosen dates.");
-                                return;
+                               
+                                if (bAfrikaans == false)
+                                {
+                                    MessageBox.Show("The selected room is not available for the chosen dates.");
+                                    return;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Die geselekteerde kamer bestaan ​​nie.");
+                                    return;
+                                }
+                                
                             }
                         }
 
@@ -1522,29 +1535,29 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            bAfrikaans = !bAfrikaans;
-
-            if (bAfrikaans)
+            //bAfrikaans = !bAfrikaans;
+            if (bAfrikaans == false)
             {
+                bAfrikaans = true;
                 btnSearch.Text = "SOEK";
                 btnAdd.Text = "VOEG TOE";
                 btnUpdate.Text = "OPDATERING";
-                btnDelete.Text = "VEE";
-                btnLanguage.Text = "TAAL";
+                btnDelete.Text = "VERWYDER";
+                btnLanguage.Text = "ENGLISH";
                 gpGeneralSearch.Text = "Algemene soektog";
                 lblBookingID.Text = "Soek volgens besprekings-ID:";
                 gpGuestSearch.Text = "Algemene soektog";
                 btnDisplayGuests.Text = "VERTOON ALLE GASTE";
                 lblGuestID.Text = "Soek volgens gas-ID:";
                 gpAvailablity.Text = "Soek vir beskikbare kamers vir tydperk";
-                btnSearchReset.Text = "STEL TERUG";
+                btnSearchReset.Text = "HERSTEL";
                 lblFName.Text = "Gas voornaam:";
                 lblLName.Text = "Gas Van:";
                 lblRoomNumber.Text = "Kamernommer:";
                 lblArrivalDate.Text = "Aankomsdatum:";
                 lblDepartureDate.Text = "Vertrekdatum:";
-                btnAddReset.Text = "TERUGSTEL";
-                btnAddBooking.Text = "VOEG TOE";
+                btnAddReset.Text = "HERSTEL";
+                btnAddBooking.Text = "VOEG BY";
                 gpVerifyBooking.Text = "Verifieer besprekingsbesonderhede";
                 lblBooking.Text = "Besprekings-ID:";
                 lblName.Text = "Gas voornaam:";
@@ -1553,8 +1566,8 @@ namespace HotelManagementSystem
                 lblArrival.Text = "Aankomsdatum:";
                 lblDeparture.Text = "Vertrekdatum:";
                 cmbConfirm.Text = "Bevestig dat besonderhede wat uitgevee moet word korrek is";
-                btnDeleteReset.Text = "TERUGSTEL";
-                btnDeleteEmp.Text = "VEE UIT";
+                btnDeleteReset.Text = "HERSTEL";
+                btnDeleteEmp.Text = "VERWYDER";
                 gpBookingDetails.Text = "Besprekingsbesonderhede moet opgedateer word";
                 lblIDBooking.Text = "Besprekings-ID:";
                 lblGFName.Text = "Gas voornaam:";
@@ -1562,16 +1575,17 @@ namespace HotelManagementSystem
                 lblGRoomNumber.Text = "Kamernommer:";
                 lblGArrival.Text = "Aankomsdatum:";
                 lblGDeparture.Text = "Vertrekdatum:";
-                btnUpdateReset.Text = "TERUGSTEL";
-                btnUpdateEmp.Text = "OPDATERING";
+                btnUpdateReset.Text = "HERSTEL";
+                btnUpdateEmp.Text = "OPDATEER";
             }
             else
             {
+                bAfrikaans = false;
                 btnSearch.Text = "SEARCH";
                 btnAdd.Text = "ADD";
                 btnUpdate.Text = "UPDATE";
                 btnDelete.Text = "DELETE";
-                btnLanguage.Text = "LANGUAGE";
+                btnLanguage.Text = "AFRIKAANS";
                 gpGeneralSearch.Text = "General Search";
                 lblBookingID.Text = "Search by Booking ID:";
                 gpGuestSearch.Text = "General Search";

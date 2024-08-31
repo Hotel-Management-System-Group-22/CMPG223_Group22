@@ -124,7 +124,7 @@
             this.bookingsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bookingsDataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.bookingsDataGridView.Location = new System.Drawing.Point(45, 386);
-            this.bookingsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bookingsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.bookingsDataGridView.Name = "bookingsDataGridView";
             this.bookingsDataGridView.RowHeadersWidth = 51;
             this.bookingsDataGridView.RowTemplate.Height = 24;
@@ -142,9 +142,9 @@
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(45, 119);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(183, 259);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -156,7 +156,7 @@
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(172, 35);
             this.btnLanguage.TabIndex = 6;
-            this.btnLanguage.Text = "LANGUAGE";
+            this.btnLanguage.Text = "AFRIKAANS";
             this.btnLanguage.UseVisualStyleBackColor = true;
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
@@ -164,7 +164,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(5, 149);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(174, 35);
             this.btnDelete.TabIndex = 5;
@@ -176,7 +176,7 @@
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(5, 107);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(174, 35);
             this.btnUpdate.TabIndex = 4;
@@ -188,7 +188,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(4, 68);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(174, 35);
             this.btnAdd.TabIndex = 3;
@@ -200,7 +200,7 @@
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(4, 29);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(174, 35);
             this.btnSearch.TabIndex = 2;
@@ -216,7 +216,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(256, 114);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(632, 269);
@@ -235,9 +235,9 @@
             this.tabPage1.Controls.Add(this.btnUpdateEmp);
             this.tabPage1.Controls.Add(this.gpBookingDetails);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(624, 236);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -245,7 +245,7 @@
             // dtDeparture_Update
             // 
             this.dtDeparture_Update.Location = new System.Drawing.Point(176, 200);
-            this.dtDeparture_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtDeparture_Update.Margin = new System.Windows.Forms.Padding(2);
             this.dtDeparture_Update.Name = "dtDeparture_Update";
             this.dtDeparture_Update.Size = new System.Drawing.Size(171, 26);
             this.dtDeparture_Update.TabIndex = 31;
@@ -254,7 +254,7 @@
             // dtArrival_Update
             // 
             this.dtArrival_Update.Location = new System.Drawing.Point(176, 162);
-            this.dtArrival_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtArrival_Update.Margin = new System.Windows.Forms.Padding(2);
             this.dtArrival_Update.Name = "dtArrival_Update";
             this.dtArrival_Update.Size = new System.Drawing.Size(171, 26);
             this.dtArrival_Update.TabIndex = 30;
@@ -263,7 +263,7 @@
             // txtRoomNr_Update
             // 
             this.txtRoomNr_Update.Location = new System.Drawing.Point(176, 132);
-            this.txtRoomNr_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRoomNr_Update.Margin = new System.Windows.Forms.Padding(2);
             this.txtRoomNr_Update.Name = "txtRoomNr_Update";
             this.txtRoomNr_Update.Size = new System.Drawing.Size(171, 26);
             this.txtRoomNr_Update.TabIndex = 26;
@@ -302,7 +302,7 @@
             // btnUpdateReset
             // 
             this.btnUpdateReset.Location = new System.Drawing.Point(438, 152);
-            this.btnUpdateReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateReset.Name = "btnUpdateReset";
             this.btnUpdateReset.Size = new System.Drawing.Size(174, 35);
             this.btnUpdateReset.TabIndex = 9;
@@ -312,7 +312,7 @@
             // btnUpdateEmp
             // 
             this.btnUpdateEmp.Location = new System.Drawing.Point(438, 193);
-            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(180, 35);
             this.btnUpdateEmp.TabIndex = 6;
@@ -329,9 +329,9 @@
             this.gpBookingDetails.Controls.Add(this.txtBookingID_Update);
             this.gpBookingDetails.Controls.Add(this.txtGuestFName_Update);
             this.gpBookingDetails.Location = new System.Drawing.Point(14, 9);
-            this.gpBookingDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpBookingDetails.Margin = new System.Windows.Forms.Padding(2);
             this.gpBookingDetails.Name = "gpBookingDetails";
-            this.gpBookingDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpBookingDetails.Padding = new System.Windows.Forms.Padding(2);
             this.gpBookingDetails.Size = new System.Drawing.Size(358, 118);
             this.gpBookingDetails.TabIndex = 38;
             this.gpBookingDetails.TabStop = false;
@@ -361,7 +361,7 @@
             // 
             this.txtGuestLName_Update.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestLName_Update.Location = new System.Drawing.Point(163, 84);
-            this.txtGuestLName_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestLName_Update.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestLName_Update.Name = "txtGuestLName_Update";
             this.txtGuestLName_Update.ReadOnly = true;
             this.txtGuestLName_Update.Size = new System.Drawing.Size(171, 26);
@@ -382,7 +382,7 @@
             // 
             this.txtBookingID_Update.BackColor = System.Drawing.SystemColors.Window;
             this.txtBookingID_Update.Location = new System.Drawing.Point(163, 21);
-            this.txtBookingID_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBookingID_Update.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookingID_Update.Name = "txtBookingID_Update";
             this.txtBookingID_Update.ReadOnly = true;
             this.txtBookingID_Update.Size = new System.Drawing.Size(171, 26);
@@ -392,7 +392,7 @@
             // 
             this.txtGuestFName_Update.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestFName_Update.Location = new System.Drawing.Point(163, 52);
-            this.txtGuestFName_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestFName_Update.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestFName_Update.Name = "txtGuestFName_Update";
             this.txtGuestFName_Update.ReadOnly = true;
             this.txtGuestFName_Update.Size = new System.Drawing.Size(171, 26);
@@ -405,9 +405,9 @@
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
             this.tabPage2.Controls.Add(this.gpVerifyBooking);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(624, 236);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
@@ -415,7 +415,7 @@
             // btnDeleteReset
             // 
             this.btnDeleteReset.Location = new System.Drawing.Point(419, 141);
-            this.btnDeleteReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteReset.Name = "btnDeleteReset";
             this.btnDeleteReset.Size = new System.Drawing.Size(188, 35);
             this.btnDeleteReset.TabIndex = 9;
@@ -425,7 +425,7 @@
             // btnDeleteEmp
             // 
             this.btnDeleteEmp.Location = new System.Drawing.Point(419, 187);
-            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(188, 35);
             this.btnDeleteEmp.TabIndex = 6;
@@ -449,9 +449,9 @@
             this.gpVerifyBooking.Controls.Add(this.lblArrival);
             this.gpVerifyBooking.Controls.Add(this.cmbConfirm);
             this.gpVerifyBooking.Location = new System.Drawing.Point(4, 5);
-            this.gpVerifyBooking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpVerifyBooking.Margin = new System.Windows.Forms.Padding(2);
             this.gpVerifyBooking.Name = "gpVerifyBooking";
-            this.gpVerifyBooking.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpVerifyBooking.Padding = new System.Windows.Forms.Padding(2);
             this.gpVerifyBooking.Size = new System.Drawing.Size(362, 222);
             this.gpVerifyBooking.TabIndex = 18;
             this.gpVerifyBooking.TabStop = false;
@@ -461,7 +461,7 @@
             // 
             this.txtDeparture.BackColor = System.Drawing.SystemColors.Window;
             this.txtDeparture.Location = new System.Drawing.Point(154, 171);
-            this.txtDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeparture.Name = "txtDeparture";
             this.txtDeparture.ReadOnly = true;
             this.txtDeparture.Size = new System.Drawing.Size(167, 26);
@@ -471,7 +471,7 @@
             // 
             this.txtArrival.BackColor = System.Drawing.SystemColors.Window;
             this.txtArrival.Location = new System.Drawing.Point(154, 141);
-            this.txtArrival.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArrival.Margin = new System.Windows.Forms.Padding(2);
             this.txtArrival.Name = "txtArrival";
             this.txtArrival.ReadOnly = true;
             this.txtArrival.Size = new System.Drawing.Size(167, 26);
@@ -481,7 +481,7 @@
             // 
             this.txtBookingID_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtBookingID_Delete.Location = new System.Drawing.Point(154, 20);
-            this.txtBookingID_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBookingID_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookingID_Delete.Name = "txtBookingID_Delete";
             this.txtBookingID_Delete.ReadOnly = true;
             this.txtBookingID_Delete.Size = new System.Drawing.Size(167, 26);
@@ -501,7 +501,7 @@
             // 
             this.txtGuestLName_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestLName_Delete.Location = new System.Drawing.Point(154, 80);
-            this.txtGuestLName_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestLName_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestLName_Delete.Name = "txtGuestLName_Delete";
             this.txtGuestLName_Delete.ReadOnly = true;
             this.txtGuestLName_Delete.Size = new System.Drawing.Size(167, 26);
@@ -511,7 +511,7 @@
             // 
             this.txtGuestFName_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestFName_Delete.Location = new System.Drawing.Point(154, 50);
-            this.txtGuestFName_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestFName_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestFName_Delete.Name = "txtGuestFName_Delete";
             this.txtGuestFName_Delete.ReadOnly = true;
             this.txtGuestFName_Delete.Size = new System.Drawing.Size(167, 26);
@@ -521,7 +521,7 @@
             // 
             this.txtRoomNr_Delete.BackColor = System.Drawing.SystemColors.Window;
             this.txtRoomNr_Delete.Location = new System.Drawing.Point(154, 112);
-            this.txtRoomNr_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRoomNr_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.txtRoomNr_Delete.Name = "txtRoomNr_Delete";
             this.txtRoomNr_Delete.ReadOnly = true;
             this.txtRoomNr_Delete.Size = new System.Drawing.Size(167, 26);
@@ -581,7 +581,7 @@
             // 
             this.cmbConfirm.AutoSize = true;
             this.cmbConfirm.Location = new System.Drawing.Point(20, 193);
-            this.cmbConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.cmbConfirm.Name = "cmbConfirm";
             this.cmbConfirm.Size = new System.Drawing.Size(330, 24);
             this.cmbConfirm.TabIndex = 0;
@@ -604,9 +604,9 @@
             this.tabPage3.Controls.Add(this.txtGuestLNameAdd);
             this.tabPage3.Controls.Add(this.lblLName);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(624, 236);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
@@ -634,7 +634,7 @@
             // dtCheckout
             // 
             this.dtCheckout.Location = new System.Drawing.Point(166, 193);
-            this.dtCheckout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtCheckout.Margin = new System.Windows.Forms.Padding(2);
             this.dtCheckout.Name = "dtCheckout";
             this.dtCheckout.Size = new System.Drawing.Size(175, 26);
             this.dtCheckout.TabIndex = 13;
@@ -643,7 +643,7 @@
             // dtCheckin
             // 
             this.dtCheckin.Location = new System.Drawing.Point(168, 159);
-            this.dtCheckin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtCheckin.Margin = new System.Windows.Forms.Padding(2);
             this.dtCheckin.Name = "dtCheckin";
             this.dtCheckin.Size = new System.Drawing.Size(173, 26);
             this.dtCheckin.TabIndex = 12;
@@ -652,7 +652,7 @@
             // txtRoomNrAdd
             // 
             this.txtRoomNrAdd.Location = new System.Drawing.Point(168, 116);
-            this.txtRoomNrAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRoomNrAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txtRoomNrAdd.Name = "txtRoomNrAdd";
             this.txtRoomNrAdd.Size = new System.Drawing.Size(173, 26);
             this.txtRoomNrAdd.TabIndex = 10;
@@ -671,7 +671,7 @@
             // btnAddReset
             // 
             this.btnAddReset.Location = new System.Drawing.Point(413, 129);
-            this.btnAddReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddReset.Name = "btnAddReset";
             this.btnAddReset.Size = new System.Drawing.Size(198, 35);
             this.btnAddReset.TabIndex = 9;
@@ -682,7 +682,7 @@
             // btnAddBooking
             // 
             this.btnAddBooking.Location = new System.Drawing.Point(413, 182);
-            this.btnAddBooking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddBooking.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddBooking.Name = "btnAddBooking";
             this.btnAddBooking.Size = new System.Drawing.Size(198, 35);
             this.btnAddBooking.TabIndex = 6;
@@ -693,7 +693,7 @@
             // txtGuestFNameAdd
             // 
             this.txtGuestFNameAdd.Location = new System.Drawing.Point(168, 37);
-            this.txtGuestFNameAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestFNameAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestFNameAdd.Name = "txtGuestFNameAdd";
             this.txtGuestFNameAdd.Size = new System.Drawing.Size(173, 26);
             this.txtGuestFNameAdd.TabIndex = 0;
@@ -712,7 +712,7 @@
             // txtGuestLNameAdd
             // 
             this.txtGuestLNameAdd.Location = new System.Drawing.Point(168, 76);
-            this.txtGuestLNameAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestLNameAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestLNameAdd.Name = "txtGuestLNameAdd";
             this.txtGuestLNameAdd.Size = new System.Drawing.Size(173, 26);
             this.txtGuestLNameAdd.TabIndex = 3;
@@ -736,9 +736,9 @@
             this.tabPage4.Controls.Add(this.gpAvailablity);
             this.tabPage4.Controls.Add(this.btnSearchReset);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(624, 236);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
@@ -750,9 +750,9 @@
             this.gpGuestSearch.Controls.Add(this.lblGuestID);
             this.gpGuestSearch.Controls.Add(this.txtGuestId);
             this.gpGuestSearch.Location = new System.Drawing.Point(4, 84);
-            this.gpGuestSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpGuestSearch.Margin = new System.Windows.Forms.Padding(2);
             this.gpGuestSearch.Name = "gpGuestSearch";
-            this.gpGuestSearch.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpGuestSearch.Padding = new System.Windows.Forms.Padding(2);
             this.gpGuestSearch.Size = new System.Drawing.Size(250, 105);
             this.gpGuestSearch.TabIndex = 15;
             this.gpGuestSearch.TabStop = false;
@@ -761,7 +761,7 @@
             // btnDisplayGuests
             // 
             this.btnDisplayGuests.Location = new System.Drawing.Point(8, 67);
-            this.btnDisplayGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDisplayGuests.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisplayGuests.Name = "btnDisplayGuests";
             this.btnDisplayGuests.Size = new System.Drawing.Size(158, 35);
             this.btnDisplayGuests.TabIndex = 8;
@@ -782,7 +782,7 @@
             // txtGuestId
             // 
             this.txtGuestId.Location = new System.Drawing.Point(85, 27);
-            this.txtGuestId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGuestId.Margin = new System.Windows.Forms.Padding(2);
             this.txtGuestId.Name = "txtGuestId";
             this.txtGuestId.Size = new System.Drawing.Size(148, 26);
             this.txtGuestId.TabIndex = 7;
@@ -793,9 +793,9 @@
             this.gpGeneralSearch.Controls.Add(this.lblBookingID);
             this.gpGeneralSearch.Controls.Add(this.txtBookingID_Search);
             this.gpGeneralSearch.Location = new System.Drawing.Point(4, 15);
-            this.gpGeneralSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpGeneralSearch.Margin = new System.Windows.Forms.Padding(2);
             this.gpGeneralSearch.Name = "gpGeneralSearch";
-            this.gpGeneralSearch.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpGeneralSearch.Padding = new System.Windows.Forms.Padding(2);
             this.gpGeneralSearch.Size = new System.Drawing.Size(250, 61);
             this.gpGeneralSearch.TabIndex = 14;
             this.gpGeneralSearch.TabStop = false;
@@ -814,7 +814,7 @@
             // txtBookingID_Search
             // 
             this.txtBookingID_Search.Location = new System.Drawing.Point(93, 31);
-            this.txtBookingID_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBookingID_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txtBookingID_Search.Name = "txtBookingID_Search";
             this.txtBookingID_Search.Size = new System.Drawing.Size(148, 26);
             this.txtBookingID_Search.TabIndex = 7;
@@ -828,9 +828,9 @@
             this.gpAvailablity.Controls.Add(this.label21);
             this.gpAvailablity.Controls.Add(this.label22);
             this.gpAvailablity.Location = new System.Drawing.Point(260, 15);
-            this.gpAvailablity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpAvailablity.Margin = new System.Windows.Forms.Padding(2);
             this.gpAvailablity.Name = "gpAvailablity";
-            this.gpAvailablity.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpAvailablity.Padding = new System.Windows.Forms.Padding(2);
             this.gpAvailablity.Size = new System.Drawing.Size(367, 175);
             this.gpAvailablity.TabIndex = 13;
             this.gpAvailablity.TabStop = false;
@@ -839,7 +839,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(125, 58);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(240, 26);
             this.dateTimePicker2.TabIndex = 13;
@@ -847,7 +847,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(106, 29);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(239, 26);
             this.dateTimePicker1.TabIndex = 12;
@@ -855,7 +855,7 @@
             // bttnSearch
             // 
             this.bttnSearch.Location = new System.Drawing.Point(4, 136);
-            this.bttnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.bttnSearch.Name = "bttnSearch";
             this.bttnSearch.Size = new System.Drawing.Size(172, 35);
             this.bttnSearch.TabIndex = 14;
@@ -886,7 +886,7 @@
             // btnSearchReset
             // 
             this.btnSearchReset.Location = new System.Drawing.Point(440, 200);
-            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchReset.Name = "btnSearchReset";
             this.btnSearchReset.Size = new System.Drawing.Size(172, 35);
             this.btnSearchReset.TabIndex = 10;
@@ -903,7 +903,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(946, 622);
             this.pictureBox1.TabIndex = 19;
@@ -913,7 +913,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel1.Location = new System.Drawing.Point(237, 45);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(622, 14);
             this.panel1.TabIndex = 16;
@@ -929,7 +929,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bookings";
             this.Text = "Bookings";
             this.Load += new System.EventHandler(this.Bookings_Load);
