@@ -129,5 +129,15 @@ namespace HotelManagementSystem
                 btnLanguage.Text = "Afrikaans";
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
