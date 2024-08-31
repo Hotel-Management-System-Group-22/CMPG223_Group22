@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\duimp\\desktop\\cmpg223_group22\\hotelmanagementsystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -27,6 +39,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UpdatePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "RelativeDocumentMoniker": "UpdatePassword.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
+              "RelativeToolTip": "UpdatePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T09:32:15.65Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
+              "RelativeDocumentMoniker": "CheckIn.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs [Design]",
+              "RelativeToolTip": "CheckIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T09:32:04.191Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bookings.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
+              "RelativeDocumentMoniker": "Bookings.cs",
+              "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs [Design]",
+              "RelativeToolTip": "Bookings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T09:32:02.397Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Guests.cs",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
               "RelativeDocumentMoniker": "Guests.cs",
@@ -39,15 +87,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Guests.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
               "RelativeDocumentMoniker": "Guests.cs",
               "ToolTip": "C:\\Users\\Duimp\\Desktop\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs [Design]",
               "RelativeToolTip": "Guests.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T21:05:53.776Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-30T21:05:53.776Z"
             }
           ]
         }
