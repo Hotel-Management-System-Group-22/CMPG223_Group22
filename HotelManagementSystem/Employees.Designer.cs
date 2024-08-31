@@ -62,7 +62,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gpVerifyDetails = new System.Windows.Forms.GroupBox();
             this.cbConfirm = new System.Windows.Forms.CheckBox();
             this.txtVerifyJob = new System.Windows.Forms.TextBox();
             this.txtVerifyClerk = new System.Windows.Forms.TextBox();
@@ -76,17 +76,17 @@
             this.lblDeleteFName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.gpSort = new System.Windows.Forms.GroupBox();
             this.rdoDes = new System.Windows.Forms.RadioButton();
             this.rdoAsc = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gpFilter = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.rdoStaff = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rdoClerk = new System.Windows.Forms.RadioButton();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
             this.bttnSearch = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gpSearch = new System.Windows.Forms.GroupBox();
             this.lblSearchLName = new System.Windows.Forms.Label();
             this.lblSearchUsername = new System.Windows.Forms.Label();
             this.lblSearchFName = new System.Windows.Forms.Label();
@@ -118,12 +118,12 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpVerifyDetails.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gpSort.SuspendLayout();
+            this.gpFilter.SuspendLayout();
+            this.gpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
@@ -482,7 +482,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.gpVerifyDetails);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
@@ -493,27 +493,27 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // groupBox3
+            // gpVerifyDetails
             // 
-            this.groupBox3.Controls.Add(this.cbConfirm);
-            this.groupBox3.Controls.Add(this.txtVerifyJob);
-            this.groupBox3.Controls.Add(this.txtVerifyClerk);
-            this.groupBox3.Controls.Add(this.txtVerifyAdmin);
-            this.groupBox3.Controls.Add(this.txtVerifyLName);
-            this.groupBox3.Controls.Add(this.lblDeleteJob);
-            this.groupBox3.Controls.Add(this.lblDeleteClerk);
-            this.groupBox3.Controls.Add(this.txtVerifyFName);
-            this.groupBox3.Controls.Add(this.lblDeleteAdmin);
-            this.groupBox3.Controls.Add(this.lblDeleteLName);
-            this.groupBox3.Controls.Add(this.lblDeleteFName);
-            this.groupBox3.Location = new System.Drawing.Point(15, 12);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(305, 187);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Verfify Employee details";
+            this.gpVerifyDetails.Controls.Add(this.cbConfirm);
+            this.gpVerifyDetails.Controls.Add(this.txtVerifyJob);
+            this.gpVerifyDetails.Controls.Add(this.txtVerifyClerk);
+            this.gpVerifyDetails.Controls.Add(this.txtVerifyAdmin);
+            this.gpVerifyDetails.Controls.Add(this.txtVerifyLName);
+            this.gpVerifyDetails.Controls.Add(this.lblDeleteJob);
+            this.gpVerifyDetails.Controls.Add(this.lblDeleteClerk);
+            this.gpVerifyDetails.Controls.Add(this.txtVerifyFName);
+            this.gpVerifyDetails.Controls.Add(this.lblDeleteAdmin);
+            this.gpVerifyDetails.Controls.Add(this.lblDeleteLName);
+            this.gpVerifyDetails.Controls.Add(this.lblDeleteFName);
+            this.gpVerifyDetails.Location = new System.Drawing.Point(15, 12);
+            this.gpVerifyDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.gpVerifyDetails.Name = "gpVerifyDetails";
+            this.gpVerifyDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.gpVerifyDetails.Size = new System.Drawing.Size(305, 187);
+            this.gpVerifyDetails.TabIndex = 10;
+            this.gpVerifyDetails.TabStop = false;
+            this.gpVerifyDetails.Text = "Verfify Employee details";
             // 
             // cbConfirm
             // 
@@ -644,10 +644,10 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.groupBox4);
+            this.tabPage4.Controls.Add(this.gpSort);
+            this.tabPage4.Controls.Add(this.gpFilter);
             this.tabPage4.Controls.Add(this.bttnSearch);
-            this.tabPage4.Controls.Add(this.groupBox2);
+            this.tabPage4.Controls.Add(this.gpSearch);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
@@ -657,18 +657,18 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // groupBox5
+            // gpSort
             // 
-            this.groupBox5.Controls.Add(this.rdoDes);
-            this.groupBox5.Controls.Add(this.rdoAsc);
-            this.groupBox5.Location = new System.Drawing.Point(299, 11);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(269, 110);
-            this.groupBox5.TabIndex = 23;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Sort by:";
+            this.gpSort.Controls.Add(this.rdoDes);
+            this.gpSort.Controls.Add(this.rdoAsc);
+            this.gpSort.Location = new System.Drawing.Point(299, 11);
+            this.gpSort.Margin = new System.Windows.Forms.Padding(2);
+            this.gpSort.Name = "gpSort";
+            this.gpSort.Padding = new System.Windows.Forms.Padding(2);
+            this.gpSort.Size = new System.Drawing.Size(269, 110);
+            this.gpSort.TabIndex = 23;
+            this.gpSort.TabStop = false;
+            this.gpSort.Text = "Sort by:";
             // 
             // rdoDes
             // 
@@ -694,21 +694,21 @@
             this.rdoAsc.Text = "Ascending";
             this.rdoAsc.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // gpFilter
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.rdoStaff);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.rdoClerk);
-            this.groupBox4.Controls.Add(this.rdoAdmin);
-            this.groupBox4.Location = new System.Drawing.Point(11, 128);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(269, 93);
-            this.groupBox4.TabIndex = 23;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Filter by:";
+            this.gpFilter.Controls.Add(this.button3);
+            this.gpFilter.Controls.Add(this.rdoStaff);
+            this.gpFilter.Controls.Add(this.label12);
+            this.gpFilter.Controls.Add(this.rdoClerk);
+            this.gpFilter.Controls.Add(this.rdoAdmin);
+            this.gpFilter.Location = new System.Drawing.Point(11, 128);
+            this.gpFilter.Margin = new System.Windows.Forms.Padding(2);
+            this.gpFilter.Name = "gpFilter";
+            this.gpFilter.Padding = new System.Windows.Forms.Padding(2);
+            this.gpFilter.Size = new System.Drawing.Size(269, 93);
+            this.gpFilter.TabIndex = 23;
+            this.gpFilter.TabStop = false;
+            this.gpFilter.Text = "Filter by:";
             // 
             // button3
             // 
@@ -778,23 +778,23 @@
             this.bttnSearch.UseVisualStyleBackColor = true;
             this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // groupBox2
+            // gpSearch
             // 
-            this.groupBox2.Controls.Add(this.lblSearchLName);
-            this.groupBox2.Controls.Add(this.lblSearchUsername);
-            this.groupBox2.Controls.Add(this.lblSearchFName);
-            this.groupBox2.Controls.Add(this.btnSearchReset);
-            this.groupBox2.Controls.Add(this.txtUsername);
-            this.groupBox2.Controls.Add(this.txtSearchFName);
-            this.groupBox2.Controls.Add(this.txtSearchLName);
-            this.groupBox2.Location = new System.Drawing.Point(11, 6);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(269, 115);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Search by:";
+            this.gpSearch.Controls.Add(this.lblSearchLName);
+            this.gpSearch.Controls.Add(this.lblSearchUsername);
+            this.gpSearch.Controls.Add(this.lblSearchFName);
+            this.gpSearch.Controls.Add(this.btnSearchReset);
+            this.gpSearch.Controls.Add(this.txtUsername);
+            this.gpSearch.Controls.Add(this.txtSearchFName);
+            this.gpSearch.Controls.Add(this.txtSearchLName);
+            this.gpSearch.Location = new System.Drawing.Point(11, 6);
+            this.gpSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.gpSearch.Name = "gpSearch";
+            this.gpSearch.Padding = new System.Windows.Forms.Padding(2);
+            this.gpSearch.Size = new System.Drawing.Size(269, 115);
+            this.gpSearch.TabIndex = 22;
+            this.gpSearch.TabStop = false;
+            this.gpSearch.Text = "Search by:";
             // 
             // lblSearchLName
             // 
@@ -1030,17 +1030,17 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpVerifyDetails.ResumeLayout(false);
+            this.gpVerifyDetails.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gpSort.ResumeLayout(false);
+            this.gpSort.PerformLayout();
+            this.gpFilter.ResumeLayout(false);
+            this.gpFilter.PerformLayout();
+            this.gpSearch.ResumeLayout(false);
+            this.gpSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
@@ -1105,11 +1105,11 @@
         private System.Windows.Forms.Label lblSearchLName;
         private System.Windows.Forms.Label lblSearchFName;
         private System.Windows.Forms.Label lblSearchUsername;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gpSearch;
         private System.Windows.Forms.RadioButton rdoClerk;
         private System.Windows.Forms.RadioButton rdoAdmin;
         private System.Windows.Forms.RadioButton rdoStaff;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gpVerifyDetails;
         private System.Windows.Forms.Label lblDeleteAdmin;
         private System.Windows.Forms.Label lblDeleteLName;
         private System.Windows.Forms.Label lblDeleteFName;
@@ -1122,8 +1122,8 @@
         private System.Windows.Forms.TextBox txtVerifyFName;
         private System.Windows.Forms.CheckBox cbConfirm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox gpFilter;
+        private System.Windows.Forms.GroupBox gpSort;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Employee_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

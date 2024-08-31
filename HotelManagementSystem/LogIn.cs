@@ -22,6 +22,7 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
             txtPassword.PasswordChar = '•';
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -117,16 +118,17 @@ namespace HotelManagementSystem
         {
             if (bAfrikaans == false)
             {
-                bAfrikaans = true;
-                //Buttons
-                btnLanguage.Text = "English";
-
+                lblUsername.Text = "Gebruikersnaam";
+                lblPassword.Text = "Wagwoord";
+                btnLogin.Text = "AANMEL";
+                btnLanguage.Text = "TAAL";
             }
             else
             {
-                bAfrikaans = false;
-                //Buttons
-                btnLanguage.Text = "Afrikaans";
+                lblUsername.Text = "Username";
+                lblPassword.Text = "Password";
+                btnLogin.Text = "LOGIN";
+                btnLanguage.Text = "LANGUAGE";
             }
         }
     }

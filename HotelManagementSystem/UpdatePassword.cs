@@ -21,6 +21,7 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
             this.username = userName;  // Initialize with the username passed from the LogIn form
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         
@@ -148,16 +149,17 @@ namespace HotelManagementSystem
         {
             if (bAfrikaans == false)
             {
-                bAfrikaans = true;
-                //Buttons
-                btnLanguage.Text = "English";
-
+                lblNewPassword.Text = "Nuwe wagwoord";
+                lblConfirmNewPassword.Text = "Bevestig nuwe wagwoord";
+                btnUpdatePassword.Text = "DATEER WAGWOORD OP";
+                btnLanguage.Text = "TAAL";
             }
             else
             {
-                bAfrikaans = false;
-                //Buttons
-                btnLanguage.Text = "Afrikaans";
+                lblNewPassword.Text = "New Password";
+                lblConfirmNewPassword.Text = "Confirm new password";
+                btnUpdatePassword.Text = "UPDATE";
+                btnLanguage.Text = "LANGUAGE";
             }
         }
     }
