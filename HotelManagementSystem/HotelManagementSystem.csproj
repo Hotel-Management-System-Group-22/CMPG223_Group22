@@ -88,12 +88,6 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaintainBookings\MaintainBookings\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="MaintainBookings\MaintainBookings\obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="MaintainBookings\MaintainBookings\Program.cs" />
-    <Compile Include="MaintainBookings\MaintainBookings\Properties\AssemblyInfo.cs" />
-    <Compile Include="MaintainBookings\MaintainBookings\Properties\Resources.Designer.cs" />
-    <Compile Include="MaintainBookings\MaintainBookings\Properties\Settings.Designer.cs" />
     <Compile Include="MaintainRooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +100,6 @@
     <Compile Include="Manage-Jobs-Form.Designer.cs">
       <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports-Form.cs">
@@ -140,7 +132,6 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MaintainBookings\MaintainBookings\Properties\Resources.resx" />
     <EmbeddedResource Include="MaintainRooms.resx">
       <DependentUpon>MaintainRooms.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,7 +168,6 @@
     <None Include=".vs\ProjectSettings.json" />
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
-    <None Include="bin\Debug\HotelManagementSystem.exe.config" />
     <None Include="HotelManagementSystemDataSet.xsc">
       <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
     </None>
@@ -196,16 +186,6 @@
     <None Include="HotelManagementSystemDataSet1.xss">
       <DependentUpon>HotelManagementSystemDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="MaintainBookings\.vs\MaintainBookings\v17\.suo" />
-    <None Include="MaintainBookings\.vs\MaintainBookings\v17\DocumentLayout.json" />
-    <None Include="MaintainBookings\MaintainBookings\App.config" />
-    <None Include="MaintainBookings\MaintainBookings\MaintainBookings.csproj" />
-    <None Include="MaintainBookings\MaintainBookings\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="MaintainBookings\MaintainBookings\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="MaintainBookings\MaintainBookings\obj\Debug\MaintainBookings.csproj.AssemblyReference.cache" />
-    <None Include="MaintainBookings\MaintainBookings\obj\Release\MaintainBookings.csproj.AssemblyReference.cache" />
-    <None Include="MaintainBookings\MaintainBookings\Properties\Settings.settings" />
-    <None Include="obj\Release\HotelManagementSystem.csproj.AssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="packages\BCrypt.Net-Next.4.0.3\.signature.p7s" />
     <None Include="packages\BCrypt.Net-Next.4.0.3\BCrypt.Net-Next.4.0.3.nupkg" />
@@ -257,20 +237,7 @@
     <None Include="Resources\Maintain Guests  %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\BCrypt.Net-Next.dll" />
-    <Content Include="bin\Debug\BCrypt.Net-Next.xml" />
-    <Content Include="bin\Debug\HotelManagementSystem.exe" />
-    <Content Include="bin\Debug\HotelManagementSystem.pdb" />
-    <Content Include="bin\Debug\System.Buffers.dll" />
-    <Content Include="bin\Debug\System.Buffers.xml" />
-    <Content Include="bin\Debug\System.Memory.dll" />
-    <Content Include="bin\Debug\System.Memory.xml" />
-    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
-    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
-    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
-    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
     <Content Include="HotelManagementSystem - Copy.sln" />
-    <Content Include="MaintainBookings\MaintainBookings.sln" />
     <Content Include="packages\BCrypt.Net-Next.4.0.3\ico.png" />
     <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net20\BCrypt.Net-Next.dll" />
     <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net20\BCrypt.Net-Next.xml" />
@@ -355,10 +322,11 @@
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\version.txt" />
     <Content Include="preview-show-interface-icon-free-vector.jpg" />
+    <None Include="Resources\preview_show_interface_icon_free_vector.bmp" />
+    <None Include="Resources\OIP.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\HotelManagementSystem\v17\TestStore\0\" />
-    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
