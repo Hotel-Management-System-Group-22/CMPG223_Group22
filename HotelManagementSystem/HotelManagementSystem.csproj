@@ -94,6 +94,11 @@
     <Compile Include="MaintainBookings\MaintainBookings\Properties\AssemblyInfo.cs" />
     <Compile Include="MaintainBookings\MaintainBookings\Properties\Resources.Designer.cs" />
     <Compile Include="MaintainBookings\MaintainBookings\Properties\Settings.Designer.cs" />
+    <Compile Include="MaintainRooms.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaintainRooms.resx</DependentUpon>
+    </Compile>
     <Compile Include="Manage-Jobs-Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,7 +140,10 @@
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaintainBookings\MaintainBookings\Properties\Resources.resx" />
-    <EmbeddedResource Include="MaintainRooms.resx" />
+    <EmbeddedResource Include="MaintainRooms.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaintainRooms.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage-Jobs-Form.resx">
       <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
     </EmbeddedResource>

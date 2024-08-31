@@ -247,5 +247,10 @@ namespace HotelManagementSystem
         {
 
         }
+
+        private void dgvBookings_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
