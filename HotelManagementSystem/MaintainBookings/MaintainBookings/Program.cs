@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelManagementSystem
+namespace MaintainBookings
 {
     internal static class Program
     {
@@ -14,10 +14,9 @@ namespace HotelManagementSystem
         [STAThread]
         static void Main()
         {
-            Boolean isAfrikaans = false;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageJobsForm(isAfrikaans));
+            Application.Run(new Form1());
         }
     }
 }

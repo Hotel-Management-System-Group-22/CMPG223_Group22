@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings.Designer.cs">
+      <DependentUpon>Bookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,10 +81,69 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HotelManagementSystemDataSet1.Designer.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintainBookings\MaintainBookings\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="MaintainBookings\MaintainBookings\obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="MaintainBookings\MaintainBookings\Program.cs" />
+    <Compile Include="MaintainBookings\MaintainBookings\Properties\AssemblyInfo.cs" />
+    <Compile Include="MaintainBookings\MaintainBookings\Properties\Resources.Designer.cs" />
+    <Compile Include="MaintainBookings\MaintainBookings\Properties\Settings.Designer.cs" />
+    <Compile Include="MaintainRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintainRooms.Designer.cs">
+      <DependentUpon>MaintainRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage-Jobs-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage-Jobs-Form.Designer.cs">
+      <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports-Form.Designer.cs">
+      <DependentUpon>Reports-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePassword.Designer.cs">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bookings.resx">
+      <DependentUpon>Bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guests.resx">
       <DependentUpon>Guests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintainBookings\MaintainBookings\Properties\Resources.resx" />
+    <EmbeddedResource Include="MaintainRooms.resx" />
+    <EmbeddedResource Include="Manage-Jobs-Form.resx">
+      <DependentUpon>Manage-Jobs-Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +155,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports-Form.resx">
+      <DependentUpon>Reports-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePassword.resx">
+      <DependentUpon>UpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".vs\HotelManagementSystem.csproj.dtbcache.json" />
+    <None Include=".vs\HotelManagementSystem\FileContentIndex\2ad737db-a582-4aa9-ba00-2695fea6761f.vsidx" />
+    <None Include=".vs\HotelManagementSystem\FileContentIndex\8372a4c8-3902-4790-8bd9-b065799aaf30.vsidx" />
+    <None Include=".vs\HotelManagementSystem\FileContentIndex\86ec65ce-bbc9-456d-8ea8-5d2113e452d5.vsidx" />
+    <None Include=".vs\HotelManagementSystem\FileContentIndex\c7162d38-69a4-4cc8-9c18-545fd7acad6a.vsidx" />
+    <None Include=".vs\HotelManagementSystem\FileContentIndex\f4051e33-09f1-4e92-b23d-6bd77802aea4.vsidx" />
+    <None Include=".vs\HotelManagementSystem\v17\ - Copy.suo" />
+    <None Include=".vs\HotelManagementSystem\v17\.suo" />
+    <None Include=".vs\HotelManagementSystem\v17\.wsuo" />
+    <None Include=".vs\HotelManagementSystem\v17\DocumentLayout - Copy.json" />
+    <None Include=".vs\HotelManagementSystem\v17\DocumentLayout.json" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="bin\Debug\HotelManagementSystem.exe.config" />
     <None Include="HotelManagementSystemDataSet.xsc">
       <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
     </None>
@@ -83,6 +187,57 @@
     <None Include="HotelManagementSystemDataSet.xss">
       <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
     </None>
+    <None Include="HotelManagementSystemDataSet1.xsc">
+      <DependentUpon>HotelManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HotelManagementSystemDataSet1.xsd" />
+    <None Include="HotelManagementSystemDataSet1.xss">
+      <DependentUpon>HotelManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MaintainBookings\.vs\MaintainBookings\v17\.suo" />
+    <None Include="MaintainBookings\.vs\MaintainBookings\v17\DocumentLayout.json" />
+    <None Include="MaintainBookings\MaintainBookings\App.config" />
+    <None Include="MaintainBookings\MaintainBookings\MaintainBookings.csproj" />
+    <None Include="MaintainBookings\MaintainBookings\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="MaintainBookings\MaintainBookings\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="MaintainBookings\MaintainBookings\obj\Debug\MaintainBookings.csproj.AssemblyReference.cache" />
+    <None Include="MaintainBookings\MaintainBookings\obj\Release\MaintainBookings.csproj.AssemblyReference.cache" />
+    <None Include="MaintainBookings\MaintainBookings\Properties\Settings.settings" />
+    <None Include="obj\Release\HotelManagementSystem.csproj.AssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="packages\BCrypt.Net-Next.4.0.3\.signature.p7s" />
+    <None Include="packages\BCrypt.Net-Next.4.0.3\BCrypt.Net-Next.4.0.3.nupkg" />
+    <None Include="packages\BCrypt.Net-Next.4.0.3\readme.md" />
+    <None Include="packages\System.Buffers.4.5.1\.signature.p7s" />
+    <None Include="packages\System.Buffers.4.5.1\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.5.1\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.Buffers.4.5.1\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.5.1\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.Buffers.4.5.1\System.Buffers.4.5.1.nupkg" />
+    <None Include="packages\System.Memory.4.5.4\.signature.p7s" />
+    <None Include="packages\System.Memory.4.5.4\lib\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.4\ref\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.4\System.Memory.4.5.4.nupkg" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\.signature.p7s" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.5.0\System.Numerics.Vectors.4.5.0.nupkg" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\.signature.p7s" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\System.Runtime.CompilerServices.Unsafe.4.5.3.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,6 +253,110 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Maintain Guests  %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BCrypt.Net-Next.dll" />
+    <Content Include="bin\Debug\BCrypt.Net-Next.xml" />
+    <Content Include="bin\Debug\HotelManagementSystem.exe" />
+    <Content Include="bin\Debug\HotelManagementSystem.pdb" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="HotelManagementSystem - Copy.sln" />
+    <Content Include="MaintainBookings\MaintainBookings.sln" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\ico.png" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net20\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net20\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net35\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net35\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net462\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net462\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net5.0\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net5.0\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net6.0\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\net6.0\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.0\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.0\BCrypt.Net-Next.xml" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.1\BCrypt.Net-Next.dll" />
+    <Content Include="packages\BCrypt.Net-Next.4.0.3\lib\netstandard2.1\BCrypt.Net-Next.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\net461\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\LICENSE.TXT" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\net45\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\net45\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.5.1\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Buffers.4.5.1\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Buffers.4.5.1\version.txt" />
+    <Content Include="packages\System.Memory.4.5.4\lib\net461\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\net461\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard1.1\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.4\LICENSE.TXT" />
+    <Content Include="packages\System.Memory.4.5.4\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Memory.4.5.4\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Memory.4.5.4\version.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net45\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net45\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\version.txt" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\LICENSE.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\net461\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\net461\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard1.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\version.txt" />
+    <Content Include="preview-show-interface-icon-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\HotelManagementSystem\v17\TestStore\0\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
