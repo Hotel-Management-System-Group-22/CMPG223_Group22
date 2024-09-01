@@ -67,7 +67,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(146, 101);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(192, 20);
             this.txtUsername.TabIndex = 2;
@@ -76,7 +76,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(146, 141);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(131, 20);
             this.txtPassword.TabIndex = 4;
@@ -85,7 +85,7 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(130, 245);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(146, 54);
             this.btnLogin.TabIndex = 5;
@@ -98,7 +98,7 @@
             // 
             this.pbNotView.Image = global::HotelManagementSystem.Properties.Resources.OIP;
             this.pbNotView.Location = new System.Drawing.Point(280, 136);
-            this.pbNotView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbNotView.Margin = new System.Windows.Forms.Padding(2);
             this.pbNotView.Name = "pbNotView";
             this.pbNotView.Size = new System.Drawing.Size(34, 38);
             this.pbNotView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@
             // pbExit
             // 
             this.pbExit.Location = new System.Drawing.Point(308, 17);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(50, 37);
             this.pbExit.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             this.pbViewPassword.Image = global::HotelManagementSystem.Properties.Resources.preview_show_interface_icon_free_vector;
             this.pbViewPassword.Location = new System.Drawing.Point(280, 136);
-            this.pbViewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbViewPassword.Margin = new System.Windows.Forms.Padding(2);
             this.pbViewPassword.Name = "pbViewPassword";
             this.pbViewPassword.Size = new System.Drawing.Size(34, 39);
             this.pbViewPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,6 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(421, 366);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.pbExit);
@@ -153,7 +154,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.pbViewPassword);
             this.Controls.Add(this.pbNotView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogIn";
             this.Text = "LogIn";
             ((System.ComponentModel.ISupportInitialize)(this.pbNotView)).EndInit();

@@ -39,7 +39,7 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Location = new System.Drawing.Point(174, 258);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(253, 44);
             this.btnCheckOut.TabIndex = 15;
@@ -50,7 +50,7 @@
             // btnCheckIn
             // 
             this.btnCheckIn.Location = new System.Drawing.Point(174, 210);
-            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(253, 44);
             this.btnCheckIn.TabIndex = 14;
@@ -61,7 +61,7 @@
             // btnBookings
             // 
             this.btnBookings.Location = new System.Drawing.Point(174, 161);
-            this.btnBookings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBookings.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookings.Name = "btnBookings";
             this.btnBookings.Size = new System.Drawing.Size(253, 44);
             this.btnBookings.TabIndex = 12;
@@ -72,7 +72,7 @@
             // btnRooms
             // 
             this.btnRooms.Location = new System.Drawing.Point(174, 112);
-            this.btnRooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRooms.Margin = new System.Windows.Forms.Padding(2);
             this.btnRooms.Name = "btnRooms";
             this.btnRooms.Size = new System.Drawing.Size(253, 44);
             this.btnRooms.TabIndex = 11;
@@ -83,7 +83,7 @@
             // btnGuests
             // 
             this.btnGuests.Location = new System.Drawing.Point(174, 63);
-            this.btnGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuests.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuests.Name = "btnGuests";
             this.btnGuests.Size = new System.Drawing.Size(253, 44);
             this.btnGuests.TabIndex = 9;
@@ -94,7 +94,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(504, 326);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(2);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(76, 30);
             this.btnLanguage.TabIndex = 16;
@@ -106,6 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.btnCheckOut);
@@ -113,7 +114,7 @@
             this.Controls.Add(this.btnBookings);
             this.Controls.Add(this.btnRooms);
             this.Controls.Add(this.btnGuests);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClerkMenu";
             this.Text = "ClerkMenu";
             this.ResumeLayout(false);

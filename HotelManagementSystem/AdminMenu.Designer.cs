@@ -42,7 +42,7 @@
             // btnGuests
             // 
             this.btnGuests.Location = new System.Drawing.Point(135, 10);
-            this.btnGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuests.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuests.Name = "btnGuests";
             this.btnGuests.Size = new System.Drawing.Size(253, 44);
             this.btnGuests.TabIndex = 2;
@@ -53,7 +53,7 @@
             // btnEmployees
             // 
             this.btnEmployees.Location = new System.Drawing.Point(135, 58);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(253, 44);
             this.btnEmployees.TabIndex = 3;
@@ -64,7 +64,7 @@
             // btnRooms
             // 
             this.btnRooms.Location = new System.Drawing.Point(135, 107);
-            this.btnRooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRooms.Margin = new System.Windows.Forms.Padding(2);
             this.btnRooms.Name = "btnRooms";
             this.btnRooms.Size = new System.Drawing.Size(253, 44);
             this.btnRooms.TabIndex = 4;
@@ -75,7 +75,7 @@
             // btnBookings
             // 
             this.btnBookings.Location = new System.Drawing.Point(135, 156);
-            this.btnBookings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBookings.Margin = new System.Windows.Forms.Padding(2);
             this.btnBookings.Name = "btnBookings";
             this.btnBookings.Size = new System.Drawing.Size(253, 44);
             this.btnBookings.TabIndex = 5;
@@ -86,7 +86,7 @@
             // btnJobs
             // 
             this.btnJobs.Location = new System.Drawing.Point(135, 205);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(2);
             this.btnJobs.Name = "btnJobs";
             this.btnJobs.Size = new System.Drawing.Size(253, 44);
             this.btnJobs.TabIndex = 6;
@@ -97,7 +97,7 @@
             // btnCheckIn
             // 
             this.btnCheckIn.Location = new System.Drawing.Point(135, 254);
-            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(253, 44);
             this.btnCheckIn.TabIndex = 7;
@@ -108,7 +108,7 @@
             // btnReports
             // 
             this.btnReports.Location = new System.Drawing.Point(135, 349);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(2);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(253, 44);
             this.btnReports.TabIndex = 8;
@@ -119,7 +119,7 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Location = new System.Drawing.Point(135, 301);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(253, 44);
             this.btnCheckOut.TabIndex = 9;
@@ -130,7 +130,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(494, 371);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(2);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(86, 23);
             this.btnLanguage.TabIndex = 10;
@@ -142,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(600, 403);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.btnCheckOut);
@@ -152,7 +153,7 @@
             this.Controls.Add(this.btnRooms);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnGuests);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
             this.ResumeLayout(false);

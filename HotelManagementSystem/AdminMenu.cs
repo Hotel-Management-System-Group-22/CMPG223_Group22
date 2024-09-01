@@ -65,7 +65,7 @@ namespace HotelManagementSystem
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ReportsForm reports = new ReportsForm(true);
+            ReportsForm reports = new ReportsForm(isAfrikaans);
             reports.Show();
         }
 

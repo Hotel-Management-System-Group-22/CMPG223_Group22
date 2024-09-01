@@ -109,7 +109,15 @@ namespace HotelManagementSystem
                             // Format the columns in dgvReport
                             dgvBookings.Columns["TotalCheckOuts"].HeaderText = "Total Number of Check-Outs";
                             lblHeading.Visible = true;
-                            lblHeading.Text = "Report Showing "+cbReports.SelectedItem.ToString()+" between "+startDate+" - " + endDate;
+                           
+                            if (isAfrikaans)
+                            {
+                                lblHeading.Text = "Versoek  Wys "+cbReports.SelectedItem.ToString()+" tussen "+startDate.Date.ToString("yyyy-MM-dd")+" - " + endDate.Date.ToString("yyyy-MM-dd");
+                            }
+                            else
+                            {
+                                lblHeading.Text = "Report Showing " + cbReports.SelectedItem.ToString() + " between " + startDate.Date.ToString("yyyy-MM-dd") + " - " + endDate.Date.ToString("yyyy-MM-dd");
+                            }
                         }
                         catch (Exception ex)
                         {
