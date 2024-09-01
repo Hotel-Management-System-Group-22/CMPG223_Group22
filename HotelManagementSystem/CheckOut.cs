@@ -170,8 +170,7 @@ namespace HotelManagementSystem
         private void btnCheckOutCancel_Click(object sender, EventArgs e)
         {
             txtBookingID.Text = string.Empty;
-            txtGuestID.Text = string.Empty;
-            txtRoomID.Text = string.Empty;
+            
             dateTimePicker1.Value = DateTime.Now; 
             LoadData();
         }
@@ -197,8 +196,28 @@ namespace HotelManagementSystem
                     if (result == DialogResult.Yes)
                             {
 
-                                ValidateArrivalDate(int.Parse(txtBookingID.Text), DateTime.Now);                               
-                            }
+                                ValidateArrivalDate(int.Parse(txtBookingID.Text), DateTime.Now);
+                                using (SqlConnection conn = new SqlConnection(connection))
+                                {
+                                    //stack overflow Test!
+                                    string query = @"SELECT Guest.Guest_FName, Guest.Guest_LName, Room.Room_ID FROM Booking JOIN Guest ON Booking.Guest_ID = Guest.Guest_ID JOIN Room ON Booking.Room_ID = Room.Room_ID WHERE Booking.Booking_ID = @BookingID";
+
+                                    SqlCommand cmd = new SqlCommand(query, conn);
+                                    cmd.Parameters.AddWithValue("@BookingID", txtBookingID.Text);
+
+                                    conn.Open();
+                                    SqlDataReader reader = cmd.ExecuteReader();
+
+                                    if (reader.Read())
+                                    {
+                                        txtGuestFName.Text = reader["Guest_FName"].ToString();
+                                        txtGuestLName.Text = reader["Guest_LName"].ToString();
+                                        txtCheckOutRoom.Text = reader["Room_ID"].ToString();
+                                    }
+
+                                    reader.Close();
+                                }
+                    }
                         
                 }
                 else {
@@ -266,6 +285,7 @@ namespace HotelManagementSystem
 
         private void txtGuestID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtGuestID.Text, out int result)) || (txtGuestID.Text == string.Empty))
             {
@@ -288,6 +308,7 @@ namespace HotelManagementSystem
                 txtGuestID.Select(txtGuestID.Text.Length, 0);
 
             }
+            */
            
         }
 
@@ -311,6 +332,7 @@ namespace HotelManagementSystem
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
             {
@@ -333,9 +355,31 @@ namespace HotelManagementSystem
                 txtRoomID.Select(txtRoomID.Text.Length, 0);
 
             }
+            */
 
             
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            
+        }
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -380,9 +424,9 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(btnCheckOut, "Teken die bespreking uit.");
                 toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
                 toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
-                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
+               // toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
                 toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
+                //toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
 
 
             }
@@ -399,9 +443,9 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(btnCheckOut, "Check the customer out.");
                 toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
                 toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
-                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
+                //toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
                 toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
-                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
+                //toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
             }
         }
     }

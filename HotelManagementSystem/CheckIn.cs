@@ -169,8 +169,8 @@ namespace HotelManagementSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtRoomID.Text = string.Empty;
-            txtGuestID.Text = string.Empty;
+            txtRoomNr.Text = string.Empty;
+            txtGuestFName.Text = string.Empty;
             txtBookingID.Text = string.Empty;
             dateTimePicker1.Value = DateTime.Now;
             LoadData();
@@ -194,9 +194,30 @@ namespace HotelManagementSystem
                     }
                     if (result == DialogResult.Yes)
                         {
-                            ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
+                            ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);
 
-                         }                        
+                        using (SqlConnection conn = new SqlConnection(connection))
+                        {
+                            //stack overflow Test!
+                            string query = @"SELECT Guest.Guest_FName, Guest.Guest_LName, Room.Room_ID FROM Booking JOIN Guest ON Booking.Guest_ID = Guest.Guest_ID JOIN Room ON Booking.Room_ID = Room.Room_ID WHERE Booking.Booking_ID = @BookingID";
+
+                            SqlCommand cmd = new SqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@BookingID", txtBookingID.Text);
+
+                            conn.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            if (reader.Read())
+                            {
+                                txtGuestFName.Text = reader["Guest_FName"].ToString();
+                                txtGuestLName.Text = reader["Guest_LName"].ToString();
+                                txtRoomNr.Text = reader["Room_ID"].ToString();
+                            }
+
+                            reader.Close();
+                        }
+
+                    }                        
                 }else {
                     if (bAfrikaans == false)
                     {
@@ -223,8 +244,8 @@ namespace HotelManagementSystem
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            Bookings booking = new Bookings();
-            booking.Show();
+            //Bookings booking = new Bookings();
+           // booking.Show();
         }
 
         private void CheckIn_Load(object sender, EventArgs e)
@@ -263,11 +284,11 @@ namespace HotelManagementSystem
         private void txtGuestID_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtGuestID.Text, out int result)) || (txtGuestID.Text == string.Empty))
+            if ((int.TryParse(txtGuestFName.Text, out int result)) || (txtGuestFName.Text == string.Empty))
             {
                 // The input is a valid integer
-                UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
-                sGuestId = txtGuestID.Text;
+                UpdateDataGridView(txtGuestFName.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+                sGuestId = txtGuestFName.Text;
             }
             else
             {
@@ -280,8 +301,8 @@ namespace HotelManagementSystem
                 {
                     MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                txtGuestID.Text = sGuestId;
-                txtGuestID.Select(txtGuestID.Text.Length, 0);
+                txtGuestFName.Text = sGuestId;
+                txtGuestFName.Select(txtGuestFName.Text.Length, 0);
 
             }
            
@@ -308,11 +329,11 @@ namespace HotelManagementSystem
         private void txtRoomID_TextChanged(object sender, EventArgs e)
         {
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
+            if ((int.TryParse(txtRoomNr.Text, out int result)) || (txtRoomNr.Text == string.Empty))
             {
                 // The input is a valid integer
-                UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
-                sRoomId = txtRoomID.Text;
+                UpdateDataGridView(txtRoomNr.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+                sRoomId = txtRoomNr.Text;
             }
             else
             {
@@ -325,12 +346,17 @@ namespace HotelManagementSystem
                 {
                     MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                txtRoomID.Text = sRoomId;
-                txtRoomID.Select(txtRoomID.Text.Length, 0);
+                txtRoomNr.Text = sRoomId;
+                txtRoomNr.Select(txtRoomNr.Text.Length, 0);
 
             }
 
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -378,9 +404,9 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(btnCheckIn, "Teken die bespreking in.");
                 toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
                 toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
-                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtRoomNr, "Tik die Kamer ID in van die bespreeking.");
                 toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtGuestFName, "Tik die Gas ID in van die bespreeking.");
 
 
             }
@@ -399,9 +425,9 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(btnLanguage, "Change the language of the form.");
                 toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
                 toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
-                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
+                toolTip1.SetToolTip(txtRoomNr, "Type in the Bookings Room ID.");
                 toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
-                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
+                toolTip1.SetToolTip(txtGuestFName, "Type in the Bookings Guest ID.");
 
             }
         }

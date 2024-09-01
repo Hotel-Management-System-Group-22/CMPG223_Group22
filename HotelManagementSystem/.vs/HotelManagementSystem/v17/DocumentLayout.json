@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\caitlin calder\\onedrive\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -15,28 +43,8 @@
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|c:\\users\\caitlin calder\\onedrive\\desktop\\cmpg223 project\\cmpg223_group22\\hotelmanagementsystem\\manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:manage-jobs-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:maintainrooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,20 +91,12 @@
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:reports-form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:guests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:updatepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA8852E-7B81-4F15-9C29-E141966ADD59}|HotelManagementSystem.csproj|C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,23 +110,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdatePassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
-              "RelativeDocumentMoniker": "UpdatePassword.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
-              "RelativeToolTip": "UpdatePassword.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T07:40:56.41Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "CheckIn.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
               "RelativeDocumentMoniker": "CheckIn.cs",
@@ -138,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MaintainRooms.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs",
               "RelativeDocumentMoniker": "MaintainRooms.cs",
@@ -150,31 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reports-Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
-              "RelativeDocumentMoniker": "Reports-Form.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs [Design]",
-              "RelativeToolTip": "Reports-Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:49:33.214Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Manage-Jobs-Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
-              "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs [Design]",
-              "RelativeToolTip": "Manage-Jobs-Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:49:01.374Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Manage-Jobs-Form.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
               "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
@@ -188,18 +152,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
-              "RelativeDocumentMoniker": "LogIn.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
-              "RelativeToolTip": "LogIn.cs [Design]",
+              "Title": "CheckIn.cs",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
+              "RelativeDocumentMoniker": "CheckIn.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
+              "RelativeToolTip": "CheckIn.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAkwCQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:43:34.196Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-31T22:47:25.786Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "CheckOut.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
               "RelativeDocumentMoniker": "CheckOut.cs",
@@ -211,20 +176,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CheckIn.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
-              "RelativeDocumentMoniker": "CheckIn.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckIn.cs",
-              "RelativeToolTip": "CheckIn.cs",
-              "ViewState": "AQIAAMwAAAAAAAAAAAASwOIAAAAYAAAA",
+              "DocumentIndex": 3,
+              "Title": "CheckOut.cs",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
+              "RelativeDocumentMoniker": "CheckOut.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
+              "RelativeToolTip": "CheckOut.cs",
+              "ViewState": "AQIAAEIBAAAAAAAAAADwv1MBAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:47:25.786Z",
+              "WhenOpened": "2024-08-31T22:47:45.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T21:34:39.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdatePassword.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
+              "RelativeDocumentMoniker": "UpdatePassword.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs [Design]",
+              "RelativeToolTip": "UpdatePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T07:40:56.41Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Manage-Jobs-Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs",
+              "RelativeDocumentMoniker": "Manage-Jobs-Form.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Manage-Jobs-Form.cs [Design]",
+              "RelativeToolTip": "Manage-Jobs-Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T22:49:01.374Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Reports-Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
+              "RelativeDocumentMoniker": "Reports-Form.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs [Design]",
+              "RelativeToolTip": "Reports-Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T22:49:33.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogIn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs",
+              "RelativeDocumentMoniker": "LogIn.cs",
+              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\LogIn.cs [Design]",
+              "RelativeToolTip": "LogIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T22:43:34.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MaintainRooms.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\MaintainRooms.cs",
               "RelativeDocumentMoniker": "MaintainRooms.cs",
@@ -237,31 +261,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Bookings.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
               "RelativeDocumentMoniker": "Bookings.cs",
               "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs [Design]",
               "RelativeToolTip": "Bookings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:42:39.617Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-31T22:42:39.617Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Guests.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
               "RelativeDocumentMoniker": "Guests.cs",
               "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs [Design]",
               "RelativeToolTip": "Guests.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:48:16.181Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-31T22:48:16.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Bookings.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Bookings.cs",
               "RelativeDocumentMoniker": "Bookings.cs",
@@ -269,24 +291,22 @@
               "RelativeToolTip": "Bookings.cs",
               "ViewState": "AQIAADkFAAAAAAAAAAAawG8GAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:43:02.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T22:43:02.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Employees.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
               "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs [Design]",
               "RelativeToolTip": "Employees.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:47:53.303Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-31T22:47:53.303Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Employees.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Employees.cs",
               "RelativeDocumentMoniker": "Employees.cs",
@@ -294,12 +314,11 @@
               "RelativeToolTip": "Employees.cs",
               "ViewState": "AQIAAJoEAAAAAAAAAAAAAL0DAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:48:09.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T22:48:09.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Reports-Form.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Reports-Form.cs",
               "RelativeDocumentMoniker": "Reports-Form.cs",
@@ -307,12 +326,11 @@
               "RelativeToolTip": "Reports-Form.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAwBoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:49:48.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T22:49:48.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AdminMenu.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\AdminMenu.cs",
               "RelativeDocumentMoniker": "AdminMenu.cs",
@@ -324,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AdminMenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\AdminMenu.cs",
               "RelativeDocumentMoniker": "AdminMenu.cs",
@@ -335,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ClerkMenu.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\ClerkMenu.cs",
               "RelativeDocumentMoniker": "ClerkMenu.cs",
@@ -347,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ClerkMenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\ClerkMenu.cs",
               "RelativeDocumentMoniker": "ClerkMenu.cs",
@@ -358,20 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CheckOut.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
-              "RelativeDocumentMoniker": "CheckOut.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\CheckOut.cs",
-              "RelativeToolTip": "CheckOut.cs",
-              "ViewState": "AQIAABgBAAAAAAAAAAAuwCcBAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:47:45.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Guests.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Guests.cs",
               "RelativeDocumentMoniker": "Guests.cs",
@@ -379,12 +384,11 @@
               "RelativeToolTip": "Guests.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAG0DAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:48:29.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T22:48:29.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "UpdatePassword.cs",
               "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\UpdatePassword.cs",
               "RelativeDocumentMoniker": "UpdatePassword.cs",
@@ -392,20 +396,7 @@
               "RelativeToolTip": "UpdatePassword.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAwwB0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T00:34:49.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T21:34:39.189Z"
+              "WhenOpened": "2024-09-01T00:34:49.062Z"
             },
             {
               "$type": "Document",
@@ -417,8 +408,7 @@
               "RelativeToolTip": "LogIn.cs",
               "ViewState": "AQIAAGkAAAAAAAAAAAAYwH0AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:43:36.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T22:43:36.612Z"
             }
           ]
         }

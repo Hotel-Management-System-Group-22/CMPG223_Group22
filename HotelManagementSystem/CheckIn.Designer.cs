@@ -36,20 +36,24 @@
             this.lblBookingID = new System.Windows.Forms.Label();
             this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.btnCheckIn = new System.Windows.Forms.Button();
-            this.txtRoomID = new System.Windows.Forms.TextBox();
+            this.txtRoomNr = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtGuestID = new System.Windows.Forms.TextBox();
+            this.txtGuestFName = new System.Windows.Forms.TextBox();
             this.lblRoomID = new System.Windows.Forms.Label();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpBxCheckIn = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGuestLName = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpBxCheckIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,12 +71,12 @@
             // lblGuestID
             // 
             this.lblGuestID.AutoSize = true;
-            this.lblGuestID.Location = new System.Drawing.Point(19, 145);
+            this.lblGuestID.Location = new System.Drawing.Point(15, 73);
             this.lblGuestID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGuestID.Name = "lblGuestID";
-            this.lblGuestID.Size = new System.Drawing.Size(94, 25);
+            this.lblGuestID.Size = new System.Drawing.Size(169, 25);
             this.lblGuestID.TabIndex = 7;
-            this.lblGuestID.Text = "Guest ID:";
+            this.lblGuestID.Text = "Guest First Name:";
             // 
             // txtBookingID
             // 
@@ -96,19 +100,19 @@
             // 
             // btnBookingUpdate
             // 
-            this.btnBookingUpdate.Location = new System.Drawing.Point(560, 155);
+            this.btnBookingUpdate.Location = new System.Drawing.Point(560, 143);
             this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookingUpdate.Name = "btnBookingUpdate";
-            this.btnBookingUpdate.Size = new System.Drawing.Size(226, 39);
+            this.btnBookingUpdate.Size = new System.Drawing.Size(226, 58);
             this.btnBookingUpdate.TabIndex = 6;
-            this.btnBookingUpdate.Text = "Update Booking Info";
+            this.btnBookingUpdate.Text = "Update or Search Booking Info";
             this.toolTip1.SetToolTip(this.btnBookingUpdate, "Click to navigate to BOokings Form");
             this.btnBookingUpdate.UseVisualStyleBackColor = true;
             this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.Location = new System.Drawing.Point(560, 108);
+            this.btnCheckIn.Location = new System.Drawing.Point(560, 97);
             this.btnCheckIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(226, 39);
@@ -118,19 +122,20 @@
             this.btnCheckIn.UseVisualStyleBackColor = true;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
-            // txtRoomID
+            // txtRoomNr
             // 
-            this.txtRoomID.Location = new System.Drawing.Point(198, 80);
-            this.txtRoomID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRoomID.Name = "txtRoomID";
-            this.txtRoomID.Size = new System.Drawing.Size(191, 30);
-            this.txtRoomID.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.txtRoomID, "Enter Room ID");
-            this.txtRoomID.TextChanged += new System.EventHandler(this.txtRoomID_TextChanged);
+            this.txtRoomNr.Location = new System.Drawing.Point(194, 31);
+            this.txtRoomNr.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRoomNr.Name = "txtRoomNr";
+            this.txtRoomNr.ReadOnly = true;
+            this.txtRoomNr.Size = new System.Drawing.Size(191, 30);
+            this.txtRoomNr.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtRoomNr, "Enter Room ID");
+            this.txtRoomNr.TextChanged += new System.EventHandler(this.txtRoomID_TextChanged);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(7, 211);
+            this.dateTimePicker1.Location = new System.Drawing.Point(24, 224);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(325, 30);
@@ -150,25 +155,26 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtGuestID
+            // txtGuestFName
             // 
-            this.txtGuestID.Location = new System.Drawing.Point(198, 140);
-            this.txtGuestID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGuestID.Name = "txtGuestID";
-            this.txtGuestID.Size = new System.Drawing.Size(191, 30);
-            this.txtGuestID.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.txtGuestID, "Enter Guest ID");
-            this.txtGuestID.TextChanged += new System.EventHandler(this.txtGuestID_TextChanged);
+            this.txtGuestFName.Location = new System.Drawing.Point(194, 68);
+            this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGuestFName.Name = "txtGuestFName";
+            this.txtGuestFName.ReadOnly = true;
+            this.txtGuestFName.Size = new System.Drawing.Size(191, 30);
+            this.txtGuestFName.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtGuestFName, "Enter Guest ID");
+            this.txtGuestFName.TextChanged += new System.EventHandler(this.txtGuestID_TextChanged);
             // 
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(19, 94);
+            this.lblRoomID.Location = new System.Drawing.Point(15, 31);
             this.lblRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(93, 25);
+            this.lblRoomID.Size = new System.Drawing.Size(143, 25);
             this.lblRoomID.TabIndex = 8;
-            this.lblRoomID.Text = "Room ID:";
+            this.lblRoomID.Text = "Room Number:";
             // 
             // btnLanguage
             // 
@@ -196,15 +202,12 @@
             // grpBxCheckIn
             // 
             this.grpBxCheckIn.BackColor = System.Drawing.Color.PapayaWhip;
+            this.grpBxCheckIn.Controls.Add(this.groupBox1);
             this.grpBxCheckIn.Controls.Add(this.lblBookingID);
             this.grpBxCheckIn.Controls.Add(this.txtBookingID);
-            this.grpBxCheckIn.Controls.Add(this.lblRoomID);
             this.grpBxCheckIn.Controls.Add(this.btnCancel);
             this.grpBxCheckIn.Controls.Add(this.btnBookingUpdate);
-            this.grpBxCheckIn.Controls.Add(this.txtRoomID);
             this.grpBxCheckIn.Controls.Add(this.btnCheckIn);
-            this.grpBxCheckIn.Controls.Add(this.lblGuestID);
-            this.grpBxCheckIn.Controls.Add(this.txtGuestID);
             this.grpBxCheckIn.Controls.Add(this.dateTimePicker1);
             this.grpBxCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxCheckIn.Location = new System.Drawing.Point(71, 131);
@@ -222,6 +225,42 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Guest Last Name:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtGuestLName
+            // 
+            this.txtGuestLName.Location = new System.Drawing.Point(194, 106);
+            this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGuestLName.Name = "txtGuestLName";
+            this.txtGuestLName.ReadOnly = true;
+            this.txtGuestLName.Size = new System.Drawing.Size(191, 30);
+            this.txtGuestLName.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.txtGuestLName, "Enter Guest ID");
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtGuestLName);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtGuestFName);
+            this.groupBox1.Controls.Add(this.lblGuestID);
+            this.groupBox1.Controls.Add(this.txtRoomNr);
+            this.groupBox1.Controls.Add(this.lblRoomID);
+            this.groupBox1.Location = new System.Drawing.Point(24, 70);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(519, 147);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Booking Details";
             // 
             // CheckIn
             // 
@@ -243,6 +282,8 @@
             this.grpBxCheckIn.ResumeLayout(false);
             this.grpBxCheckIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,15 +296,18 @@
         private System.Windows.Forms.Label lblBookingID;
         private System.Windows.Forms.Button btnBookingUpdate;
         private System.Windows.Forms.Button btnCheckIn;
-        private System.Windows.Forms.TextBox txtRoomID;
+        private System.Windows.Forms.TextBox txtRoomNr;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtGuestID;
+        private System.Windows.Forms.TextBox txtGuestFName;
         private System.Windows.Forms.Label lblRoomID;
         private System.Windows.Forms.Button btnLanguage;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox grpBxCheckIn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtGuestLName;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
