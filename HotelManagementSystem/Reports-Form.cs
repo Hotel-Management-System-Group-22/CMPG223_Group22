@@ -82,7 +82,9 @@ namespace HotelManagementSystem
             {
                 if (cbReports.SelectedIndex == 0) 
                 {
-                    string query = @"
+                    if (endDate > startDate)
+                    {
+                        string query = @"
     SELECT 
         COUNT(*) AS TotalCheckOuts
     FROM 
@@ -90,46 +92,58 @@ namespace HotelManagementSystem
     WHERE 
         Guest_Departure BETWEEN @StartDate AND @EndDate;";
 
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        SqlCommand command = new SqlCommand(query, connection);
-                        command.Parameters.AddWithValue("@StartDate", startDate);
-                        command.Parameters.AddWithValue("@EndDate", endDate);
-
-                        try
+                        using (SqlConnection connection = new SqlConnection(connectionString))
                         {
-                            connection.Open();
-                            SqlDataAdapter adapter = new SqlDataAdapter(command);
-                            DataTable dataTable = new DataTable();
-                            adapter.Fill(dataTable);
+                            SqlCommand command = new SqlCommand(query, connection);
+                            command.Parameters.AddWithValue("@StartDate", startDate);
+                            command.Parameters.AddWithValue("@EndDate", endDate);
 
-                            // Bind the DataTable to the DataGridView
-                            dgvBookings.DataSource = dataTable;
-
-                            // Format the columns in dgvReport
-                            dgvBookings.Columns["TotalCheckOuts"].HeaderText = "Total Number of Check-Outs";
-                            lblHeading.Visible = true;
-                           
-                            if (isAfrikaans)
+                            try
                             {
-                                lblHeading.Text = "Versoek  Wys "+cbReports.SelectedItem.ToString()+" tussen "+startDate.Date.ToString("yyyy-MM-dd")+" - " + endDate.Date.ToString("yyyy-MM-dd");
+                                connection.Open();
+                                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                                DataTable dataTable = new DataTable();
+                                adapter.Fill(dataTable);
+
+                                // Bind the DataTable to the DataGridView
+                                dgvBookings.DataSource = dataTable;
+
+                                // Format the columns in dgvReport
+                                dgvBookings.Columns["TotalCheckOuts"].HeaderText = "Total Number of Check-Outs";
+                                lblHeading.Visible = true;
+
+                                if (isAfrikaans)
+                                {
+                                    lblHeading.Text = "Versoek  Wys " + cbReports.SelectedItem.ToString() + " tussen " + startDate.Date.ToString("yyyy-MM-dd") + " - " + endDate.Date.ToString("yyyy-MM-dd");
+                                }
+                                else
+                                {
+                                    lblHeading.Text = "Report Showing " + cbReports.SelectedItem.ToString() + " between " + startDate.Date.ToString("yyyy-MM-dd") + " - " + endDate.Date.ToString("yyyy-MM-dd");
+                                }
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                lblHeading.Text = "Report Showing " + cbReports.SelectedItem.ToString() + " between " + startDate.Date.ToString("yyyy-MM-dd") + " - " + endDate.Date.ToString("yyyy-MM-dd");
+                                if (isAfrikaans)
+                                {
+                                    MessageBox.Show("Daar het 'n fout voorgekom: " + ex.Message);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("An error occurred: " + ex.Message);
+                                }
+
                             }
                         }
-                        catch (Exception ex)
+                    }
+                    else
+                    { 
+                        if (isAfrikaans)
                         {
-                            if (isAfrikaans)
-                            {
-                                MessageBox.Show("Daar het 'n fout voorgekom: " + ex.Message);
-                            }
-                            else
-                            {
-                                MessageBox.Show("An error occurred: " + ex.Message);
-                            }
-
+                            MessageBox.Show("Eind datum kan nie voor die begin datum wees nie");
+                        }
+                        else
+                        {
+                            MessageBox.Show("End date cannot be before start date");
                         }
                     }
                 } 
