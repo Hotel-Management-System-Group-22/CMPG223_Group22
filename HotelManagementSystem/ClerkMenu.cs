@@ -24,6 +24,7 @@ namespace HotelManagementSystem
         {
             Guests guests = new Guests(isAfrikaans);
             guests.Show();
+            this.Hide();
 
         }
 
@@ -31,24 +32,28 @@ namespace HotelManagementSystem
         {
             MaintainRooms maintainRooms = new MaintainRooms(isAfrikaans);
             maintainRooms.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Bookings bookings = new Bookings(isAfrikaans);
             bookings.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             CheckIn checkIn = new CheckIn(isAfrikaans);
             checkIn.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             CheckOut checkOut = new CheckOut(isAfrikaans);
             checkOut.Show();
+            this.Hide();
         }
 
         private void btnLanguage_Click(object sender, EventArgs e)

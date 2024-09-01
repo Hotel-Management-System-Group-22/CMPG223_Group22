@@ -17,7 +17,7 @@ namespace HotelManagementSystem
             Boolean isAfrikaans = false;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMenu(isAfrikaans));
+            Application.Run(new LogIn(isAfrikaans));
         }
     }
 }

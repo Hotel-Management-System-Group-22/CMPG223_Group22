@@ -25,48 +25,56 @@ namespace HotelManagementSystem
         {
             Guests guests = new Guests(isAfrikaans);
             guests.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Employees employees = new Employees(isAfrikaans);
             employees.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MaintainRooms rooms = new MaintainRooms(isAfrikaans);
             rooms.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Bookings booking = new Bookings(isAfrikaans);
             booking.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             ManageJobsForm manageJobs = new ManageJobsForm(isAfrikaans);
             manageJobs.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             CheckIn checkIn = new CheckIn(isAfrikaans);
             checkIn.Show();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             CheckOut checkOut = new CheckOut(isAfrikaans);
             checkOut.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             ReportsForm reports = new ReportsForm(isAfrikaans);
             reports.Show();
+            this.Hide();
         }
 
         private void btnLanguage_Click(object sender, EventArgs e)
