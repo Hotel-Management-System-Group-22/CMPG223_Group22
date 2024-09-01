@@ -183,6 +183,26 @@ namespace HotelManagementSystem
             {
                 if (IsValueInTable("Booking_ID",txtBookingID.Text))
                 {
+                    using (SqlConnection conn = new SqlConnection(connection))
+                    {
+                        //stack overflow Test!
+                        string query = @"SELECT Guest.Guest_FName, Guest.Guest_LName, Room.Room_ID FROM Booking JOIN Guest ON Booking.Guest_ID = Guest.Guest_ID JOIN Room ON Booking.Room_ID = Room.Room_ID WHERE Booking.Booking_ID = @BookingID";
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@BookingID", txtBookingID.Text);
+
+                        conn.Open();
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            txtGuestFName.Text = reader["Guest_FName"].ToString();
+                            txtGuestLName.Text = reader["Guest_LName"].ToString();
+                            txtRoomNr.Text = reader["Room_ID"].ToString();
+                        }
+
+                        reader.Close();
+                    }
                     DialogResult result;
                     if (bAfrikaans == false)
                     {
@@ -193,29 +213,8 @@ namespace HotelManagementSystem
                         result = MessageBox.Show("Is jy seker jy wil inteken? \nBooking ID: " + txtBookingID.Text, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     }
                     if (result == DialogResult.Yes)
-                        {
+                    {
                             ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);
-
-                        using (SqlConnection conn = new SqlConnection(connection))
-                        {
-                            //stack overflow Test!
-                            string query = @"SELECT Guest.Guest_FName, Guest.Guest_LName, Room.Room_ID FROM Booking JOIN Guest ON Booking.Guest_ID = Guest.Guest_ID JOIN Room ON Booking.Room_ID = Room.Room_ID WHERE Booking.Booking_ID = @BookingID";
-
-                            SqlCommand cmd = new SqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("@BookingID", txtBookingID.Text);
-
-                            conn.Open();
-                            SqlDataReader reader = cmd.ExecuteReader();
-
-                            if (reader.Read())
-                            {
-                                txtGuestFName.Text = reader["Guest_FName"].ToString();
-                                txtGuestLName.Text = reader["Guest_LName"].ToString();
-                                txtRoomNr.Text = reader["Room_ID"].ToString();
-                            }
-
-                            reader.Close();
-                        }
 
                     }                        
                 }else {
