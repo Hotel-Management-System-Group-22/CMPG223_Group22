@@ -21,9 +21,10 @@ namespace HotelManagementSystem
         public CheckOut(bool isAfrikaans)
         {
             InitializeComponent();
-            bool bAfrikaans = isAfrikaans;
+             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
+        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void LoadData()
         {
@@ -226,8 +227,8 @@ namespace HotelManagementSystem
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            //Booking booking = new Booking();
-            //booking.ShowDialog();
+            Bookings booking = new Bookings(bAfrikaans);
+            booking.Show();
         }
 
         private void CheckOut_Load(object sender, EventArgs e)
@@ -449,11 +450,15 @@ namespace HotelManagementSystem
                // toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
                 toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
                 //toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
+                grpBxCheckOut.Text = "Teken uit";
+                groupBox1.Text = "Bespreekings besonderhede";
 
 
             }
             else
             {
+                grpBxCheckOut.Text = "Check Out";
+                groupBox1.Text = "Bookings Details";
                 btnLanguage.Text = "Afrikaans";
                 lblBookingID.Text = "Booking ID:";
                 lblGuestFName.Text = "Guest First Name:";

@@ -223,8 +223,8 @@ namespace HotelManagementSystem
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            //Bookings booking = new Bookings();
-           // booking.Show();
+            Bookings booking = new Bookings(bAfrikaans);
+            booking.Show();
         }
 
         private void CheckIn_Load(object sender, EventArgs e)
@@ -415,11 +415,15 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtRoomNr, "Tik die Kamer ID in van die bespreeking.");
                 toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
                 toolTip1.SetToolTip(txtGuestFName, "Tik die Gas ID in van die bespreeking.");
+                grpBxCheckIn.Text = "Teken In";
+                groupBox1.Text = "Bespreekings besonderhede";
 
 
             }
             else
             {
+                grpBxCheckIn.Text = "Check In";
+                groupBox1.Text = "Bookings Details";
                 btnLanguage.Text = "Afrikaans";
                 lblBookingID.Text = "Booking ID:";
                 lblGuestFName.Text = "Guest First Name:";

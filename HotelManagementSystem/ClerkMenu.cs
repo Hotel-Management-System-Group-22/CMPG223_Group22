@@ -24,6 +24,7 @@ namespace HotelManagementSystem
         {
             Guests guests = new Guests(isAfrikaans);
             guests.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -19,15 +19,18 @@ namespace HotelManagementSystem
 {
     public partial class ManageJobsForm : Form
     {
-        Boolean isAfrikaans;
-        public ManageJobsForm(Boolean isAfrikaans) { 
-             this.isAfrikaans = isAfrikaans;
-             InitializeComponent();
-             checkLanguage();
+        bool isAfrikaans;
+        public ManageJobsForm(bool bAfrikaans) {
+           
+             InitializeComponent();            
+           isAfrikaans = bAfrikaans;
+            checkLanguage();
+
         }
 
         //Connection String
-        string connectionString = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
+        // string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         string sJobID;
         string sJobRate;
         string sJobTitle;
@@ -824,20 +827,21 @@ namespace HotelManagementSystem
             toolTip1.ShowAlways = true;
             if (isAfrikaans)
             {
-                lblAddRate.Text = "Werkskoers: ";
+                lblAddRate.Text = "Werkskoers:";
                 lblAddTitle.Text = "Werkstitel";
                 lblEditRate.Text = "Werkskoers: ";
-                lblEditTitle.Text = "Werkstitel";
-                lblJobID.Text = "Werk ID";
-                lblJobRate.Text = "Werkskoers: ";
-                lblJobTitle.Text = "Werkstitel";
+                lblEditTitle.Text = "Werkstitel:";
+                lblJobID.Text = "Werk ID:";
+                lblJobRate.Text = "Werkskoers:";
+                lblJobTitle.Text = "Werkstitel:";
                 //lblSearchJob.Text = "Soek Werk";
                 lblSelectedID.Text = "Geselekteerde ID";
                 //lblSelectRecords.Text = "Kies Rekords Hieronder";
+                btnLanguage.Text = "English";
                 btnAcceptNewJob.Text = "Aanvaar";
                 btnAddCancel.Text = "Kanseleer";
                 btnAddJob.Text = "Voeg Werk By ";
-                btnDeleteJob.Text = "Vee Geselekteerde Werk Uit";
+                btnDeleteJob.Text = "Verwyder Werk";
                 btnEditJob.Text = "Opdateer Werk ";
                 btnReset.Text = "Herstel";
                 btnEditAccept.Text = "Aanvaar";
@@ -861,11 +865,14 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtJobID, "Voer die Job ID in waarna jy soek.");
                 toolTip1.SetToolTip(txtJobRate, "Voer die tarief in waarna jy soek.");
                 toolTip1.SetToolTip(txtJobTitle, "Voer die titel in waarna jy soek.");
-
+                groupBox1.Text = "Kieslys";
+                groupBox1.Text = "Soek Werk";
 
             }
             else
             {
+                groupBox1.Text = "Menu";
+                groupBox1.Text = "Search Job";
                 lblAddRate.Text = "Job Rate: ";
                 lblAddTitle.Text = "Job Title: ";
                 lblEditRate.Text = "Job Rate: ";
@@ -876,6 +883,7 @@ namespace HotelManagementSystem
                 //lblSearchJob.Text = "Search Job: ";
                 lblSelectedID.Text = "Selected ID: ";
                 //lblSelectRecords.Text = "Select Records Below";
+                btnLanguage.Text = "Afrikaans";
                 btnAcceptNewJob.Text = "Accept";
                 btnAddCancel.Text = "Cancel";
                 btnAddJob.Text = "Add Job";
@@ -905,6 +913,19 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtJobTitle, "Enter the Title you seek");
 
             }
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (isAfrikaans)
+            {
+                isAfrikaans = false;
+            }
+            else
+            {
+                isAfrikaans = true;
+            }
+            checkLanguage();
         }
     }
 }

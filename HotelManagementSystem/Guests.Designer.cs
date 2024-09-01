@@ -114,11 +114,11 @@
             this.grpBoxMenu.Controls.Add(this.BtnUpdatePage);
             this.grpBoxMenu.Controls.Add(this.BtnAddPage);
             this.grpBoxMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBoxMenu.Location = new System.Drawing.Point(32, 103);
-            this.grpBoxMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBoxMenu.Location = new System.Drawing.Point(24, 84);
+            this.grpBoxMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpBoxMenu.Name = "grpBoxMenu";
-            this.grpBoxMenu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpBoxMenu.Size = new System.Drawing.Size(275, 277);
+            this.grpBoxMenu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxMenu.Size = new System.Drawing.Size(206, 225);
             this.grpBoxMenu.TabIndex = 0;
             this.grpBoxMenu.TabStop = false;
             this.grpBoxMenu.Text = "Menu";
@@ -126,10 +126,10 @@
             // btnSearchPage
             // 
             this.btnSearchPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchPage.Location = new System.Drawing.Point(11, 210);
-            this.btnSearchPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearchPage.Location = new System.Drawing.Point(8, 171);
+            this.btnSearchPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchPage.Name = "btnSearchPage";
-            this.btnSearchPage.Size = new System.Drawing.Size(253, 48);
+            this.btnSearchPage.Size = new System.Drawing.Size(190, 39);
             this.btnSearchPage.TabIndex = 4;
             this.btnSearchPage.Text = "SEARCH GUEST";
             this.btnSearchPage.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@
             // BtnDeleteGuestPage
             // 
             this.BtnDeleteGuestPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteGuestPage.Location = new System.Drawing.Point(11, 155);
-            this.BtnDeleteGuestPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDeleteGuestPage.Location = new System.Drawing.Point(8, 126);
+            this.BtnDeleteGuestPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDeleteGuestPage.Name = "BtnDeleteGuestPage";
-            this.BtnDeleteGuestPage.Size = new System.Drawing.Size(253, 46);
+            this.BtnDeleteGuestPage.Size = new System.Drawing.Size(190, 37);
             this.BtnDeleteGuestPage.TabIndex = 3;
             this.BtnDeleteGuestPage.Text = "DELETE GUEST";
             this.BtnDeleteGuestPage.UseVisualStyleBackColor = true;
@@ -150,10 +150,10 @@
             // BtnUpdatePage
             // 
             this.BtnUpdatePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdatePage.Location = new System.Drawing.Point(11, 96);
-            this.BtnUpdatePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnUpdatePage.Location = new System.Drawing.Point(8, 78);
+            this.BtnUpdatePage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnUpdatePage.Name = "BtnUpdatePage";
-            this.BtnUpdatePage.Size = new System.Drawing.Size(253, 46);
+            this.BtnUpdatePage.Size = new System.Drawing.Size(190, 37);
             this.BtnUpdatePage.TabIndex = 2;
             this.BtnUpdatePage.Text = "UPDATE GUEST";
             this.BtnUpdatePage.UseVisualStyleBackColor = true;
@@ -162,10 +162,10 @@
             // BtnAddPage
             // 
             this.BtnAddPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddPage.Location = new System.Drawing.Point(11, 33);
-            this.BtnAddPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAddPage.Location = new System.Drawing.Point(8, 27);
+            this.BtnAddPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAddPage.Name = "BtnAddPage";
-            this.BtnAddPage.Size = new System.Drawing.Size(253, 47);
+            this.BtnAddPage.Size = new System.Drawing.Size(190, 38);
             this.BtnAddPage.TabIndex = 0;
             this.BtnAddPage.Text = "ADD GUEST";
             this.BtnAddPage.UseVisualStyleBackColor = true;
@@ -177,11 +177,11 @@
             this.tabControl1.Controls.Add(this.tbUpdateGuest);
             this.tabControl1.Controls.Add(this.tbDeleteGuest);
             this.tabControl1.Controls.Add(this.tbSearchGuest);
-            this.tabControl1.Location = new System.Drawing.Point(387, 127);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(290, 103);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(762, 258);
+            this.tabControl1.Size = new System.Drawing.Size(572, 210);
             this.tabControl1.TabIndex = 1;
             // 
             // tbAddGuest
@@ -197,21 +197,21 @@
             this.tbAddGuest.Controls.Add(this.lblLNameAdd);
             this.tbAddGuest.Controls.Add(this.LblContactNo);
             this.tbAddGuest.Controls.Add(this.LblEmailAddress);
-            this.tbAddGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbAddGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAddGuest.Location = new System.Drawing.Point(4, 22);
+            this.tbAddGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbAddGuest.Name = "tbAddGuest";
-            this.tbAddGuest.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbAddGuest.Size = new System.Drawing.Size(747, 229);
+            this.tbAddGuest.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAddGuest.Size = new System.Drawing.Size(564, 184);
             this.tbAddGuest.TabIndex = 0;
             this.tbAddGuest.Text = "ADD GUEST";
             // 
             // btnAddReset
             // 
             this.btnAddReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReset.Location = new System.Drawing.Point(483, 87);
-            this.btnAddReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddReset.Location = new System.Drawing.Point(362, 71);
+            this.btnAddReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddReset.Name = "btnAddReset";
-            this.btnAddReset.Size = new System.Drawing.Size(243, 46);
+            this.btnAddReset.Size = new System.Drawing.Size(182, 37);
             this.btnAddReset.TabIndex = 11;
             this.btnAddReset.Text = "Reset";
             this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear textboxes");
@@ -221,10 +221,10 @@
             // BtnAddGuest
             // 
             this.BtnAddGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddGuest.Location = new System.Drawing.Point(483, 158);
-            this.BtnAddGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAddGuest.Location = new System.Drawing.Point(362, 128);
+            this.BtnAddGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAddGuest.Name = "BtnAddGuest";
-            this.BtnAddGuest.Size = new System.Drawing.Size(243, 46);
+            this.BtnAddGuest.Size = new System.Drawing.Size(182, 37);
             this.BtnAddGuest.TabIndex = 3;
             this.BtnAddGuest.Text = "Add Guest";
             this.toolTip1.SetToolTip(this.BtnAddGuest, "Click to add Guest");
@@ -233,40 +233,40 @@
             // 
             // TxtFName_Add
             // 
-            this.TxtFName_Add.Location = new System.Drawing.Point(193, 46);
-            this.TxtFName_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtFName_Add.Location = new System.Drawing.Point(145, 37);
+            this.TxtFName_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtFName_Add.Name = "TxtFName_Add";
-            this.TxtFName_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtFName_Add.Size = new System.Drawing.Size(166, 20);
             this.TxtFName_Add.TabIndex = 10;
             this.toolTip1.SetToolTip(this.TxtFName_Add, "Enter Guest First Name");
             this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
             // TxtLName_Add
             // 
-            this.TxtLName_Add.Location = new System.Drawing.Point(193, 87);
-            this.TxtLName_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtLName_Add.Location = new System.Drawing.Point(145, 71);
+            this.TxtLName_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtLName_Add.Name = "TxtLName_Add";
-            this.TxtLName_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtLName_Add.Size = new System.Drawing.Size(166, 20);
             this.TxtLName_Add.TabIndex = 9;
             this.toolTip1.SetToolTip(this.TxtLName_Add, "Enter Guest Last Name");
             this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
             // TxtContactNo_Add
             // 
-            this.TxtContactNo_Add.Location = new System.Drawing.Point(193, 132);
-            this.TxtContactNo_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtContactNo_Add.Location = new System.Drawing.Point(145, 107);
+            this.TxtContactNo_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
-            this.TxtContactNo_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtContactNo_Add.Size = new System.Drawing.Size(166, 20);
             this.TxtContactNo_Add.TabIndex = 8;
             this.toolTip1.SetToolTip(this.TxtContactNo_Add, "Enter Guest 10-digit Contact Number (eg. 0876543667)");
             this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
             // TxtEmail_Add
             // 
-            this.TxtEmail_Add.Location = new System.Drawing.Point(193, 167);
-            this.TxtEmail_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtEmail_Add.Location = new System.Drawing.Point(145, 136);
+            this.TxtEmail_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtEmail_Add.Name = "TxtEmail_Add";
-            this.TxtEmail_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtEmail_Add.Size = new System.Drawing.Size(166, 20);
             this.TxtEmail_Add.TabIndex = 7;
             this.toolTip1.SetToolTip(this.TxtEmail_Add, "Enter valid Guest Email (eg. guest@gmail.com) ");
             this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
@@ -275,9 +275,10 @@
             // 
             this.lblFNameAdd.AutoSize = true;
             this.lblFNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNameAdd.Location = new System.Drawing.Point(20, 43);
+            this.lblFNameAdd.Location = new System.Drawing.Point(15, 35);
+            this.lblFNameAdd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFNameAdd.Name = "lblFNameAdd";
-            this.lblFNameAdd.Size = new System.Drawing.Size(112, 25);
+            this.lblFNameAdd.Size = new System.Drawing.Size(90, 20);
             this.lblFNameAdd.TabIndex = 3;
             this.lblFNameAdd.Text = "First Name:\r\n";
             // 
@@ -285,9 +286,10 @@
             // 
             this.lblLNameAdd.AutoSize = true;
             this.lblLNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLNameAdd.Location = new System.Drawing.Point(20, 87);
+            this.lblLNameAdd.Location = new System.Drawing.Point(15, 71);
+            this.lblLNameAdd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLNameAdd.Name = "lblLNameAdd";
-            this.lblLNameAdd.Size = new System.Drawing.Size(112, 25);
+            this.lblLNameAdd.Size = new System.Drawing.Size(90, 20);
             this.lblLNameAdd.TabIndex = 4;
             this.lblLNameAdd.Text = "Last Name:";
             // 
@@ -295,9 +297,10 @@
             // 
             this.LblContactNo.AutoSize = true;
             this.LblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactNo.Location = new System.Drawing.Point(20, 128);
+            this.LblContactNo.Location = new System.Drawing.Point(15, 104);
+            this.LblContactNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblContactNo.Name = "LblContactNo";
-            this.LblContactNo.Size = new System.Drawing.Size(165, 25);
+            this.LblContactNo.Size = new System.Drawing.Size(133, 20);
             this.LblContactNo.TabIndex = 5;
             this.LblContactNo.Text = "Contact Number: ";
             // 
@@ -305,9 +308,10 @@
             // 
             this.LblEmailAddress.AutoSize = true;
             this.LblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmailAddress.Location = new System.Drawing.Point(20, 167);
+            this.LblEmailAddress.Location = new System.Drawing.Point(15, 136);
+            this.LblEmailAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEmailAddress.Name = "LblEmailAddress";
-            this.LblEmailAddress.Size = new System.Drawing.Size(149, 25);
+            this.LblEmailAddress.Size = new System.Drawing.Size(119, 20);
             this.LblEmailAddress.TabIndex = 6;
             this.LblEmailAddress.Text = "Email Address: ";
             // 
@@ -324,10 +328,10 @@
             this.tbUpdateGuest.Controls.Add(this.btnReset);
             this.tbUpdateGuest.Controls.Add(this.TxtFName_Update);
             this.tbUpdateGuest.Controls.Add(this.LblFName_Update);
-            this.tbUpdateGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbUpdateGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUpdateGuest.Location = new System.Drawing.Point(4, 22);
+            this.tbUpdateGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUpdateGuest.Name = "tbUpdateGuest";
-            this.tbUpdateGuest.Size = new System.Drawing.Size(747, 229);
+            this.tbUpdateGuest.Size = new System.Drawing.Size(564, 184);
             this.tbUpdateGuest.TabIndex = 2;
             this.tbUpdateGuest.Text = "UPDATE GUEST";
             // 
@@ -335,9 +339,10 @@
             // 
             this.LblEmail_Update.AutoSize = true;
             this.LblEmail_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail_Update.Location = new System.Drawing.Point(19, 143);
+            this.LblEmail_Update.Location = new System.Drawing.Point(14, 116);
+            this.LblEmail_Update.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblEmail_Update.Name = "LblEmail_Update";
-            this.LblEmail_Update.Size = new System.Drawing.Size(144, 25);
+            this.LblEmail_Update.Size = new System.Drawing.Size(115, 20);
             this.LblEmail_Update.TabIndex = 14;
             this.LblEmail_Update.Text = "Email Address:";
             // 
@@ -345,9 +350,10 @@
             // 
             this.LblContactNo_Update.AutoSize = true;
             this.LblContactNo_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactNo_Update.Location = new System.Drawing.Point(19, 107);
+            this.LblContactNo_Update.Location = new System.Drawing.Point(14, 87);
+            this.LblContactNo_Update.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblContactNo_Update.Name = "LblContactNo_Update";
-            this.LblContactNo_Update.Size = new System.Drawing.Size(160, 25);
+            this.LblContactNo_Update.Size = new System.Drawing.Size(129, 20);
             this.LblContactNo_Update.TabIndex = 13;
             this.LblContactNo_Update.Text = "Contact Number:";
             // 
@@ -355,38 +361,39 @@
             // 
             this.LblLName_Update.AutoSize = true;
             this.LblLName_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLName_Update.Location = new System.Drawing.Point(19, 66);
+            this.LblLName_Update.Location = new System.Drawing.Point(14, 54);
+            this.LblLName_Update.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblLName_Update.Name = "LblLName_Update";
-            this.LblLName_Update.Size = new System.Drawing.Size(112, 25);
+            this.LblLName_Update.Size = new System.Drawing.Size(90, 20);
             this.LblLName_Update.TabIndex = 12;
             this.LblLName_Update.Text = "Last Name:\r\n";
             // 
             // TxtLName_Update
             // 
-            this.TxtLName_Update.Location = new System.Drawing.Point(196, 71);
-            this.TxtLName_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtLName_Update.Location = new System.Drawing.Point(147, 58);
+            this.TxtLName_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtLName_Update.Name = "TxtLName_Update";
-            this.TxtLName_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtLName_Update.Size = new System.Drawing.Size(162, 20);
             this.TxtLName_Update.TabIndex = 10;
             this.toolTip1.SetToolTip(this.TxtLName_Update, "Enter Guest Last Name");
             this.TxtLName_Update.TextChanged += new System.EventHandler(this.TxtLName_Update_TextChanged);
             // 
             // TxtContactNo_Update
             // 
-            this.TxtContactNo_Update.Location = new System.Drawing.Point(196, 111);
-            this.TxtContactNo_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtContactNo_Update.Location = new System.Drawing.Point(147, 90);
+            this.TxtContactNo_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtContactNo_Update.Name = "TxtContactNo_Update";
-            this.TxtContactNo_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtContactNo_Update.Size = new System.Drawing.Size(162, 20);
             this.TxtContactNo_Update.TabIndex = 9;
             this.toolTip1.SetToolTip(this.TxtContactNo_Update, "Enter Guest 10-digit Contact Number (eg. 0784567787)");
             this.TxtContactNo_Update.TextChanged += new System.EventHandler(this.TxtContactNo_Update_TextChanged);
             // 
             // TxtBoxEmail_Update
             // 
-            this.TxtBoxEmail_Update.Location = new System.Drawing.Point(196, 145);
-            this.TxtBoxEmail_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtBoxEmail_Update.Location = new System.Drawing.Point(147, 118);
+            this.TxtBoxEmail_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtBoxEmail_Update.Name = "TxtBoxEmail_Update";
-            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(162, 20);
             this.TxtBoxEmail_Update.TabIndex = 8;
             this.toolTip1.SetToolTip(this.TxtBoxEmail_Update, "Enter Valid Guest Email(eg. guest@gmail.com)");
             this.TxtBoxEmail_Update.TextChanged += new System.EventHandler(this.TxtBoxEmail_Update_TextChanged);
@@ -394,10 +401,10 @@
             // BtnUpdate
             // 
             this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdate.Location = new System.Drawing.Point(475, 158);
-            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnUpdate.Location = new System.Drawing.Point(356, 128);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(224, 43);
+            this.BtnUpdate.Size = new System.Drawing.Size(168, 35);
             this.BtnUpdate.TabIndex = 3;
             this.BtnUpdate.Text = "Update ";
             this.toolTip1.SetToolTip(this.BtnUpdate, "Click to Update Employee Details");
@@ -407,10 +414,10 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(475, 90);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Location = new System.Drawing.Point(356, 73);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(224, 43);
+            this.btnReset.Size = new System.Drawing.Size(168, 35);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
             this.toolTip1.SetToolTip(this.btnReset, "Click to clear textboxes");
@@ -419,10 +426,10 @@
             // 
             // TxtFName_Update
             // 
-            this.TxtFName_Update.Location = new System.Drawing.Point(196, 32);
-            this.TxtFName_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtFName_Update.Location = new System.Drawing.Point(147, 26);
+            this.TxtFName_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtFName_Update.Name = "TxtFName_Update";
-            this.TxtFName_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtFName_Update.Size = new System.Drawing.Size(162, 20);
             this.TxtFName_Update.TabIndex = 3;
             this.toolTip1.SetToolTip(this.TxtFName_Update, "Enter Guest First Name ");
             this.TxtFName_Update.TextChanged += new System.EventHandler(this.TxtFName_Update_TextChanged);
@@ -431,9 +438,10 @@
             // 
             this.LblFName_Update.AutoSize = true;
             this.LblFName_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFName_Update.Location = new System.Drawing.Point(19, 30);
+            this.LblFName_Update.Location = new System.Drawing.Point(14, 24);
+            this.LblFName_Update.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFName_Update.Name = "LblFName_Update";
-            this.LblFName_Update.Size = new System.Drawing.Size(112, 25);
+            this.LblFName_Update.Size = new System.Drawing.Size(90, 20);
             this.LblFName_Update.TabIndex = 0;
             this.LblFName_Update.Text = "First Name:";
             // 
@@ -443,10 +451,10 @@
             this.tbDeleteGuest.Controls.Add(this.cbConfirmation);
             this.tbDeleteGuest.Controls.Add(this.groupBox1);
             this.tbDeleteGuest.Controls.Add(this.BtnDelete);
-            this.tbDeleteGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbDeleteGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDeleteGuest.Location = new System.Drawing.Point(4, 22);
+            this.tbDeleteGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbDeleteGuest.Name = "tbDeleteGuest";
-            this.tbDeleteGuest.Size = new System.Drawing.Size(754, 229);
+            this.tbDeleteGuest.Size = new System.Drawing.Size(564, 184);
             this.tbDeleteGuest.TabIndex = 3;
             this.tbDeleteGuest.Text = "DELETE GUEST";
             // 
@@ -454,10 +462,10 @@
             // 
             this.cbConfirmation.AutoSize = true;
             this.cbConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbConfirmation.Location = new System.Drawing.Point(431, 86);
-            this.cbConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbConfirmation.Location = new System.Drawing.Point(323, 70);
+            this.cbConfirmation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbConfirmation.Name = "cbConfirmation";
-            this.cbConfirmation.Size = new System.Drawing.Size(327, 44);
+            this.cbConfirmation.Size = new System.Drawing.Size(273, 38);
             this.cbConfirmation.TabIndex = 24;
             this.cbConfirmation.Text = "Confirmation that it is the correct Guest\r\n to be deleted";
             this.toolTip1.SetToolTip(this.cbConfirmation, "Check box to confirm that the correct Guest is being deleted");
@@ -474,11 +482,11 @@
             this.groupBox1.Controls.Add(this.txtFName_Delete);
             this.groupBox1.Controls.Add(this.lblDeleteFName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 26);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(15, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(405, 199);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(304, 162);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Confirm Values";
@@ -488,9 +496,10 @@
             // 
             this.lblDeleteEmail.AutoSize = true;
             this.lblDeleteEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteEmail.Location = new System.Drawing.Point(5, 159);
+            this.lblDeleteEmail.Location = new System.Drawing.Point(4, 129);
+            this.lblDeleteEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeleteEmail.Name = "lblDeleteEmail";
-            this.lblDeleteEmail.Size = new System.Drawing.Size(144, 25);
+            this.lblDeleteEmail.Size = new System.Drawing.Size(115, 20);
             this.lblDeleteEmail.TabIndex = 30;
             this.lblDeleteEmail.Text = "Email Address:";
             this.lblDeleteEmail.Click += new System.EventHandler(this.lblDeleteEmail_Click);
@@ -499,9 +508,10 @@
             // 
             this.lblDeleteNumber.AutoSize = true;
             this.lblDeleteNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteNumber.Location = new System.Drawing.Point(5, 114);
+            this.lblDeleteNumber.Location = new System.Drawing.Point(4, 93);
+            this.lblDeleteNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeleteNumber.Name = "lblDeleteNumber";
-            this.lblDeleteNumber.Size = new System.Drawing.Size(160, 25);
+            this.lblDeleteNumber.Size = new System.Drawing.Size(129, 20);
             this.lblDeleteNumber.TabIndex = 29;
             this.lblDeleteNumber.Text = "Contact Number:";
             // 
@@ -509,53 +519,54 @@
             // 
             this.lblDeleteLName.AutoSize = true;
             this.lblDeleteLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteLName.Location = new System.Drawing.Point(5, 74);
+            this.lblDeleteLName.Location = new System.Drawing.Point(4, 60);
+            this.lblDeleteLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeleteLName.Name = "lblDeleteLName";
-            this.lblDeleteLName.Size = new System.Drawing.Size(112, 25);
+            this.lblDeleteLName.Size = new System.Drawing.Size(90, 20);
             this.lblDeleteLName.TabIndex = 28;
             this.lblDeleteLName.Text = "Last Name:\r\n";
             // 
             // txtLName_delete
             // 
             this.txtLName_delete.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLName_delete.Location = new System.Drawing.Point(183, 74);
-            this.txtLName_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLName_delete.Location = new System.Drawing.Point(137, 60);
+            this.txtLName_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLName_delete.Name = "txtLName_delete";
             this.txtLName_delete.ReadOnly = true;
-            this.txtLName_delete.Size = new System.Drawing.Size(183, 30);
+            this.txtLName_delete.Size = new System.Drawing.Size(138, 26);
             this.txtLName_delete.TabIndex = 27;
             this.txtLName_delete.TextChanged += new System.EventHandler(this.txtLName_delete_TextChanged);
             // 
             // txtCellNr_Delete
             // 
             this.txtCellNr_Delete.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCellNr_Delete.Location = new System.Drawing.Point(183, 110);
-            this.txtCellNr_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCellNr_Delete.Location = new System.Drawing.Point(137, 89);
+            this.txtCellNr_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCellNr_Delete.Name = "txtCellNr_Delete";
             this.txtCellNr_Delete.ReadOnly = true;
-            this.txtCellNr_Delete.Size = new System.Drawing.Size(183, 30);
+            this.txtCellNr_Delete.Size = new System.Drawing.Size(138, 26);
             this.txtCellNr_Delete.TabIndex = 26;
             this.txtCellNr_Delete.TextChanged += new System.EventHandler(this.txtCellNr_Delete_TextChanged);
             // 
             // txtEmail_Delete
             // 
             this.txtEmail_Delete.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEmail_Delete.Location = new System.Drawing.Point(183, 155);
-            this.txtEmail_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail_Delete.Location = new System.Drawing.Point(137, 126);
+            this.txtEmail_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail_Delete.Name = "txtEmail_Delete";
             this.txtEmail_Delete.ReadOnly = true;
-            this.txtEmail_Delete.Size = new System.Drawing.Size(183, 30);
+            this.txtEmail_Delete.Size = new System.Drawing.Size(138, 26);
             this.txtEmail_Delete.TabIndex = 25;
             this.txtEmail_Delete.TextChanged += new System.EventHandler(this.txtEmail_Delete_TextChanged);
             // 
             // txtFName_Delete
             // 
             this.txtFName_Delete.BackColor = System.Drawing.SystemColors.Window;
-            this.txtFName_Delete.Location = new System.Drawing.Point(183, 32);
-            this.txtFName_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFName_Delete.Location = new System.Drawing.Point(137, 26);
+            this.txtFName_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFName_Delete.Name = "txtFName_Delete";
             this.txtFName_Delete.ReadOnly = true;
-            this.txtFName_Delete.Size = new System.Drawing.Size(183, 30);
+            this.txtFName_Delete.Size = new System.Drawing.Size(138, 26);
             this.txtFName_Delete.TabIndex = 24;
             this.txtFName_Delete.TextChanged += new System.EventHandler(this.txtFName_Delete_TextChanged);
             // 
@@ -563,19 +574,20 @@
             // 
             this.lblDeleteFName.AutoSize = true;
             this.lblDeleteFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeleteFName.Location = new System.Drawing.Point(5, 36);
+            this.lblDeleteFName.Location = new System.Drawing.Point(4, 29);
+            this.lblDeleteFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeleteFName.Name = "lblDeleteFName";
-            this.lblDeleteFName.Size = new System.Drawing.Size(112, 25);
+            this.lblDeleteFName.Size = new System.Drawing.Size(90, 20);
             this.lblDeleteFName.TabIndex = 23;
             this.lblDeleteFName.Text = "First Name:";
             // 
             // BtnDelete
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(488, 163);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDelete.Location = new System.Drawing.Point(366, 132);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(211, 46);
+            this.BtnDelete.Size = new System.Drawing.Size(158, 37);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Delete";
             this.toolTip1.SetToolTip(this.BtnDelete, "Click to Delete Guest");
@@ -590,20 +602,20 @@
             this.tbSearchGuest.Controls.Add(this.groupBox3);
             this.tbSearchGuest.Controls.Add(this.groupBox2);
             this.tbSearchGuest.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
-            this.tbSearchGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbSearchGuest.Location = new System.Drawing.Point(4, 22);
+            this.tbSearchGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSearchGuest.Name = "tbSearchGuest";
-            this.tbSearchGuest.Size = new System.Drawing.Size(754, 229);
+            this.tbSearchGuest.Size = new System.Drawing.Size(564, 184);
             this.tbSearchGuest.TabIndex = 4;
             this.tbSearchGuest.Text = "SEARCH GUEST";
             // 
             // btnResetSearch
             // 
             this.btnResetSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetSearch.Location = new System.Drawing.Point(492, 185);
-            this.btnResetSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnResetSearch.Location = new System.Drawing.Point(369, 150);
+            this.btnResetSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResetSearch.Name = "btnResetSearch";
-            this.btnResetSearch.Size = new System.Drawing.Size(239, 42);
+            this.btnResetSearch.Size = new System.Drawing.Size(179, 34);
             this.btnResetSearch.TabIndex = 13;
             this.btnResetSearch.Text = "Reset";
             this.toolTip1.SetToolTip(this.btnResetSearch, "Click to clear textboxes");
@@ -615,11 +627,11 @@
             this.groupBox3.Controls.Add(this.rdoDsc);
             this.groupBox3.Controls.Add(this.rdoAsc);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(543, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(407, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(155, 174);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(116, 141);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sort by:";
@@ -628,10 +640,10 @@
             // 
             this.rdoDsc.AutoSize = true;
             this.rdoDsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoDsc.Location = new System.Drawing.Point(9, 92);
-            this.rdoDsc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoDsc.Location = new System.Drawing.Point(7, 75);
+            this.rdoDsc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoDsc.Name = "rdoDsc";
-            this.rdoDsc.Size = new System.Drawing.Size(137, 29);
+            this.rdoDsc.Size = new System.Drawing.Size(112, 24);
             this.rdoDsc.TabIndex = 6;
             this.rdoDsc.TabStop = true;
             this.rdoDsc.Text = "Descending";
@@ -643,10 +655,10 @@
             // 
             this.rdoAsc.AutoSize = true;
             this.rdoAsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoAsc.Location = new System.Drawing.Point(9, 43);
-            this.rdoAsc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoAsc.Location = new System.Drawing.Point(7, 35);
+            this.rdoAsc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoAsc.Name = "rdoAsc";
-            this.rdoAsc.Size = new System.Drawing.Size(126, 29);
+            this.rdoAsc.Size = new System.Drawing.Size(102, 24);
             this.rdoAsc.TabIndex = 3;
             this.rdoAsc.TabStop = true;
             this.rdoAsc.Text = "Ascending";
@@ -665,11 +677,11 @@
             this.groupBox2.Controls.Add(this.lblSearchLName);
             this.groupBox2.Controls.Add(this.txtFName_Search);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(9, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(505, 175);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(379, 142);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search by:";
@@ -677,18 +689,19 @@
             // lblSearchEmail
             // 
             this.lblSearchEmail.AutoSize = true;
-            this.lblSearchEmail.Location = new System.Drawing.Point(25, 143);
+            this.lblSearchEmail.Location = new System.Drawing.Point(19, 116);
+            this.lblSearchEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchEmail.Name = "lblSearchEmail";
-            this.lblSearchEmail.Size = new System.Drawing.Size(144, 25);
+            this.lblSearchEmail.Size = new System.Drawing.Size(115, 20);
             this.lblSearchEmail.TabIndex = 28;
             this.lblSearchEmail.Text = "Email Address:";
             // 
             // txtEmail_Search
             // 
-            this.txtEmail_Search.Location = new System.Drawing.Point(252, 139);
-            this.txtEmail_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail_Search.Location = new System.Drawing.Point(189, 113);
+            this.txtEmail_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail_Search.Name = "txtEmail_Search";
-            this.txtEmail_Search.Size = new System.Drawing.Size(207, 30);
+            this.txtEmail_Search.Size = new System.Drawing.Size(156, 26);
             this.txtEmail_Search.TabIndex = 11;
             this.toolTip1.SetToolTip(this.txtEmail_Search, "Enter Guest Email to search");
             this.txtEmail_Search.TextChanged += new System.EventHandler(this.txtEmail_Search_TextChanged);
@@ -696,18 +709,19 @@
             // lblSearchNumber
             // 
             this.lblSearchNumber.AutoSize = true;
-            this.lblSearchNumber.Location = new System.Drawing.Point(25, 107);
+            this.lblSearchNumber.Location = new System.Drawing.Point(19, 87);
+            this.lblSearchNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchNumber.Name = "lblSearchNumber";
-            this.lblSearchNumber.Size = new System.Drawing.Size(160, 25);
+            this.lblSearchNumber.Size = new System.Drawing.Size(129, 20);
             this.lblSearchNumber.TabIndex = 27;
             this.lblSearchNumber.Text = "Contact Number:";
             // 
             // txtContact_Search
             // 
-            this.txtContact_Search.Location = new System.Drawing.Point(252, 103);
-            this.txtContact_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContact_Search.Location = new System.Drawing.Point(189, 84);
+            this.txtContact_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContact_Search.Name = "txtContact_Search";
-            this.txtContact_Search.Size = new System.Drawing.Size(207, 30);
+            this.txtContact_Search.Size = new System.Drawing.Size(156, 26);
             this.txtContact_Search.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtContact_Search, "Enter Guest Contact Number  to search");
             this.txtContact_Search.TextChanged += new System.EventHandler(this.txtContact_Search_TextChanged);
@@ -715,18 +729,19 @@
             // lblSearchFName
             // 
             this.lblSearchFName.AutoSize = true;
-            this.lblSearchFName.Location = new System.Drawing.Point(25, 69);
+            this.lblSearchFName.Location = new System.Drawing.Point(19, 56);
+            this.lblSearchFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchFName.Name = "lblSearchFName";
-            this.lblSearchFName.Size = new System.Drawing.Size(112, 25);
+            this.lblSearchFName.Size = new System.Drawing.Size(90, 20);
             this.lblSearchFName.TabIndex = 26;
             this.lblSearchFName.Text = "First Name:";
             // 
             // txtLName_Search
             // 
-            this.txtLName_Search.Location = new System.Drawing.Point(252, 30);
-            this.txtLName_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLName_Search.Location = new System.Drawing.Point(189, 24);
+            this.txtLName_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLName_Search.Name = "txtLName_Search";
-            this.txtLName_Search.Size = new System.Drawing.Size(207, 30);
+            this.txtLName_Search.Size = new System.Drawing.Size(156, 26);
             this.txtLName_Search.TabIndex = 7;
             this.toolTip1.SetToolTip(this.txtLName_Search, "Enter Guest Last Name to search");
             this.txtLName_Search.TextChanged += new System.EventHandler(this.txtLName_Search_TextChanged);
@@ -734,18 +749,19 @@
             // lblSearchLName
             // 
             this.lblSearchLName.AutoSize = true;
-            this.lblSearchLName.Location = new System.Drawing.Point(25, 33);
+            this.lblSearchLName.Location = new System.Drawing.Point(19, 27);
+            this.lblSearchLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchLName.Name = "lblSearchLName";
-            this.lblSearchLName.Size = new System.Drawing.Size(112, 25);
+            this.lblSearchLName.Size = new System.Drawing.Size(90, 20);
             this.lblSearchLName.TabIndex = 12;
             this.lblSearchLName.Text = "Last Name:";
             // 
             // txtFName_Search
             // 
-            this.txtFName_Search.Location = new System.Drawing.Point(252, 65);
-            this.txtFName_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFName_Search.Location = new System.Drawing.Point(189, 53);
+            this.txtFName_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFName_Search.Name = "txtFName_Search";
-            this.txtFName_Search.Size = new System.Drawing.Size(207, 30);
+            this.txtFName_Search.Size = new System.Drawing.Size(156, 26);
             this.txtFName_Search.TabIndex = 5;
             this.toolTip1.SetToolTip(this.txtFName_Search, "Enter Guest First Name to search");
             this.txtFName_Search.TextChanged += new System.EventHandler(this.txtFName_Search_TextChanged);
@@ -754,12 +770,12 @@
             // 
             this.DgvGuests.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.DgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGuests.Location = new System.Drawing.Point(37, 391);
-            this.DgvGuests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DgvGuests.Location = new System.Drawing.Point(28, 318);
+            this.DgvGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvGuests.Name = "DgvGuests";
             this.DgvGuests.RowHeadersWidth = 51;
             this.DgvGuests.RowTemplate.Height = 24;
-            this.DgvGuests.Size = new System.Drawing.Size(1133, 222);
+            this.DgvGuests.Size = new System.Drawing.Size(850, 180);
             this.DgvGuests.TabIndex = 2;
             this.DgvGuests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGuests_CellContentClick);
             // 
@@ -772,10 +788,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureBox1.BackgroundImage = global::HotelManagementSystem.Properties.Resources.Maintain_Guests___1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-27, -59);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(-20, -48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1275, 706);
+            this.pictureBox1.Size = new System.Drawing.Size(956, 574);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -783,18 +799,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(391, 121);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(293, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 12);
+            this.panel1.Size = new System.Drawing.Size(560, 10);
             this.panel1.TabIndex = 25;
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(937, 654);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLanguage.Location = new System.Drawing.Point(693, 43);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(153, 62);
+            this.btnLanguage.Size = new System.Drawing.Size(115, 50);
             this.btnLanguage.TabIndex = 26;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;
@@ -802,19 +817,20 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(37, 36);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 29);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Guests
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1367, 743);
+            this.ClientSize = new System.Drawing.Size(936, 526);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.panel1);
@@ -823,7 +839,7 @@
             this.Controls.Add(this.grpBoxMenu);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Guests";
             this.Text = "Guests";
             this.Load += new System.EventHandler(this.Guests_Load);

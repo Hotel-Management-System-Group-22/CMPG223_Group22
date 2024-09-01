@@ -41,13 +41,13 @@ namespace HotelManagementSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Bookings bookings = new Bookings(isAfrikaans);
-            bookings.Show();
+            Bookings booking = new Bookings(isAfrikaans);
+            booking.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ManageJobsForm manageJobs = new ManageJobsForm(true);
+            ManageJobsForm manageJobs = new ManageJobsForm(isAfrikaans);
             manageJobs.Show();
         }
 

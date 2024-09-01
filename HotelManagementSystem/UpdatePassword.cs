@@ -23,8 +23,8 @@ namespace HotelManagementSystem
             this.username = userName;  // Initialize with the username passed from the LogIn form
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
-        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        
+        // string connectiong = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void Update_Click(object sender, EventArgs e)
         {
             LogIn login = new LogIn(bAfrikaans);

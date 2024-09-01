@@ -24,7 +24,7 @@ namespace HotelManagementSystem
 {
     public partial class Employees : Form
     {
-        private bool bAfrikaans = false;
+         bool bAfrikaans = false;
         public Employees(bool isAfrikaans)
         {
             InitializeComponent();
@@ -32,8 +32,9 @@ namespace HotelManagementSystem
             checkLanguage();
         }
 
-        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        
+        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+
         private void Employees_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelManagementSystemDataSet1.Job' table. You can move, or remove it, as needed.

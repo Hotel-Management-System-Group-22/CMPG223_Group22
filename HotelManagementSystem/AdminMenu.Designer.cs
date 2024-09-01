@@ -41,9 +41,10 @@
             // 
             // btnGuests
             // 
-            this.btnGuests.Location = new System.Drawing.Point(180, 12);
+            this.btnGuests.Location = new System.Drawing.Point(135, 10);
+            this.btnGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuests.Name = "btnGuests";
-            this.btnGuests.Size = new System.Drawing.Size(337, 54);
+            this.btnGuests.Size = new System.Drawing.Size(253, 44);
             this.btnGuests.TabIndex = 2;
             this.btnGuests.Text = "Maintain Guests";
             this.btnGuests.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btnEmployees
             // 
-            this.btnEmployees.Location = new System.Drawing.Point(180, 72);
+            this.btnEmployees.Location = new System.Drawing.Point(135, 58);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(337, 54);
+            this.btnEmployees.Size = new System.Drawing.Size(253, 44);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "Maintain Employees";
             this.btnEmployees.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // 
             // btnRooms
             // 
-            this.btnRooms.Location = new System.Drawing.Point(180, 132);
+            this.btnRooms.Location = new System.Drawing.Point(135, 107);
+            this.btnRooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRooms.Name = "btnRooms";
-            this.btnRooms.Size = new System.Drawing.Size(337, 54);
+            this.btnRooms.Size = new System.Drawing.Size(253, 44);
             this.btnRooms.TabIndex = 4;
             this.btnRooms.Text = "Maintain Rooms";
             this.btnRooms.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // 
             // btnBookings
             // 
-            this.btnBookings.Location = new System.Drawing.Point(180, 192);
+            this.btnBookings.Location = new System.Drawing.Point(135, 156);
+            this.btnBookings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBookings.Name = "btnBookings";
-            this.btnBookings.Size = new System.Drawing.Size(337, 54);
+            this.btnBookings.Size = new System.Drawing.Size(253, 44);
             this.btnBookings.TabIndex = 5;
             this.btnBookings.Text = "Maintain Bookings";
             this.btnBookings.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // 
             // btnJobs
             // 
-            this.btnJobs.Location = new System.Drawing.Point(180, 252);
+            this.btnJobs.Location = new System.Drawing.Point(135, 205);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(337, 54);
+            this.btnJobs.Size = new System.Drawing.Size(253, 44);
             this.btnJobs.TabIndex = 6;
             this.btnJobs.Text = "Maintain Jobs";
             this.btnJobs.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.Location = new System.Drawing.Point(180, 312);
+            this.btnCheckIn.Location = new System.Drawing.Point(135, 254);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(337, 54);
+            this.btnCheckIn.Size = new System.Drawing.Size(253, 44);
             this.btnCheckIn.TabIndex = 7;
             this.btnCheckIn.Text = "Check Guest In";
             this.btnCheckIn.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             // btnReports
             // 
-            this.btnReports.Location = new System.Drawing.Point(180, 430);
+            this.btnReports.Location = new System.Drawing.Point(135, 349);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(337, 54);
+            this.btnReports.Size = new System.Drawing.Size(253, 44);
             this.btnReports.TabIndex = 8;
             this.btnReports.Text = "Request Reports";
             this.btnReports.UseVisualStyleBackColor = true;
@@ -111,9 +118,10 @@
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Location = new System.Drawing.Point(180, 370);
+            this.btnCheckOut.Location = new System.Drawing.Point(135, 301);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(337, 54);
+            this.btnCheckOut.Size = new System.Drawing.Size(253, 44);
             this.btnCheckOut.TabIndex = 9;
             this.btnCheckOut.Text = "Check Guest Out";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -121,9 +129,10 @@
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(698, 461);
+            this.btnLanguage.Location = new System.Drawing.Point(494, 371);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.Size = new System.Drawing.Size(86, 23);
             this.btnLanguage.TabIndex = 10;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;
@@ -131,9 +140,9 @@
             // 
             // AdminMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.ClientSize = new System.Drawing.Size(600, 403);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnReports);
@@ -143,6 +152,7 @@
             this.Controls.Add(this.btnRooms);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnGuests);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
             this.ResumeLayout(false);

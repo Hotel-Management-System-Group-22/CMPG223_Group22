@@ -189,15 +189,15 @@ namespace HotelManagementSystem
             {
                 lblUsername.Text = "Gebruikersnaam";
                 lblPassword.Text = "Wagwoord";
-                btnLogin.Text = "AANMEL";
-                btnLanguage.Text = "English";
+                btnLogin.Text = "AANMELD";
+                btnLanguage.Text = "ENGLISH";
             }
             else
             {
                 lblUsername.Text = "Username";
                 lblPassword.Text = "Password";
                 btnLogin.Text = "LOGIN";
-                btnLanguage.Text = "Afrikaans";
+                btnLanguage.Text = "AFRIKAANS";
             }
         }
     }

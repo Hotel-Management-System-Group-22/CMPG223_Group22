@@ -28,8 +28,8 @@ namespace HotelManagementSystem
             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
-
-        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         bool bAfrikaans = false;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -898,7 +898,7 @@ namespace HotelManagementSystem
                 btnReset.Text = "Herstel";
                 btnResetSearch.Text = "Herstel";
                 btnSearchPage.Text = "SOEK GAS";
-                BtnAddPage.Text = "VOEGBY Gas";
+                BtnAddPage.Text = "VOEGBY GAS";
                 BtnAddGuest.Text = "Voeg Gas by";
                 BtnDelete.Text = "Verwyder";
                 BtnDeleteGuestPage.Text = "VERWYDER GAS";
@@ -935,7 +935,7 @@ namespace HotelManagementSystem
             else
             {
                 //Buttons
-                btnLanguage.Text = "English";
+                btnLanguage.Text = "Afrikaans";
                 btnAddReset.Text = "Reset";
                 btnReset.Text = "Reset";
                 btnResetSearch.Text = "Reset";

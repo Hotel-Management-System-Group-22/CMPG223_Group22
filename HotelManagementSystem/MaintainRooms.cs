@@ -19,19 +19,21 @@ namespace HotelManagementSystem
     public partial class MaintainRooms : Form
     {
         bool isAfrikaans;
+        bool bAfrikaans = true;
         public MaintainRooms(bool isAfrikaans)
         {
             InitializeComponent();
-            this.isAfrikaans = isAfrikaans;
+           this.isAfrikaans = isAfrikaans;
             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
 
+        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         int selectedId;
         string sRoomID = "";
         string sEmployeeID = "";
-        bool bAfrikaans = true;
+       
 
         public void ResetTabPages()
         {
@@ -725,7 +727,7 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (isAfrikaans)
+            if (bAfrikaans)
             {
                 isAfrikaans = false;
                 bAfrikaans = false;
@@ -757,10 +759,10 @@ namespace HotelManagementSystem
                 btnMenuUpdate.Text = "Opdateer";
                 btnMenuDelete.Text = "Verwyder";
                 //Search
-                lblSearchRoomID.Text = "Soek Kamer ID";
-                lblSearchEmployeeID.Text = "Soek Werknemer ID";
-                lblSearchRoomStatus.Text = "Kamer status";
-                lblSearchSortRoomID.Text = "Sorteer by kamer ID";
+                lblSearchRoomID.Text = "Soek Kamer ID:";
+                lblSearchEmployeeID.Text = "Soek Werknemer ID:";
+                lblSearchRoomStatus.Text = "Kamer status:";
+                lblSearchSortRoomID.Text = "Sorteer by kamer I:D";
                 rdbAscending.Text = "Stygend";
                 rdbDescending.Text = "Dalend";
                 btnSearchReset.Text = "Herstel";
@@ -768,9 +770,9 @@ namespace HotelManagementSystem
                 cbxSearchStatus.Items.Add("Onbeset");
                 cbxSearchStatus.Items.Add("Beset");
                 //Update and delete page
-                lblRoomID.Text = "Kamer ID";
-                lblEmployeeID.Text = "Werknemer ID";
-                lblRoomStatus.Text = "Kamer status";
+                lblRoomID.Text = "Kamer ID:";
+                lblEmployeeID.Text = "Werknemer ID:";
+                lblRoomStatus.Text = "Kamer status:";
                 cbxRoomStatus.Items.Clear();
                 cbxRoomStatus.Items.Add("Onbeset");
                 cbxRoomStatus.Items.Add("Beset");
@@ -780,7 +782,7 @@ namespace HotelManagementSystem
                 //Delete
                 btnDeleteReset.Text = "Herstel";
                 btnDeleteRoom.Text = "Verwyder Kamer";
-                lblDeleteRoomID.Text = "Soek volgens kamer ID";
+                lblDeleteRoomID.Text = "Soek volgens kamer ID:";
                 // Buttons
                 toolTip1.SetToolTip(btnAddReset, "Kliek om die velde terug te stel.");
                 toolTip1.SetToolTip(btnAddRoom, "Kliek om 'n nuwe kamer by te voeg.");
@@ -800,6 +802,8 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtRoomID, "Voer die Kamer ID in");
                 toolTip1.SetToolTip(txtSearchEmployee, "Voer die Werknemer ID in waarvoor jy soek");
                 toolTip1.SetToolTip(txtSearchRoom, "Voer die Kamer ID in waarvoor jy soek");
+
+                groupBox1.Text = "Kieslys";
 
             }
             else
@@ -834,7 +838,7 @@ namespace HotelManagementSystem
                 //Delete
                 btnDeleteReset.Text = "Reset";
                 btnDeleteRoom.Text = "Delete Room";
-                lblDeleteRoomID.Text = "Search by Room ID";
+                lblDeleteRoomID.Text = "Search by Room ID:";
                 // Buttons
                 toolTip1.SetToolTip(btnAddReset, "Reset the form to its default state before adding a new entry.");
                 toolTip1.SetToolTip(btnAddRoom, "Add a new room to the system.");
@@ -853,6 +857,7 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(txtRoomID, "Enter the Room ID.");
                 toolTip1.SetToolTip(txtSearchEmployee, "Enter the Employee ID or name to search.");
                 toolTip1.SetToolTip(txtSearchRoom, "Enter the Room ID or name to search.");
+                groupBox1.Text = "Menu";
 
 
             }

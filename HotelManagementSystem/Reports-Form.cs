@@ -18,7 +18,8 @@ namespace HotelManagementSystem
         DateTime startDate;
         DateTime endDate;
         Boolean isAfrikaans = false;
-        string connectionString = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
+        // string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         public ReportsForm(Boolean isAfrikaans)
         {
             this.isAfrikaans=isAfrikaans;
@@ -247,9 +248,11 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(btnGenerateReport, "Klik om die geselekteerde verslag te genereer.");
                 toolTip1.SetToolTip(dtpStart, "Kies die begindatum.");
                 toolTip1.SetToolTip(dtpEnd, "Kies die einddatum.");
+                grpBxReports.Text = "Versoek Verslag";
             }
             else
             {
+                grpBxReports.Text = "Request Report";
                 lblEndDate.Text = "End Date:";
                 lblReportType.Text = "Report Type: ";
                 lblStartDate.Text = "Start Date: ";
@@ -265,6 +268,19 @@ namespace HotelManagementSystem
                 toolTip1.SetToolTip(dtpEnd, "Select the end date.");
 
             }
+        }
+
+        private void btnlanguage_Click(object sender, EventArgs e)
+        {
+            if (isAfrikaans)
+            {
+                isAfrikaans = false;
+            }
+            else
+            {
+                isAfrikaans = true;
+            }
+            checkLanguage();
         }
     }
 }

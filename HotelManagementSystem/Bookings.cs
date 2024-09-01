@@ -23,7 +23,8 @@ namespace HotelManagementSystem
             InitializeComponent();
             checkLanguage();
         }
-        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         bool bAfrikaans = false;
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
@@ -1567,10 +1568,10 @@ namespace HotelManagementSystem
                 btnDelete.Text = "VERWYDER";
                 btnLanguage.Text = "ENGLISH";
                 gpGeneralSearch.Text = "Algemene soektog";
-                lblBookingID.Text = "Soek volgens besprekings-ID:";
+                lblBookingID.Text = "Besprekings-ID:";
                 gpGuestSearch.Text = "Algemene soektog";
                 btnDisplayGuests.Text = "VERTOON ALLE GASTE";
-                lblGuestID.Text = "Soek volgens gas-ID:";
+                lblGuestID.Text = "Gas-ID:";
                 gpAvailablity.Text = "Soek vir beskikbare kamers vir tydperk";
                 btnSearchReset.Text = "HERSTEL";
                 lblFName.Text = "Gas voornaam:";
@@ -1590,7 +1591,7 @@ namespace HotelManagementSystem
                 cmbConfirm.Text = "Bevestig dat besonderhede wat uitgevee moet word korrek is";
                 btnDeleteReset.Text = "HERSTEL";
                 btnDeleteEmp.Text = "VERWYDER";
-                gpBookingDetails.Text = "Besprekingsbesonderhede moet opgedateer word";
+                gpBookingDetails.Text = "Besonderhede wat opgedateer moet word";
                 lblIDBooking.Text = "Besprekings-ID:";
                 lblGFName.Text = "Gas voornaam:";
                 lblGLName.Text = "Gas Van:";
@@ -1599,6 +1600,7 @@ namespace HotelManagementSystem
                 lblGDeparture.Text = "Vertrekdatum:";
                 btnUpdateReset.Text = "HERSTEL";
                 btnUpdateEmp.Text = "OPDATEER";
+                groupBox1.Text = "Kieslys";
             }
             else
             {
@@ -1608,10 +1610,10 @@ namespace HotelManagementSystem
                 btnDelete.Text = "DELETE";
                 btnLanguage.Text = "AFRIKAANS";
                 gpGeneralSearch.Text = "General Search";
-                lblBookingID.Text = "Search by Booking ID:";
+                lblBookingID.Text = "Booking ID:";
                 gpGuestSearch.Text = "General Search";
                 btnDisplayGuests.Text = "DISPLAY ALL GUESTS";
-                lblGuestID.Text = "Search by Guest ID:";
+                lblGuestID.Text = "Guest ID:";
                 gpAvailablity.Text = "Search for Availible rooms for time period";
                 btnSearchReset.Text = "RESET";
                 lblFName.Text = "Guest First Name:";
@@ -1640,6 +1642,7 @@ namespace HotelManagementSystem
                 lblGDeparture.Text = "Departure Date:";
                 btnUpdateReset.Text = "RESET";
                 btnUpdateEmp.Text = "UPDATE";
+                groupBox1.Text = "Menu";
             }
         }
 
