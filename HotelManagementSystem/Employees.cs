@@ -225,6 +225,9 @@ namespace HotelManagementSystem
             txtUsername.Clear();
             txtSearchFName.Clear();
             txtSearchLName.Clear();
+            rdoAdmin.Checked = false;
+            rdoStaff.Checked = false;
+            rdoClerk.Checked = false;
         }
 
         private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -1096,17 +1099,18 @@ namespace HotelManagementSystem
         private void checkLanguage() {
             if (bAfrikaans)
             {
+                groupBox1.Text = "KIESLYS";
                 //Hoofknoppies
                 btnSearch.Text = "SOEK";
                 btnAdd.Text = "VOEG TOE";
                 btnUpdate.Text = "OPDATERING";
-                btnDelete.Text = "VEE";
-                btnLanguage.Text = "TAAL";
+                btnDelete.Text = "VERWYDER";
+                btnLanguage.Text = "ENGLISH";
 
                 //Dateer etikette op
-                lblUpdateUsername.Text = "Werknemer Gebruikersnaam:";
+                lblUpdateUsername.Text = "Gebruikersnaam:";
                 lblUpdateFirstName.Text = "Voornaam:";
-                lblUpdateLastName.Text = "Vannaam:";
+                lblUpdateLastName.Text = "Van:";
                 lblUpdateJobTitle.Text = "Postitel:";
                 lblUpdateRole.Text = "Rol:";
                 btnUpdateEmp.Text = "OPDATERING";
@@ -1133,9 +1137,9 @@ namespace HotelManagementSystem
                 gpSearch.Text = "Soek deur:";
                 lblSearchUsername.Text = "Gebruikernaam:";
                 lblSearchFName.Text = "Voornaam:";
-                lblSearchLName.Text = "Vannaam:";
+                lblSearchLName.Text = "Van:";
                 btnSearchReset.Text = "TERUGSTEL";
-                gpSort.Text = "Sorteer volgens:";
+                gpSort.Text = "Sorteer volgens Gebruikernaam:";
                 rdoAsc.Text = "Stygend";
                 rdoDes.Text = "Daalend";
                 gpFilter.Text = "Filter volgens:";
@@ -1147,12 +1151,13 @@ namespace HotelManagementSystem
             }
             else
             {
+                groupBox1.Text = "MENU";
                 //Main buttons
                 btnSearch.Text = "SEARCH";
                 btnAdd.Text = "ADD";
                 btnUpdate.Text = "UPDATE";
                 btnDelete.Text = "DELETE";
-                btnLanguage.Text = "LANGUAGE";
+                btnLanguage.Text = "AFRIKAANS";
 
                 //Update labels
                 lblUpdateUsername.Text = "Employee Username:";
@@ -1186,7 +1191,7 @@ namespace HotelManagementSystem
                 lblSearchFName.Text = "First Name:";
                 lblSearchLName.Text = "Last Name:";
                 btnSearchReset.Text = "RESET";
-                gpSort.Text = "Sort by:";
+                gpSort.Text = "Sort by Username:";
                 rdoAsc.Text = "Ascending";
                 rdoDes.Text = "Descending";
                 gpFilter.Text = "Filter by:";
@@ -1196,6 +1201,11 @@ namespace HotelManagementSystem
                 btnSearchReset.Text = "RESET";
                 btnSearch.Text = "SEARCH";
             }
+        }
+
+        private void rdoAsc_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
