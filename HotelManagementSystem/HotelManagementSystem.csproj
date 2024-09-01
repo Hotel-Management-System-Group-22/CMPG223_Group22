@@ -186,6 +186,7 @@
     <None Include=".vs\ProjectSettings.json" />
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="Help functionality.pdf" />
     <None Include="HotelManagementSystemDataSet.xsc">
       <DependentUpon>HotelManagementSystemDataSet.xsd</DependentUpon>
     </None>

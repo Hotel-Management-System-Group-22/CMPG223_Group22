@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Security.AccessControl;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -191,6 +196,7 @@ namespace HotelManagementSystem
                 lblPassword.Text = "Wagwoord";
                 btnLogin.Text = "AANMELD";
                 btnLanguage.Text = "ENGLISH";
+                btnHelp.Text = "Hulp";
             }
             else
             {
@@ -214,6 +220,46 @@ namespace HotelManagementSystem
         private void pbExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            // Path to the PDF file in your project
+            string pdfPath = "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Help functionality.pdf"; // Ensure this matches the actual file name and path
+
+            try
+            {
+                // Open the PDF file with the default application
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = pdfPath,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening help file: {ex.Message}");
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            // Path to the PDF file in your project
+            string pdfPath = "C:\\Users\\Caitlin Calder\\OneDrive\\Desktop\\CMPG223 Project\\CMPG223_Group22\\HotelManagementSystem\\Help functionality.pdf"; // Ensure this matches the actual file name and path
+
+            try
+            {
+                // Open the PDF file with the default application
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = pdfPath,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening help file: {ex.Message}");
+            }
         }
     }
 }
