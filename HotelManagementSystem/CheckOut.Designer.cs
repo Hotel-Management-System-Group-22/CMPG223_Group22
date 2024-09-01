@@ -147,6 +147,7 @@
             this.txtGuestLName.Size = new System.Drawing.Size(144, 26);
             this.txtGuestLName.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtGuestLName, "Enter Guest ID");
+            this.txtGuestLName.TextChanged += new System.EventHandler(this.txtGuestLName_TextChanged);
             // 
             // txtGuestFName
             // 
@@ -156,6 +157,7 @@
             this.txtGuestFName.Size = new System.Drawing.Size(144, 26);
             this.txtGuestFName.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txtGuestFName, "Enter Guest ID");
+            this.txtGuestFName.TextChanged += new System.EventHandler(this.txtGuestFName_TextChanged);
             // 
             // txtCheckOutRoom
             // 
@@ -165,13 +167,14 @@
             this.txtCheckOutRoom.Size = new System.Drawing.Size(144, 26);
             this.txtCheckOutRoom.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtCheckOutRoom, "Enter Room ID");
+            this.txtCheckOutRoom.TextChanged += new System.EventHandler(this.txtCheckOutRoom_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(893, 544);
             this.pictureBox1.TabIndex = 21;
@@ -189,9 +192,9 @@
             this.grpBxCheckOut.Controls.Add(this.dateTimePicker1);
             this.grpBxCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxCheckOut.Location = new System.Drawing.Point(48, 106);
-            this.grpBxCheckOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBxCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.grpBxCheckOut.Name = "grpBxCheckOut";
-            this.grpBxCheckOut.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBxCheckOut.Padding = new System.Windows.Forms.Padding(2);
             this.grpBxCheckOut.Size = new System.Drawing.Size(589, 210);
             this.grpBxCheckOut.TabIndex = 22;
             this.grpBxCheckOut.TabStop = false;
@@ -206,9 +209,9 @@
             this.groupBox1.Controls.Add(this.txtCheckOutRoom);
             this.groupBox1.Controls.Add(this.lblRoomID);
             this.groupBox1.Location = new System.Drawing.Point(14, 63);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(389, 119);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -244,7 +247,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(40, 33);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.TabIndex = 23;

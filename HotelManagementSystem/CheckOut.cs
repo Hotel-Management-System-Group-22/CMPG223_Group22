@@ -387,6 +387,20 @@ namespace HotelManagementSystem
             
         }
 
+        private void txtCheckOutRoom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuestFName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuestLName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

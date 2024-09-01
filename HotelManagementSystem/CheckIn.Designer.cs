@@ -185,13 +185,14 @@
             this.txtGuestLName.Size = new System.Drawing.Size(144, 26);
             this.txtGuestLName.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtGuestLName, "Enter Guest ID");
+            this.txtGuestLName.TextChanged += new System.EventHandler(this.txtGuestLName_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(946, 549);
             this.pictureBox1.TabIndex = 22;
@@ -209,9 +210,9 @@
             this.grpBxCheckIn.Controls.Add(this.dateTimePicker1);
             this.grpBxCheckIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxCheckIn.Location = new System.Drawing.Point(53, 106);
-            this.grpBxCheckIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBxCheckIn.Margin = new System.Windows.Forms.Padding(2);
             this.grpBxCheckIn.Name = "grpBxCheckIn";
-            this.grpBxCheckIn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBxCheckIn.Padding = new System.Windows.Forms.Padding(2);
             this.grpBxCheckIn.Size = new System.Drawing.Size(609, 215);
             this.grpBxCheckIn.TabIndex = 23;
             this.grpBxCheckIn.TabStop = false;
@@ -226,9 +227,9 @@
             this.groupBox1.Controls.Add(this.txtRoomNr);
             this.groupBox1.Controls.Add(this.lblRoomID);
             this.groupBox1.Location = new System.Drawing.Point(18, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(389, 119);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
@@ -247,7 +248,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(40, 24);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.TabIndex = 24;

@@ -24,7 +24,7 @@ namespace HotelManagementSystem
             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
-        string connection = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
+        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
 
         private void LoadData()
         {
@@ -282,6 +282,7 @@ namespace HotelManagementSystem
 
         private void txtGuestID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtGuestFName.Text, out int result)) || (txtGuestFName.Text == string.Empty))
             {
@@ -304,6 +305,7 @@ namespace HotelManagementSystem
                 txtGuestFName.Select(txtGuestFName.Text.Length, 0);
 
             }
+            */
            
         }
 
@@ -327,6 +329,7 @@ namespace HotelManagementSystem
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtRoomNr.Text, out int result)) || (txtRoomNr.Text == string.Empty))
             {
@@ -350,10 +353,15 @@ namespace HotelManagementSystem
 
             }
 
-            
+            */
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuestLName_TextChanged(object sender, EventArgs e)
         {
 
         }
