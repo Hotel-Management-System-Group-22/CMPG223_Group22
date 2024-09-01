@@ -29,8 +29,8 @@ namespace HotelManagementSystem
         }
 
         //Connection String
-        // string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         string sJobID;
         string sJobRate;
         string sJobTitle;
@@ -297,13 +297,14 @@ namespace HotelManagementSystem
 
         private void btnAddJob_Click_1(object sender, EventArgs e)
         {
+           
             tabcontrol.Visible = true;
             tabcontrol.SelectedTab = tabAddJob;
         }
 
         private void btnEditJob_Click(object sender, EventArgs e)
         {
-            
+            //tabcontrol.Visible = true;
             if (dgvJobList.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvJobList.SelectedRows[0];
@@ -926,6 +927,11 @@ namespace HotelManagementSystem
                 isAfrikaans = true;
             }
             checkLanguage();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

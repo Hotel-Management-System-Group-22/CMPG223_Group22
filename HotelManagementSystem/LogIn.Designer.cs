@@ -47,47 +47,45 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(70, 103);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(93, 127);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(58, 13);
+            this.lblUsername.Size = new System.Drawing.Size(73, 16);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(70, 141);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(93, 174);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.Size = new System.Drawing.Size(70, 16);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password:";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(146, 101);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(195, 124);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(192, 20);
+            this.txtUsername.Size = new System.Drawing.Size(255, 22);
             this.txtUsername.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtUsername, "Enter your username");
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(146, 141);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(195, 174);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(131, 20);
+            this.txtPassword.Size = new System.Drawing.Size(173, 22);
             this.txtPassword.TabIndex = 4;
             this.toolTip1.SetToolTip(this.txtPassword, "Enter your password");
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(130, 245);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(173, 302);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(146, 54);
+            this.btnLogin.Size = new System.Drawing.Size(195, 66);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.toolTip1.SetToolTip(this.btnLogin, "Click to Login");
@@ -97,10 +95,10 @@
             // pbNotView
             // 
             this.pbNotView.Image = global::HotelManagementSystem.Properties.Resources.OIP;
-            this.pbNotView.Location = new System.Drawing.Point(280, 136);
-            this.pbNotView.Margin = new System.Windows.Forms.Padding(2);
+            this.pbNotView.Location = new System.Drawing.Point(373, 167);
+            this.pbNotView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbNotView.Name = "pbNotView";
-            this.pbNotView.Size = new System.Drawing.Size(34, 38);
+            this.pbNotView.Size = new System.Drawing.Size(45, 47);
             this.pbNotView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNotView.TabIndex = 8;
             this.pbNotView.TabStop = false;
@@ -108,20 +106,20 @@
             // 
             // pbExit
             // 
-            this.pbExit.Location = new System.Drawing.Point(308, 17);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(2);
+            this.pbExit.Location = new System.Drawing.Point(411, 21);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(50, 37);
+            this.pbExit.Size = new System.Drawing.Size(67, 46);
             this.pbExit.TabIndex = 7;
             this.pbExit.TabStop = false;
             // 
             // pbViewPassword
             // 
             this.pbViewPassword.Image = global::HotelManagementSystem.Properties.Resources.preview_show_interface_icon_free_vector;
-            this.pbViewPassword.Location = new System.Drawing.Point(280, 136);
-            this.pbViewPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.pbViewPassword.Location = new System.Drawing.Point(373, 167);
+            this.pbViewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbViewPassword.Name = "pbViewPassword";
-            this.pbViewPassword.Size = new System.Drawing.Size(34, 39);
+            this.pbViewPassword.Size = new System.Drawing.Size(45, 48);
             this.pbViewPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewPassword.TabIndex = 6;
             this.pbViewPassword.TabStop = false;
@@ -130,9 +128,10 @@
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(130, 305);
+            this.btnLanguage.Location = new System.Drawing.Point(173, 375);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(147, 35);
+            this.btnLanguage.Size = new System.Drawing.Size(196, 43);
             this.btnLanguage.TabIndex = 9;
             this.btnLanguage.Text = "AFRIKAANS";
             this.toolTip1.SetToolTip(this.btnLanguage, "Click to change languages");
@@ -141,10 +140,10 @@
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(421, 366);
+            this.ClientSize = new System.Drawing.Size(561, 450);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.btnLogin);
@@ -154,9 +153,10 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.pbViewPassword);
             this.Controls.Add(this.pbNotView);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbNotView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).EndInit();

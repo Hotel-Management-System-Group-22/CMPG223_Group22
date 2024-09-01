@@ -160,6 +160,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(1047, 705);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // grpBxReports
             // 
@@ -195,7 +196,7 @@
             // btnlanguage
             // 
             this.btnlanguage.Location = new System.Drawing.Point(883, 60);
-            this.btnlanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnlanguage.Name = "btnlanguage";
             this.btnlanguage.Size = new System.Drawing.Size(100, 28);
             this.btnlanguage.TabIndex = 13;

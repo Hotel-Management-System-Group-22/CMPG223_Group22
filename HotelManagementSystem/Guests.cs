@@ -28,8 +28,8 @@ namespace HotelManagementSystem
             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
-        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         bool bAfrikaans = false;
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -182,16 +182,19 @@ namespace HotelManagementSystem
 
         private void BtnAddPage_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tbAddGuest;
         }
 
         private void BtnUpdatePage_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tbUpdateGuest;
         }
 
         private void BtnDeleteGuest_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tbDeleteGuest;
         }
 
@@ -596,6 +599,7 @@ namespace HotelManagementSystem
         private void Guests_Load(object sender, EventArgs e)
         {
             LoadGuests();
+            tabControl1.Visible = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -699,6 +703,7 @@ namespace HotelManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tbSearchGuest;
             //txtLName_Search.Visible = false;
             //txtFName_Search.Visible = false;

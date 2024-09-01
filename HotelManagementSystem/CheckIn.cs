@@ -24,7 +24,7 @@ namespace HotelManagementSystem
             bAfrikaans = isAfrikaans;
             checkLanguage();
         }
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
 
         private void LoadData()
         {
@@ -362,6 +362,11 @@ namespace HotelManagementSystem
         }
 
         private void txtGuestLName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

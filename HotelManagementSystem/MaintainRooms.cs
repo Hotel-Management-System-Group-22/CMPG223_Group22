@@ -28,8 +28,8 @@ namespace HotelManagementSystem
             checkLanguage();
         }
 
-        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         int selectedId;
         string sRoomID = "";
         string sEmployeeID = "";
@@ -125,12 +125,14 @@ namespace HotelManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedIndex = 0;
             ResetTabPages();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedIndex = 1;
             btnUpdateRoom.Visible = false;
             btnAddRoom.Visible = true;
@@ -141,6 +143,7 @@ namespace HotelManagementSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedIndex = 1;
             txtRoomID.Visible = true;
             lblRoomID.Visible = true;
@@ -152,6 +155,7 @@ namespace HotelManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedIndex = 2;
             ResetTabPages();
         }
@@ -258,7 +262,7 @@ namespace HotelManagementSystem
 
         private void MaintainRooms_Load(object sender, EventArgs e)
         {
-
+            tabControl1.Visible = false;
             LoadData();
 
         }
@@ -303,54 +307,60 @@ namespace HotelManagementSystem
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                selectedId = Convert.ToInt32(selectedRow.Cells["Room_ID"].Value);
-                DialogResult result;
-                if (bAfrikaans == false)
-                {
-                     result = MessageBox.Show("Are you sure you want to Delete this record? \nID: " + selectedId, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                int selectedId = Convert.ToInt32(selectedRow.Cells["Room_ID"].Value);
 
+                // Populate the txtDeleteRoomID textbox with the selected room ID
+                txtDeleteRoomID.Text = selectedId.ToString();
+
+                DialogResult result;
+
+                if (!bAfrikaans)
+                {
+                    result = MessageBox.Show($"Are you sure you want to delete this record? \nID: {selectedId}", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 }
                 else
                 {
-                    result = MessageBox.Show("Is jy seker jy wil die record verwyder? \nID: " + selectedId, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    result = MessageBox.Show($"Is jy seker jy wil die rekord verwyder? \nID: {selectedId}", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 }
+
                 if (result == DialogResult.Yes)
                 {
-                    string query = "DELETE FROM Booking WHERE Room_ID = " + selectedId;
+                    string query = "DELETE FROM Room WHERE Room_ID = @id";
 
                     // Use a SqlConnection to connect to the database
                     using (SqlConnection conn = new SqlConnection(connection))
                     {
-                        //Referencial intergrity D:R so need to check if room has any bookings, if so, need to restrict the deletion of room. INTEGRITY of Data!!
-                        string checkGuests = "SELECT COUNT(*) FROM Room WHERE Room_ID = @id";
-                        using (SqlCommand checkCmd = new SqlCommand(checkGuests, conn))
-                        {
-                            checkCmd.Parameters.AddWithValue("@id", txtDeleteRoomID.Text);
-                            int bookingCount = (int)checkCmd.ExecuteScalar();
-
-                            if (bookingCount > 0)
-                            {
-                                if (bAfrikaans == false)
-                                {
-                                    MessageBox.Show("Cannot delete room as there are existing bookings associated with this room.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    return;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Kan nie ruimte uitvee nie, aangesien daar bestaande besprekings met hierdie kamer verband hou.", "Verwyder beperk", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    return;
-                                }
-                            }
-                        }
                         try
                         {
-                            conn.Open();
+                            conn.Open(); // Open the connection
 
-                            // Use a SqlCommand to execute the delete query
+                            // Check for existing bookings
+                            string checkGuests = "SELECT COUNT(*) FROM Booking WHERE Room_ID = @id";
+                            using (SqlCommand checkCmd = new SqlCommand(checkGuests, conn))
+                            {
+                                checkCmd.Parameters.AddWithValue("@id", selectedId);
+                                int bookingCount = (int)checkCmd.ExecuteScalar();
+
+                                if (bookingCount > 0)
+                                {
+                                    if (!bAfrikaans)
+                                    {
+                                        MessageBox.Show("Cannot delete room as there are existing bookings associated with this room.", "Delete Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Kan nie kamer uitvee nie, aangesien daar bestaande besprekings met hierdie kamer verband hou.", "Verwyder beperk", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                    return; // Exit if there are existing bookings
+                                }
+                            }
+
+                            // Execute the delete query
                             using (SqlCommand command = new SqlCommand(query, conn))
                             {
+                                command.Parameters.AddWithValue("@id", selectedId); // Pass the selected ID as a parameter
                                 int rowsAffected = command.ExecuteNonQuery();
-                                
+
                                 if (bAfrikaans)
                                 {
                                     MessageBox.Show(rowsAffected > 0
@@ -360,46 +370,52 @@ namespace HotelManagementSystem
                                 else
                                 {
                                     MessageBox.Show(rowsAffected > 0
-                                    ? "Record deleted successfully."
-                                    : "No record found with the specified ID.");
+                                        ? "Record deleted successfully."
+                                        : "No record found with the specified ID.");
                                 }
                             }
-                            LoadData();
+
+                            LoadData(); // Reload the data to reflect changes
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("An error occurred: " + ex.Message);
+                            MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            conn.Close(); // Ensure the connection is closed
                         }
                     }
                 }
                 else
                 {
-                    if (bAfrikaans == false)
+                    if (!bAfrikaans)
                     {
-                        MessageBox.Show("Action Canceled");
+                        MessageBox.Show("Action Canceled", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Aksie is gekanselleer");
+                        MessageBox.Show("Aksie is gekanselleer", "Gekanselleer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             else
             {
-                if (bAfrikaans == false)
+                if (!bAfrikaans)
                 {
-                    MessageBox.Show("No record selected. Please select on data grid which room you would like to Delete");
+                    MessageBox.Show("No record selected. Please select a room from the data grid to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show("Geen record is gekies nie. Kies asseblief watse kamer jy wil verwyder in die tabel");
+                    MessageBox.Show("Geen rekord is gekies nie. Kies asseblief die kamer wat jy wil verwyder in die tabel.", "Geen Keuse", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
         }
+
 
         private void txtDeleteRoomID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtDeleteRoomID.Text, out int result)) || txtDeleteRoomID.Text == "" )
             {
@@ -422,7 +438,7 @@ namespace HotelManagementSystem
                 txtDeleteRoomID.Select(txtDeleteRoomID.Text.Length, 0);
 
             }
-            
+            */
         }
 
         private void txtEmployeeID_TextChanged(object sender, EventArgs e)
@@ -861,6 +877,17 @@ namespace HotelManagementSystem
 
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchEmployee_Click(object sender, EventArgs e)
+        {
+            Employees emp = new Employees(isAfrikaans);
+            emp.Show();
         }
     }
 }

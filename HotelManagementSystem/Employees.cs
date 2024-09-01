@@ -32,8 +32,8 @@ namespace HotelManagementSystem
             checkLanguage();
         }
 
-        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
 
         private void Employees_Load(object sender, EventArgs e)
         {
@@ -41,6 +41,7 @@ namespace HotelManagementSystem
             this.jobTableAdapter.Fill(this.hotelManagementSystemDataSet1.Job);
             // TODO: This line of code loads data into the 'hotelManagementSystemDataSet.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter.Fill(this.hotelManagementSystemDataSet.Employee);
+            tabControl1.Visible = false;
 
         }
         private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
@@ -166,6 +167,7 @@ namespace HotelManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage4;
         }
 
@@ -179,6 +181,7 @@ namespace HotelManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             cmbAddRole.SelectedIndex = -1;
             cmbAddJob.SelectedIndex = -1;
             tabControl1.SelectedTab = tabPage3;
@@ -186,6 +189,7 @@ namespace HotelManagementSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             cmbUpdateRole.SelectedIndex = -1;
             cmbUpdateJob.SelectedIndex = -1;
             tabControl1.SelectedTab = tabPage1;
@@ -193,6 +197,7 @@ namespace HotelManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage2;
         }
 
@@ -358,103 +363,102 @@ namespace HotelManagementSystem
 
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
-            //PopulateDeleteFields(selectedEmployeeID);
-
+            // Ensure an employee is selected
             if (selectedEmployeeID == -1)
             {
                 if (bAfrikaans)
                 {
-                    MessageBox.Show("No Employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Geen werknemer gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Geen werknemer gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("No Employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                return;
             }
 
-
-            string Deletequery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
-            //D:SN
-            string setNull = "UPDATE Room SET Employee_ID = NULL WHERE Employee_ID = @EmployeeID";
+            // SQL queries
+            string deleteQuery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
+            string setNullQuery = "UPDATE Room SET Employee_ID = NULL WHERE Employee_ID = @EmployeeId";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
-                //Referencial integrity if employee is deleted, must be set to null in room
-                using (SqlCommand referencialintegrity = new SqlCommand(setNull, conn))
+
+                // Set Employee_ID to NULL in Room table
+                using (SqlCommand referentialIntegrity = new SqlCommand(setNullQuery, conn))
                 {
-                    referencialintegrity.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
-                    referencialintegrity.ExecuteNonQuery();
+                    referentialIntegrity.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
+                    referentialIntegrity.ExecuteNonQuery();
                 }
-                using (SqlCommand command = new SqlCommand(Deletequery, conn))
+
+                // Delete the employee
+                using (SqlCommand command = new SqlCommand(deleteQuery, conn))
                 {
                     command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
 
+                    // Check if the confirmation checkbox is checked
                     if (!cbConfirm.Checked)
                     {
                         if (bAfrikaans)
                         {
-                            MessageBox.Show("Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete");
-                            return;
+                            MessageBox.Show("Merk asseblief die merkblokkie as die inligting in 'Verifieer werknemerbesonderhede' ooreenstem met die werknemer wat jy van plan is om uit te vee");
                         }
                         else
                         {
-                            MessageBox.Show("Merk asseblief die merkblokkie as die inligting in 'Verifieer werknemerbesonderhede' ooreenstem met die werknemer wat jy van plan is om uit te vee");
-                            return;
+                            MessageBox.Show("Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete");
                         }
+                        return;
                     }
-                    DialogResult dialogResult = DialogResult.None; // Initialize with a default value
+
+                    // Show confirmation dialog
+                    DialogResult dialogResult;
                     if (bAfrikaans)
                     {
-                        MessageBox.Show("Are you sure you would like to delete this user:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        //eturn;
+                        dialogResult = MessageBox.Show("Is jy seker jy wil hierdie gebruiker uitvee?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Is jy seker jy wil hierdie gebruiker uitvee:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); 
-                        //return;
+                        dialogResult = MessageBox.Show("Are you sure you would like to delete this user?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     }
+
+                    // If the user confirms the deletion
                     if (dialogResult == DialogResult.Yes)
                     {
                         int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
-                            command.ExecuteNonQuery();
                             if (bAfrikaans)
                             {
-                                MessageBox.Show("Employee sucessfully deleted");
-                                txtVerifyClerk.Text = " ";
-                                txtVerifyAdmin.Text = " ";
-                                txtVerifyFName.Text = " ";
-                                txtVerifyLName.Text = " ";
-                                txtVerifyJob.Text = " ";
+                                MessageBox.Show("Werknemer suksesvol verwyder.");
                             }
                             else
                             {
-                                MessageBox.Show("Werknemer suksesvol verwyder");
-                                txtVerifyClerk.Text = " ";
-                                txtVerifyAdmin.Text = " ";
-                                txtVerifyFName.Text = " ";
-                                txtVerifyLName.Text = " ";
-                                txtVerifyJob.Text = " ";
+                                MessageBox.Show("Employee successfully deleted.");
                             }
+
+                            // Clear the verification text fields
+                            txtVerifyClerk.Clear();
+                            txtVerifyAdmin.Clear();
+                            txtVerifyFName.Clear();
+                            txtVerifyLName.Clear();
+                            txtVerifyJob.Clear();
                         }
                         else
                         {
                             if (bAfrikaans)
                             {
-                                MessageBox.Show("No employee found with the provided username.");
+                                MessageBox.Show("Geen werknemer gevind met die verskafde gebruikersnaam nie.");
                             }
                             else
                             {
-                                MessageBox.Show("Geen werknemer gevind met die verskafde gebruikersnaam nie.");
+                                MessageBox.Show("No employee found with the provided username.");
                             }
                         }
+
+                        LoadData(); // Refresh the data grid after deletion
                     }
-                    LoadData();
                 }
             }
         }
@@ -1204,6 +1208,11 @@ namespace HotelManagementSystem
         }
 
         private void rdoAsc_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

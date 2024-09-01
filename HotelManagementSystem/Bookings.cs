@@ -23,8 +23,8 @@ namespace HotelManagementSystem
             InitializeComponent();
             checkLanguage();
         }
-        // string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         bool bAfrikaans = false;
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
@@ -622,6 +622,7 @@ namespace HotelManagementSystem
         private void Bookings_Load(object sender, EventArgs e)
         {
             LoadBookingData();
+            tabControl1.Visible = false;
         }
         private void PopulateBookingDeleteFields(int bookingId)
         {
@@ -1247,11 +1248,11 @@ namespace HotelManagementSystem
             {
                 if (bAfrikaans == false)
                 {
-                    errorProvider1.SetError(dtCheckout, "Booking has to be for at least one day");
+                    errorProvider1.SetError(dtDeparture_Update, "Booking has to be for at least one day");
                 }
                 else
                 {
-                    errorProvider1.SetError(dtCheckout, "Bespreking moet vir ten minste een dag wees");
+                    errorProvider1.SetError(dtDeparture_Update, "Bespreking moet vir ten minste een dag wees");
                 }
             }
             if (duration.Days > maxBookingDuration)
@@ -1392,21 +1393,25 @@ namespace HotelManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage3;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage1;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage2;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage4;
         }
 
@@ -1647,6 +1652,16 @@ namespace HotelManagementSystem
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtArrival_TextChanged(object sender, EventArgs e)
         {
 
         }

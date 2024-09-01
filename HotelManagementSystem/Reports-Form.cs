@@ -18,8 +18,8 @@ namespace HotelManagementSystem
         DateTime startDate;
         DateTime endDate;
         Boolean isAfrikaans = false;
-        // string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+         string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         public ReportsForm(Boolean isAfrikaans)
         {
             this.isAfrikaans=isAfrikaans;
@@ -307,6 +307,11 @@ namespace HotelManagementSystem
                 isAfrikaans = true;
             }
             checkLanguage();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

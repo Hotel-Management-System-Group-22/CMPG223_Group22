@@ -23,8 +23,8 @@ namespace HotelManagementSystem
             this.username = userName;  // Initialize with the username passed from the LogIn form
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
-        // string connectiong = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connectiong = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void Update_Click(object sender, EventArgs e)
         {
             LogIn login = new LogIn(bAfrikaans);
@@ -96,7 +96,7 @@ namespace HotelManagementSystem
                         {
                             string query = "UPDATE Employee SET Employee_Password = @newPassword WHERE Employee_Username = @username";
 
-                            using (SqlConnection conn = new SqlConnection(connection))
+                            using (SqlConnection conn = new SqlConnection(connectiong))
                             {
                                 conn.Open();
                                 using (SqlCommand command = new SqlCommand(query, conn))
@@ -161,6 +161,11 @@ namespace HotelManagementSystem
                 btnUpdatePassword.Text = "UPDATE";
                 btnLanguage.Text = "LANGUAGE";
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

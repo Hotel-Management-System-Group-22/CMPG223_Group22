@@ -130,11 +130,12 @@
             this.pictureBox1.Size = new System.Drawing.Size(797, 447);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(237, 351);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(284, 47);
             this.btnLanguage.TabIndex = 7;

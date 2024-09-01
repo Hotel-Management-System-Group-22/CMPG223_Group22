@@ -200,5 +200,10 @@ namespace HotelManagementSystem
                 btnLanguage.Text = "AFRIKAANS";
             }
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
