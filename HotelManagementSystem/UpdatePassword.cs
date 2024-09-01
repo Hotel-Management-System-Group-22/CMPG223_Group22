@@ -27,7 +27,7 @@ namespace HotelManagementSystem
         
         private void Update_Click(object sender, EventArgs e)
         {
-            LogIn login = new LogIn();
+            LogIn login = new LogIn(bAfrikaans);
 
             string username = login.GetUsername();
             string newPassword = txtNewPassword.Text.Trim();

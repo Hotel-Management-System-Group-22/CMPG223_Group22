@@ -19,10 +19,11 @@ namespace HotelManagementSystem
 {
     public partial class ManageJobsForm : Form
     {
-        Boolean isAfrikaans = false;
+        Boolean isAfrikaans;
         public ManageJobsForm(Boolean isAfrikaans) { 
              this.isAfrikaans = isAfrikaans;
              InitializeComponent();
+             checkLanguage();
         }
 
         //Connection String
@@ -36,94 +37,7 @@ namespace HotelManagementSystem
         private void ManageJobsForm_Load(object sender, EventArgs e)
         {
             loadData();
-            toolTip1.AutoPopDelay = 5000;   //5 seconds
-            toolTip1.InitialDelay = 700;    //0.7 seconds
-            toolTip1.ReshowDelay = 2000;     //2 seconds
-            toolTip1.ShowAlways = true;
             tabcontrol.Visible = false;
-            if (isAfrikaans)
-            {
-                lblAddRate.Text = "Werkskoers: ";
-                lblAddTitle.Text = "Werkstitel";
-                lblEditRate.Text = "Werkskoers: ";
-                lblEditTitle.Text = "Werkstitel";
-                lblJobID.Text = "Werk ID";
-                lblJobRate.Text = "Werkskoers: ";
-                lblJobTitle.Text = "Werkstitel";
-                //lblSearchJob.Text = "Soek Werk";
-                lblSelectedID.Text = "Geselekteerde ID";
-                //lblSelectRecords.Text = "Kies Rekords Hieronder";
-                btnAcceptNewJob.Text = "Aanvaar";
-                btnAddCancel.Text = "Kanseleer";
-                btnAddJob.Text = "Voeg Werk By ";
-                btnDeleteJob.Text = "Vee Geselekteerde Werk Uit";
-                btnEditJob.Text = "Opdateer Werk ";
-                btnReset.Text = "Herstel";
-                btnEditAccept.Text = "Aanvaar";
-                btnEditCancel.Text = "Kanseleer";
-                tabAddJob.Text = "Voeg Werkinlighting by";
-                tabEditJob.Text = "Wysig Werkinligting";
-
-                toolTip1.SetToolTip(btnAcceptNewJob, "Kliek om die nuwe werk te aanvaar.");
-                toolTip1.SetToolTip(btnAddCancel, "Kliek om die toevoeging van werk te kanselleer.");
-                toolTip1.SetToolTip(btnAddJob, "Kliek om 'n nuwe werk by te voeg.");
-                toolTip1.SetToolTip(btnDeleteJob, "Kliek om die geselekteerde werk uit te vee.");
-                toolTip1.SetToolTip(btnEditJob, "Kliek om die geselekteerde werk op te dateer.");
-                toolTip1.SetToolTip(btnReset, "Kliek om die soekveld terug te stel.");
-                toolTip1.SetToolTip(btnEditAccept, "Kliek om die gewysigde werk te aanvaar.");
-                toolTip1.SetToolTip(btnEditCancel, "Kliek om die gewysigde van die werk te kanselleer.");
-
-                toolTip1.SetToolTip(txtAddJobRate, "Voer die tarief vir die nuwe werk in.");
-                toolTip1.SetToolTip(txtAddJobTitle, "Voer die titel vir die nuwe werk in.");
-                toolTip1.SetToolTip(txtEditJobRate, "Voer die nuwe tarief vir die geselekteerde werk in.");
-                toolTip1.SetToolTip(txtEditJobTitle, "Voer die nuwe titel vir die geselekteerde werk in.");
-                toolTip1.SetToolTip(txtJobID, "Voer die Job ID in waarna jy soek.");
-                toolTip1.SetToolTip(txtJobRate, "Voer die tarief in waarna jy soek.");
-                toolTip1.SetToolTip(txtJobTitle, "Voer die titel in waarna jy soek.");
-
-
-            }
-            else if (isAfrikaans == false)
-            {
-                lblAddRate.Text = "Job Rate: ";
-                lblAddTitle.Text = "Job Title: ";
-                lblEditRate.Text = "Job Rate: ";
-                lblEditTitle.Text = "Job Title: ";
-                lblJobID.Text = "Job ID: ";
-                lblJobRate.Text = "Job Rate: ";
-                lblJobTitle.Text = "Job Title: ";
-                //lblSearchJob.Text = "Search Job: ";
-                lblSelectedID.Text = "Selected ID: ";
-                //lblSelectRecords.Text = "Select Records Below";
-                btnAcceptNewJob.Text = "Accept";
-                btnAddCancel.Text = "Cancel";
-                btnAddJob.Text = "Add Job";
-                btnDeleteJob.Text = "Delete Selected Job";
-                btnEditJob.Text = "Update Job";
-                btnReset.Text = "Reset";
-                btnEditAccept.Text = "Accept";
-                btnEditCancel.Text = "Cancel";
-                tabAddJob.Text = "Add Job Info";
-                tabEditJob.Text = "Edit Job Info";
-
-                toolTip1.SetToolTip(btnAcceptNewJob, "Click to accept the new job.");
-                toolTip1.SetToolTip(btnAddCancel, "Click to cancel adding the job.");
-                toolTip1.SetToolTip(btnAddJob, "Click to add a new job.");
-                toolTip1.SetToolTip(btnDeleteJob, "Click to delete the selected job.");
-                toolTip1.SetToolTip(btnEditJob, "Click to edit the selected job.");
-                toolTip1.SetToolTip(btnReset, "Click to reset the search field.");
-                toolTip1.SetToolTip(btnEditAccept, "Click to accept the modified job.");
-                toolTip1.SetToolTip(btnEditCancel, "Click to cancel editing the job.");
-
-                toolTip1.SetToolTip(txtAddJobRate, "Enter the rate for the new job.");
-                toolTip1.SetToolTip(txtAddJobTitle, "Enter the title for the new job.");
-                toolTip1.SetToolTip(txtEditJobRate, "Enter the new rate for the selected job.");
-                toolTip1.SetToolTip(txtEditJobTitle, "Enter the new title for the selected job.");
-                toolTip1.SetToolTip(txtJobID, "Enter the Job ID you seek");
-                toolTip1.SetToolTip(txtJobRate, "Enter the Rate you seek ");
-                toolTip1.SetToolTip(txtJobTitle, "Enter the Title you seek");
-
-            }
         }
 
         private void loadData()
@@ -845,8 +759,6 @@ namespace HotelManagementSystem
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            CheckIn newform = new CheckIn();
-            newform.Show();
             tabcontrol.Visible = false;
             txtAddJobRate.Text = "";
             txtAddJobTitle.Text = "";
@@ -901,8 +813,98 @@ namespace HotelManagementSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, isAfrikaans);
 
+        }
+
+        private void checkLanguage() {
+            toolTip1.AutoPopDelay = 5000;   //5 seconds
+            toolTip1.InitialDelay = 700;    //0.7 seconds
+            toolTip1.ReshowDelay = 2000;     //2 seconds
+            toolTip1.ShowAlways = true;
+            if (isAfrikaans)
+            {
+                lblAddRate.Text = "Werkskoers: ";
+                lblAddTitle.Text = "Werkstitel";
+                lblEditRate.Text = "Werkskoers: ";
+                lblEditTitle.Text = "Werkstitel";
+                lblJobID.Text = "Werk ID";
+                lblJobRate.Text = "Werkskoers: ";
+                lblJobTitle.Text = "Werkstitel";
+                //lblSearchJob.Text = "Soek Werk";
+                lblSelectedID.Text = "Geselekteerde ID";
+                //lblSelectRecords.Text = "Kies Rekords Hieronder";
+                btnAcceptNewJob.Text = "Aanvaar";
+                btnAddCancel.Text = "Kanseleer";
+                btnAddJob.Text = "Voeg Werk By ";
+                btnDeleteJob.Text = "Vee Geselekteerde Werk Uit";
+                btnEditJob.Text = "Opdateer Werk ";
+                btnReset.Text = "Herstel";
+                btnEditAccept.Text = "Aanvaar";
+                btnEditCancel.Text = "Kanseleer";
+                tabAddJob.Text = "Voeg Werkinlighting by";
+                tabEditJob.Text = "Wysig Werkinligting";
+
+                toolTip1.SetToolTip(btnAcceptNewJob, "Kliek om die nuwe werk te aanvaar.");
+                toolTip1.SetToolTip(btnAddCancel, "Kliek om die toevoeging van werk te kanselleer.");
+                toolTip1.SetToolTip(btnAddJob, "Kliek om 'n nuwe werk by te voeg.");
+                toolTip1.SetToolTip(btnDeleteJob, "Kliek om die geselekteerde werk uit te vee.");
+                toolTip1.SetToolTip(btnEditJob, "Kliek om die geselekteerde werk op te dateer.");
+                toolTip1.SetToolTip(btnReset, "Kliek om die soekveld terug te stel.");
+                toolTip1.SetToolTip(btnEditAccept, "Kliek om die gewysigde werk te aanvaar.");
+                toolTip1.SetToolTip(btnEditCancel, "Kliek om die gewysigde van die werk te kanselleer.");
+
+                toolTip1.SetToolTip(txtAddJobRate, "Voer die tarief vir die nuwe werk in.");
+                toolTip1.SetToolTip(txtAddJobTitle, "Voer die titel vir die nuwe werk in.");
+                toolTip1.SetToolTip(txtEditJobRate, "Voer die nuwe tarief vir die geselekteerde werk in.");
+                toolTip1.SetToolTip(txtEditJobTitle, "Voer die nuwe titel vir die geselekteerde werk in.");
+                toolTip1.SetToolTip(txtJobID, "Voer die Job ID in waarna jy soek.");
+                toolTip1.SetToolTip(txtJobRate, "Voer die tarief in waarna jy soek.");
+                toolTip1.SetToolTip(txtJobTitle, "Voer die titel in waarna jy soek.");
+
+
+            }
+            else
+            {
+                lblAddRate.Text = "Job Rate: ";
+                lblAddTitle.Text = "Job Title: ";
+                lblEditRate.Text = "Job Rate: ";
+                lblEditTitle.Text = "Job Title: ";
+                lblJobID.Text = "Job ID: ";
+                lblJobRate.Text = "Job Rate: ";
+                lblJobTitle.Text = "Job Title: ";
+                //lblSearchJob.Text = "Search Job: ";
+                lblSelectedID.Text = "Selected ID: ";
+                //lblSelectRecords.Text = "Select Records Below";
+                btnAcceptNewJob.Text = "Accept";
+                btnAddCancel.Text = "Cancel";
+                btnAddJob.Text = "Add Job";
+                btnDeleteJob.Text = "Delete Selected Job";
+                btnEditJob.Text = "Update Job";
+                btnReset.Text = "Reset";
+                btnEditAccept.Text = "Accept";
+                btnEditCancel.Text = "Cancel";
+                tabAddJob.Text = "Add Job Info";
+                tabEditJob.Text = "Edit Job Info";
+
+                toolTip1.SetToolTip(btnAcceptNewJob, "Click to accept the new job.");
+                toolTip1.SetToolTip(btnAddCancel, "Click to cancel adding the job.");
+                toolTip1.SetToolTip(btnAddJob, "Click to add a new job.");
+                toolTip1.SetToolTip(btnDeleteJob, "Click to delete the selected job.");
+                toolTip1.SetToolTip(btnEditJob, "Click to edit the selected job.");
+                toolTip1.SetToolTip(btnReset, "Click to reset the search field.");
+                toolTip1.SetToolTip(btnEditAccept, "Click to accept the modified job.");
+                toolTip1.SetToolTip(btnEditCancel, "Click to cancel editing the job.");
+
+                toolTip1.SetToolTip(txtAddJobRate, "Enter the rate for the new job.");
+                toolTip1.SetToolTip(txtAddJobTitle, "Enter the title for the new job.");
+                toolTip1.SetToolTip(txtEditJobRate, "Enter the new rate for the selected job.");
+                toolTip1.SetToolTip(txtEditJobTitle, "Enter the new title for the selected job.");
+                toolTip1.SetToolTip(txtJobID, "Enter the Job ID you seek");
+                toolTip1.SetToolTip(txtJobRate, "Enter the Rate you seek ");
+                toolTip1.SetToolTip(txtJobTitle, "Enter the Title you seek");
+
+            }
         }
     }
 }

@@ -17,15 +17,11 @@ namespace HotelManagementSystem
     public partial class Bookings : Form
     {
         
-        public Bookings()
+        public Bookings(bool isAfrikaans)
         {
+            bAfrikaans = isAfrikaans;
             InitializeComponent();
-            this.btnLanguage.Click += new System.EventHandler(this.btnAddReset_Click);
-
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
+            checkLanguage();
         }
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
         bool bAfrikaans = false;
@@ -1536,10 +1532,35 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            //bAfrikaans = !bAfrikaans;
-            if (bAfrikaans == false)
+            if (bAfrikaans)
             {
+                bAfrikaans = false;
+            }
+            else {
                 bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void txtGuestLName_Update_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+        }
+
+        private void checkLanguage()
+        {
+            if (bAfrikaans)
+            {
                 btnSearch.Text = "SOEK";
                 btnAdd.Text = "VOEG TOE";
                 btnUpdate.Text = "OPDATERING";
@@ -1581,7 +1602,6 @@ namespace HotelManagementSystem
             }
             else
             {
-                bAfrikaans = false;
                 btnSearch.Text = "SEARCH";
                 btnAdd.Text = "ADD";
                 btnUpdate.Text = "UPDATE";
@@ -1621,21 +1641,6 @@ namespace HotelManagementSystem
                 btnUpdateReset.Text = "RESET";
                 btnUpdateEmp.Text = "UPDATE";
             }
-        }
-
-        private void txtGuestLName_Update_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
         }
     }
 }

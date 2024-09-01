@@ -13,32 +13,35 @@ namespace HotelManagementSystem
 {
     public partial class AdminMenu : Form
     {
-        public AdminMenu()
+        bool isAfrikaans = false;
+        public AdminMenu(bool isAfrikaans)
         {
             InitializeComponent();
+            this.isAfrikaans=isAfrikaans;
+            checkLanguage();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Guests guests = new Guests();
+            Guests guests = new Guests(isAfrikaans);
             guests.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Employees employees = new Employees();
+            Employees employees = new Employees(isAfrikaans);
             employees.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MaintainRooms rooms = new MaintainRooms();
+            MaintainRooms rooms = new MaintainRooms(isAfrikaans);
             rooms.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Bookings bookings = new Bookings();
+            Bookings bookings = new Bookings(isAfrikaans);
             bookings.Show();
         }
 
@@ -50,13 +53,13 @@ namespace HotelManagementSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            CheckIn checkIn = new CheckIn();
+            CheckIn checkIn = new CheckIn(isAfrikaans);
             checkIn.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            CheckOut checkOut = new CheckOut();
+            CheckOut checkOut = new CheckOut(isAfrikaans);
             checkOut.Show();
         }
 
@@ -64,6 +67,44 @@ namespace HotelManagementSystem
         {
             ReportsForm reports = new ReportsForm(true);
             reports.Show();
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (isAfrikaans)
+            {
+                isAfrikaans = false;
+            }
+            else {
+                isAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void checkLanguage() {
+            if (isAfrikaans)
+            {
+                btnBookings.Text = "Handhaaf Besprekings";
+                btnCheckIn.Text = "Gaste Inboek";
+                btnCheckOut.Text = "Gaste Uitboek";
+                btnGuests.Text = "Handhaaf Gaste";
+                btnLanguage.Text = "English";
+                btnRooms.Text = "Handhaaf Kamers";
+                btnEmployees.Text = "Handhaaf Werknemers";
+                btnJobs.Text = "Handhaaf Poste";
+                btnReports.Text = "Versoek Verslae";
+            }
+            else {
+                btnBookings.Text = "Maintain Bookings";
+                btnCheckIn.Text = "Check Guest in";
+                btnCheckOut.Text = "Check Guest out";
+                btnGuests.Text = "Maintain Guests";
+                btnLanguage.Text = "Afrikaans";
+                btnRooms.Text = "Maintain Rooms";
+                btnEmployees.Text = "Maintain Employees";
+                btnJobs.Text = "Maintain Jobs";
+                btnReports.Text = "Request Reports";
+            }
         }
     }
 }

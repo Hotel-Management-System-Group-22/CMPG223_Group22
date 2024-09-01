@@ -20,9 +20,13 @@ namespace HotelManagementSystem
 {
     public partial class Guests : Form
     {
-        public Guests()
+        bool isAfrikaans;
+        public Guests(bool isAfrikaans)
         {
             InitializeComponent();
+            this.isAfrikaans = isAfrikaans;
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
@@ -329,7 +333,7 @@ namespace HotelManagementSystem
             }
 
             // Retrieve guest details for confirmation
-            string selectQuery = "SELECT Guest_FName, Guest_LName, Guest_ContactNo, Guest_Email FROM Guest WHERE Guest_ID = @id";
+            //string selectQuery = "SELECT Guest_FName, Guest_LName, Guest_ContactNo, Guest_Email FROM Guest WHERE Guest_ID = @id";
             string guestName = string.Empty;
 
             using (SqlConnection conn = new SqlConnection(connection))
@@ -862,9 +866,32 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
+            if (isAfrikaans)
             {
-                bAfrikaans = true;
+                isAfrikaans = false;
+                bAfrikaans = false;
+            }
+            else {
+                isAfrikaans=true;
+                bAfrikaans=true;
+            }
+            checkLanguage();
+        }
+
+        private void lblDeleteEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+
+        }
+
+        private void checkLanguage() {
+            if (isAfrikaans)
+            {
                 //Buttons
                 btnLanguage.Text = "English";
                 btnAddReset.Text = "Herstel";
@@ -885,9 +912,9 @@ namespace HotelManagementSystem
                 LblEmailAddress.Text = "E-pos:";
                 LblEmail_Update.Text = "E-pos:";
                 LblFName_Update.Text = "Voornaam:";
-                LblLName_Update.Text = "Van:";                
+                LblLName_Update.Text = "Van:";
                 lblDeleteEmail.Text = "E-pos:";
-                lblDeleteNumber.Text = "Kontak nommer:";               
+                lblDeleteNumber.Text = "Kontak nommer:";
                 lblDeleteLName.Text = "Van:";
                 lblDeleteFName.Text = "Voornaam:";
                 lblSearchNumber.Text = "Kontak nommer:";
@@ -898,16 +925,15 @@ namespace HotelManagementSystem
                 cbConfirmation.Text = "Is dit die Gas wat jy wil verwyder?";
                 rdoAsc.Text = "Stygend";
                 rdoDsc.Text = "Dalend";
-                groupBox1.Text  = "Bevestig waardes";
+                groupBox1.Text = "Bevestig waardes";
                 groupBox2.Text = "Soek volgens:";
                 groupBox3.Text = "Sorteer by:";
-                grpBoxMenu.Text = "Kieslys";  
+                grpBoxMenu.Text = "Kieslys";
 
 
             }
             else
             {
-                bAfrikaans = false;
                 //Buttons
                 btnLanguage.Text = "English";
                 btnAddReset.Text = "Reset";
@@ -947,17 +973,6 @@ namespace HotelManagementSystem
                 grpBoxMenu.Text = "Menu";
 
             }
-        }
-
-        private void lblDeleteEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
-
         }
     }
 }

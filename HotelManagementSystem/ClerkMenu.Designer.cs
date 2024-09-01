@@ -33,6 +33,7 @@
             this.btnBookings = new System.Windows.Forms.Button();
             this.btnRooms = new System.Windows.Forms.Button();
             this.btnGuests = new System.Windows.Forms.Button();
+            this.btnLanguage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCheckOut
@@ -85,11 +86,22 @@
             this.btnGuests.UseVisualStyleBackColor = true;
             this.btnGuests.Click += new System.EventHandler(this.button3_Click);
             // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Location = new System.Drawing.Point(699, 415);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.TabIndex = 16;
+            this.btnLanguage.Text = "Afrikaans";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
             // ClerkMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.btnBookings);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btnBookings;
         private System.Windows.Forms.Button btnRooms;
         private System.Windows.Forms.Button btnGuests;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }

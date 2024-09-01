@@ -18,21 +18,13 @@ namespace HotelManagementSystem
 {
     public partial class MaintainRooms : Form
     {
-
-        public MaintainRooms()
+        bool isAfrikaans;
+        public MaintainRooms(bool isAfrikaans)
         {
             InitializeComponent();
-
-            btnAddReset.Click += new EventHandler(btnAddReset_Click);
-            btnDeleteReset.Click += new EventHandler(btnDeleteReset_Click);
-            btnSearchReset.Click += new EventHandler(btnDeleteReset_Click);
-            btnLanguage.Click += new EventHandler(btnDeleteReset_Click);
-
-
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
+            this.isAfrikaans = isAfrikaans;
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
 
         string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
@@ -733,13 +725,31 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
+            if (isAfrikaans)
+            {
+                isAfrikaans = false;
+                bAfrikaans = false;
+            }
+            else {
+                isAfrikaans = true;
+                bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+
+        }
+
+        private void checkLanguage() {
             toolTip1.AutoPopDelay = 4000; // 4 seconds
             toolTip1.InitialDelay = 700; // 0.7 seconds
             toolTip1.ReshowDelay = 500;   // 0.5 seconds
 
-            if (bAfrikaans == false)
+            if (bAfrikaans)
             {
-                bAfrikaans = true;
                 btnLanguage.Text = "English";
                 //Menu
                 btnMenuSearch.Text = "Soek";
@@ -794,7 +804,6 @@ namespace HotelManagementSystem
             }
             else
             {
-                bAfrikaans = false;
                 btnLanguage.Text = "Afrikaans";
                 //Menu
                 btnMenuSearch.Text = "Search";
@@ -847,12 +856,6 @@ namespace HotelManagementSystem
 
 
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
-
         }
     }
 }

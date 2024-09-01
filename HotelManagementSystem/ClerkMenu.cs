@@ -12,39 +12,75 @@ namespace HotelManagementSystem
 {
     public partial class ClerkMenu : Form
     {
-        public ClerkMenu()
+        bool isAfrikaans = false;
+        public ClerkMenu(bool isAfrikaans)
         {
             InitializeComponent();
+            this.isAfrikaans=isAfrikaans;
+            checkLanguage();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Guests guests = new Guests();
+            Guests guests = new Guests(isAfrikaans);
             guests.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MaintainRooms maintainRooms = new MaintainRooms();
+            MaintainRooms maintainRooms = new MaintainRooms(isAfrikaans);
             maintainRooms.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Bookings bookings = new Bookings();
+            Bookings bookings = new Bookings(isAfrikaans);
             bookings.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            CheckIn checkIn = new CheckIn();
+            CheckIn checkIn = new CheckIn(isAfrikaans);
             checkIn.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            CheckOut checkOut = new CheckOut();
+            CheckOut checkOut = new CheckOut(isAfrikaans);
             checkOut.Show();
+        }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            if (isAfrikaans)
+            {
+                isAfrikaans = false;
+            }
+            else {
+                isAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void checkLanguage() {
+            if (isAfrikaans)
+            {
+                btnBookings.Text = "Handhaaf Besprekings";
+                btnCheckIn.Text = "Gaste Inboek";
+                btnCheckOut.Text = "Gaste Uitboek";
+                btnGuests.Text = "Handhaaf Gaste";
+                btnLanguage.Text = "English";
+                btnRooms.Text = "Handhaaf Kamers";
+            }
+            else
+            {
+                btnBookings.Text = "Maintain Bookings";
+                btnCheckIn.Text = "Check Guest in";
+                btnCheckOut.Text = "Check Guest out";
+                btnGuests.Text = "Maintain Guests";
+                btnLanguage.Text = "Afrikaans";
+                btnRooms.Text = "Maintain Rooms";
+            }
         }
     }
 }

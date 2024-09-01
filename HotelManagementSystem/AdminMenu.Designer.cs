@@ -36,6 +36,7 @@
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
+            this.btnLanguage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGuests
@@ -118,11 +119,22 @@
             this.btnCheckOut.UseVisualStyleBackColor = true;
             this.btnCheckOut.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Location = new System.Drawing.Point(698, 461);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.TabIndex = 10;
+            this.btnLanguage.Text = "Afrikaans";
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnCheckIn);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btnCheckIn;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnCheckOut;
+        private System.Windows.Forms.Button btnLanguage;
     }
 }

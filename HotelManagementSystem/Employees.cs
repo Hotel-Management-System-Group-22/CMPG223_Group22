@@ -25,10 +25,11 @@ namespace HotelManagementSystem
     public partial class Employees : Form
     {
         private bool bAfrikaans = false;
-        public Employees()
+        public Employees(bool isAfrikaans)
         {
             InitializeComponent();
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
@@ -426,16 +427,16 @@ namespace HotelManagementSystem
                             return;
                         }
                     }
-                    DialogResult dialogResult;
+                    DialogResult dialogResult = DialogResult.None; // Initialize with a default value
                     if (bAfrikaans)
                     {
                         MessageBox.Show("Are you sure you would like to delete this user:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        return;
+                        //eturn;
                     }
                     else
                     {
                         MessageBox.Show("Is jy seker jy wil hierdie gebruiker uitvee:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); 
-                        return;
+                        //return;
                     }
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -1116,59 +1117,24 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
+            if (bAfrikaans)
             {
-                //Main buttons
-                btnSearch.Text = "SEARCH";
-                btnAdd.Text = "ADD";
-                btnUpdate.Text = "UPDATE";
-                btnDelete.Text = "DELETE";
-                btnLanguage.Text = "LANGUAGE";
-
-                //Update labels
-                lblUpdateUsername.Text = "Employee Username:";
-                lblUpdateFirstName.Text = "First Name:";
-                lblUpdateLastName.Text = "Last Name:";
-                lblUpdateJobTitle.Text = "Job Title:";
-                lblUpdateRole.Text = "Role:";
-                btnUpdateEmp.Text = "UPDATE";
-
-                //Delete labels
-                gpVerifyDetails.Text = "Verify Employee Details";
-                lblDeleteFName.Text = "Employee First Name:";
-                lblDeleteLName.Text = "Employee Last Name:";
-                lblDeleteAdmin.Text = "Is Admin:";
-                lblDeleteClerk.Text = "Is Clerk:";
-                lblDeleteJob.Text = "Employee Job:";
-                cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
-                btnDeleteEmp.Text = "DELETE";
-
-                //Add Employee
-                lblAddFName.Text = "First Name:";
-                lblAddLName.Text = "Last Name:";
-                lblAddTitle.Text = "Job Title:";
-                lblAddRole.Text = "Role:";
-                btnAddReset.Text = "RESET";
-                btnAdd.Text = "ADD";
-
-                //Search Employee
-                gpSearch.Text = "Search by:";
-                lblSearchUsername.Text = "Username:";
-                lblSearchFName.Text = "First Name:";
-                lblSearchLName.Text = "Last Name:";
-                btnSearchReset.Text = "RESET";
-                gpSort.Text = "Sort by:";
-                rdoAsc.Text = "Ascending";
-                rdoDes.Text = "Descending";
-                gpFilter.Text = "Filter by:";
-                rdoAdmin.Text = "Admin users only";
-                rdoClerk.Text = "Clerk users only";
-                rdoStaff.Text = "Employee staff only";
-                btnSearchReset.Text = "RESET";
-                btnSearch.Text = "SEARCH";
-
+                bAfrikaans = false;
             }
-            else
+            else {
+                bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+
+        }
+
+        private void checkLanguage() {
+            if (bAfrikaans)
             {
                 //Hoofknoppies
                 btnSearch.Text = "SOEK";
@@ -1219,12 +1185,57 @@ namespace HotelManagementSystem
                 btnSearchReset.Text = "TERUGSTEL";
                 btnSearch.Text = "SOEK";
             }
-        }
+            else
+            {
+                //Main buttons
+                btnSearch.Text = "SEARCH";
+                btnAdd.Text = "ADD";
+                btnUpdate.Text = "UPDATE";
+                btnDelete.Text = "DELETE";
+                btnLanguage.Text = "LANGUAGE";
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+                //Update labels
+                lblUpdateUsername.Text = "Employee Username:";
+                lblUpdateFirstName.Text = "First Name:";
+                lblUpdateLastName.Text = "Last Name:";
+                lblUpdateJobTitle.Text = "Job Title:";
+                lblUpdateRole.Text = "Role:";
+                btnUpdateEmp.Text = "UPDATE";
 
+                //Delete labels
+                gpVerifyDetails.Text = "Verify Employee Details";
+                lblDeleteFName.Text = "Employee First Name:";
+                lblDeleteLName.Text = "Employee Last Name:";
+                lblDeleteAdmin.Text = "Is Admin:";
+                lblDeleteClerk.Text = "Is Clerk:";
+                lblDeleteJob.Text = "Employee Job:";
+                cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+                btnDeleteEmp.Text = "DELETE";
+
+                //Add Employee
+                lblAddFName.Text = "First Name:";
+                lblAddLName.Text = "Last Name:";
+                lblAddTitle.Text = "Job Title:";
+                lblAddRole.Text = "Role:";
+                btnAddReset.Text = "RESET";
+                btnAdd.Text = "ADD";
+
+                //Search Employee
+                gpSearch.Text = "Search by:";
+                lblSearchUsername.Text = "Username:";
+                lblSearchFName.Text = "First Name:";
+                lblSearchLName.Text = "Last Name:";
+                btnSearchReset.Text = "RESET";
+                gpSort.Text = "Sort by:";
+                rdoAsc.Text = "Ascending";
+                rdoDes.Text = "Descending";
+                gpFilter.Text = "Filter by:";
+                rdoAdmin.Text = "Admin users only";
+                rdoClerk.Text = "Clerk users only";
+                rdoStaff.Text = "Employee staff only";
+                btnSearchReset.Text = "RESET";
+                btnSearch.Text = "SEARCH";
+            }
         }
     }
     }

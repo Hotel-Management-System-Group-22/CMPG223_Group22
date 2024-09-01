@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using BCrypt.Net;
 
@@ -20,11 +19,13 @@ namespace HotelManagementSystem
         private bool bAfrikaans = false;
         public static bool isAdmin = false;
         public static bool isClerk = false;
-        public LogIn()
+        public LogIn(Boolean isAfrikaans)
         {
             InitializeComponent();
             txtPassword.PasswordChar = '•';
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
+            //this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -78,7 +79,7 @@ namespace HotelManagementSystem
                                         }
                                     }
                                 }
-                                FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+                                FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
 
 
                             }
@@ -112,17 +113,17 @@ namespace HotelManagementSystem
         //Stack Overflow TEST!!!
         public static class FormHelper
         {
-            public static void ShowAppropriateForm(Form currentForm, bool isAdmin, bool isClerk)
+            public static void ShowAppropriateForm(Form currentForm, bool isAdmin, bool isClerk, bool isAfrikaans)
             {
                 if (isAdmin)
                 {
-                    AdminMenu adminMenu = new AdminMenu();
+                    AdminMenu adminMenu = new AdminMenu(isAfrikaans);
                     adminMenu.Show();
                     currentForm.Hide();
                 }
                 else if (isClerk)
                 {
-                    ClerkMenu clerkMenu = new ClerkMenu();
+                    ClerkMenu clerkMenu = new ClerkMenu(isAfrikaans);
                     clerkMenu.Show();
                     currentForm.Hide();
                 }
@@ -159,20 +160,6 @@ namespace HotelManagementSystem
         }
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
-            {
-                lblUsername.Text = "Gebruikersnaam";
-                lblPassword.Text = "Wagwoord";
-                btnLogin.Text = "AANMEL";
-                btnLanguage.Text = "TAAL";
-            }
-            else
-            {
-                lblUsername.Text = "Username";
-                lblPassword.Text = "Password";
-                btnLogin.Text = "LOGIN";
-                btnLanguage.Text = "LANGUAGE";
-            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
@@ -183,6 +170,35 @@ namespace HotelManagementSystem
         private void pbExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLanguage_Click_1(object sender, EventArgs e)
+        {
+            if (bAfrikaans == false)
+            {
+                bAfrikaans = true;
+            }
+            else if (bAfrikaans == true) {
+                bAfrikaans = false;
+            }
+            checkLanguage();
+        }
+
+        private void checkLanguage() {
+            if (bAfrikaans == false)
+            {
+                lblUsername.Text = "Gebruikersnaam";
+                lblPassword.Text = "Wagwoord";
+                btnLogin.Text = "AANMEL";
+                btnLanguage.Text = "English";
+            }
+            else
+            {
+                lblUsername.Text = "Username";
+                lblPassword.Text = "Password";
+                btnLogin.Text = "LOGIN";
+                btnLanguage.Text = "Afrikaans";
+            }
         }
     }
 }

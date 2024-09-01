@@ -18,16 +18,11 @@ namespace HotelManagementSystem
     {
         string sRoomId = "", sGuestId = "", sBookingId = "";
         bool bAfrikaans = false;
-        public CheckIn()
+        public CheckIn(bool isAfrikaans)
         {
             InitializeComponent();
-            btnLanguage.Click += new EventHandler(btnBookingUpdate_Click);
-
-
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
         string connection = "Server=DESKTOP-P6754UF;Database=223project;Trusted_Connection=True;";
 
@@ -294,52 +289,19 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
-            {
-                bAfrikaans = true;
-                btnLanguage.Text = "English";
-                lblBookingID.Text = "Bespreking ID";
-                lblGuestID.Text = "Gas ID";
-                lblRoomID.Text = "Kamer ID";
-                btnBookingUpdate.Text = "Opdateer bespreking";
-                btnCheckIn.Text = "Teken uit";
-                btnCancel.Text = "Kanselleer";
-                toolTip1.SetToolTip(btnCancel, "Stel die vorm terug na sy oorsprong.");
-                toolTip1.SetToolTip(btnCheckIn, "Teken die bespreking in.");
-                toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
-                toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
-                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
-
-
-            }
-            else
+            if (bAfrikaans)
             {
                 bAfrikaans = false;
-                btnLanguage.Text = "Afrikaans";
-                lblBookingID.Text = "Booking ID";
-                lblGuestID.Text = "Guest ID";
-                lblRoomID.Text = "Room ID";
-                btnBookingUpdate.Text = "Update Booking ID";
-                btnCheckIn.Text = "Check Out";
-                btnCancel.Text = "Cancel";
-
-                toolTip1.SetToolTip(btnCancel, "Reset the form to its default state before adding a new entry.");
-                toolTip1.SetToolTip(btnCheckIn, "Check the customer in.");
-                toolTip1.SetToolTip(btnLanguage, "Change the language of the form.");
-                toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
-                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
-                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
-                toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
-                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
-                
             }
+            else {
+                bAfrikaans = true;
+            }
+            checkLanguage();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk);
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
 
         }
 
@@ -400,6 +362,48 @@ namespace HotelManagementSystem
                 }
             }
             
+        }
+
+        private void checkLanguage() {
+            if (bAfrikaans)
+            {
+                btnLanguage.Text = "English";
+                lblBookingID.Text = "Bespreking ID";
+                lblGuestID.Text = "Gas ID";
+                lblRoomID.Text = "Kamer ID";
+                btnBookingUpdate.Text = "Opdateer bespreking";
+                btnCheckIn.Text = "Teken uit";
+                btnCancel.Text = "Kanselleer";
+                toolTip1.SetToolTip(btnCancel, "Stel die vorm terug na sy oorsprong.");
+                toolTip1.SetToolTip(btnCheckIn, "Teken die bespreking in.");
+                toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
+                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
+
+
+            }
+            else
+            {
+                btnLanguage.Text = "Afrikaans";
+                lblBookingID.Text = "Booking ID";
+                lblGuestID.Text = "Guest ID";
+                lblRoomID.Text = "Room ID";
+                btnBookingUpdate.Text = "Update Booking ID";
+                btnCheckIn.Text = "Check Out";
+                btnCancel.Text = "Cancel";
+
+                toolTip1.SetToolTip(btnCancel, "Reset the form to its default state before adding a new entry.");
+                toolTip1.SetToolTip(btnCheckIn, "Check the customer in.");
+                toolTip1.SetToolTip(btnLanguage, "Change the language of the form.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
+                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
+                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
+                toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
+                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
+
+            }
         }
     }
 }
