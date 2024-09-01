@@ -1642,5 +1642,10 @@ namespace HotelManagementSystem
                 btnUpdateEmp.Text = "UPDATE";
             }
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -90,6 +90,7 @@
             this.btnCheckOut.Size = new System.Drawing.Size(226, 39);
             this.btnCheckOut.TabIndex = 4;
             this.btnCheckOut.Text = "Check Out";
+            this.toolTip1.SetToolTip(this.btnCheckOut, "Click to Check-Out Guest");
             this.btnCheckOut.UseVisualStyleBackColor = true;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
@@ -101,6 +102,7 @@
             this.btnCheckOutCancel.Size = new System.Drawing.Size(226, 39);
             this.btnCheckOutCancel.TabIndex = 5;
             this.btnCheckOutCancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.btnCheckOutCancel, "Click to cancle Checkout");
             this.btnCheckOutCancel.UseVisualStyleBackColor = true;
             this.btnCheckOutCancel.Click += new System.EventHandler(this.btnCheckOutCancel_Click);
             // 
@@ -111,6 +113,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(331, 30);
             this.dateTimePicker1.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.dateTimePicker1, "Select Check-Out Date");
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtRoomID
@@ -120,6 +123,7 @@
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(184, 30);
             this.txtRoomID.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtRoomID, "Enter Room Number");
             this.txtRoomID.TextChanged += new System.EventHandler(this.txtRoomID_TextChanged);
             // 
             // txtGuestID
@@ -129,6 +133,7 @@
             this.txtGuestID.Name = "txtGuestID";
             this.txtGuestID.Size = new System.Drawing.Size(184, 30);
             this.txtGuestID.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtGuestID, "Enter Guest ID");
             this.txtGuestID.TextChanged += new System.EventHandler(this.txtGuestID_TextChanged);
             // 
             // txtBookingID
@@ -138,6 +143,7 @@
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(184, 30);
             this.txtBookingID.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtBookingID, "Enter Booking ID");
             this.txtBookingID.TextChanged += new System.EventHandler(this.txtBookingID_TextChanged);
             // 
             // btnBookingUpdate
@@ -148,6 +154,7 @@
             this.btnBookingUpdate.Size = new System.Drawing.Size(226, 39);
             this.btnBookingUpdate.TabIndex = 6;
             this.btnBookingUpdate.Text = "Update Booking Info";
+            this.toolTip1.SetToolTip(this.btnBookingUpdate, "Click to Navigate to Bookings Form");
             this.btnBookingUpdate.UseVisualStyleBackColor = true;
             this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
@@ -172,6 +179,7 @@
             this.btnLanguage.Size = new System.Drawing.Size(195, 45);
             this.btnLanguage.TabIndex = 20;
             this.btnLanguage.Text = "Afrikaans";
+            this.toolTip1.SetToolTip(this.btnLanguage, "Click to change languages");
             this.btnLanguage.UseVisualStyleBackColor = true;
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 

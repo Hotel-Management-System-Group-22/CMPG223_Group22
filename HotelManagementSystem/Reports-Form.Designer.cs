@@ -59,6 +59,7 @@
             this.cbReports.Name = "cbReports";
             this.cbReports.Size = new System.Drawing.Size(322, 33);
             this.cbReports.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.cbReports, "Select Report Type");
             this.cbReports.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dtpStart
@@ -67,6 +68,7 @@
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(322, 30);
             this.dtpStart.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.dtpStart, "Select Start Date");
             this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // dtpEnd
@@ -75,6 +77,7 @@
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(322, 30);
             this.dtpEnd.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.dtpEnd, "Select End Date");
             this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
             // 
             // btnGenerateReport
@@ -84,6 +87,7 @@
             this.btnGenerateReport.Size = new System.Drawing.Size(183, 42);
             this.btnGenerateReport.TabIndex = 4;
             this.btnGenerateReport.Text = "Generate Report";
+            this.toolTip1.SetToolTip(this.btnGenerateReport, "Click to generate Report");
             this.btnGenerateReport.UseVisualStyleBackColor = true;
             this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
@@ -94,6 +98,7 @@
             this.btnCancel.Size = new System.Drawing.Size(183, 41);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.btnCancel, "Click to Cancel");
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

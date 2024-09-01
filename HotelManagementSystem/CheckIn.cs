@@ -223,8 +223,8 @@ namespace HotelManagementSystem
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            //Booking booking = new Booking();
-            //booking.ShowDialog();
+            Bookings booking = new Bookings();
+            booking.Show();
         }
 
         private void CheckIn_Load(object sender, EventArgs e)

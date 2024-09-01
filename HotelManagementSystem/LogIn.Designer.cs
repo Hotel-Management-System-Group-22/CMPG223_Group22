@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbViewPassword = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbNotView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewPassword)).BeginInit();
@@ -67,6 +69,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(255, 22);
             this.txtUsername.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtUsername, "Enter your username");
             // 
             // txtPassword
             // 
@@ -75,6 +78,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(173, 22);
             this.txtPassword.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtPassword, "Enter your password");
             // 
             // btnLogin
             // 
@@ -84,6 +88,7 @@
             this.btnLogin.Size = new System.Drawing.Size(195, 66);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
+            this.toolTip1.SetToolTip(this.btnLogin, "Click to Login");
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -118,6 +123,7 @@
             this.pbViewPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewPassword.TabIndex = 6;
             this.pbViewPassword.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbViewPassword, "Click to see or hide Password");
             this.pbViewPassword.Click += new System.EventHandler(this.pbViewPassword_Click);
             // 
             // btnLanguage
@@ -128,6 +134,7 @@
             this.btnLanguage.Size = new System.Drawing.Size(196, 43);
             this.btnLanguage.TabIndex = 9;
             this.btnLanguage.Text = "LANGUAGE";
+            this.toolTip1.SetToolTip(this.btnLanguage, "Click to change languages");
             this.btnLanguage.UseVisualStyleBackColor = true;
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click_1);
             // 
@@ -167,5 +174,6 @@
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.PictureBox pbNotView;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

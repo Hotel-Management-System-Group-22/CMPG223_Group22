@@ -107,45 +107,20 @@ namespace HotelManagementSystem
                 return result.ToString();
             }
 
-            // Method to generate a username
+            // Generates Username , concatenates and adds two random numbers at the end, in case there are two people with the same name
             public static string GenerateUsername(string name, string lastName)
             {
                 string usernameChars = NumberChars;
                 return name + lastName + GenerateRandomString(2, usernameChars);
             }
 
-            // Method to generate a random password for security reasons
+            // Generate a random password for security reasons - default password
             public static string GenerateRandomPassword(int length = 12)
             {
-                string passwordChars = UppercaseChars + LowercaseChars + NumberChars + SpecialChars;
+                string passwordChars =  LowercaseChars + NumberChars ;
                 return GenerateRandomString(length, passwordChars);
             }
         }
-        /* public bool checkNames(string name)
-         {
-             if (string.IsNullOrEmpty(name))
-             {
-                 errorProvider1.SetError(txtAddFName, "Please enter " + txtAddFName.Text);
-             }
-
-             // Check if the first character is uppercase
-             if (!char.IsUpper(name[0]))
-             {
-                 errorProvider1.SetError(txtAddFName, "Please start with Capital Letter");
-             }
-
-             // Check if all remaining characters are lowercase
-             for (int i = 1; i < name.Length; i++)
-             {
-                 if (!char.IsLower(name[i]))
-                 {
-                     errorProvider1.SetError(txtAddFName, "Must only contain letters");
-                 }
-             }
-
-             return true;
-         }
-         */
 
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
@@ -183,7 +158,7 @@ namespace HotelManagementSystem
 
         private bool IsTextValid(string text)
         {
-            // Regular expression to match only letters (Ensures that first letter is capitalized and rest lowercase)
+            //Ensures that first letter is capitalized and rest lowercase
             Regex regex = new Regex("^[A-Z][a-zA-Z]*$");
             return regex.IsMatch(text);
         }
@@ -399,7 +374,6 @@ namespace HotelManagementSystem
             string Deletequery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
             //D:SN
             string setNull = "UPDATE Room SET Employee_ID = NULL WHERE Employee_ID = @EmployeeID";
-            //string username = txtDeleteSerach.Text;
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -581,13 +555,7 @@ namespace HotelManagementSystem
 
             // Proceed with updating the employee
             int selectedJobID = (int)cmbAddJob.SelectedValue;
-            string query = "UPDATE Employee SET " +
-                           "Employee_FName = COALESCE(NULLIF(@newFirstName, ''), Employee_FName), " +
-                           "Employee_LName = COALESCE(NULLIF(@newLastName, ''), Employee_LName), " +
-                           "Is_Admin_YN = @isAdmin, " +
-                           "Is_Clerk_YN = @isClerk, " +
-                           "Job_ID = @jobId " +
-                           "WHERE Employee_ID = @EmployeeId";
+            string query = "UPDATE Employee SET " +"Employee_FName = COALESCE(NULLIF(@newFirstName, ''), Employee_FName), " +"Employee_LName = COALESCE(NULLIF(@newLastName, ''), Employee_LName), " +"Is_Admin_YN = @isAdmin, " +"Is_Clerk_YN = @isClerk, " +"Job_ID = @jobId " +"WHERE Employee_ID = @EmployeeId";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -635,6 +603,7 @@ namespace HotelManagementSystem
                 {
                     string newUsername = RandomGenerator.GenerateUsername(newFirstName, newLastName);
                     usernameChanged = true;
+                    //generate new username
                     string queryUsername = "UPDATE Employee SET Employee_Username = @newUsername WHERE Employee_Username = @oldUsername";
                     using (SqlCommand cmdUsername = new SqlCommand(queryUsername, conn))
                     {
@@ -643,7 +612,7 @@ namespace HotelManagementSystem
                         cmdUsername.ExecuteNonQuery();
                         usernameChanged = true;
                     }
-                    username = newUsername; // Update the username variable
+                    username = newUsername; // Update the username 
                 }
                 else if (!string.IsNullOrEmpty(newFirstName) && string.IsNullOrEmpty(newLastName))
                 {
@@ -671,7 +640,7 @@ namespace HotelManagementSystem
                         hasErrors = true;
                     }
                 }
-                // Execute update command only if there are no errors
+                // Execute update only if there are no errors
                 if (!hasErrors)
                 {
                     using (SqlCommand command = new SqlCommand(query, conn))
@@ -688,7 +657,6 @@ namespace HotelManagementSystem
 
                         if (rowsAffected > 0)
                         {
-                            // Show success message only if no errors
                             if (!hasErrors)
                             {
                                 if (usernameChanged)
@@ -729,7 +697,6 @@ namespace HotelManagementSystem
                                     }
                                 }
 
-                                // Optionally refresh DataGridView
                                 LoadData();
 
                             }
@@ -751,10 +718,8 @@ namespace HotelManagementSystem
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            // Get the search term and trim any extra whitespace
             string searchTerm = txtUsername.Text.Trim();
 
-            // Construct the SQL query based on the selected filter
             string query = "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm";
 
             if (rdoAdmin.Checked)
@@ -774,7 +739,6 @@ namespace HotelManagementSystem
                 query += " ORDER BY Employee_LName DESC";
             }
 
-            // Update the DataGridView with the constructed query
             UpdateEmployeeDataGridView(searchTerm, employeeDataGridView, query);
         }
 
@@ -871,7 +835,6 @@ namespace HotelManagementSystem
                 conn.Open();
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    // Add parameters to avoid SQL injection
                     if (!string.IsNullOrEmpty(txtUsername.Text))
                     {
                         command.Parameters.AddWithValue("@username", "%" + txtUsername.Text + "%");
@@ -885,7 +848,6 @@ namespace HotelManagementSystem
                         command.Parameters.AddWithValue("@lastName", "%" + txtSearchLName.Text + "%");
                     }
 
-                    // Execute the query and fill the DataGridView
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         DataTable dt = new DataTable();
@@ -916,7 +878,7 @@ namespace HotelManagementSystem
                     {
                         if (reader.Read())
                         {
-                            // Populate the text boxes with the retrieved data
+                            // Populate the text boxes with the retrieved data from datagridview
                             txtVerifyFName.Text = reader["Employee_FName"].ToString();
                             txtVerifyLName.Text = reader["Employee_LName"].ToString();
                             txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
@@ -955,15 +917,14 @@ namespace HotelManagementSystem
                     {
                         if (reader.Read())
                         {
-                            // Populate the text boxes with the retrieved data
+                            // Populate the text boxes with the retrieved data from datagridview
                             txtUpdateSearch.Text = reader["Employee_Username"].ToString();
                             txtUpdateFName.Text = reader["Employee_FName"].ToString();
                             txtUpdateLName.Text = reader["Employee_LName"].ToString();
                             bool isAdmin = Convert.ToBoolean(reader["Is_Admin_YN"]);
                             bool isClerk = Convert.ToBoolean(reader["Is_Clerk_YN"]);
 
-                            // Update the ComboBox based on the values retrieved
-                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; // Example: 0 for Admin, 1 for Clerk (adjust as needed)
+                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; //0 for Admin, 1 for Clerk
 
                             // Populate the job ComboBox
                             int jobId = Convert.ToInt32(reader["Job_Id"]);
@@ -991,12 +952,10 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow row = employeeDataGridView.Rows[e.RowIndex];
 
-                // Ensure the correct column name is used
                 if (row.Cells["Employee_ID"] != null && row.Cells["Employee_ID"].Value != DBNull.Value)
                 {
                     selectedEmployeeID = Convert.ToInt32(row.Cells["Employee_ID"].Value);
 
-                    // Check which tab or mode is active and populate fields accordingly
                     if (tabControl1.SelectedTab == tabPage1)
                     {
                         populateUpdateFields(selectedEmployeeID);

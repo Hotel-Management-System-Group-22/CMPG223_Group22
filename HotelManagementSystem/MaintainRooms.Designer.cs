@@ -120,6 +120,7 @@
             this.txtSearchEmployee.Name = "txtSearchEmployee";
             this.txtSearchEmployee.Size = new System.Drawing.Size(223, 30);
             this.txtSearchEmployee.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtSearchEmployee, "Enter Employee ID");
             this.txtSearchEmployee.TextChanged += new System.EventHandler(this.txtSearchEmployee_TextChanged);
             // 
             // lblSearchEmployeeID
@@ -135,6 +136,7 @@
             // 
             // cbxSearchStatus
             // 
+            this.cbxSearchStatus.DisplayMember = "Enter Room status";
             this.cbxSearchStatus.FormattingEnabled = true;
             this.cbxSearchStatus.Items.AddRange(new object[] {
             "Unoccupied",
@@ -144,6 +146,7 @@
             this.cbxSearchStatus.Name = "cbxSearchStatus";
             this.cbxSearchStatus.Size = new System.Drawing.Size(223, 33);
             this.cbxSearchStatus.TabIndex = 3;
+            this.cbxSearchStatus.ValueMember = "Enter Room status";
             this.cbxSearchStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblSearchRoomStatus
@@ -166,6 +169,7 @@
             this.rdbDescending.Size = new System.Drawing.Size(137, 29);
             this.rdbDescending.TabIndex = 5;
             this.rdbDescending.Text = "Descending";
+            this.toolTip1.SetToolTip(this.rdbDescending, "Click to Search in Descending Order");
             this.rdbDescending.UseVisualStyleBackColor = true;
             this.rdbDescending.CheckedChanged += new System.EventHandler(this.rdbDescending_CheckedChanged);
             // 
@@ -180,6 +184,7 @@
             this.rdbAscending.TabIndex = 4;
             this.rdbAscending.TabStop = true;
             this.rdbAscending.Text = "Ascending";
+            this.toolTip1.SetToolTip(this.rdbAscending, "Click to Search in ascending order");
             this.rdbAscending.UseVisualStyleBackColor = true;
             this.rdbAscending.CheckedChanged += new System.EventHandler(this.rdbAscending_CheckedChanged);
             // 
@@ -199,9 +204,9 @@
             this.lblSearchRoomID.Location = new System.Drawing.Point(17, 27);
             this.lblSearchRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchRoomID.Name = "lblSearchRoomID";
-            this.lblSearchRoomID.Size = new System.Drawing.Size(161, 25);
+            this.lblSearchRoomID.Size = new System.Drawing.Size(211, 25);
             this.lblSearchRoomID.TabIndex = 2;
-            this.lblSearchRoomID.Text = "Search Room ID:";
+            this.lblSearchRoomID.Text = "Search Room Number:";
             // 
             // btnSearchReset
             // 
@@ -211,6 +216,7 @@
             this.btnSearchReset.Size = new System.Drawing.Size(242, 50);
             this.btnSearchReset.TabIndex = 6;
             this.btnSearchReset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnSearchReset, "Click to reset");
             this.btnSearchReset.UseVisualStyleBackColor = true;
             this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
             // 
@@ -221,6 +227,7 @@
             this.txtSearchRoom.Name = "txtSearchRoom";
             this.txtSearchRoom.Size = new System.Drawing.Size(223, 30);
             this.txtSearchRoom.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtSearchRoom, "Enter Room Number");
             this.txtSearchRoom.TextChanged += new System.EventHandler(this.txtSearchRoom_TextChanged);
             // 
             // tbpAdd_Update
@@ -252,6 +259,7 @@
             this.btnUpdateRoom.Size = new System.Drawing.Size(242, 48);
             this.btnUpdateRoom.TabIndex = 5;
             this.btnUpdateRoom.Text = "Update Room";
+            this.toolTip1.SetToolTip(this.btnUpdateRoom, "Click to Update Room Details");
             this.btnUpdateRoom.UseVisualStyleBackColor = true;
             this.btnUpdateRoom.Click += new System.EventHandler(this.btnUpdateRoom_Click);
             // 
@@ -262,6 +270,7 @@
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(212, 30);
             this.txtRoomID.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtRoomID, "Enter Room Number");
             this.txtRoomID.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblRoomID
@@ -270,9 +279,9 @@
             this.lblRoomID.Location = new System.Drawing.Point(22, 25);
             this.lblRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(93, 25);
+            this.lblRoomID.Size = new System.Drawing.Size(143, 25);
             this.lblRoomID.TabIndex = 27;
-            this.lblRoomID.Text = "Room ID:";
+            this.lblRoomID.Text = "Room Number:";
             this.lblRoomID.Click += new System.EventHandler(this.label13_Click);
             // 
             // btnAddRoom
@@ -283,6 +292,7 @@
             this.btnAddRoom.Size = new System.Drawing.Size(242, 48);
             this.btnAddRoom.TabIndex = 4;
             this.btnAddRoom.Text = "Add Room";
+            this.toolTip1.SetToolTip(this.btnAddRoom, "Click to Add Room");
             this.btnAddRoom.UseVisualStyleBackColor = true;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
@@ -294,6 +304,7 @@
             this.btnAddReset.Size = new System.Drawing.Size(242, 48);
             this.btnAddReset.TabIndex = 6;
             this.btnAddReset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear textboxes");
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.btnAddReset_Click);
             // 
@@ -308,6 +319,7 @@
             this.cbxRoomStatus.Name = "cbxRoomStatus";
             this.cbxRoomStatus.Size = new System.Drawing.Size(212, 33);
             this.cbxRoomStatus.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.cbxRoomStatus, "Select Room status");
             this.cbxRoomStatus.SelectedIndexChanged += new System.EventHandler(this.cbxRoomStatus_SelectedIndexChanged);
             // 
             // txtEmployeeID
@@ -317,6 +329,7 @@
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(212, 30);
             this.txtEmployeeID.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtEmployeeID, "Enter Employee ID");
             this.txtEmployeeID.TextChanged += new System.EventHandler(this.txtEmployeeID_TextChanged);
             // 
             // lblRoomStatus
@@ -362,6 +375,7 @@
             this.btnDeleteReset.Size = new System.Drawing.Size(242, 52);
             this.btnDeleteReset.TabIndex = 18;
             this.btnDeleteReset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnDeleteReset, "Click to clear Textboxes");
             this.btnDeleteReset.UseVisualStyleBackColor = true;
             this.btnDeleteReset.Click += new System.EventHandler(this.btnDeleteReset_Click);
             // 
@@ -373,6 +387,7 @@
             this.btnDeleteRoom.Size = new System.Drawing.Size(242, 52);
             this.btnDeleteRoom.TabIndex = 17;
             this.btnDeleteRoom.Text = "Delete room";
+            this.toolTip1.SetToolTip(this.btnDeleteRoom, "Click to Delete Room");
             this.btnDeleteRoom.UseVisualStyleBackColor = true;
             this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
             // 
@@ -383,6 +398,7 @@
             this.txtDeleteRoomID.Name = "txtDeleteRoomID";
             this.txtDeleteRoomID.Size = new System.Drawing.Size(199, 30);
             this.txtDeleteRoomID.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.txtDeleteRoomID, "Enter room number to search");
             this.txtDeleteRoomID.TextChanged += new System.EventHandler(this.txtDeleteRoomID_TextChanged);
             // 
             // lblDeleteRoomID
@@ -391,9 +407,9 @@
             this.lblDeleteRoomID.Location = new System.Drawing.Point(4, 45);
             this.lblDeleteRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeleteRoomID.Name = "lblDeleteRoomID";
-            this.lblDeleteRoomID.Size = new System.Drawing.Size(180, 25);
+            this.lblDeleteRoomID.Size = new System.Drawing.Size(237, 25);
             this.lblDeleteRoomID.TabIndex = 0;
-            this.lblDeleteRoomID.Text = "Search by room ID:";
+            this.lblDeleteRoomID.Text = "Search by Room Number:";
             // 
             // groupBox1
             // 

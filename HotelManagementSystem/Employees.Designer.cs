@@ -113,6 +113,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -207,6 +208,7 @@
             this.btnAddReset.Size = new System.Drawing.Size(303, 43);
             this.btnAddReset.TabIndex = 9;
             this.btnAddReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear textboxes");
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -218,6 +220,7 @@
             this.btnAddEmp.Size = new System.Drawing.Size(303, 43);
             this.btnAddEmp.TabIndex = 6;
             this.btnAddEmp.Text = "ADD";
+            this.toolTip1.SetToolTip(this.btnAddEmp, "Click to add Employee details");
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
@@ -233,6 +236,7 @@
             this.cmbAddRole.Name = "cmbAddRole";
             this.cmbAddRole.Size = new System.Drawing.Size(180, 24);
             this.cmbAddRole.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.cmbAddRole, "Select Employee Role");
             // 
             // lblAddRole
             // 
@@ -253,6 +257,7 @@
             this.cmbAddJob.Name = "cmbAddJob";
             this.cmbAddJob.Size = new System.Drawing.Size(180, 24);
             this.cmbAddJob.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.cmbAddJob, "Select Employee Job Title");
             this.cmbAddJob.ValueMember = "Job_ID";
             this.cmbAddJob.SelectedIndexChanged += new System.EventHandler(this.cmbAddJob_SelectedIndexChanged);
             // 
@@ -291,6 +296,7 @@
             this.txtAddLName.Name = "txtAddLName";
             this.txtAddLName.Size = new System.Drawing.Size(180, 22);
             this.txtAddLName.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtAddLName, "Add Employee Last Name");
             this.txtAddLName.TextChanged += new System.EventHandler(this.txtAddLName_TextChanged);
             // 
             // lblAddFName
@@ -309,6 +315,7 @@
             this.txtAddFName.Name = "txtAddFName";
             this.txtAddFName.Size = new System.Drawing.Size(180, 22);
             this.txtAddFName.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtAddFName, "Add Employee First Name");
             this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
             // 
             // btnDeleteEmp
@@ -319,6 +326,7 @@
             this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
+            this.toolTip1.SetToolTip(this.btnDeleteEmp, "Click to delete Employee");
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
@@ -330,6 +338,7 @@
             this.txtUpdateSearch.ReadOnly = true;
             this.txtUpdateSearch.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateSearch.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.txtUpdateSearch, "Verify that username is the employee you selected");
             this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
             // 
             // lblUpdateUsername
@@ -352,6 +361,7 @@
             this.btnUpdateEmp.Size = new System.Drawing.Size(224, 43);
             this.btnUpdateEmp.TabIndex = 6;
             this.btnUpdateEmp.Text = "UPDATE";
+            this.toolTip1.SetToolTip(this.btnUpdateEmp, "Click to Update Employee details");
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
@@ -367,6 +377,7 @@
             this.cmbUpdateRole.Name = "cmbUpdateRole";
             this.cmbUpdateRole.Size = new System.Drawing.Size(212, 24);
             this.cmbUpdateRole.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.cmbUpdateRole, "Select Employee Role");
             // 
             // lblUpdateRole
             // 
@@ -388,6 +399,7 @@
             this.cmbUpdateJob.Name = "cmbUpdateJob";
             this.cmbUpdateJob.Size = new System.Drawing.Size(212, 24);
             this.cmbUpdateJob.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.cmbUpdateJob, "Select Employee Job Title");
             this.cmbUpdateJob.ValueMember = "Job_ID";
             // 
             // lblUpdateJobTitle
@@ -417,6 +429,7 @@
             this.txtUpdateLName.Name = "txtUpdateLName";
             this.txtUpdateLName.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateLName.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtUpdateLName, "Add Employee Last Name");
             this.txtUpdateLName.TextChanged += new System.EventHandler(this.txtUpdateLName_TextChanged);
             // 
             // lblUpdateFirstName
@@ -436,6 +449,7 @@
             this.txtUpdateFName.Name = "txtUpdateFName";
             this.txtUpdateFName.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateFName.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtUpdateFName, "Add Employee First Name");
             this.txtUpdateFName.TextChanged += new System.EventHandler(this.txtUpdateFName_TextChanged);
             // 
             // tabControl1
@@ -517,6 +531,7 @@
             this.cbConfirm.Size = new System.Drawing.Size(360, 20);
             this.cbConfirm.TabIndex = 11;
             this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+            this.toolTip1.SetToolTip(this.cbConfirm, "Check box to confirm that correct employee is being deleted");
             this.cbConfirm.UseVisualStyleBackColor = true;
             // 
             // txtVerifyJob
@@ -668,6 +683,7 @@
             this.rdoDes.Size = new System.Drawing.Size(101, 20);
             this.rdoDes.TabIndex = 7;
             this.rdoDes.Text = "Descending";
+            this.toolTip1.SetToolTip(this.rdoDes, "Select to search in descending order");
             this.rdoDes.UseVisualStyleBackColor = true;
             // 
             // rdoAsc
@@ -680,6 +696,7 @@
             this.rdoAsc.Size = new System.Drawing.Size(92, 20);
             this.rdoAsc.TabIndex = 6;
             this.rdoAsc.Text = "Ascending";
+            this.toolTip1.SetToolTip(this.rdoAsc, "Select to search in ascending order");
             this.rdoAsc.UseVisualStyleBackColor = true;
             // 
             // gpFilter
@@ -719,6 +736,7 @@
             this.rdoStaff.Size = new System.Drawing.Size(145, 20);
             this.rdoStaff.TabIndex = 9;
             this.rdoStaff.Text = "Employee staff only";
+            this.toolTip1.SetToolTip(this.rdoStaff, "Click to filter by employee staff  only");
             this.rdoStaff.UseVisualStyleBackColor = true;
             // 
             // label12
@@ -740,6 +758,7 @@
             this.rdoClerk.Size = new System.Drawing.Size(123, 20);
             this.rdoClerk.TabIndex = 5;
             this.rdoClerk.Text = "Clerk users only";
+            this.toolTip1.SetToolTip(this.rdoClerk, "Click to filter by clerk users only");
             this.rdoClerk.UseVisualStyleBackColor = true;
             // 
             // rdoAdmin
@@ -752,6 +771,7 @@
             this.rdoAdmin.Size = new System.Drawing.Size(130, 20);
             this.rdoAdmin.TabIndex = 4;
             this.rdoAdmin.Text = "Admin users only";
+            this.toolTip1.SetToolTip(this.rdoAdmin, "Click to filter by admin users only");
             this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
             // bttnSearch
@@ -762,6 +782,7 @@
             this.bttnSearch.Size = new System.Drawing.Size(303, 43);
             this.bttnSearch.TabIndex = 18;
             this.bttnSearch.Text = "SEARCH";
+            this.toolTip1.SetToolTip(this.bttnSearch, "Click to Search for Employee");
             this.bttnSearch.UseVisualStyleBackColor = true;
             this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -818,6 +839,7 @@
             this.btnSearchReset.Size = new System.Drawing.Size(201, 22);
             this.btnSearchReset.TabIndex = 10;
             this.btnSearchReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnSearchReset, "Click to clear textboxes");
             this.btnSearchReset.UseVisualStyleBackColor = true;
             this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
             // 
@@ -828,6 +850,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(201, 22);
             this.txtUsername.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtUsername, "Enter username to search ");
             this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtSearchFName
@@ -837,6 +860,7 @@
             this.txtSearchFName.Name = "txtSearchFName";
             this.txtSearchFName.Size = new System.Drawing.Size(201, 22);
             this.txtSearchFName.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.txtSearchFName, "Enter First Name to search");
             // 
             // txtSearchLName
             // 
@@ -845,6 +869,7 @@
             this.txtSearchLName.Name = "txtSearchLName";
             this.txtSearchLName.Size = new System.Drawing.Size(201, 22);
             this.txtSearchLName.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.txtSearchLName, "Enter Lasnt Name to search");
             // 
             // hotelManagementSystemDataSet
             // 
@@ -986,7 +1011,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(1004, 85);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(100, 28);
             this.btnLanguage.TabIndex = 14;
@@ -1131,5 +1156,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.Button btnLanguage;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

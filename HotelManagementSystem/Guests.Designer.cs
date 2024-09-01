@@ -90,6 +90,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.grpBoxMenu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbAddGuest.SuspendLayout();
@@ -180,7 +181,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 258);
+            this.tabControl1.Size = new System.Drawing.Size(762, 258);
             this.tabControl1.TabIndex = 1;
             // 
             // tbAddGuest
@@ -213,6 +214,7 @@
             this.btnAddReset.Size = new System.Drawing.Size(243, 46);
             this.btnAddReset.TabIndex = 11;
             this.btnAddReset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear textboxes");
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -225,6 +227,7 @@
             this.BtnAddGuest.Size = new System.Drawing.Size(243, 46);
             this.BtnAddGuest.TabIndex = 3;
             this.BtnAddGuest.Text = "Add Guest";
+            this.toolTip1.SetToolTip(this.BtnAddGuest, "Click to add Guest");
             this.BtnAddGuest.UseVisualStyleBackColor = true;
             this.BtnAddGuest.Click += new System.EventHandler(this.BtnAddGuest_Click);
             // 
@@ -235,6 +238,7 @@
             this.TxtFName_Add.Name = "TxtFName_Add";
             this.TxtFName_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtFName_Add.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.TxtFName_Add, "Enter Guest First Name");
             this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
             // TxtLName_Add
@@ -244,6 +248,7 @@
             this.TxtLName_Add.Name = "TxtLName_Add";
             this.TxtLName_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtLName_Add.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.TxtLName_Add, "Enter Guest Last Name");
             this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
             // TxtContactNo_Add
@@ -253,6 +258,7 @@
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
             this.TxtContactNo_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtContactNo_Add.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.TxtContactNo_Add, "Enter Guest 10-digit Contact Number (eg. 0876543667)");
             this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
             // TxtEmail_Add
@@ -262,6 +268,7 @@
             this.TxtEmail_Add.Name = "TxtEmail_Add";
             this.TxtEmail_Add.Size = new System.Drawing.Size(220, 22);
             this.TxtEmail_Add.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.TxtEmail_Add, "Enter valid Guest Email (eg. guest@gmail.com) ");
             this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
             // 
             // lblFNameAdd
@@ -361,6 +368,7 @@
             this.TxtLName_Update.Name = "TxtLName_Update";
             this.TxtLName_Update.Size = new System.Drawing.Size(215, 22);
             this.TxtLName_Update.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.TxtLName_Update, "Enter Guest Last Name");
             this.TxtLName_Update.TextChanged += new System.EventHandler(this.TxtLName_Update_TextChanged);
             // 
             // TxtContactNo_Update
@@ -370,6 +378,7 @@
             this.TxtContactNo_Update.Name = "TxtContactNo_Update";
             this.TxtContactNo_Update.Size = new System.Drawing.Size(215, 22);
             this.TxtContactNo_Update.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.TxtContactNo_Update, "Enter Guest 10-digit Contact Number (eg. 0784567787)");
             this.TxtContactNo_Update.TextChanged += new System.EventHandler(this.TxtContactNo_Update_TextChanged);
             // 
             // TxtBoxEmail_Update
@@ -379,6 +388,7 @@
             this.TxtBoxEmail_Update.Name = "TxtBoxEmail_Update";
             this.TxtBoxEmail_Update.Size = new System.Drawing.Size(215, 22);
             this.TxtBoxEmail_Update.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.TxtBoxEmail_Update, "Enter Valid Guest Email(eg. guest@gmail.com)");
             this.TxtBoxEmail_Update.TextChanged += new System.EventHandler(this.TxtBoxEmail_Update_TextChanged);
             // 
             // BtnUpdate
@@ -390,6 +400,7 @@
             this.BtnUpdate.Size = new System.Drawing.Size(224, 43);
             this.BtnUpdate.TabIndex = 3;
             this.BtnUpdate.Text = "Update ";
+            this.toolTip1.SetToolTip(this.BtnUpdate, "Click to Update Employee Details");
             this.BtnUpdate.UseVisualStyleBackColor = true;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
@@ -402,6 +413,7 @@
             this.btnReset.Size = new System.Drawing.Size(224, 43);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnReset, "Click to clear textboxes");
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -412,6 +424,7 @@
             this.TxtFName_Update.Name = "TxtFName_Update";
             this.TxtFName_Update.Size = new System.Drawing.Size(215, 22);
             this.TxtFName_Update.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.TxtFName_Update, "Enter Guest First Name ");
             this.TxtFName_Update.TextChanged += new System.EventHandler(this.TxtFName_Update_TextChanged);
             // 
             // LblFName_Update
@@ -433,7 +446,7 @@
             this.tbDeleteGuest.Location = new System.Drawing.Point(4, 25);
             this.tbDeleteGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDeleteGuest.Name = "tbDeleteGuest";
-            this.tbDeleteGuest.Size = new System.Drawing.Size(747, 229);
+            this.tbDeleteGuest.Size = new System.Drawing.Size(754, 229);
             this.tbDeleteGuest.TabIndex = 3;
             this.tbDeleteGuest.Text = "DELETE GUEST";
             // 
@@ -441,12 +454,13 @@
             // 
             this.cbConfirmation.AutoSize = true;
             this.cbConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbConfirmation.Location = new System.Drawing.Point(440, 133);
+            this.cbConfirmation.Location = new System.Drawing.Point(431, 86);
             this.cbConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbConfirmation.Name = "cbConfirmation";
-            this.cbConfirmation.Size = new System.Drawing.Size(303, 24);
+            this.cbConfirmation.Size = new System.Drawing.Size(327, 44);
             this.cbConfirmation.TabIndex = 24;
-            this.cbConfirmation.Text = "Is this the Guest you want to delete?";
+            this.cbConfirmation.Text = "Confirmation that it is the correct Guest\r\n to be deleted";
+            this.toolTip1.SetToolTip(this.cbConfirmation, "Check box to confirm that the correct Guest is being deleted");
             this.cbConfirmation.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -558,12 +572,13 @@
             // BtnDelete
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(523, 165);
+            this.BtnDelete.Location = new System.Drawing.Point(488, 163);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(211, 46);
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Delete";
+            this.toolTip1.SetToolTip(this.BtnDelete, "Click to Delete Guest");
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
@@ -578,7 +593,7 @@
             this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
             this.tbSearchGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSearchGuest.Name = "tbSearchGuest";
-            this.tbSearchGuest.Size = new System.Drawing.Size(747, 229);
+            this.tbSearchGuest.Size = new System.Drawing.Size(754, 229);
             this.tbSearchGuest.TabIndex = 4;
             this.tbSearchGuest.Text = "SEARCH GUEST";
             // 
@@ -591,6 +606,7 @@
             this.btnResetSearch.Size = new System.Drawing.Size(239, 42);
             this.btnResetSearch.TabIndex = 13;
             this.btnResetSearch.Text = "Reset";
+            this.toolTip1.SetToolTip(this.btnResetSearch, "Click to clear textboxes");
             this.btnResetSearch.UseVisualStyleBackColor = true;
             this.btnResetSearch.Click += new System.EventHandler(this.btnResetSearch_Click);
             // 
@@ -619,6 +635,7 @@
             this.rdoDsc.TabIndex = 6;
             this.rdoDsc.TabStop = true;
             this.rdoDsc.Text = "Descending";
+            this.toolTip1.SetToolTip(this.rdoDsc, "Click to search in Descending Order");
             this.rdoDsc.UseVisualStyleBackColor = true;
             this.rdoDsc.CheckedChanged += new System.EventHandler(this.rdoDsc_CheckedChanged);
             // 
@@ -633,6 +650,7 @@
             this.rdoAsc.TabIndex = 3;
             this.rdoAsc.TabStop = true;
             this.rdoAsc.Text = "Ascending";
+            this.toolTip1.SetToolTip(this.rdoAsc, "Click to search in Ascending order");
             this.rdoAsc.UseVisualStyleBackColor = true;
             this.rdoAsc.CheckedChanged += new System.EventHandler(this.rdoAsc_CheckedChanged);
             // 
@@ -672,6 +690,7 @@
             this.txtEmail_Search.Name = "txtEmail_Search";
             this.txtEmail_Search.Size = new System.Drawing.Size(207, 30);
             this.txtEmail_Search.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.txtEmail_Search, "Enter Guest Email to search");
             this.txtEmail_Search.TextChanged += new System.EventHandler(this.txtEmail_Search_TextChanged);
             // 
             // lblSearchNumber
@@ -690,6 +709,7 @@
             this.txtContact_Search.Name = "txtContact_Search";
             this.txtContact_Search.Size = new System.Drawing.Size(207, 30);
             this.txtContact_Search.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.txtContact_Search, "Enter Guest Contact Number  to search");
             this.txtContact_Search.TextChanged += new System.EventHandler(this.txtContact_Search_TextChanged);
             // 
             // lblSearchFName
@@ -708,6 +728,7 @@
             this.txtLName_Search.Name = "txtLName_Search";
             this.txtLName_Search.Size = new System.Drawing.Size(207, 30);
             this.txtLName_Search.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtLName_Search, "Enter Guest Last Name to search");
             this.txtLName_Search.TextChanged += new System.EventHandler(this.txtLName_Search_TextChanged);
             // 
             // lblSearchLName
@@ -726,6 +747,7 @@
             this.txtFName_Search.Name = "txtFName_Search";
             this.txtFName_Search.Size = new System.Drawing.Size(207, 30);
             this.txtFName_Search.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.txtFName_Search, "Enter Guest First Name to search");
             this.txtFName_Search.TextChanged += new System.EventHandler(this.txtFName_Search_TextChanged);
             // 
             // DgvGuests
@@ -770,7 +792,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(937, 654);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(153, 62);
             this.btnLanguage.TabIndex = 26;
@@ -891,6 +913,7 @@
         private System.Windows.Forms.Button btnAddReset;
         private System.Windows.Forms.Button btnLanguage;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

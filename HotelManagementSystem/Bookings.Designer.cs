@@ -103,6 +103,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -155,7 +156,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(8, 236);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(229, 43);
             this.btnLanguage.TabIndex = 6;
@@ -244,6 +245,7 @@
             this.tabPage1.Size = new System.Drawing.Size(835, 293);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dtDeparture_Update
             // 
@@ -252,6 +254,7 @@
             this.dtDeparture_Update.Name = "dtDeparture_Update";
             this.dtDeparture_Update.Size = new System.Drawing.Size(227, 30);
             this.dtDeparture_Update.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.dtDeparture_Update, "Select Departure Date");
             this.dtDeparture_Update.ValueChanged += new System.EventHandler(this.dtDeparture_Update_ValueChanged);
             // 
             // dtArrival_Update
@@ -261,6 +264,7 @@
             this.dtArrival_Update.Name = "dtArrival_Update";
             this.dtArrival_Update.Size = new System.Drawing.Size(227, 30);
             this.dtArrival_Update.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.dtArrival_Update, "Select Arrival Date");
             this.dtArrival_Update.ValueChanged += new System.EventHandler(this.dtArrival_Update_ValueChanged);
             // 
             // txtRoomNr_Update
@@ -270,6 +274,7 @@
             this.txtRoomNr_Update.Name = "txtRoomNr_Update";
             this.txtRoomNr_Update.Size = new System.Drawing.Size(227, 30);
             this.txtRoomNr_Update.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.txtRoomNr_Update, "Enter Room Number to be Updated");
             this.txtRoomNr_Update.TextChanged += new System.EventHandler(this.txtRoomNr_Update_TextChanged);
             // 
             // lblGRoomNumber
@@ -307,6 +312,7 @@
             this.btnUpdateReset.Size = new System.Drawing.Size(232, 43);
             this.btnUpdateReset.TabIndex = 9;
             this.btnUpdateReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnUpdateReset, "Click to clear textboxes and dates");
             this.btnUpdateReset.UseVisualStyleBackColor = true;
             // 
             // btnUpdateEmp
@@ -317,6 +323,7 @@
             this.btnUpdateEmp.Size = new System.Drawing.Size(240, 43);
             this.btnUpdateEmp.TabIndex = 6;
             this.btnUpdateEmp.Text = "UPDATE";
+            this.toolTip1.SetToolTip(this.btnUpdateEmp, "Click to Update Booking Details");
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
@@ -417,6 +424,7 @@
             this.btnDeleteReset.Size = new System.Drawing.Size(251, 43);
             this.btnDeleteReset.TabIndex = 9;
             this.btnDeleteReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnDeleteReset, "Click to clear all textboxes");
             this.btnDeleteReset.UseVisualStyleBackColor = true;
             // 
             // btnDeleteEmp
@@ -427,6 +435,7 @@
             this.btnDeleteEmp.Size = new System.Drawing.Size(251, 43);
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
+            this.toolTip1.SetToolTip(this.btnDeleteEmp, "Click to Delete Booking");
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
@@ -574,9 +583,10 @@
             this.cmbConfirm.Location = new System.Drawing.Point(27, 238);
             this.cmbConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbConfirm.Name = "cmbConfirm";
-            this.cmbConfirm.Size = new System.Drawing.Size(400, 29);
+            this.cmbConfirm.Size = new System.Drawing.Size(386, 29);
             this.cmbConfirm.TabIndex = 0;
-            this.cmbConfirm.Text = "Confirm that details to be deleted is correct";
+            this.cmbConfirm.Text = "Confirmation that it is the correct Booking";
+            this.toolTip1.SetToolTip(this.cmbConfirm, "Check box to Confirm that it is the correct booking to be deleted");
             this.cmbConfirm.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -627,6 +637,7 @@
             this.dtCheckout.Name = "dtCheckout";
             this.dtCheckout.Size = new System.Drawing.Size(232, 30);
             this.dtCheckout.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.dtCheckout, "Select Departure Date");
             this.dtCheckout.ValueChanged += new System.EventHandler(this.dtCheckout_ValueChanged);
             // 
             // dtCheckin
@@ -636,6 +647,7 @@
             this.dtCheckin.Name = "dtCheckin";
             this.dtCheckin.Size = new System.Drawing.Size(229, 30);
             this.dtCheckin.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.dtCheckin, "Select Arrival Date");
             this.dtCheckin.ValueChanged += new System.EventHandler(this.dtCheckin_ValueChanged);
             // 
             // txtRoomNrAdd
@@ -645,6 +657,7 @@
             this.txtRoomNrAdd.Name = "txtRoomNrAdd";
             this.txtRoomNrAdd.Size = new System.Drawing.Size(229, 30);
             this.txtRoomNrAdd.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.txtRoomNrAdd, "Enter valid Room Number");
             this.txtRoomNrAdd.TextChanged += new System.EventHandler(this.txtRoomNrAdd_TextChanged);
             // 
             // lblRoomNumber
@@ -664,6 +677,7 @@
             this.btnAddReset.Size = new System.Drawing.Size(264, 43);
             this.btnAddReset.TabIndex = 9;
             this.btnAddReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear all textboxes");
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.btnAddReset_Click);
             // 
@@ -675,6 +689,7 @@
             this.btnAddBooking.Size = new System.Drawing.Size(264, 43);
             this.btnAddBooking.TabIndex = 6;
             this.btnAddBooking.Text = "ADD";
+            this.toolTip1.SetToolTip(this.btnAddBooking, "Click to add Booking");
             this.btnAddBooking.UseVisualStyleBackColor = true;
             this.btnAddBooking.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
@@ -685,6 +700,7 @@
             this.txtGuestFNameAdd.Name = "txtGuestFNameAdd";
             this.txtGuestFNameAdd.Size = new System.Drawing.Size(229, 30);
             this.txtGuestFNameAdd.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtGuestFNameAdd, "Enter Guest First Name");
             this.txtGuestFNameAdd.TextChanged += new System.EventHandler(this.txtGuestFNameAdd_TextChanged);
             // 
             // lblFName
@@ -703,6 +719,7 @@
             this.txtGuestLNameAdd.Name = "txtGuestLNameAdd";
             this.txtGuestLNameAdd.Size = new System.Drawing.Size(229, 30);
             this.txtGuestLNameAdd.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtGuestLNameAdd, "Enter Guest Last Name");
             this.txtGuestLNameAdd.TextChanged += new System.EventHandler(this.txtGuestLNameAdd_TextChanged);
             // 
             // lblLName
@@ -752,6 +769,7 @@
             this.btnDisplayGuests.Size = new System.Drawing.Size(211, 43);
             this.btnDisplayGuests.TabIndex = 8;
             this.btnDisplayGuests.Text = "Display all Guests";
+            this.toolTip1.SetToolTip(this.btnDisplayGuests, "Click to see all Guests");
             this.btnDisplayGuests.UseVisualStyleBackColor = true;
             this.btnDisplayGuests.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -771,6 +789,7 @@
             this.txtGuestId.Name = "txtGuestId";
             this.txtGuestId.Size = new System.Drawing.Size(196, 30);
             this.txtGuestId.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtGuestId, "Enter Guest ID to search");
             this.txtGuestId.TextChanged += new System.EventHandler(this.txtGuestId_TextChanged);
             // 
             // gpGeneralSearch
@@ -802,6 +821,7 @@
             this.txtBookingID_Search.Name = "txtBookingID_Search";
             this.txtBookingID_Search.Size = new System.Drawing.Size(196, 30);
             this.txtBookingID_Search.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtBookingID_Search, "Enter Booking ID to search");
             this.txtBookingID_Search.TextChanged += new System.EventHandler(this.txtBookingID_Search_TextChanged);
             // 
             // gpAvailablity
@@ -827,6 +847,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(319, 30);
             this.dateTimePicker2.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.dateTimePicker2, "Select End date to search");
             // 
             // dateTimePicker1
             // 
@@ -835,6 +856,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(317, 30);
             this.dateTimePicker1.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.dateTimePicker1, "Select start date to search");
             // 
             // bttnSearch
             // 
@@ -844,6 +866,7 @@
             this.bttnSearch.Size = new System.Drawing.Size(229, 43);
             this.bttnSearch.TabIndex = 14;
             this.bttnSearch.Text = "SEARCH";
+            this.toolTip1.SetToolTip(this.bttnSearch, "Click to Search Avalible rooms");
             this.bttnSearch.UseVisualStyleBackColor = true;
             this.bttnSearch.Click += new System.EventHandler(this.bttnSearch_Click);
             // 
@@ -873,6 +896,7 @@
             this.btnSearchReset.Size = new System.Drawing.Size(229, 43);
             this.btnSearchReset.TabIndex = 10;
             this.btnSearchReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnSearchReset, "Click to clear all textboxes");
             this.btnSearchReset.UseVisualStyleBackColor = true;
             this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click_1);
             // 
@@ -1026,5 +1050,6 @@
         private System.Windows.Forms.Label lblGLName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

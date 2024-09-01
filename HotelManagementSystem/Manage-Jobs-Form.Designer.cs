@@ -95,6 +95,7 @@
             this.txtJobID.Name = "txtJobID";
             this.txtJobID.Size = new System.Drawing.Size(168, 30);
             this.txtJobID.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtJobID, "Enter Job ID");
             this.txtJobID.TextChanged += new System.EventHandler(this.txtJobID_TextChanged);
             // 
             // lblJobID
@@ -143,6 +144,7 @@
             this.btnAddCancel.Size = new System.Drawing.Size(109, 41);
             this.btnAddCancel.TabIndex = 15;
             this.btnAddCancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.btnAddCancel, "Click to Cancel");
             this.btnAddCancel.UseVisualStyleBackColor = true;
             this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click_1);
             // 
@@ -153,7 +155,8 @@
             this.btnAcceptNewJob.Name = "btnAcceptNewJob";
             this.btnAcceptNewJob.Size = new System.Drawing.Size(109, 41);
             this.btnAcceptNewJob.TabIndex = 14;
-            this.btnAcceptNewJob.Text = "Accept";
+            this.btnAcceptNewJob.Text = "Add";
+            this.toolTip1.SetToolTip(this.btnAcceptNewJob, "Click to add job");
             this.btnAcceptNewJob.UseVisualStyleBackColor = true;
             this.btnAcceptNewJob.Click += new System.EventHandler(this.btnAcceptNewJob_Click);
             // 
@@ -184,6 +187,7 @@
             this.txtAddJobRate.Name = "txtAddJobRate";
             this.txtAddJobRate.Size = new System.Drawing.Size(148, 30);
             this.txtAddJobRate.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.txtAddJobRate, "Enter Job Rate");
             this.txtAddJobRate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtAddJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddJobRate_Validating);
             // 
@@ -194,6 +198,7 @@
             this.txtAddJobTitle.Name = "txtAddJobTitle";
             this.txtAddJobTitle.Size = new System.Drawing.Size(148, 30);
             this.txtAddJobTitle.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.txtAddJobTitle, "Enter Job Title");
             this.txtAddJobTitle.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnEditJob
@@ -226,6 +231,7 @@
             this.btnEditCancel.Size = new System.Drawing.Size(101, 41);
             this.btnEditCancel.TabIndex = 15;
             this.btnEditCancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.btnEditCancel, "Click to Cancel");
             this.btnEditCancel.UseVisualStyleBackColor = true;
             this.btnEditCancel.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -245,7 +251,8 @@
             this.btnEditAccept.Name = "btnEditAccept";
             this.btnEditAccept.Size = new System.Drawing.Size(101, 41);
             this.btnEditAccept.TabIndex = 14;
-            this.btnEditAccept.Text = "Accept";
+            this.btnEditAccept.Text = "Update";
+            this.toolTip1.SetToolTip(this.btnEditAccept, "Click to Update Job Details");
             this.btnEditAccept.UseVisualStyleBackColor = true;
             this.btnEditAccept.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -256,6 +263,7 @@
             this.txtEditJobTitle.Name = "txtEditJobTitle";
             this.txtEditJobTitle.Size = new System.Drawing.Size(160, 30);
             this.txtEditJobTitle.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.txtEditJobTitle, "Enter Job Title");
             this.txtEditJobTitle.TextChanged += new System.EventHandler(this.txtEditJobTitle_TextChanged);
             // 
             // txtEditJobRate
@@ -265,6 +273,7 @@
             this.txtEditJobRate.Name = "txtEditJobRate";
             this.txtEditJobRate.Size = new System.Drawing.Size(160, 30);
             this.txtEditJobRate.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.txtEditJobRate, "Enter Job Rate");
             this.txtEditJobRate.TextChanged += new System.EventHandler(this.txtEditJobRate_TextChanged);
             this.txtEditJobRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtEditJobRate_Validating);
             // 
@@ -284,6 +293,7 @@
             this.txtJobRate.Name = "txtJobRate";
             this.txtJobRate.Size = new System.Drawing.Size(168, 30);
             this.txtJobRate.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtJobRate, "Enter Job rate");
             this.txtJobRate.TextChanged += new System.EventHandler(this.txtJobRate_TextChanged);
             // 
             // txtJobTitle
@@ -293,6 +303,7 @@
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.Size = new System.Drawing.Size(168, 30);
             this.txtJobTitle.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtJobTitle, "Enter Job Title");
             this.txtJobTitle.TextChanged += new System.EventHandler(this.txtJobTitle_TextChanged);
             // 
             // btnReset
