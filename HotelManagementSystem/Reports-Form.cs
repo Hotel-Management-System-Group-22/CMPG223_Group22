@@ -28,6 +28,7 @@ namespace HotelManagementSystem
             startDate = dtpStart.Value;
             endDate = dtpEnd.Value;
             checkLanguage();
+            lblHeading.Visible = false;
             
         }
 
@@ -107,6 +108,8 @@ namespace HotelManagementSystem
 
                             // Format the columns in dgvReport
                             dgvBookings.Columns["TotalCheckOuts"].HeaderText = "Total Number of Check-Outs";
+                            lblHeading.Visible = true;
+                            lblHeading.Text = "Report Showing "+cbReports.SelectedItem.ToString()+" between "+startDate+" - " + endDate;
                         }
                         catch (Exception ex)
                         {
@@ -214,6 +217,7 @@ namespace HotelManagementSystem
         private void btnCancel_Click(object sender, EventArgs e)
         {
             loadData();
+            lblHeading.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

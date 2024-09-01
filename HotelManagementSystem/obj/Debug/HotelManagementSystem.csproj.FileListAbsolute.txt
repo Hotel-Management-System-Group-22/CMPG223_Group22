@@ -58,3 +58,6 @@ C:\Users\User\Documents\Uni\2024\GitHub\CMPG223_Group22\HotelManagementSystem\ob
 C:\Users\User\Documents\Uni\2024\GitHub\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.pdb
 C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.AdminMenu.resources
 C:\Users\Duimp\Desktop\CMPG223_Group22\HotelManagementSystem\obj\Debug\HotelManagementSystem.ClerkMenu.resources
+C:\Users\User\Documents\Uni\2024\GitHub\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe.config
+C:\Users\User\Documents\Uni\2024\GitHub\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.exe
+C:\Users\User\Documents\Uni\2024\GitHub\CMPG223_Group22\HotelManagementSystem\bin\Debug\HotelManagementSystem.pdb
