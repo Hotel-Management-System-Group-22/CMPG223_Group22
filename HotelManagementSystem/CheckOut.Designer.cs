@@ -41,6 +41,7 @@
             this.txtGuestLName = new System.Windows.Forms.TextBox();
             this.txtGuestFName = new System.Windows.Forms.TextBox();
             this.txtCheckOutRoom = new System.Windows.Forms.TextBox();
+            this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpBxCheckOut = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@
             this.lblGuestFName = new System.Windows.Forms.Label();
             this.lblRoomID = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnBookingUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpBxCheckOut.SuspendLayout();
@@ -69,7 +69,7 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Location = new System.Drawing.Point(545, 87);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(227, 39);
             this.btnCheckOut.TabIndex = 4;
@@ -81,7 +81,7 @@
             // btnCheckOutCancel
             // 
             this.btnCheckOutCancel.Location = new System.Drawing.Point(545, 212);
-            this.btnCheckOutCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckOutCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOutCancel.Name = "btnCheckOutCancel";
             this.btnCheckOutCancel.Size = new System.Drawing.Size(227, 39);
             this.btnCheckOutCancel.TabIndex = 5;
@@ -93,7 +93,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 226);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(331, 30);
             this.dateTimePicker1.TabIndex = 3;
@@ -103,7 +103,7 @@
             // txtBookingID
             // 
             this.txtBookingID.Location = new System.Drawing.Point(164, 39);
-            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(184, 30);
             this.txtBookingID.TabIndex = 0;
@@ -115,7 +115,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(64, 411);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
@@ -126,7 +126,7 @@
             // 
             this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Location = new System.Drawing.Point(936, 46);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(195, 46);
             this.btnLanguage.TabIndex = 20;
@@ -137,8 +137,9 @@
             // 
             // txtGuestLName
             // 
+            this.txtGuestLName.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestLName.Location = new System.Drawing.Point(195, 106);
-            this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestLName.Name = "txtGuestLName";
             this.txtGuestLName.ReadOnly = true;
             this.txtGuestLName.Size = new System.Drawing.Size(191, 30);
@@ -148,8 +149,9 @@
             // 
             // txtGuestFName
             // 
+            this.txtGuestFName.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestFName.Location = new System.Drawing.Point(195, 68);
-            this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestFName.Name = "txtGuestFName";
             this.txtGuestFName.ReadOnly = true;
             this.txtGuestFName.Size = new System.Drawing.Size(191, 30);
@@ -159,14 +161,27 @@
             // 
             // txtCheckOutRoom
             // 
+            this.txtCheckOutRoom.BackColor = System.Drawing.SystemColors.Window;
             this.txtCheckOutRoom.Location = new System.Drawing.Point(195, 31);
-            this.txtCheckOutRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCheckOutRoom.Margin = new System.Windows.Forms.Padding(4);
             this.txtCheckOutRoom.Name = "txtCheckOutRoom";
             this.txtCheckOutRoom.ReadOnly = true;
             this.txtCheckOutRoom.Size = new System.Drawing.Size(191, 30);
             this.txtCheckOutRoom.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtCheckOutRoom, "Enter Room ID");
             this.txtCheckOutRoom.TextChanged += new System.EventHandler(this.txtCheckOutRoom_TextChanged);
+            // 
+            // btnBookingUpdate
+            // 
+            this.btnBookingUpdate.Location = new System.Drawing.Point(545, 138);
+            this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBookingUpdate.Name = "btnBookingUpdate";
+            this.btnBookingUpdate.Size = new System.Drawing.Size(227, 66);
+            this.btnBookingUpdate.TabIndex = 6;
+            this.btnBookingUpdate.Text = "Update or Search Booking Info";
+            this.toolTip1.SetToolTip(this.btnBookingUpdate, "Click to Navigate to Bookings Form");
+            this.btnBookingUpdate.UseVisualStyleBackColor = true;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
             // pictureBox1
             // 
@@ -256,18 +271,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // btnBookingUpdate
-            // 
-            this.btnBookingUpdate.Location = new System.Drawing.Point(545, 138);
-            this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBookingUpdate.Name = "btnBookingUpdate";
-            this.btnBookingUpdate.Size = new System.Drawing.Size(227, 66);
-            this.btnBookingUpdate.TabIndex = 6;
-            this.btnBookingUpdate.Text = "Update or Search Booking Info";
-            this.toolTip1.SetToolTip(this.btnBookingUpdate, "Click to Navigate to Bookings Form");
-            this.btnBookingUpdate.UseVisualStyleBackColor = true;
-            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
-            // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,7 +281,7 @@
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
             this.Load += new System.EventHandler(this.CheckOut_Load);

@@ -52,7 +52,7 @@
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.BackColor = System.Drawing.Color.Wheat;
+            this.lblNewPassword.BackColor = System.Drawing.Color.PapayaWhip;
             this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPassword.Location = new System.Drawing.Point(215, 142);
             this.lblNewPassword.Name = "lblNewPassword";
@@ -64,7 +64,7 @@
             // lblConfirmNewPassword
             // 
             this.lblConfirmNewPassword.AutoSize = true;
-            this.lblConfirmNewPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmNewPassword.BackColor = System.Drawing.Color.PapayaWhip;
             this.lblConfirmNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmNewPassword.Location = new System.Drawing.Point(148, 194);
             this.lblConfirmNewPassword.Name = "lblConfirmNewPassword";
@@ -134,12 +134,13 @@
             // 
             // btnLanguage
             // 
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Location = new System.Drawing.Point(237, 351);
             this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(284, 47);
             this.btnLanguage.TabIndex = 7;
-            this.btnLanguage.Text = "LANGUAGE";
+            this.btnLanguage.Text = "Language";
             this.toolTip1.SetToolTip(this.btnLanguage, "Click to change Languages");
             this.btnLanguage.UseVisualStyleBackColor = true;
             // 

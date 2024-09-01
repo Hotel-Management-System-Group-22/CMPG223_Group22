@@ -61,7 +61,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(71, 402);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
@@ -81,7 +81,7 @@
             // txtBookingID
             // 
             this.txtBookingID.Location = new System.Drawing.Point(197, 33);
-            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookingID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingID.Name = "txtBookingID";
             this.txtBookingID.Size = new System.Drawing.Size(191, 30);
             this.txtBookingID.TabIndex = 0;
@@ -101,7 +101,7 @@
             // btnBookingUpdate
             // 
             this.btnBookingUpdate.Location = new System.Drawing.Point(560, 138);
-            this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBookingUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookingUpdate.Name = "btnBookingUpdate";
             this.btnBookingUpdate.Size = new System.Drawing.Size(227, 58);
             this.btnBookingUpdate.TabIndex = 6;
@@ -113,7 +113,7 @@
             // btnCheckIn
             // 
             this.btnCheckIn.Location = new System.Drawing.Point(560, 87);
-            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(227, 39);
             this.btnCheckIn.TabIndex = 4;
@@ -124,8 +124,9 @@
             // 
             // txtRoomNr
             // 
+            this.txtRoomNr.BackColor = System.Drawing.SystemColors.Window;
             this.txtRoomNr.Location = new System.Drawing.Point(195, 31);
-            this.txtRoomNr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRoomNr.Margin = new System.Windows.Forms.Padding(4);
             this.txtRoomNr.Name = "txtRoomNr";
             this.txtRoomNr.ReadOnly = true;
             this.txtRoomNr.Size = new System.Drawing.Size(191, 30);
@@ -136,7 +137,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(24, 224);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(325, 30);
             this.dateTimePicker1.TabIndex = 3;
@@ -146,7 +147,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(560, 209);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(227, 39);
             this.btnCancel.TabIndex = 5;
@@ -157,8 +158,9 @@
             // 
             // txtGuestFName
             // 
+            this.txtGuestFName.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestFName.Location = new System.Drawing.Point(195, 68);
-            this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestFName.Name = "txtGuestFName";
             this.txtGuestFName.ReadOnly = true;
             this.txtGuestFName.Size = new System.Drawing.Size(191, 30);
@@ -180,7 +182,7 @@
             // 
             this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Location = new System.Drawing.Point(1003, 39);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(195, 39);
             this.btnLanguage.TabIndex = 21;
@@ -191,8 +193,9 @@
             // 
             // txtGuestLName
             // 
+            this.txtGuestLName.BackColor = System.Drawing.SystemColors.Window;
             this.txtGuestLName.Location = new System.Drawing.Point(195, 106);
-            this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestLName.Name = "txtGuestLName";
             this.txtGuestLName.ReadOnly = true;
             this.txtGuestLName.Size = new System.Drawing.Size(191, 30);
@@ -280,7 +283,7 @@
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckIn";
             this.Text = "CheckIn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

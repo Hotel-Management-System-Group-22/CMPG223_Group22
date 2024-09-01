@@ -113,6 +113,7 @@
             this.btnLanguage = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -331,6 +332,7 @@
             // 
             // txtUpdateSearch
             // 
+            this.txtUpdateSearch.BackColor = System.Drawing.SystemColors.Window;
             this.txtUpdateSearch.Location = new System.Drawing.Point(301, 36);
             this.txtUpdateSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateSearch.Name = "txtUpdateSearch";
@@ -999,10 +1001,11 @@
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(1004, 85);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Location = new System.Drawing.Point(1020, 36);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(100, 28);
+            this.btnLanguage.Size = new System.Drawing.Size(198, 47);
             this.btnLanguage.TabIndex = 14;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;
@@ -1018,11 +1021,20 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Location = new System.Drawing.Point(365, 130);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(823, 35);
+            this.panel1.TabIndex = 16;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 718);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.employeeDataGridView);
@@ -1146,5 +1158,6 @@
         private System.Windows.Forms.Button btnLanguage;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

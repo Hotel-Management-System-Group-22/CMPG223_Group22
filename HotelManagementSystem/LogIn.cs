@@ -205,5 +205,15 @@ namespace HotelManagementSystem
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

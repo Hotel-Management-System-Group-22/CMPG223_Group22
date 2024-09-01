@@ -177,11 +177,11 @@
             this.tabControl1.Controls.Add(this.tbUpdateGuest);
             this.tabControl1.Controls.Add(this.tbDeleteGuest);
             this.tabControl1.Controls.Add(this.tbSearchGuest);
-            this.tabControl1.Location = new System.Drawing.Point(387, 127);
+            this.tabControl1.Location = new System.Drawing.Point(387, 123);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(763, 258);
+            this.tabControl1.Size = new System.Drawing.Size(763, 262);
             this.tabControl1.TabIndex = 1;
             // 
             // tbAddGuest
@@ -197,6 +197,7 @@
             this.tbAddGuest.Controls.Add(this.lblLNameAdd);
             this.tbAddGuest.Controls.Add(this.LblContactNo);
             this.tbAddGuest.Controls.Add(this.LblEmailAddress);
+            this.tbAddGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAddGuest.Location = new System.Drawing.Point(4, 25);
             this.tbAddGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAddGuest.Name = "tbAddGuest";
@@ -233,40 +234,40 @@
             // 
             // TxtFName_Add
             // 
-            this.TxtFName_Add.Location = new System.Drawing.Point(193, 46);
+            this.TxtFName_Add.Location = new System.Drawing.Point(193, 32);
             this.TxtFName_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtFName_Add.Name = "TxtFName_Add";
-            this.TxtFName_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtFName_Add.Size = new System.Drawing.Size(220, 30);
             this.TxtFName_Add.TabIndex = 10;
             this.toolTip1.SetToolTip(this.TxtFName_Add, "Enter Guest First Name");
             this.TxtFName_Add.TextChanged += new System.EventHandler(this.TxtFName_Add_TextChanged);
             // 
             // TxtLName_Add
             // 
-            this.TxtLName_Add.Location = new System.Drawing.Point(193, 87);
+            this.TxtLName_Add.Location = new System.Drawing.Point(193, 72);
             this.TxtLName_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtLName_Add.Name = "TxtLName_Add";
-            this.TxtLName_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtLName_Add.Size = new System.Drawing.Size(220, 30);
             this.TxtLName_Add.TabIndex = 9;
             this.toolTip1.SetToolTip(this.TxtLName_Add, "Enter Guest Last Name");
             this.TxtLName_Add.TextChanged += new System.EventHandler(this.TxtLName_Add_TextChanged);
             // 
             // TxtContactNo_Add
             // 
-            this.TxtContactNo_Add.Location = new System.Drawing.Point(193, 132);
+            this.TxtContactNo_Add.Location = new System.Drawing.Point(193, 112);
             this.TxtContactNo_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtContactNo_Add.Name = "TxtContactNo_Add";
-            this.TxtContactNo_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtContactNo_Add.Size = new System.Drawing.Size(220, 30);
             this.TxtContactNo_Add.TabIndex = 8;
             this.toolTip1.SetToolTip(this.TxtContactNo_Add, "Enter Guest 10-digit Contact Number (eg. 0876543667)");
             this.TxtContactNo_Add.TextChanged += new System.EventHandler(this.TxtContactNo_Add_TextChanged);
             // 
             // TxtEmail_Add
             // 
-            this.TxtEmail_Add.Location = new System.Drawing.Point(193, 167);
+            this.TxtEmail_Add.Location = new System.Drawing.Point(193, 158);
             this.TxtEmail_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtEmail_Add.Name = "TxtEmail_Add";
-            this.TxtEmail_Add.Size = new System.Drawing.Size(220, 22);
+            this.TxtEmail_Add.Size = new System.Drawing.Size(220, 30);
             this.TxtEmail_Add.TabIndex = 7;
             this.toolTip1.SetToolTip(this.TxtEmail_Add, "Enter valid Guest Email (eg. guest@gmail.com) ");
             this.TxtEmail_Add.TextChanged += new System.EventHandler(this.TxtEmail_Add_TextChanged);
@@ -275,7 +276,7 @@
             // 
             this.lblFNameAdd.AutoSize = true;
             this.lblFNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNameAdd.Location = new System.Drawing.Point(20, 43);
+            this.lblFNameAdd.Location = new System.Drawing.Point(20, 32);
             this.lblFNameAdd.Name = "lblFNameAdd";
             this.lblFNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblFNameAdd.TabIndex = 3;
@@ -285,7 +286,7 @@
             // 
             this.lblLNameAdd.AutoSize = true;
             this.lblLNameAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLNameAdd.Location = new System.Drawing.Point(20, 87);
+            this.lblLNameAdd.Location = new System.Drawing.Point(20, 77);
             this.lblLNameAdd.Name = "lblLNameAdd";
             this.lblLNameAdd.Size = new System.Drawing.Size(112, 25);
             this.lblLNameAdd.TabIndex = 4;
@@ -295,7 +296,7 @@
             // 
             this.LblContactNo.AutoSize = true;
             this.LblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactNo.Location = new System.Drawing.Point(20, 128);
+            this.LblContactNo.Location = new System.Drawing.Point(22, 117);
             this.LblContactNo.Name = "LblContactNo";
             this.LblContactNo.Size = new System.Drawing.Size(165, 25);
             this.LblContactNo.TabIndex = 5;
@@ -324,6 +325,7 @@
             this.tbUpdateGuest.Controls.Add(this.btnReset);
             this.tbUpdateGuest.Controls.Add(this.TxtFName_Update);
             this.tbUpdateGuest.Controls.Add(this.LblFName_Update);
+            this.tbUpdateGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUpdateGuest.Location = new System.Drawing.Point(4, 25);
             this.tbUpdateGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUpdateGuest.Name = "tbUpdateGuest";
@@ -335,7 +337,7 @@
             // 
             this.LblEmail_Update.AutoSize = true;
             this.LblEmail_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail_Update.Location = new System.Drawing.Point(19, 143);
+            this.LblEmail_Update.Location = new System.Drawing.Point(19, 150);
             this.LblEmail_Update.Name = "LblEmail_Update";
             this.LblEmail_Update.Size = new System.Drawing.Size(144, 25);
             this.LblEmail_Update.TabIndex = 14;
@@ -345,7 +347,7 @@
             // 
             this.LblContactNo_Update.AutoSize = true;
             this.LblContactNo_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblContactNo_Update.Location = new System.Drawing.Point(19, 107);
+            this.LblContactNo_Update.Location = new System.Drawing.Point(19, 114);
             this.LblContactNo_Update.Name = "LblContactNo_Update";
             this.LblContactNo_Update.Size = new System.Drawing.Size(160, 25);
             this.LblContactNo_Update.TabIndex = 13;
@@ -355,7 +357,7 @@
             // 
             this.LblLName_Update.AutoSize = true;
             this.LblLName_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLName_Update.Location = new System.Drawing.Point(19, 66);
+            this.LblLName_Update.Location = new System.Drawing.Point(19, 74);
             this.LblLName_Update.Name = "LblLName_Update";
             this.LblLName_Update.Size = new System.Drawing.Size(112, 25);
             this.LblLName_Update.TabIndex = 12;
@@ -366,7 +368,7 @@
             this.TxtLName_Update.Location = new System.Drawing.Point(196, 71);
             this.TxtLName_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtLName_Update.Name = "TxtLName_Update";
-            this.TxtLName_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtLName_Update.Size = new System.Drawing.Size(215, 30);
             this.TxtLName_Update.TabIndex = 10;
             this.toolTip1.SetToolTip(this.TxtLName_Update, "Enter Guest Last Name");
             this.TxtLName_Update.TextChanged += new System.EventHandler(this.TxtLName_Update_TextChanged);
@@ -376,7 +378,7 @@
             this.TxtContactNo_Update.Location = new System.Drawing.Point(196, 111);
             this.TxtContactNo_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtContactNo_Update.Name = "TxtContactNo_Update";
-            this.TxtContactNo_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtContactNo_Update.Size = new System.Drawing.Size(215, 30);
             this.TxtContactNo_Update.TabIndex = 9;
             this.toolTip1.SetToolTip(this.TxtContactNo_Update, "Enter Guest 10-digit Contact Number (eg. 0784567787)");
             this.TxtContactNo_Update.TextChanged += new System.EventHandler(this.TxtContactNo_Update_TextChanged);
@@ -386,7 +388,7 @@
             this.TxtBoxEmail_Update.Location = new System.Drawing.Point(196, 145);
             this.TxtBoxEmail_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtBoxEmail_Update.Name = "TxtBoxEmail_Update";
-            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtBoxEmail_Update.Size = new System.Drawing.Size(215, 30);
             this.TxtBoxEmail_Update.TabIndex = 8;
             this.toolTip1.SetToolTip(this.TxtBoxEmail_Update, "Enter Valid Guest Email(eg. guest@gmail.com)");
             this.TxtBoxEmail_Update.TextChanged += new System.EventHandler(this.TxtBoxEmail_Update_TextChanged);
@@ -422,7 +424,7 @@
             this.TxtFName_Update.Location = new System.Drawing.Point(196, 32);
             this.TxtFName_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtFName_Update.Name = "TxtFName_Update";
-            this.TxtFName_Update.Size = new System.Drawing.Size(215, 22);
+            this.TxtFName_Update.Size = new System.Drawing.Size(215, 30);
             this.TxtFName_Update.TabIndex = 3;
             this.toolTip1.SetToolTip(this.TxtFName_Update, "Enter Guest First Name ");
             this.TxtFName_Update.TextChanged += new System.EventHandler(this.TxtFName_Update_TextChanged);
@@ -454,7 +456,7 @@
             // 
             this.cbConfirmation.AutoSize = true;
             this.cbConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbConfirmation.Location = new System.Drawing.Point(431, 86);
+            this.cbConfirmation.Location = new System.Drawing.Point(428, 106);
             this.cbConfirmation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbConfirmation.Name = "cbConfirmation";
             this.cbConfirmation.Size = new System.Drawing.Size(327, 44);
@@ -474,7 +476,7 @@
             this.groupBox1.Controls.Add(this.txtFName_Delete);
             this.groupBox1.Controls.Add(this.lblDeleteFName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 26);
+            this.groupBox1.Location = new System.Drawing.Point(3, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -572,7 +574,7 @@
             // BtnDelete
             // 
             this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.Location = new System.Drawing.Point(488, 162);
+            this.BtnDelete.Location = new System.Drawing.Point(541, 173);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(211, 46);
@@ -593,14 +595,14 @@
             this.tbSearchGuest.Location = new System.Drawing.Point(4, 25);
             this.tbSearchGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSearchGuest.Name = "tbSearchGuest";
-            this.tbSearchGuest.Size = new System.Drawing.Size(755, 229);
+            this.tbSearchGuest.Size = new System.Drawing.Size(755, 233);
             this.tbSearchGuest.TabIndex = 4;
             this.tbSearchGuest.Text = "SEARCH GUEST";
             // 
             // btnResetSearch
             // 
             this.btnResetSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetSearch.Location = new System.Drawing.Point(492, 185);
+            this.btnResetSearch.Location = new System.Drawing.Point(508, 181);
             this.btnResetSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnResetSearch.Name = "btnResetSearch";
             this.btnResetSearch.Size = new System.Drawing.Size(239, 42);
@@ -786,15 +788,16 @@
             this.panel1.Location = new System.Drawing.Point(391, 121);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 12);
+            this.panel1.Size = new System.Drawing.Size(759, 28);
             this.panel1.TabIndex = 25;
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(924, 53);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Location = new System.Drawing.Point(956, 53);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(153, 62);
+            this.btnLanguage.Size = new System.Drawing.Size(239, 50);
             this.btnLanguage.TabIndex = 26;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;

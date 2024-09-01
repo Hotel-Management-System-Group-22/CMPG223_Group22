@@ -133,7 +133,7 @@
             this.btnDeleteJob.Name = "btnDeleteJob";
             this.btnDeleteJob.Size = new System.Drawing.Size(215, 41);
             this.btnDeleteJob.TabIndex = 10;
-            this.btnDeleteJob.Text = "Delete Selected Job";
+            this.btnDeleteJob.Text = "Delete Job";
             this.btnDeleteJob.UseVisualStyleBackColor = true;
             this.btnDeleteJob.Click += new System.EventHandler(this.btnDeleteJob_Click);
             // 
@@ -239,7 +239,7 @@
             // lblEditTitle
             // 
             this.lblEditTitle.AutoSize = true;
-            this.lblEditTitle.Location = new System.Drawing.Point(3, 21);
+            this.lblEditTitle.Location = new System.Drawing.Point(3, 35);
             this.lblEditTitle.Name = "lblEditTitle";
             this.lblEditTitle.Size = new System.Drawing.Size(93, 25);
             this.lblEditTitle.TabIndex = 12;
@@ -428,7 +428,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(356, 82);
+            this.panel1.Location = new System.Drawing.Point(348, 134);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(373, 30);
@@ -446,10 +446,11 @@
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(1021, 103);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Location = new System.Drawing.Point(940, 57);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(100, 28);
+            this.btnLanguage.Size = new System.Drawing.Size(181, 57);
             this.btnLanguage.TabIndex = 27;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;

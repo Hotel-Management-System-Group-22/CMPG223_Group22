@@ -43,6 +43,7 @@
             this.btnSearchReset = new System.Windows.Forms.Button();
             this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.tbpAdd_Update = new System.Windows.Forms.TabPage();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.btnUpdateRoom = new System.Windows.Forms.Button();
             this.txtRoomID = new System.Windows.Forms.TextBox();
             this.lblRoomID = new System.Windows.Forms.Label();
@@ -55,6 +56,8 @@
             this.tbpDelete = new System.Windows.Forms.TabPage();
             this.btnDeleteReset = new System.Windows.Forms.Button();
             this.btnDeleteRoom = new System.Windows.Forms.Button();
+            this.txtDeleteRoomID = new System.Windows.Forms.TextBox();
+            this.lblDeleteRoomID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnMenuDelete = new System.Windows.Forms.Button();
             this.btnMenuAdd = new System.Windows.Forms.Button();
@@ -67,9 +70,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSearchEmployee = new System.Windows.Forms.Button();
-            this.lblDeleteRoomID = new System.Windows.Forms.Label();
-            this.txtDeleteRoomID = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tbpSearch.SuspendLayout();
             this.tbpAdd_Update.SuspendLayout();
@@ -86,7 +86,7 @@
             this.tabControl1.Controls.Add(this.tbpAdd_Update);
             this.tabControl1.Controls.Add(this.tbpDelete);
             this.tabControl1.Location = new System.Drawing.Point(453, 162);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(799, 309);
@@ -107,9 +107,9 @@
             this.tbpSearch.Controls.Add(this.txtSearchRoom);
             this.tbpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpSearch.Location = new System.Drawing.Point(4, 25);
-            this.tbpSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbpSearch.Name = "tbpSearch";
-            this.tbpSearch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpSearch.Padding = new System.Windows.Forms.Padding(4);
             this.tbpSearch.Size = new System.Drawing.Size(791, 280);
             this.tbpSearch.TabIndex = 0;
             this.tbpSearch.Text = "Search";
@@ -117,7 +117,7 @@
             // txtSearchEmployee
             // 
             this.txtSearchEmployee.Location = new System.Drawing.Point(243, 80);
-            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchEmployee.Name = "txtSearchEmployee";
             this.txtSearchEmployee.Size = new System.Drawing.Size(223, 30);
             this.txtSearchEmployee.TabIndex = 2;
@@ -143,7 +143,7 @@
             "Unoccupied",
             "Occupied"});
             this.cbxSearchStatus.Location = new System.Drawing.Point(243, 139);
-            this.cbxSearchStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxSearchStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxSearchStatus.Name = "cbxSearchStatus";
             this.cbxSearchStatus.Size = new System.Drawing.Size(223, 33);
             this.cbxSearchStatus.TabIndex = 3;
@@ -165,7 +165,7 @@
             // 
             this.rdbDescending.AutoSize = true;
             this.rdbDescending.Location = new System.Drawing.Point(243, 222);
-            this.rdbDescending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbDescending.Margin = new System.Windows.Forms.Padding(4);
             this.rdbDescending.Name = "rdbDescending";
             this.rdbDescending.Size = new System.Drawing.Size(137, 29);
             this.rdbDescending.TabIndex = 5;
@@ -179,7 +179,7 @@
             this.rdbAscending.AutoSize = true;
             this.rdbAscending.Checked = true;
             this.rdbAscending.Location = new System.Drawing.Point(243, 185);
-            this.rdbAscending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbAscending.Margin = new System.Windows.Forms.Padding(4);
             this.rdbAscending.Name = "rdbAscending";
             this.rdbAscending.Size = new System.Drawing.Size(126, 29);
             this.rdbAscending.TabIndex = 4;
@@ -212,7 +212,7 @@
             // btnSearchReset
             // 
             this.btnSearchReset.Location = new System.Drawing.Point(541, 212);
-            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchReset.Name = "btnSearchReset";
             this.btnSearchReset.Size = new System.Drawing.Size(243, 50);
             this.btnSearchReset.TabIndex = 6;
@@ -224,7 +224,7 @@
             // txtSearchRoom
             // 
             this.txtSearchRoom.Location = new System.Drawing.Point(243, 22);
-            this.txtSearchRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchRoom.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchRoom.Name = "txtSearchRoom";
             this.txtSearchRoom.Size = new System.Drawing.Size(223, 30);
             this.txtSearchRoom.TabIndex = 1;
@@ -246,17 +246,29 @@
             this.tbpAdd_Update.Controls.Add(this.lblEmployeeID);
             this.tbpAdd_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpAdd_Update.Location = new System.Drawing.Point(4, 25);
-            this.tbpAdd_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpAdd_Update.Margin = new System.Windows.Forms.Padding(4);
             this.tbpAdd_Update.Name = "tbpAdd_Update";
-            this.tbpAdd_Update.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpAdd_Update.Padding = new System.Windows.Forms.Padding(4);
             this.tbpAdd_Update.Size = new System.Drawing.Size(791, 280);
             this.tbpAdd_Update.TabIndex = 1;
             this.tbpAdd_Update.Text = "Add and Update";
             // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.Location = new System.Drawing.Point(532, 168);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(243, 48);
+            this.btnSearchEmployee.TabIndex = 28;
+            this.btnSearchEmployee.Text = "Search Employee";
+            this.toolTip1.SetToolTip(this.btnSearchEmployee, "Click to Add Room");
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
+            // 
             // btnUpdateRoom
             // 
             this.btnUpdateRoom.Location = new System.Drawing.Point(532, 117);
-            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
             this.btnUpdateRoom.Size = new System.Drawing.Size(243, 48);
             this.btnUpdateRoom.TabIndex = 5;
@@ -268,7 +280,7 @@
             // txtRoomID
             // 
             this.txtRoomID.Location = new System.Drawing.Point(201, 22);
-            this.txtRoomID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRoomID.Margin = new System.Windows.Forms.Padding(4);
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(212, 30);
             this.txtRoomID.TabIndex = 1;
@@ -289,7 +301,7 @@
             // btnAddRoom
             // 
             this.btnAddRoom.Location = new System.Drawing.Point(532, 61);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.Size = new System.Drawing.Size(243, 48);
             this.btnAddRoom.TabIndex = 4;
@@ -301,7 +313,7 @@
             // btnAddReset
             // 
             this.btnAddReset.Location = new System.Drawing.Point(532, 224);
-            this.btnAddReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddReset.Name = "btnAddReset";
             this.btnAddReset.Size = new System.Drawing.Size(243, 48);
             this.btnAddReset.TabIndex = 6;
@@ -317,7 +329,7 @@
             "Unoccupied",
             "Occupied"});
             this.cbxRoomStatus.Location = new System.Drawing.Point(201, 139);
-            this.cbxRoomStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxRoomStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxRoomStatus.Name = "cbxRoomStatus";
             this.cbxRoomStatus.Size = new System.Drawing.Size(212, 33);
             this.cbxRoomStatus.TabIndex = 3;
@@ -327,7 +339,7 @@
             // txtEmployeeID
             // 
             this.txtEmployeeID.Location = new System.Drawing.Point(201, 80);
-            this.txtEmployeeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmployeeID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Size = new System.Drawing.Size(212, 30);
             this.txtEmployeeID.TabIndex = 2;
@@ -363,7 +375,7 @@
             this.tbpDelete.Controls.Add(this.lblDeleteRoomID);
             this.tbpDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpDelete.Location = new System.Drawing.Point(4, 25);
-            this.tbpDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpDelete.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDelete.Name = "tbpDelete";
             this.tbpDelete.Size = new System.Drawing.Size(791, 280);
             this.tbpDelete.TabIndex = 3;
@@ -372,7 +384,7 @@
             // btnDeleteReset
             // 
             this.btnDeleteReset.Location = new System.Drawing.Point(531, 208);
-            this.btnDeleteReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteReset.Name = "btnDeleteReset";
             this.btnDeleteReset.Size = new System.Drawing.Size(243, 52);
             this.btnDeleteReset.TabIndex = 18;
@@ -384,7 +396,7 @@
             // btnDeleteRoom
             // 
             this.btnDeleteRoom.Location = new System.Drawing.Point(531, 148);
-            this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.Size = new System.Drawing.Size(243, 52);
             this.btnDeleteRoom.TabIndex = 17;
@@ -392,6 +404,27 @@
             this.toolTip1.SetToolTip(this.btnDeleteRoom, "Click to Delete Room");
             this.btnDeleteRoom.UseVisualStyleBackColor = true;
             this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
+            // 
+            // txtDeleteRoomID
+            // 
+            this.txtDeleteRoomID.Location = new System.Drawing.Point(257, 49);
+            this.txtDeleteRoomID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDeleteRoomID.Name = "txtDeleteRoomID";
+            this.txtDeleteRoomID.ReadOnly = true;
+            this.txtDeleteRoomID.Size = new System.Drawing.Size(199, 30);
+            this.txtDeleteRoomID.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.txtDeleteRoomID, "Enter room number to search");
+            this.txtDeleteRoomID.TextChanged += new System.EventHandler(this.txtDeleteRoomID_TextChanged);
+            // 
+            // lblDeleteRoomID
+            // 
+            this.lblDeleteRoomID.AutoSize = true;
+            this.lblDeleteRoomID.Location = new System.Drawing.Point(20, 49);
+            this.lblDeleteRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDeleteRoomID.Name = "lblDeleteRoomID";
+            this.lblDeleteRoomID.Size = new System.Drawing.Size(225, 25);
+            this.lblDeleteRoomID.TabIndex = 0;
+            this.lblDeleteRoomID.Text = "Selected Room Number:";
             // 
             // groupBox1
             // 
@@ -402,9 +435,9 @@
             this.groupBox1.Controls.Add(this.btnMenuUpdate);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(51, 162);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(307, 309);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -415,7 +448,7 @@
             this.btnMenuDelete.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMenuDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuDelete.Location = new System.Drawing.Point(19, 235);
-            this.btnMenuDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuDelete.Name = "btnMenuDelete";
             this.btnMenuDelete.Size = new System.Drawing.Size(263, 52);
             this.btnMenuDelete.TabIndex = 15;
@@ -427,7 +460,7 @@
             // 
             this.btnMenuAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuAdd.Location = new System.Drawing.Point(19, 94);
-            this.btnMenuAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuAdd.Name = "btnMenuAdd";
             this.btnMenuAdd.Size = new System.Drawing.Size(263, 52);
             this.btnMenuAdd.TabIndex = 7;
@@ -439,7 +472,7 @@
             // 
             this.btnMenuSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenuSearch.Location = new System.Drawing.Point(19, 25);
-            this.btnMenuSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenuSearch.Name = "btnMenuSearch";
             this.btnMenuSearch.Size = new System.Drawing.Size(263, 52);
             this.btnMenuSearch.TabIndex = 0;
@@ -464,7 +497,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.PapayaWhip;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(51, 494);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -475,7 +508,7 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(-27, -11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1352, 26);
             this.panel1.TabIndex = 4;
@@ -483,8 +516,8 @@
             // btnLanguage
             // 
             this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanguage.Location = new System.Drawing.Point(1039, 57);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Location = new System.Drawing.Point(998, 48);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(243, 50);
             this.btnLanguage.TabIndex = 5;
@@ -507,7 +540,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel2.Location = new System.Drawing.Point(480, 121);
+            this.panel2.Location = new System.Drawing.Point(457, 162);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 34);
@@ -522,39 +555,6 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // btnSearchEmployee
-            // 
-            this.btnSearchEmployee.Location = new System.Drawing.Point(532, 168);
-            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(243, 48);
-            this.btnSearchEmployee.TabIndex = 28;
-            this.btnSearchEmployee.Text = "Search Employee";
-            this.toolTip1.SetToolTip(this.btnSearchEmployee, "Click to Add Room");
-            this.btnSearchEmployee.UseVisualStyleBackColor = true;
-            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
-            // 
-            // lblDeleteRoomID
-            // 
-            this.lblDeleteRoomID.AutoSize = true;
-            this.lblDeleteRoomID.Location = new System.Drawing.Point(20, 49);
-            this.lblDeleteRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDeleteRoomID.Name = "lblDeleteRoomID";
-            this.lblDeleteRoomID.Size = new System.Drawing.Size(225, 25);
-            this.lblDeleteRoomID.TabIndex = 0;
-            this.lblDeleteRoomID.Text = "Selected Room Number:";
-            // 
-            // txtDeleteRoomID
-            // 
-            this.txtDeleteRoomID.Location = new System.Drawing.Point(257, 49);
-            this.txtDeleteRoomID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDeleteRoomID.Name = "txtDeleteRoomID";
-            this.txtDeleteRoomID.ReadOnly = true;
-            this.txtDeleteRoomID.Size = new System.Drawing.Size(199, 30);
-            this.txtDeleteRoomID.TabIndex = 16;
-            this.toolTip1.SetToolTip(this.txtDeleteRoomID, "Enter room number to search");
-            this.txtDeleteRoomID.TextChanged += new System.EventHandler(this.txtDeleteRoomID_TextChanged);
             // 
             // MaintainRooms
             // 

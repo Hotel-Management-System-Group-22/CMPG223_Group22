@@ -104,6 +104,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -156,7 +157,7 @@
             // btnLanguage
             // 
             this.btnLanguage.Location = new System.Drawing.Point(8, 236);
-            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(229, 43);
             this.btnLanguage.TabIndex = 6;
@@ -230,6 +231,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.PapayaWhip;
             this.tabPage1.Controls.Add(this.dtDeparture_Update);
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.dtArrival_Update);
             this.tabPage1.Controls.Add(this.txtRoomNr_Update);
             this.tabPage1.Controls.Add(this.lblGRoomNumber);
@@ -252,7 +254,7 @@
             this.dtDeparture_Update.Location = new System.Drawing.Point(235, 246);
             this.dtDeparture_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtDeparture_Update.Name = "dtDeparture_Update";
-            this.dtDeparture_Update.Size = new System.Drawing.Size(227, 30);
+            this.dtDeparture_Update.Size = new System.Drawing.Size(328, 30);
             this.dtDeparture_Update.TabIndex = 31;
             this.toolTip1.SetToolTip(this.dtDeparture_Update, "Select Departure Date");
             this.dtDeparture_Update.ValueChanged += new System.EventHandler(this.dtDeparture_Update_ValueChanged);
@@ -262,7 +264,7 @@
             this.dtArrival_Update.Location = new System.Drawing.Point(235, 199);
             this.dtArrival_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtArrival_Update.Name = "dtArrival_Update";
-            this.dtArrival_Update.Size = new System.Drawing.Size(227, 30);
+            this.dtArrival_Update.Size = new System.Drawing.Size(328, 30);
             this.dtArrival_Update.TabIndex = 30;
             this.toolTip1.SetToolTip(this.dtArrival_Update, "Select Arrival Date");
             this.dtArrival_Update.ValueChanged += new System.EventHandler(this.dtArrival_Update_ValueChanged);
@@ -306,7 +308,7 @@
             // 
             // btnUpdateReset
             // 
-            this.btnUpdateReset.Location = new System.Drawing.Point(584, 187);
+            this.btnUpdateReset.Location = new System.Drawing.Point(665, 195);
             this.btnUpdateReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateReset.Name = "btnUpdateReset";
             this.btnUpdateReset.Size = new System.Drawing.Size(232, 43);
@@ -317,7 +319,7 @@
             // 
             // btnUpdateEmp
             // 
-            this.btnUpdateEmp.Location = new System.Drawing.Point(584, 238);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(660, 246);
             this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(240, 43);
@@ -636,7 +638,7 @@
             this.dtCheckout.Location = new System.Drawing.Point(221, 238);
             this.dtCheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtCheckout.Name = "dtCheckout";
-            this.dtCheckout.Size = new System.Drawing.Size(232, 30);
+            this.dtCheckout.Size = new System.Drawing.Size(324, 30);
             this.dtCheckout.TabIndex = 13;
             this.toolTip1.SetToolTip(this.dtCheckout, "Select Departure Date");
             this.dtCheckout.ValueChanged += new System.EventHandler(this.dtCheckout_ValueChanged);
@@ -646,7 +648,7 @@
             this.dtCheckin.Location = new System.Drawing.Point(224, 196);
             this.dtCheckin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtCheckin.Name = "dtCheckin";
-            this.dtCheckin.Size = new System.Drawing.Size(229, 30);
+            this.dtCheckin.Size = new System.Drawing.Size(321, 30);
             this.dtCheckin.TabIndex = 12;
             this.toolTip1.SetToolTip(this.dtCheckin, "Select Arrival Date");
             this.dtCheckin.ValueChanged += new System.EventHandler(this.dtCheckin_ValueChanged);
@@ -672,7 +674,7 @@
             // 
             // btnAddReset
             // 
-            this.btnAddReset.Location = new System.Drawing.Point(551, 159);
+            this.btnAddReset.Location = new System.Drawing.Point(633, 186);
             this.btnAddReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddReset.Name = "btnAddReset";
             this.btnAddReset.Size = new System.Drawing.Size(264, 43);
@@ -684,7 +686,7 @@
             // 
             // btnAddBooking
             // 
-            this.btnAddBooking.Location = new System.Drawing.Point(551, 224);
+            this.btnAddBooking.Location = new System.Drawing.Point(633, 233);
             this.btnAddBooking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddBooking.Name = "btnAddBooking";
             this.btnAddBooking.Size = new System.Drawing.Size(264, 43);
@@ -920,10 +922,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.panel1.Location = new System.Drawing.Point(316, 55);
+            this.panel1.Location = new System.Drawing.Point(-4, -28);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(829, 17);
+            this.panel1.Size = new System.Drawing.Size(891, 27);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -937,13 +939,21 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel2.Location = new System.Drawing.Point(313, 134);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 46);
+            this.panel2.TabIndex = 39;
+            // 
             // Bookings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 750);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bookingsDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
@@ -1054,5 +1064,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
