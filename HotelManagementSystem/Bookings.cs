@@ -1234,6 +1234,10 @@ namespace HotelManagementSystem
                     errorProvider1.SetError(dtArrival_Update, "Die inklokdatum kan nie in die verlede wees nie. Kies asseblief 'n geldige datum.");
                 }
             }
+            else
+            {
+                errorProvider1.SetError(dtArrival_Update, string.Empty);
+            }
         }
 
         private void dtDeparture_Update_ValueChanged(object sender, EventArgs e)
@@ -1244,17 +1248,7 @@ namespace HotelManagementSystem
             DateTime selectedCheckinDate = dtArrival_Update.Value.Date;
             TimeSpan duration = selectedCheckoutDate - selectedCheckinDate;
 
-            if (selectedCheckoutDate == selectedCheckinDate)
-            {
-                if (bAfrikaans == false)
-                {
-                    errorProvider1.SetError(dtDeparture_Update, "Booking has to be for at least one day");
-                }
-                else
-                {
-                    errorProvider1.SetError(dtDeparture_Update, "Bespreking moet vir ten minste een dag wees");
-                }
-            }
+            
             if (duration.Days > maxBookingDuration)
             {
                 if (bAfrikaans == false)
@@ -1277,7 +1271,12 @@ namespace HotelManagementSystem
                     MessageBox.Show("Vertrekdatum kan nie voor Aankomsdatum wees nie!");
                 }
             }
+            else
+            {
+                errorProvider1.SetError(dtArrival_Update, string.Empty);
+            }
         }
+        
 
         private void txtRoomNr_Update_TextChanged(object sender, EventArgs e)
         {
