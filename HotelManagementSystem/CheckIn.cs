@@ -394,9 +394,10 @@ namespace HotelManagementSystem
             if (bAfrikaans)
             {
                 btnLanguage.Text = "English";
-                lblBookingID.Text = "Bespreking ID";
-                lblGuestID.Text = "Gas ID";
-                lblRoomID.Text = "Kamer ID";
+                lblBookingID.Text = "Bespreking ID:";
+                lblGuestFName.Text = "Gas Voornaam:";
+                lblGuestLName.Text = "Gas Van:";
+                lblRoomID.Text = "Kamer ID:";
                 btnBookingUpdate.Text = "Opdateer bespreking";
                 btnCheckIn.Text = "Teken uit";
                 btnCancel.Text = "Kanselleer";
@@ -413,9 +414,10 @@ namespace HotelManagementSystem
             else
             {
                 btnLanguage.Text = "Afrikaans";
-                lblBookingID.Text = "Booking ID";
-                lblGuestID.Text = "Guest ID";
-                lblRoomID.Text = "Room ID";
+                lblBookingID.Text = "Booking ID:";
+                lblGuestFName.Text = "Guest First Name:";
+                lblGuestLName.Text = "Guest Last Name:";
+                lblRoomID.Text = "Room ID:";
                 btnBookingUpdate.Text = "Update Booking ID";
                 btnCheckIn.Text = "Check Out";
                 btnCancel.Text = "Cancel";
