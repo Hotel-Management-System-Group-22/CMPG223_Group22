@@ -1664,5 +1664,10 @@ namespace HotelManagementSystem
         {
 
         }
+
+        private void btnUpdateReset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

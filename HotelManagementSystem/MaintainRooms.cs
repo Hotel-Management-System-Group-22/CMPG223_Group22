@@ -843,7 +843,7 @@ namespace HotelManagementSystem
                 cbxSearchStatus.Items.Add("Occupied");
                 //Update and delete page
                 lblRoomID.Text = "Room ID";
-                lblEmployeeID.Text = "Empluyee ID";
+                lblEmployeeID.Text = "Employee ID";
                 lblRoomStatus.Text = "Room status";
                 cbxRoomStatus.Items.Clear();
                 cbxRoomStatus.Items.Add("Unoccupied");
