@@ -231,6 +231,8 @@ namespace HotelManagementSystem
         private void CheckIn_Load(object sender, EventArgs e)
         {
             LoadData();
+            btnCheckIn.Text = "Check in";
+            btnBookingUpdate.Text = "Update or Search Booking";
         }
 
         private void txtBookingID_TextChanged(object sender, EventArgs e)

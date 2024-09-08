@@ -348,7 +348,7 @@
             this.lblUpdateUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateUsername.Location = new System.Drawing.Point(75, 32);
             this.lblUpdateUsername.Name = "lblUpdateUsername";
-            this.lblUpdateUsername.Size = new System.Drawing.Size(200, 25);
+            this.lblUpdateUsername.Size = new System.Drawing.Size(161, 20);
             this.lblUpdateUsername.TabIndex = 10;
             this.lblUpdateUsername.Text = "Employee Username:";
             this.lblUpdateUsername.Click += new System.EventHandler(this.label11_Click);
@@ -386,7 +386,7 @@
             this.lblUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateRole.Location = new System.Drawing.Point(75, 203);
             this.lblUpdateRole.Name = "lblUpdateRole";
-            this.lblUpdateRole.Size = new System.Drawing.Size(57, 25);
+            this.lblUpdateRole.Size = new System.Drawing.Size(46, 20);
             this.lblUpdateRole.TabIndex = 7;
             this.lblUpdateRole.Text = "Role:";
             // 
@@ -409,7 +409,7 @@
             this.lblUpdateJobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateJobTitle.Location = new System.Drawing.Point(75, 156);
             this.lblUpdateJobTitle.Name = "lblUpdateJobTitle";
-            this.lblUpdateJobTitle.Size = new System.Drawing.Size(93, 25);
+            this.lblUpdateJobTitle.Size = new System.Drawing.Size(72, 20);
             this.lblUpdateJobTitle.TabIndex = 5;
             this.lblUpdateJobTitle.Text = "Job Title:";
             // 
@@ -419,7 +419,7 @@
             this.lblUpdateLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateLastName.Location = new System.Drawing.Point(75, 117);
             this.lblUpdateLastName.Name = "lblUpdateLastName";
-            this.lblUpdateLastName.Size = new System.Drawing.Size(109, 25);
+            this.lblUpdateLastName.Size = new System.Drawing.Size(88, 20);
             this.lblUpdateLastName.TabIndex = 4;
             this.lblUpdateLastName.Text = "Last name:";
             // 
@@ -439,7 +439,7 @@
             this.lblUpdateFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateFirstName.Location = new System.Drawing.Point(75, 74);
             this.lblUpdateFirstName.Name = "lblUpdateFirstName";
-            this.lblUpdateFirstName.Size = new System.Drawing.Size(109, 25);
+            this.lblUpdateFirstName.Size = new System.Drawing.Size(88, 20);
             this.lblUpdateFirstName.TabIndex = 1;
             this.lblUpdateFirstName.Text = "First name:";
             // 
@@ -529,7 +529,7 @@
             this.cbConfirm.Location = new System.Drawing.Point(19, 204);
             this.cbConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbConfirm.Name = "cbConfirm";
-            this.cbConfirm.Size = new System.Drawing.Size(360, 20);
+            this.cbConfirm.Size = new System.Drawing.Size(357, 20);
             this.cbConfirm.TabIndex = 11;
             this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
             this.toolTip1.SetToolTip(this.cbConfirm, "Check box to confirm that correct employee is being deleted");
@@ -682,7 +682,7 @@
             this.rdoDes.Location = new System.Drawing.Point(24, 78);
             this.rdoDes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoDes.Name = "rdoDes";
-            this.rdoDes.Size = new System.Drawing.Size(101, 20);
+            this.rdoDes.Size = new System.Drawing.Size(98, 20);
             this.rdoDes.TabIndex = 7;
             this.rdoDes.Text = "Descending";
             this.toolTip1.SetToolTip(this.rdoDes, "Select to search in descending order");
@@ -695,7 +695,7 @@
             this.rdoAsc.Location = new System.Drawing.Point(24, 42);
             this.rdoAsc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoAsc.Name = "rdoAsc";
-            this.rdoAsc.Size = new System.Drawing.Size(92, 20);
+            this.rdoAsc.Size = new System.Drawing.Size(89, 20);
             this.rdoAsc.TabIndex = 6;
             this.rdoAsc.Text = "Ascending";
             this.toolTip1.SetToolTip(this.rdoAsc, "Select to search in ascending order");
@@ -724,7 +724,7 @@
             this.rdoStaff.Location = new System.Drawing.Point(5, 66);
             this.rdoStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoStaff.Name = "rdoStaff";
-            this.rdoStaff.Size = new System.Drawing.Size(145, 20);
+            this.rdoStaff.Size = new System.Drawing.Size(142, 20);
             this.rdoStaff.TabIndex = 9;
             this.rdoStaff.Text = "Employee staff only";
             this.toolTip1.SetToolTip(this.rdoStaff, "Click to filter by employee staff  only");
@@ -746,7 +746,7 @@
             this.rdoClerk.Location = new System.Drawing.Point(5, 41);
             this.rdoClerk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoClerk.Name = "rdoClerk";
-            this.rdoClerk.Size = new System.Drawing.Size(123, 20);
+            this.rdoClerk.Size = new System.Drawing.Size(120, 20);
             this.rdoClerk.TabIndex = 5;
             this.rdoClerk.Text = "Clerk users only";
             this.toolTip1.SetToolTip(this.rdoClerk, "Click to filter by clerk users only");
@@ -759,7 +759,7 @@
             this.rdoAdmin.Location = new System.Drawing.Point(5, 15);
             this.rdoAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Size = new System.Drawing.Size(130, 20);
+            this.rdoAdmin.Size = new System.Drawing.Size(127, 20);
             this.rdoAdmin.TabIndex = 4;
             this.rdoAdmin.Text = "Admin users only";
             this.toolTip1.SetToolTip(this.rdoAdmin, "Click to filter by admin users only");
@@ -1013,10 +1013,12 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::HotelManagementSystem.Properties.Resources._544_5440422_back_arrow_icon_transparent_png_clipart_free_download;
             this.pictureBox2.Location = new System.Drawing.Point(63, 36);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);

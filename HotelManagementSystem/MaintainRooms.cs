@@ -415,7 +415,7 @@ namespace HotelManagementSystem
 
         private void txtDeleteRoomID_TextChanged(object sender, EventArgs e)
         {
-            /*
+            
             // Try to parse the text in the TextBox to an integer
             if ((int.TryParse(txtDeleteRoomID.Text, out int result)) || txtDeleteRoomID.Text == "" )
             {
@@ -438,7 +438,6 @@ namespace HotelManagementSystem
                 txtDeleteRoomID.Select(txtDeleteRoomID.Text.Length, 0);
 
             }
-            */
         }
 
         private void txtEmployeeID_TextChanged(object sender, EventArgs e)

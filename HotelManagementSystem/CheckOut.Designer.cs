@@ -62,7 +62,7 @@
             this.lblBookingID.Location = new System.Drawing.Point(13, 46);
             this.lblBookingID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBookingID.Name = "lblBookingID";
-            this.lblBookingID.Size = new System.Drawing.Size(113, 25);
+            this.lblBookingID.Size = new System.Drawing.Size(92, 20);
             this.lblBookingID.TabIndex = 15;
             this.lblBookingID.Text = "Booking ID:";
             // 
@@ -95,7 +95,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 226);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(331, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(331, 26);
             this.dateTimePicker1.TabIndex = 3;
             this.toolTip1.SetToolTip(this.dateTimePicker1, "Select Check-Out Date");
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -105,7 +105,7 @@
             this.txtBookingID.Location = new System.Drawing.Point(164, 39);
             this.txtBookingID.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookingID.Name = "txtBookingID";
-            this.txtBookingID.Size = new System.Drawing.Size(184, 30);
+            this.txtBookingID.Size = new System.Drawing.Size(184, 26);
             this.txtBookingID.TabIndex = 0;
             this.toolTip1.SetToolTip(this.txtBookingID, "Enter Booking ID");
             this.txtBookingID.TextChanged += new System.EventHandler(this.txtBookingID_TextChanged);
@@ -142,7 +142,7 @@
             this.txtGuestLName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestLName.Name = "txtGuestLName";
             this.txtGuestLName.ReadOnly = true;
-            this.txtGuestLName.Size = new System.Drawing.Size(191, 30);
+            this.txtGuestLName.Size = new System.Drawing.Size(191, 26);
             this.txtGuestLName.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtGuestLName, "Enter Guest ID");
             this.txtGuestLName.TextChanged += new System.EventHandler(this.txtGuestLName_TextChanged);
@@ -154,7 +154,7 @@
             this.txtGuestFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuestFName.Name = "txtGuestFName";
             this.txtGuestFName.ReadOnly = true;
-            this.txtGuestFName.Size = new System.Drawing.Size(191, 30);
+            this.txtGuestFName.Size = new System.Drawing.Size(191, 26);
             this.txtGuestFName.TabIndex = 1;
             this.toolTip1.SetToolTip(this.txtGuestFName, "Enter Guest ID");
             this.txtGuestFName.TextChanged += new System.EventHandler(this.txtGuestFName_TextChanged);
@@ -166,7 +166,7 @@
             this.txtCheckOutRoom.Margin = new System.Windows.Forms.Padding(4);
             this.txtCheckOutRoom.Name = "txtCheckOutRoom";
             this.txtCheckOutRoom.ReadOnly = true;
-            this.txtCheckOutRoom.Size = new System.Drawing.Size(191, 30);
+            this.txtCheckOutRoom.Size = new System.Drawing.Size(191, 26);
             this.txtCheckOutRoom.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtCheckOutRoom, "Enter Room ID");
             this.txtCheckOutRoom.TextChanged += new System.EventHandler(this.txtCheckOutRoom_TextChanged);
@@ -237,7 +237,7 @@
             this.lblGuestLName.Location = new System.Drawing.Point(15, 108);
             this.lblGuestLName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGuestLName.Name = "lblGuestLName";
-            this.lblGuestLName.Size = new System.Drawing.Size(169, 25);
+            this.lblGuestLName.Size = new System.Drawing.Size(138, 20);
             this.lblGuestLName.TabIndex = 10;
             this.lblGuestLName.Text = "Guest Last Name:";
             // 
@@ -247,7 +247,7 @@
             this.lblGuestFName.Location = new System.Drawing.Point(15, 73);
             this.lblGuestFName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGuestFName.Name = "lblGuestFName";
-            this.lblGuestFName.Size = new System.Drawing.Size(169, 25);
+            this.lblGuestFName.Size = new System.Drawing.Size(138, 20);
             this.lblGuestFName.TabIndex = 7;
             this.lblGuestFName.Text = "Guest First Name:";
             // 
@@ -257,16 +257,18 @@
             this.lblRoomID.Location = new System.Drawing.Point(15, 31);
             this.lblRoomID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(143, 25);
+            this.lblRoomID.Size = new System.Drawing.Size(116, 20);
             this.lblRoomID.TabIndex = 8;
             this.lblRoomID.Text = "Room Number:";
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::HotelManagementSystem.Properties.Resources._544_5440422_back_arrow_icon_transparent_png_clipart_free_download;
             this.pictureBox2.Location = new System.Drawing.Point(53, 41);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);

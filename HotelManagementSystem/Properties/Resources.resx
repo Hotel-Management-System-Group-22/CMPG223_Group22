@@ -121,10 +121,22 @@
   <data name="Maintain Guests  (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maintain Guests  (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OIP.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OIP (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP (1).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OIP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="preview_show_interface_icon_free_vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preview_show_interface_icon_free_vector.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="91654-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\91654-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="544-5440422_back-arrow-icon-transparent-png-clipart-free-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\544-5440422_back-arrow-icon-transparent-png-clipart-free-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

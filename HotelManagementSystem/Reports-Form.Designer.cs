@@ -60,7 +60,7 @@
             this.cbReports.Location = new System.Drawing.Point(167, 135);
             this.cbReports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbReports.Name = "cbReports";
-            this.cbReports.Size = new System.Drawing.Size(321, 33);
+            this.cbReports.Size = new System.Drawing.Size(321, 28);
             this.cbReports.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cbReports, "Select Report Type");
             this.cbReports.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -70,7 +70,7 @@
             this.dtpStart.Location = new System.Drawing.Point(167, 34);
             this.dtpStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(321, 30);
+            this.dtpStart.Size = new System.Drawing.Size(321, 26);
             this.dtpStart.TabIndex = 1;
             this.toolTip1.SetToolTip(this.dtpStart, "Select Start Date");
             this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
@@ -80,7 +80,7 @@
             this.dtpEnd.Location = new System.Drawing.Point(167, 84);
             this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(321, 30);
+            this.dtpEnd.Size = new System.Drawing.Size(321, 26);
             this.dtpEnd.TabIndex = 2;
             this.toolTip1.SetToolTip(this.dtpEnd, "Select End Date");
             this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
@@ -114,7 +114,7 @@
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Location = new System.Drawing.Point(5, 34);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(105, 25);
+            this.lblStartDate.Size = new System.Drawing.Size(87, 20);
             this.lblStartDate.TabIndex = 6;
             this.lblStartDate.Text = "Start Date:";
             // 
@@ -123,7 +123,7 @@
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.Location = new System.Drawing.Point(5, 89);
             this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(99, 25);
+            this.lblEndDate.Size = new System.Drawing.Size(81, 20);
             this.lblEndDate.TabIndex = 7;
             this.lblEndDate.Text = "End Date:";
             // 
@@ -132,7 +132,7 @@
             this.lblReportType.AutoSize = true;
             this.lblReportType.Location = new System.Drawing.Point(5, 135);
             this.lblReportType.Name = "lblReportType";
-            this.lblReportType.Size = new System.Drawing.Size(117, 25);
+            this.lblReportType.Size = new System.Drawing.Size(96, 20);
             this.lblReportType.TabIndex = 8;
             this.lblReportType.Text = "Report type:";
             // 
@@ -185,10 +185,12 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::HotelManagementSystem.Properties.Resources._544_5440422_back_arrow_icon_transparent_png_clipart_free_download;
             this.pictureBox2.Location = new System.Drawing.Point(41, 39);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);

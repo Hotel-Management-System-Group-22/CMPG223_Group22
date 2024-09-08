@@ -341,6 +341,10 @@
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.3\version.txt" />
     <Content Include="preview-show-interface-icon-free-vector.jpg" />
+    <None Include="Resources\544-5440422_back-arrow-icon-transparent-png-clipart-free-download.png" />
+    <None Include="Resources\91654-200.png" />
+    <None Include="Resources\OIP %281%29.jpeg" />
+    <None Include="Resources\OIP1.jpeg" />
     <None Include="Resources\preview_show_interface_icon_free_vector.bmp" />
     <None Include="Resources\OIP.bmp" />
   </ItemGroup>

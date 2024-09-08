@@ -63,6 +63,26 @@ namespace HotelManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _544_5440422_back_arrow_icon_transparent_png_clipart_free_download {
+            get {
+                object obj = ResourceManager.GetObject("544-5440422_back-arrow-icon-transparent-png-clipart-free-download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _91654_200 {
+            get {
+                object obj = ResourceManager.GetObject("91654-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Maintain_Guests___1_ {
             get {
                 object obj = ResourceManager.GetObject("Maintain Guests  (1)", resourceCulture);
@@ -76,6 +96,26 @@ namespace HotelManagementSystem.Properties {
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP__1_ {
+            get {
+                object obj = ResourceManager.GetObject("OIP (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP1 {
+            get {
+                object obj = ResourceManager.GetObject("OIP1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

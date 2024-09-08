@@ -234,6 +234,7 @@ namespace HotelManagementSystem
         private void CheckOut_Load(object sender, EventArgs e)
         {
             LoadData();
+            btnBookingUpdate.Text = "Update or Search Booking";
             
         }
 

@@ -94,7 +94,7 @@
             this.txtJobID.Location = new System.Drawing.Point(159, 42);
             this.txtJobID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobID.Name = "txtJobID";
-            this.txtJobID.Size = new System.Drawing.Size(168, 30);
+            this.txtJobID.Size = new System.Drawing.Size(168, 26);
             this.txtJobID.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtJobID, "Enter Job ID");
             this.txtJobID.TextChanged += new System.EventHandler(this.txtJobID_TextChanged);
@@ -104,7 +104,7 @@
             this.lblJobID.AutoSize = true;
             this.lblJobID.Location = new System.Drawing.Point(5, 44);
             this.lblJobID.Name = "lblJobID";
-            this.lblJobID.Size = new System.Drawing.Size(75, 25);
+            this.lblJobID.Size = new System.Drawing.Size(60, 20);
             this.lblJobID.TabIndex = 5;
             this.lblJobID.Text = "Job ID:";
             // 
@@ -113,7 +113,7 @@
             this.lblJobTitle.AutoSize = true;
             this.lblJobTitle.Location = new System.Drawing.Point(5, 81);
             this.lblJobTitle.Name = "lblJobTitle";
-            this.lblJobTitle.Size = new System.Drawing.Size(93, 25);
+            this.lblJobTitle.Size = new System.Drawing.Size(72, 20);
             this.lblJobTitle.TabIndex = 6;
             this.lblJobTitle.Text = "Job Title:";
             // 
@@ -122,7 +122,7 @@
             this.lblJobRate.AutoSize = true;
             this.lblJobRate.Location = new System.Drawing.Point(5, 119);
             this.lblJobRate.Name = "lblJobRate";
-            this.lblJobRate.Size = new System.Drawing.Size(96, 25);
+            this.lblJobRate.Size = new System.Drawing.Size(78, 20);
             this.lblJobRate.TabIndex = 7;
             this.lblJobRate.Text = "Job Rate:";
             // 
@@ -166,7 +166,7 @@
             this.lblAddRate.AutoSize = true;
             this.lblAddRate.Location = new System.Drawing.Point(5, 71);
             this.lblAddRate.Name = "lblAddRate";
-            this.lblAddRate.Size = new System.Drawing.Size(96, 25);
+            this.lblAddRate.Size = new System.Drawing.Size(78, 20);
             this.lblAddRate.TabIndex = 13;
             this.lblAddRate.Text = "Job Rate:";
             this.lblAddRate.Click += new System.EventHandler(this.label2_Click);
@@ -176,7 +176,7 @@
             this.lblAddTitle.AutoSize = true;
             this.lblAddTitle.Location = new System.Drawing.Point(5, 25);
             this.lblAddTitle.Name = "lblAddTitle";
-            this.lblAddTitle.Size = new System.Drawing.Size(93, 25);
+            this.lblAddTitle.Size = new System.Drawing.Size(72, 20);
             this.lblAddTitle.TabIndex = 12;
             this.lblAddTitle.Text = "Job Title:";
             this.lblAddTitle.Click += new System.EventHandler(this.label3_Click);
@@ -186,7 +186,7 @@
             this.txtAddJobRate.Location = new System.Drawing.Point(173, 68);
             this.txtAddJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddJobRate.Name = "txtAddJobRate";
-            this.txtAddJobRate.Size = new System.Drawing.Size(148, 30);
+            this.txtAddJobRate.Size = new System.Drawing.Size(148, 26);
             this.txtAddJobRate.TabIndex = 10;
             this.toolTip1.SetToolTip(this.txtAddJobRate, "Enter Job Rate");
             this.txtAddJobRate.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -197,7 +197,7 @@
             this.txtAddJobTitle.Location = new System.Drawing.Point(173, 25);
             this.txtAddJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddJobTitle.Name = "txtAddJobTitle";
-            this.txtAddJobTitle.Size = new System.Drawing.Size(148, 30);
+            this.txtAddJobTitle.Size = new System.Drawing.Size(148, 26);
             this.txtAddJobTitle.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtAddJobTitle, "Enter Job Title");
             this.txtAddJobTitle.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -241,7 +241,7 @@
             this.lblEditTitle.AutoSize = true;
             this.lblEditTitle.Location = new System.Drawing.Point(3, 35);
             this.lblEditTitle.Name = "lblEditTitle";
-            this.lblEditTitle.Size = new System.Drawing.Size(93, 25);
+            this.lblEditTitle.Size = new System.Drawing.Size(72, 20);
             this.lblEditTitle.TabIndex = 12;
             this.lblEditTitle.Text = "Job Title:";
             // 
@@ -262,7 +262,7 @@
             this.txtEditJobTitle.Location = new System.Drawing.Point(171, 21);
             this.txtEditJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEditJobTitle.Name = "txtEditJobTitle";
-            this.txtEditJobTitle.Size = new System.Drawing.Size(160, 30);
+            this.txtEditJobTitle.Size = new System.Drawing.Size(160, 26);
             this.txtEditJobTitle.TabIndex = 9;
             this.toolTip1.SetToolTip(this.txtEditJobTitle, "Enter Job Title");
             this.txtEditJobTitle.TextChanged += new System.EventHandler(this.txtEditJobTitle_TextChanged);
@@ -272,7 +272,7 @@
             this.txtEditJobRate.Location = new System.Drawing.Point(171, 64);
             this.txtEditJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEditJobRate.Name = "txtEditJobRate";
-            this.txtEditJobRate.Size = new System.Drawing.Size(160, 30);
+            this.txtEditJobRate.Size = new System.Drawing.Size(160, 26);
             this.txtEditJobRate.TabIndex = 10;
             this.toolTip1.SetToolTip(this.txtEditJobRate, "Enter Job Rate");
             this.txtEditJobRate.TextChanged += new System.EventHandler(this.txtEditJobRate_TextChanged);
@@ -283,7 +283,7 @@
             this.lblEditRate.AutoSize = true;
             this.lblEditRate.Location = new System.Drawing.Point(3, 71);
             this.lblEditRate.Name = "lblEditRate";
-            this.lblEditRate.Size = new System.Drawing.Size(96, 25);
+            this.lblEditRate.Size = new System.Drawing.Size(78, 20);
             this.lblEditRate.TabIndex = 13;
             this.lblEditRate.Text = "Job Rate:";
             // 
@@ -292,7 +292,7 @@
             this.txtJobRate.Location = new System.Drawing.Point(159, 114);
             this.txtJobRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobRate.Name = "txtJobRate";
-            this.txtJobRate.Size = new System.Drawing.Size(168, 30);
+            this.txtJobRate.Size = new System.Drawing.Size(168, 26);
             this.txtJobRate.TabIndex = 4;
             this.toolTip1.SetToolTip(this.txtJobRate, "Enter Job rate");
             this.txtJobRate.TextChanged += new System.EventHandler(this.txtJobRate_TextChanged);
@@ -302,7 +302,7 @@
             this.txtJobTitle.Location = new System.Drawing.Point(159, 78);
             this.txtJobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(168, 30);
+            this.txtJobTitle.Size = new System.Drawing.Size(168, 26);
             this.txtJobTitle.TabIndex = 3;
             this.toolTip1.SetToolTip(this.txtJobTitle, "Enter Job Title");
             this.txtJobTitle.TextChanged += new System.EventHandler(this.txtJobTitle_TextChanged);
@@ -421,7 +421,7 @@
             this.lblSelectedID.Location = new System.Drawing.Point(5, 166);
             this.lblSelectedID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectedID.Name = "lblSelectedID";
-            this.lblSelectedID.Size = new System.Drawing.Size(124, 25);
+            this.lblSelectedID.Size = new System.Drawing.Size(101, 20);
             this.lblSelectedID.TabIndex = 8;
             this.lblSelectedID.Text = "Selected ID: ";
             // 
@@ -436,10 +436,12 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::HotelManagementSystem.Properties.Resources._544_5440422_back_arrow_icon_transparent_png_clipart_free_download;
             this.pictureBox2.Location = new System.Drawing.Point(75, 46);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
