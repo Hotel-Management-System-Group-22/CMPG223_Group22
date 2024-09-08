@@ -21,10 +21,10 @@ namespace HotelManagementSystem
         {
             InitializeComponent();
             this.username = userName;  // Initialize with the username passed from the LogIn form
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+           // this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
         }
         string connectiong = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+       // string connectiong = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void Update_Click(object sender, EventArgs e)
         {
             LogIn login = new LogIn(bAfrikaans);
@@ -164,6 +164,50 @@ namespace HotelManagementSystem
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLanguage_Click_1(object sender, EventArgs e)
+        {
+            if (bAfrikaans)
+            {
+                bAfrikaans = false;
+            }
+            else
+            {
+                bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void checkLanguage()
+        {
+            if (bAfrikaans)
+            {
+                btnLanguage.Text = "English";
+                btnUpdatePassword.Text = "Odateer wagwoord";
+                lblConfirmNewPassword.Text = "Bevestig wagwoord:";
+                lblNewPassword.Text ="Nuwe wagwoord:";
+                
+            }
+            else
+            {
+                btnLanguage.Text = "Afrikaans";
+                btnUpdatePassword.Text = "Update Password";
+                lblConfirmNewPassword.Text = "Confirm Password:";
+                lblNewPassword.Text = "New Password:";
+
+
+            }
+        }
+
+        private void txtNewPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNewPassword2_TextChanged(object sender, EventArgs e)
         {
 
         }

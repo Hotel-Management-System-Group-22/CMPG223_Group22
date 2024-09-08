@@ -20,7 +20,8 @@ namespace HotelManagementSystem
 {
     public partial class LogIn : Form
     {
-        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+      string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private bool bAfrikaans = false;
         public static bool isAdmin = false;
         public static bool isClerk = false;
@@ -192,18 +193,19 @@ namespace HotelManagementSystem
         private void checkLanguage() {
             if (bAfrikaans == false)
             {
-                lblUsername.Text = "Gebruikersnaam";
-                lblPassword.Text = "Wagwoord";
+                lblUsername.Text = "Gebruikersnaam :";
+                lblPassword.Text = "Wagwoord :";
                 btnLogin.Text = "AANMELD";
                 btnLanguage.Text = "ENGLISH";
                 btnHelp.Text = "Hulp";
             }
             else
             {
-                lblUsername.Text = "Username";
-                lblPassword.Text = "Password";
+                lblUsername.Text = "Username :";
+                lblPassword.Text = "Password :";
                 btnLogin.Text = "LOGIN";
                 btnLanguage.Text = "AFRIKAANS";
+                btnHelp.Text = "Help";
             }
         }
 
@@ -260,6 +262,11 @@ namespace HotelManagementSystem
             {
                 MessageBox.Show($"Error opening help file: {ex.Message}");
             }
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

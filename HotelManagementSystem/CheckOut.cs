@@ -25,7 +25,7 @@ namespace HotelManagementSystem
             checkLanguage();
         }
          string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-       // string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+       //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         private void LoadData()
         {
             string query = "SELECT * FROM Booking";

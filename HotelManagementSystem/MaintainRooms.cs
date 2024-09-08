@@ -29,7 +29,7 @@ namespace HotelManagementSystem
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+      //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         int selectedId;
         string sRoomID = "";
         string sEmployeeID = "";
@@ -777,7 +777,7 @@ namespace HotelManagementSystem
                 lblSearchRoomID.Text = "Soek Kamer ID:";
                 lblSearchEmployeeID.Text = "Soek Werknemer ID:";
                 lblSearchRoomStatus.Text = "Kamer status:";
-                lblSearchSortRoomID.Text = "Sorteer by kamer I:D";
+                lblSearchSortRoomID.Text = "Sorteer by kamer ID:";
                 rdbAscending.Text = "Stygend";
                 rdbDescending.Text = "Dalend";
                 btnSearchReset.Text = "Herstel";

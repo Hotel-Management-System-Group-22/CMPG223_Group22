@@ -19,7 +19,7 @@ namespace HotelManagementSystem
         DateTime endDate;
         Boolean isAfrikaans = false;
          string connectionString = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        //string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+       // string connectionString = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
         public ReportsForm(Boolean isAfrikaans)
         {
             this.isAfrikaans=isAfrikaans;
