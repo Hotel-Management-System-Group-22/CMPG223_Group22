@@ -5,7 +5,7 @@ This system helps manage essential hotel operations such as bookings, check-ins,
 
 ---
 
-## 📌 Features
+##  Features
 ### User Authentication
 - Login system with role-based access (Admin, Clerk)  
 - First-time login prompts password change  
@@ -43,14 +43,14 @@ This system helps manage essential hotel operations such as bookings, check-ins,
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **Languages**: C#  
 - **Framework**: .NET (Windows Forms)  
 - **Database**: Microsoft SQL Server  
 - **Tools**: Visual Studio, SSMS  
 ---
 
-## 👤 Roles & Contributions
+## Roles & Contributions
 Project completed collaboratively with a group of 5 students.  
 **Role:** Team Leader  
 **Contributions:**  
@@ -59,12 +59,12 @@ Project completed collaboratively with a group of 5 students.
 - Login/Authentication Logic  
 - Booking, Check-In Modules  
 ---
-## 📁 Database Structure
+## Database Structure
 
 ![Database ERD](https://github.com/user-attachments/assets/81bfa176-fb1c-400d-96a4-f152ca360501)
 
 ---
-## 🧪 How to Run
+## How to Run
 1. Clone the repository.  
 2. Open the solution in Visual Studio.  
 3. Attach or restore the SQL Server database.  
