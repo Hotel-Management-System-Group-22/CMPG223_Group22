@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HotelManagementSystem.LogIn;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelManagementSystem
@@ -17,18 +18,14 @@ namespace HotelManagementSystem
     {
         string sRoomId = "", sGuestId = "", sBookingId = "";
         bool bAfrikaans = false;
-        public CheckIn()
+        public CheckIn(bool isAfrikaans)
         {
             InitializeComponent();
-            btnLanguage.Click += new EventHandler(btnBookingUpdate_Click);
-
-
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
-            btnLanguage_Click(this, EventArgs.Empty);
-            btnLanguage.PerformClick();
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
-        string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+        string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
+      //  string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
 
         private void LoadData()
         {
@@ -173,8 +170,8 @@ namespace HotelManagementSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtRoomID.Text = string.Empty;
-            txtGuestID.Text = string.Empty;
+            txtRoomNr.Text = string.Empty;
+            txtGuestFName.Text = string.Empty;
             txtBookingID.Text = string.Empty;
             dateTimePicker1.Value = DateTime.Now;
             LoadData();
@@ -197,10 +194,10 @@ namespace HotelManagementSystem
                         result = MessageBox.Show("Is jy seker jy wil inteken? \nBooking ID: " + txtBookingID.Text, "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     }
                     if (result == DialogResult.Yes)
-                        {
-                            ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);                               
+                    {
+                            ValidateArrivalDate(int.Parse(txtBookingID.Text),DateTime.Now);
 
-                         }                        
+                    }                        
                 }else {
                     if (bAfrikaans == false)
                     {
@@ -227,13 +224,15 @@ namespace HotelManagementSystem
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            //Booking booking = new Booking();
-            //booking.ShowDialog();
+            Bookings booking = new Bookings(bAfrikaans);
+            booking.Show();
         }
 
         private void CheckIn_Load(object sender, EventArgs e)
         {
             LoadData();
+            btnCheckIn.Text = "Check in";
+            btnBookingUpdate.Text = "Update or Search Booking";
         }
 
         private void txtBookingID_TextChanged(object sender, EventArgs e)
@@ -245,6 +244,26 @@ namespace HotelManagementSystem
                 // The input is a valid integer
                 UpdateDataGridView(txtBookingID.Text, dataGridView1, "SELECT * FROM Booking WHERE Booking_ID LIKE @searchTerm");
                 sBookingId = txtBookingID.Text;
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    //stack overflow Test!
+                    string query = @"SELECT Guest.Guest_FName, Guest.Guest_LName, Room.Room_ID FROM Booking JOIN Guest ON Booking.Guest_ID = Guest.Guest_ID JOIN Room ON Booking.Room_ID = Room.Room_ID WHERE Booking.Booking_ID = @BookingID";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@BookingID", txtBookingID.Text);
+
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        txtGuestFName.Text = reader["Guest_FName"].ToString();
+                        txtGuestLName.Text = reader["Guest_LName"].ToString();
+                        txtRoomNr.Text = reader["Room_ID"].ToString();
+                    }
+
+                    reader.Close();
+                }
             }
             else
             {
@@ -266,12 +285,13 @@ namespace HotelManagementSystem
 
         private void txtGuestID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtGuestID.Text, out int result)) || (txtGuestID.Text == string.Empty))
+            if ((int.TryParse(txtGuestFName.Text, out int result)) || (txtGuestFName.Text == string.Empty))
             {
                 // The input is a valid integer
-                UpdateDataGridView(txtGuestID.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
-                sGuestId = txtGuestID.Text;
+                UpdateDataGridView(txtGuestFName.Text, dataGridView1, "SELECT * FROM Booking WHERE Guest_ID LIKE @searchTerm");
+                sGuestId = txtGuestFName.Text;
             }
             else
             {
@@ -284,66 +304,41 @@ namespace HotelManagementSystem
                 {
                     MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                txtGuestID.Text = sGuestId;
-                txtGuestID.Select(txtGuestID.Text.Length, 0);
+                txtGuestFName.Text = sGuestId;
+                txtGuestFName.Select(txtGuestFName.Text.Length, 0);
 
             }
+            */
            
         }
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
-            {
-                bAfrikaans = true;
-                btnLanguage.Text = "English";
-                lblBookingID.Text = "Bespreking ID";
-                lblGuestID.Text = "Gas ID";
-                lblRoomID.Text = "Kamer ID";
-                btnBookingUpdate.Text = "Opdateer bespreking";
-                btnCheckIn.Text = "Teken uit";
-                btnCancel.Text = "Kanselleer";
-                toolTip1.SetToolTip(btnCancel, "Stel die vorm terug na sy oorsprong.");
-                toolTip1.SetToolTip(btnCheckIn, "Teken die bespreking in.");
-                toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
-                toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
-                toolTip1.SetToolTip(txtRoomID, "Tik die Kamer ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
-                toolTip1.SetToolTip(txtGuestID, "Tik die Gas ID in van die bespreeking.");
-
-
-            }
-            else
+            if (bAfrikaans)
             {
                 bAfrikaans = false;
-                btnLanguage.Text = "Afrikaans";
-                lblBookingID.Text = "Booking ID";
-                lblGuestID.Text = "Guest ID";
-                lblRoomID.Text = "Room ID";
-                btnBookingUpdate.Text = "Update Booking ID";
-                btnCheckIn.Text = "Check Out";
-                btnCancel.Text = "Cancel";
-
-                toolTip1.SetToolTip(btnCancel, "Reset the form to its default state before adding a new entry.");
-                toolTip1.SetToolTip(btnCheckIn, "Check the customer in.");
-                toolTip1.SetToolTip(btnLanguage, "Change the language of the form.");
-                toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
-                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
-                toolTip1.SetToolTip(txtRoomID, "Type in the Bookings Room ID.");
-                toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
-                toolTip1.SetToolTip(txtGuestID, "Type in the Bookings Guest ID.");
-                
             }
+            else {
+                bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+
         }
 
         private void txtRoomID_TextChanged(object sender, EventArgs e)
         {
+            /*
             // Try to parse the text in the TextBox to an integer
-            if ((int.TryParse(txtRoomID.Text, out int result)) || (txtRoomID.Text == string.Empty))
+            if ((int.TryParse(txtRoomNr.Text, out int result)) || (txtRoomNr.Text == string.Empty))
             {
                 // The input is a valid integer
-                UpdateDataGridView(txtRoomID.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
-                sRoomId = txtRoomID.Text;
+                UpdateDataGridView(txtRoomNr.Text, dataGridView1, "SELECT * FROM Booking WHERE Room_ID LIKE @searchTerm");
+                sRoomId = txtRoomNr.Text;
             }
             else
             {
@@ -356,12 +351,27 @@ namespace HotelManagementSystem
                 {
                     MessageBox.Show("Please enter a valid integer.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                txtRoomID.Text = sRoomId;
-                txtRoomID.Select(txtRoomID.Text.Length, 0);
+                txtRoomNr.Text = sRoomId;
+                txtRoomNr.Select(txtRoomNr.Text.Length, 0);
 
             }
 
-            
+            */
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuestLName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -393,6 +403,54 @@ namespace HotelManagementSystem
                 }
             }
             
+        }
+
+        private void checkLanguage() {
+            if (bAfrikaans)
+            {
+                btnLanguage.Text = "English";
+                lblBookingID.Text = "Bespreking ID:";
+                lblGuestFName.Text = "Gas Voornaam:";
+                lblGuestLName.Text = "Gas Van:";
+                lblRoomID.Text = "Kamer ID:";
+                btnBookingUpdate.Text = "Opdateer bespreking";
+                btnCheckIn.Text = "Teken uit";
+                btnCancel.Text = "Kanselleer";
+                toolTip1.SetToolTip(btnCancel, "Stel die vorm terug na sy oorsprong.");
+                toolTip1.SetToolTip(btnCheckIn, "Teken die bespreking in.");
+                toolTip1.SetToolTip(btnLanguage, "Verander die taal vir die vorm.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Gaan na die besprekings vorm toe om veranderinge te maak.");
+                toolTip1.SetToolTip(txtRoomNr, "Tik die Kamer ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtBookingID, "Tik die Bespreking ID in van die bespreeking.");
+                toolTip1.SetToolTip(txtGuestFName, "Tik die Gas ID in van die bespreeking.");
+                grpBxCheckIn.Text = "Teken In";
+                groupBox1.Text = "Bespreekings besonderhede";
+
+
+            }
+            else
+            {
+                grpBxCheckIn.Text = "Check In";
+                groupBox1.Text = "Bookings Details";
+                btnLanguage.Text = "Afrikaans";
+                lblBookingID.Text = "Booking ID:";
+                lblGuestFName.Text = "Guest First Name:";
+                lblGuestLName.Text = "Guest Last Name:";
+                lblRoomID.Text = "Room ID:";
+                btnBookingUpdate.Text = "Update Booking ID";
+                btnCheckIn.Text = "Check Out";
+                btnCancel.Text = "Cancel";
+
+                toolTip1.SetToolTip(btnCancel, "Reset the form to its default state before adding a new entry.");
+                toolTip1.SetToolTip(btnCheckIn, "Check the customer in.");
+                toolTip1.SetToolTip(btnLanguage, "Change the language of the form.");
+                toolTip1.SetToolTip(btnBookingUpdate, "Go to the bookings from to update the booking.");
+                toolTip1.SetToolTip(btnLanguage, "Switch between available languages.");
+                toolTip1.SetToolTip(txtRoomNr, "Type in the Bookings Room ID.");
+                toolTip1.SetToolTip(txtBookingID, "Type in the Booking ID.");
+                toolTip1.SetToolTip(txtGuestFName, "Type in the Bookings Guest ID.");
+
+            }
         }
     }
 }
