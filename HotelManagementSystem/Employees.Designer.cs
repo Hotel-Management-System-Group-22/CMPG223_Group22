@@ -80,17 +80,16 @@
             this.rdoDes = new System.Windows.Forms.RadioButton();
             this.rdoAsc = new System.Windows.Forms.RadioButton();
             this.gpFilter = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.rdoStaff = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rdoClerk = new System.Windows.Forms.RadioButton();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
             this.bttnSearch = new System.Windows.Forms.Button();
+            this.btnSearchReset = new System.Windows.Forms.Button();
             this.gpSearch = new System.Windows.Forms.GroupBox();
             this.lblSearchLName = new System.Windows.Forms.Label();
             this.lblSearchUsername = new System.Windows.Forms.Label();
             this.lblSearchFName = new System.Windows.Forms.Label();
-            this.btnSearchReset = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtSearchFName = new System.Windows.Forms.TextBox();
             this.txtSearchLName = new System.Windows.Forms.TextBox();
@@ -112,6 +111,9 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelManagementSystemDataSet1)).BeginInit();
@@ -130,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -140,11 +143,11 @@
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(56, 101);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(75, 124);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(184, 237);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(245, 292);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MENU";
@@ -152,10 +155,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(12, 178);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(16, 219);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(160, 35);
+            this.btnDelete.Size = new System.Drawing.Size(213, 43);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -164,10 +167,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(12, 128);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Location = new System.Drawing.Point(16, 158);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(160, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(213, 43);
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -176,10 +179,10 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(12, 80);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(16, 98);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(160, 35);
+            this.btnAdd.Size = new System.Drawing.Size(213, 43);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -188,10 +191,10 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(12, 29);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Location = new System.Drawing.Point(16, 36);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(160, 35);
+            this.btnSearch.Size = new System.Drawing.Size(213, 43);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -199,23 +202,25 @@
             // 
             // btnAddReset
             // 
-            this.btnAddReset.Location = new System.Drawing.Point(338, 32);
-            this.btnAddReset.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddReset.Location = new System.Drawing.Point(451, 39);
+            this.btnAddReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddReset.Name = "btnAddReset";
-            this.btnAddReset.Size = new System.Drawing.Size(227, 35);
+            this.btnAddReset.Size = new System.Drawing.Size(303, 43);
             this.btnAddReset.TabIndex = 9;
             this.btnAddReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnAddReset, "Click to clear textboxes");
             this.btnAddReset.UseVisualStyleBackColor = true;
             this.btnAddReset.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddEmp
             // 
-            this.btnAddEmp.Location = new System.Drawing.Point(76, 187);
-            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmp.Location = new System.Drawing.Point(103, 224);
+            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(227, 35);
+            this.btnAddEmp.Size = new System.Drawing.Size(303, 43);
             this.btnAddEmp.TabIndex = 6;
             this.btnAddEmp.Text = "ADD";
+            this.toolTip1.SetToolTip(this.btnAddEmp, "Click to add Employee details");
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
@@ -226,19 +231,19 @@
             "Administrator",
             "Clerk",
             "Other"});
-            this.cmbAddRole.Location = new System.Drawing.Point(168, 150);
-            this.cmbAddRole.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAddRole.Location = new System.Drawing.Point(224, 185);
+            this.cmbAddRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbAddRole.Name = "cmbAddRole";
-            this.cmbAddRole.Size = new System.Drawing.Size(136, 21);
+            this.cmbAddRole.Size = new System.Drawing.Size(180, 24);
             this.cmbAddRole.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.cmbAddRole, "Select Employee Role");
             // 
             // lblAddRole
             // 
             this.lblAddRole.AutoSize = true;
-            this.lblAddRole.Location = new System.Drawing.Point(74, 153);
-            this.lblAddRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddRole.Location = new System.Drawing.Point(99, 188);
             this.lblAddRole.Name = "lblAddRole";
-            this.lblAddRole.Size = new System.Drawing.Size(29, 13);
+            this.lblAddRole.Size = new System.Drawing.Size(36, 16);
             this.lblAddRole.TabIndex = 7;
             this.lblAddRole.Text = "Role";
             // 
@@ -247,11 +252,12 @@
             this.cmbAddJob.DataSource = this.jobBindingSource;
             this.cmbAddJob.DisplayMember = "Job_Title";
             this.cmbAddJob.FormattingEnabled = true;
-            this.cmbAddJob.Location = new System.Drawing.Point(168, 116);
-            this.cmbAddJob.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAddJob.Location = new System.Drawing.Point(224, 143);
+            this.cmbAddJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbAddJob.Name = "cmbAddJob";
-            this.cmbAddJob.Size = new System.Drawing.Size(136, 21);
+            this.cmbAddJob.Size = new System.Drawing.Size(180, 24);
             this.cmbAddJob.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.cmbAddJob, "Select Employee Job Title");
             this.cmbAddJob.ValueMember = "Job_ID";
             this.cmbAddJob.SelectedIndexChanged += new System.EventHandler(this.cmbAddJob_SelectedIndexChanged);
             // 
@@ -268,78 +274,79 @@
             // lblAddTitle
             // 
             this.lblAddTitle.AutoSize = true;
-            this.lblAddTitle.Location = new System.Drawing.Point(74, 116);
-            this.lblAddTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddTitle.Location = new System.Drawing.Point(99, 143);
             this.lblAddTitle.Name = "lblAddTitle";
-            this.lblAddTitle.Size = new System.Drawing.Size(50, 13);
+            this.lblAddTitle.Size = new System.Drawing.Size(62, 16);
             this.lblAddTitle.TabIndex = 5;
             this.lblAddTitle.Text = "Job Title:";
             // 
             // lblAddLName
             // 
             this.lblAddLName.AutoSize = true;
-            this.lblAddLName.Location = new System.Drawing.Point(74, 80);
-            this.lblAddLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddLName.Location = new System.Drawing.Point(99, 98);
             this.lblAddLName.Name = "lblAddLName";
-            this.lblAddLName.Size = new System.Drawing.Size(59, 13);
+            this.lblAddLName.Size = new System.Drawing.Size(72, 16);
             this.lblAddLName.TabIndex = 4;
             this.lblAddLName.Text = "Last name:";
             // 
             // txtAddLName
             // 
-            this.txtAddLName.Location = new System.Drawing.Point(168, 76);
-            this.txtAddLName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddLName.Location = new System.Drawing.Point(224, 94);
+            this.txtAddLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddLName.Name = "txtAddLName";
-            this.txtAddLName.Size = new System.Drawing.Size(136, 20);
+            this.txtAddLName.Size = new System.Drawing.Size(180, 22);
             this.txtAddLName.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtAddLName, "Add Employee Last Name");
             this.txtAddLName.TextChanged += new System.EventHandler(this.txtAddLName_TextChanged);
             // 
             // lblAddFName
             // 
             this.lblAddFName.AutoSize = true;
-            this.lblAddFName.Location = new System.Drawing.Point(74, 43);
-            this.lblAddFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddFName.Location = new System.Drawing.Point(99, 53);
             this.lblAddFName.Name = "lblAddFName";
-            this.lblAddFName.Size = new System.Drawing.Size(58, 13);
+            this.lblAddFName.Size = new System.Drawing.Size(72, 16);
             this.lblAddFName.TabIndex = 1;
             this.lblAddFName.Text = "First name:";
             // 
             // txtAddFName
             // 
-            this.txtAddFName.Location = new System.Drawing.Point(168, 37);
-            this.txtAddFName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddFName.Location = new System.Drawing.Point(224, 46);
+            this.txtAddFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddFName.Name = "txtAddFName";
-            this.txtAddFName.Size = new System.Drawing.Size(136, 20);
+            this.txtAddFName.Size = new System.Drawing.Size(180, 22);
             this.txtAddFName.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtAddFName, "Add Employee First Name");
             this.txtAddFName.TextChanged += new System.EventHandler(this.txtAddFName_TextChanged);
             // 
             // btnDeleteEmp
             // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(351, 21);
-            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(468, 26);
+            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(227, 35);
+            this.btnDeleteEmp.Size = new System.Drawing.Size(303, 43);
             this.btnDeleteEmp.TabIndex = 6;
             this.btnDeleteEmp.Text = "DELETE";
+            this.toolTip1.SetToolTip(this.btnDeleteEmp, "Click to delete Employee");
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // txtUpdateSearch
             // 
-            this.txtUpdateSearch.Location = new System.Drawing.Point(226, 29);
-            this.txtUpdateSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUpdateSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUpdateSearch.Location = new System.Drawing.Point(301, 36);
+            this.txtUpdateSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateSearch.Name = "txtUpdateSearch";
             this.txtUpdateSearch.ReadOnly = true;
-            this.txtUpdateSearch.Size = new System.Drawing.Size(160, 20);
+            this.txtUpdateSearch.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateSearch.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.txtUpdateSearch, "Verify that username is the employee you selected");
             this.txtUpdateSearch.TextChanged += new System.EventHandler(this.txtUpdateSearch_TextChanged);
             // 
             // lblUpdateUsername
             // 
             this.lblUpdateUsername.AutoSize = true;
             this.lblUpdateUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateUsername.Location = new System.Drawing.Point(56, 26);
-            this.lblUpdateUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateUsername.Location = new System.Drawing.Point(75, 32);
             this.lblUpdateUsername.Name = "lblUpdateUsername";
             this.lblUpdateUsername.Size = new System.Drawing.Size(161, 20);
             this.lblUpdateUsername.TabIndex = 10;
@@ -349,12 +356,13 @@
             // btnUpdateEmp
             // 
             this.btnUpdateEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateEmp.Location = new System.Drawing.Point(415, 168);
-            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(553, 207);
+            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
-            this.btnUpdateEmp.Size = new System.Drawing.Size(168, 35);
+            this.btnUpdateEmp.Size = new System.Drawing.Size(224, 43);
             this.btnUpdateEmp.TabIndex = 6;
             this.btnUpdateEmp.Text = "UPDATE";
+            this.toolTip1.SetToolTip(this.btnUpdateEmp, "Click to Update Employee details");
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
@@ -365,18 +373,18 @@
             "Administrator",
             "Clerk",
             "Other"});
-            this.cmbUpdateRole.Location = new System.Drawing.Point(226, 167);
-            this.cmbUpdateRole.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbUpdateRole.Location = new System.Drawing.Point(301, 206);
+            this.cmbUpdateRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUpdateRole.Name = "cmbUpdateRole";
-            this.cmbUpdateRole.Size = new System.Drawing.Size(160, 21);
+            this.cmbUpdateRole.Size = new System.Drawing.Size(212, 24);
             this.cmbUpdateRole.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.cmbUpdateRole, "Select Employee Role");
             // 
             // lblUpdateRole
             // 
             this.lblUpdateRole.AutoSize = true;
             this.lblUpdateRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateRole.Location = new System.Drawing.Point(158, 167);
-            this.lblUpdateRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateRole.Location = new System.Drawing.Point(75, 203);
             this.lblUpdateRole.Name = "lblUpdateRole";
             this.lblUpdateRole.Size = new System.Drawing.Size(46, 20);
             this.lblUpdateRole.TabIndex = 7;
@@ -387,19 +395,19 @@
             this.cmbUpdateJob.DataSource = this.jobBindingSource;
             this.cmbUpdateJob.DisplayMember = "Job_Title";
             this.cmbUpdateJob.FormattingEnabled = true;
-            this.cmbUpdateJob.Location = new System.Drawing.Point(226, 129);
-            this.cmbUpdateJob.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbUpdateJob.Location = new System.Drawing.Point(301, 159);
+            this.cmbUpdateJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUpdateJob.Name = "cmbUpdateJob";
-            this.cmbUpdateJob.Size = new System.Drawing.Size(160, 21);
+            this.cmbUpdateJob.Size = new System.Drawing.Size(212, 24);
             this.cmbUpdateJob.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.cmbUpdateJob, "Select Employee Job Title");
             this.cmbUpdateJob.ValueMember = "Job_ID";
             // 
             // lblUpdateJobTitle
             // 
             this.lblUpdateJobTitle.AutoSize = true;
             this.lblUpdateJobTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateJobTitle.Location = new System.Drawing.Point(131, 128);
-            this.lblUpdateJobTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateJobTitle.Location = new System.Drawing.Point(75, 156);
             this.lblUpdateJobTitle.Name = "lblUpdateJobTitle";
             this.lblUpdateJobTitle.Size = new System.Drawing.Size(72, 20);
             this.lblUpdateJobTitle.TabIndex = 5;
@@ -409,8 +417,7 @@
             // 
             this.lblUpdateLastName.AutoSize = true;
             this.lblUpdateLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateLastName.Location = new System.Drawing.Point(119, 93);
-            this.lblUpdateLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateLastName.Location = new System.Drawing.Point(75, 117);
             this.lblUpdateLastName.Name = "lblUpdateLastName";
             this.lblUpdateLastName.Size = new System.Drawing.Size(88, 20);
             this.lblUpdateLastName.TabIndex = 4;
@@ -418,19 +425,19 @@
             // 
             // txtUpdateLName
             // 
-            this.txtUpdateLName.Location = new System.Drawing.Point(226, 97);
-            this.txtUpdateLName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUpdateLName.Location = new System.Drawing.Point(301, 119);
+            this.txtUpdateLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateLName.Name = "txtUpdateLName";
-            this.txtUpdateLName.Size = new System.Drawing.Size(160, 20);
+            this.txtUpdateLName.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateLName.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtUpdateLName, "Add Employee Last Name");
             this.txtUpdateLName.TextChanged += new System.EventHandler(this.txtUpdateLName_TextChanged);
             // 
             // lblUpdateFirstName
             // 
             this.lblUpdateFirstName.AutoSize = true;
             this.lblUpdateFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateFirstName.Location = new System.Drawing.Point(119, 62);
-            this.lblUpdateFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateFirstName.Location = new System.Drawing.Point(75, 74);
             this.lblUpdateFirstName.Name = "lblUpdateFirstName";
             this.lblUpdateFirstName.Size = new System.Drawing.Size(88, 20);
             this.lblUpdateFirstName.TabIndex = 1;
@@ -438,11 +445,12 @@
             // 
             // txtUpdateFName
             // 
-            this.txtUpdateFName.Location = new System.Drawing.Point(226, 62);
-            this.txtUpdateFName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUpdateFName.Location = new System.Drawing.Point(301, 76);
+            this.txtUpdateFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateFName.Name = "txtUpdateFName";
-            this.txtUpdateFName.Size = new System.Drawing.Size(160, 20);
+            this.txtUpdateFName.Size = new System.Drawing.Size(212, 22);
             this.txtUpdateFName.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtUpdateFName, "Add Employee First Name");
             this.txtUpdateFName.TextChanged += new System.EventHandler(this.txtUpdateFName_TextChanged);
             // 
             // tabControl1
@@ -451,11 +459,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(271, 106);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Location = new System.Drawing.Point(361, 130);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(623, 245);
+            this.tabControl1.Size = new System.Drawing.Size(831, 302);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -473,24 +481,24 @@
             this.tabPage1.Controls.Add(this.lblUpdateRole);
             this.tabPage1.Controls.Add(this.lblUpdateJobTitle);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(615, 219);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(823, 273);
             this.tabPage1.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.PapayaWhip;
             this.tabPage2.Controls.Add(this.gpVerifyDetails);
             this.tabPage2.Controls.Add(this.btnDeleteEmp);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(615, 219);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(823, 273);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // gpVerifyDetails
@@ -506,11 +514,11 @@
             this.gpVerifyDetails.Controls.Add(this.lblDeleteAdmin);
             this.gpVerifyDetails.Controls.Add(this.lblDeleteLName);
             this.gpVerifyDetails.Controls.Add(this.lblDeleteFName);
-            this.gpVerifyDetails.Location = new System.Drawing.Point(15, 12);
-            this.gpVerifyDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.gpVerifyDetails.Location = new System.Drawing.Point(20, 15);
+            this.gpVerifyDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpVerifyDetails.Name = "gpVerifyDetails";
-            this.gpVerifyDetails.Padding = new System.Windows.Forms.Padding(2);
-            this.gpVerifyDetails.Size = new System.Drawing.Size(305, 187);
+            this.gpVerifyDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpVerifyDetails.Size = new System.Drawing.Size(407, 230);
             this.gpVerifyDetails.TabIndex = 10;
             this.gpVerifyDetails.TabStop = false;
             this.gpVerifyDetails.Text = "Verfify Employee details";
@@ -518,111 +526,108 @@
             // cbConfirm
             // 
             this.cbConfirm.AutoSize = true;
-            this.cbConfirm.Location = new System.Drawing.Point(14, 166);
-            this.cbConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.cbConfirm.Location = new System.Drawing.Point(19, 204);
+            this.cbConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbConfirm.Name = "cbConfirm";
-            this.cbConfirm.Size = new System.Drawing.Size(290, 17);
+            this.cbConfirm.Size = new System.Drawing.Size(357, 20);
             this.cbConfirm.TabIndex = 11;
             this.cbConfirm.Text = "Confirmation that it is the correct employee to be deleted";
+            this.toolTip1.SetToolTip(this.cbConfirm, "Check box to confirm that correct employee is being deleted");
             this.cbConfirm.UseVisualStyleBackColor = true;
             // 
             // txtVerifyJob
             // 
-            this.txtVerifyJob.Location = new System.Drawing.Point(134, 140);
-            this.txtVerifyJob.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerifyJob.Location = new System.Drawing.Point(179, 172);
+            this.txtVerifyJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerifyJob.Name = "txtVerifyJob";
             this.txtVerifyJob.ReadOnly = true;
-            this.txtVerifyJob.Size = new System.Drawing.Size(76, 20);
+            this.txtVerifyJob.Size = new System.Drawing.Size(100, 22);
             this.txtVerifyJob.TabIndex = 9;
             // 
             // txtVerifyClerk
             // 
-            this.txtVerifyClerk.Location = new System.Drawing.Point(134, 110);
-            this.txtVerifyClerk.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerifyClerk.Location = new System.Drawing.Point(179, 135);
+            this.txtVerifyClerk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerifyClerk.Name = "txtVerifyClerk";
             this.txtVerifyClerk.ReadOnly = true;
-            this.txtVerifyClerk.Size = new System.Drawing.Size(76, 20);
+            this.txtVerifyClerk.Size = new System.Drawing.Size(100, 22);
             this.txtVerifyClerk.TabIndex = 8;
             // 
             // txtVerifyAdmin
             // 
-            this.txtVerifyAdmin.Location = new System.Drawing.Point(134, 80);
-            this.txtVerifyAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerifyAdmin.Location = new System.Drawing.Point(179, 98);
+            this.txtVerifyAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerifyAdmin.Name = "txtVerifyAdmin";
             this.txtVerifyAdmin.ReadOnly = true;
-            this.txtVerifyAdmin.Size = new System.Drawing.Size(76, 20);
+            this.txtVerifyAdmin.Size = new System.Drawing.Size(100, 22);
             this.txtVerifyAdmin.TabIndex = 7;
             // 
             // txtVerifyLName
             // 
-            this.txtVerifyLName.Location = new System.Drawing.Point(134, 57);
-            this.txtVerifyLName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerifyLName.Location = new System.Drawing.Point(179, 70);
+            this.txtVerifyLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerifyLName.Name = "txtVerifyLName";
             this.txtVerifyLName.ReadOnly = true;
-            this.txtVerifyLName.Size = new System.Drawing.Size(76, 20);
+            this.txtVerifyLName.Size = new System.Drawing.Size(100, 22);
             this.txtVerifyLName.TabIndex = 6;
             // 
             // lblDeleteJob
             // 
             this.lblDeleteJob.AutoSize = true;
-            this.lblDeleteJob.Location = new System.Drawing.Point(11, 145);
-            this.lblDeleteJob.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteJob.Location = new System.Drawing.Point(15, 178);
             this.lblDeleteJob.Name = "lblDeleteJob";
-            this.lblDeleteJob.Size = new System.Drawing.Size(76, 13);
+            this.lblDeleteJob.Size = new System.Drawing.Size(98, 16);
             this.lblDeleteJob.TabIndex = 5;
             this.lblDeleteJob.Text = "Employee Job:";
             // 
             // lblDeleteClerk
             // 
             this.lblDeleteClerk.AutoSize = true;
-            this.lblDeleteClerk.Location = new System.Drawing.Point(11, 112);
-            this.lblDeleteClerk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteClerk.Location = new System.Drawing.Point(15, 138);
             this.lblDeleteClerk.Name = "lblDeleteClerk";
-            this.lblDeleteClerk.Size = new System.Drawing.Size(45, 13);
+            this.lblDeleteClerk.Size = new System.Drawing.Size(54, 16);
             this.lblDeleteClerk.TabIndex = 4;
             this.lblDeleteClerk.Text = "Is Clerk:";
             // 
             // txtVerifyFName
             // 
-            this.txtVerifyFName.Location = new System.Drawing.Point(134, 28);
-            this.txtVerifyFName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerifyFName.Location = new System.Drawing.Point(179, 34);
+            this.txtVerifyFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerifyFName.Name = "txtVerifyFName";
             this.txtVerifyFName.ReadOnly = true;
-            this.txtVerifyFName.Size = new System.Drawing.Size(76, 20);
+            this.txtVerifyFName.Size = new System.Drawing.Size(100, 22);
             this.txtVerifyFName.TabIndex = 3;
             // 
             // lblDeleteAdmin
             // 
             this.lblDeleteAdmin.AutoSize = true;
-            this.lblDeleteAdmin.Location = new System.Drawing.Point(11, 86);
-            this.lblDeleteAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteAdmin.Location = new System.Drawing.Point(15, 106);
             this.lblDeleteAdmin.Name = "lblDeleteAdmin";
-            this.lblDeleteAdmin.Size = new System.Drawing.Size(50, 13);
+            this.lblDeleteAdmin.Size = new System.Drawing.Size(61, 16);
             this.lblDeleteAdmin.TabIndex = 2;
             this.lblDeleteAdmin.Text = "Is Admin:";
             // 
             // lblDeleteLName
             // 
             this.lblDeleteLName.AutoSize = true;
-            this.lblDeleteLName.Location = new System.Drawing.Point(11, 57);
-            this.lblDeleteLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteLName.Location = new System.Drawing.Point(15, 70);
             this.lblDeleteLName.Name = "lblDeleteLName";
-            this.lblDeleteLName.Size = new System.Drawing.Size(110, 13);
+            this.lblDeleteLName.Size = new System.Drawing.Size(140, 16);
             this.lblDeleteLName.TabIndex = 1;
             this.lblDeleteLName.Text = "Employee Last Name:";
             // 
             // lblDeleteFName
             // 
             this.lblDeleteFName.AutoSize = true;
-            this.lblDeleteFName.Location = new System.Drawing.Point(11, 31);
-            this.lblDeleteFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteFName.Location = new System.Drawing.Point(15, 38);
             this.lblDeleteFName.Name = "lblDeleteFName";
-            this.lblDeleteFName.Size = new System.Drawing.Size(106, 13);
+            this.lblDeleteFName.Size = new System.Drawing.Size(137, 16);
             this.lblDeleteFName.TabIndex = 0;
             this.lblDeleteFName.Text = "Employee First Name";
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.PapayaWhip;
             this.tabPage3.Controls.Add(this.btnAddReset);
             this.tabPage3.Controls.Add(this.btnAddEmp);
             this.tabPage3.Controls.Add(this.txtAddFName);
@@ -633,113 +638,104 @@
             this.tabPage3.Controls.Add(this.cmbAddJob);
             this.tabPage3.Controls.Add(this.lblAddLName);
             this.tabPage3.Controls.Add(this.lblAddTitle);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(615, 219);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(823, 273);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.PapayaWhip;
             this.tabPage4.Controls.Add(this.gpSort);
             this.tabPage4.Controls.Add(this.gpFilter);
             this.tabPage4.Controls.Add(this.bttnSearch);
+            this.tabPage4.Controls.Add(this.btnSearchReset);
             this.tabPage4.Controls.Add(this.gpSearch);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(615, 219);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(823, 273);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // gpSort
             // 
             this.gpSort.Controls.Add(this.rdoDes);
             this.gpSort.Controls.Add(this.rdoAsc);
-            this.gpSort.Location = new System.Drawing.Point(299, 11);
-            this.gpSort.Margin = new System.Windows.Forms.Padding(2);
+            this.gpSort.Location = new System.Drawing.Point(399, 14);
+            this.gpSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpSort.Name = "gpSort";
-            this.gpSort.Padding = new System.Windows.Forms.Padding(2);
-            this.gpSort.Size = new System.Drawing.Size(269, 110);
+            this.gpSort.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpSort.Size = new System.Drawing.Size(359, 135);
             this.gpSort.TabIndex = 23;
             this.gpSort.TabStop = false;
-            this.gpSort.Text = "Sort by:";
+            this.gpSort.Text = "Sort by Username:";
             // 
             // rdoDes
             // 
             this.rdoDes.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoDes.AutoSize = true;
-            this.rdoDes.Location = new System.Drawing.Point(18, 63);
-            this.rdoDes.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoDes.Location = new System.Drawing.Point(24, 78);
+            this.rdoDes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoDes.Name = "rdoDes";
-            this.rdoDes.Size = new System.Drawing.Size(82, 17);
+            this.rdoDes.Size = new System.Drawing.Size(98, 20);
             this.rdoDes.TabIndex = 7;
             this.rdoDes.Text = "Descending";
+            this.toolTip1.SetToolTip(this.rdoDes, "Select to search in descending order");
             this.rdoDes.UseVisualStyleBackColor = true;
             // 
             // rdoAsc
             // 
             this.rdoAsc.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoAsc.AutoSize = true;
-            this.rdoAsc.Location = new System.Drawing.Point(18, 34);
-            this.rdoAsc.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoAsc.Location = new System.Drawing.Point(24, 42);
+            this.rdoAsc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoAsc.Name = "rdoAsc";
-            this.rdoAsc.Size = new System.Drawing.Size(75, 17);
+            this.rdoAsc.Size = new System.Drawing.Size(89, 20);
             this.rdoAsc.TabIndex = 6;
             this.rdoAsc.Text = "Ascending";
+            this.toolTip1.SetToolTip(this.rdoAsc, "Select to search in ascending order");
             this.rdoAsc.UseVisualStyleBackColor = true;
+            this.rdoAsc.CheckedChanged += new System.EventHandler(this.rdoAsc_CheckedChanged);
             // 
             // gpFilter
             // 
-            this.gpFilter.Controls.Add(this.button3);
             this.gpFilter.Controls.Add(this.rdoStaff);
             this.gpFilter.Controls.Add(this.label12);
             this.gpFilter.Controls.Add(this.rdoClerk);
             this.gpFilter.Controls.Add(this.rdoAdmin);
-            this.gpFilter.Location = new System.Drawing.Point(11, 128);
-            this.gpFilter.Margin = new System.Windows.Forms.Padding(2);
+            this.gpFilter.Location = new System.Drawing.Point(15, 158);
+            this.gpFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpFilter.Name = "gpFilter";
-            this.gpFilter.Padding = new System.Windows.Forms.Padding(2);
-            this.gpFilter.Size = new System.Drawing.Size(269, 93);
+            this.gpFilter.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpFilter.Size = new System.Drawing.Size(359, 130);
             this.gpFilter.TabIndex = 23;
             this.gpFilter.TabStop = false;
             this.gpFilter.Text = "Filter by:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(114, 71);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 18);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "RESET";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // rdoStaff
             // 
             this.rdoStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoStaff.AutoSize = true;
-            this.rdoStaff.Location = new System.Drawing.Point(4, 54);
-            this.rdoStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoStaff.Location = new System.Drawing.Point(5, 66);
+            this.rdoStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoStaff.Name = "rdoStaff";
-            this.rdoStaff.Size = new System.Drawing.Size(116, 17);
+            this.rdoStaff.Size = new System.Drawing.Size(142, 20);
             this.rdoStaff.TabIndex = 9;
             this.rdoStaff.Text = "Employee staff only";
+            this.toolTip1.SetToolTip(this.rdoStaff, "Click to filter by employee staff  only");
             this.rdoStaff.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, -12);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(29, -15);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 13);
+            this.label12.Size = new System.Drawing.Size(78, 16);
             this.label12.TabIndex = 1;
             this.label12.Text = "Filter Users:";
             // 
@@ -747,51 +743,65 @@
             // 
             this.rdoClerk.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoClerk.AutoSize = true;
-            this.rdoClerk.Location = new System.Drawing.Point(4, 33);
-            this.rdoClerk.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoClerk.Location = new System.Drawing.Point(5, 41);
+            this.rdoClerk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoClerk.Name = "rdoClerk";
-            this.rdoClerk.Size = new System.Drawing.Size(99, 17);
+            this.rdoClerk.Size = new System.Drawing.Size(120, 20);
             this.rdoClerk.TabIndex = 5;
             this.rdoClerk.Text = "Clerk users only";
+            this.toolTip1.SetToolTip(this.rdoClerk, "Click to filter by clerk users only");
             this.rdoClerk.UseVisualStyleBackColor = true;
             // 
             // rdoAdmin
             // 
             this.rdoAdmin.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(4, 12);
-            this.rdoAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoAdmin.Location = new System.Drawing.Point(5, 15);
+            this.rdoAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Size = new System.Drawing.Size(104, 17);
+            this.rdoAdmin.Size = new System.Drawing.Size(127, 20);
             this.rdoAdmin.TabIndex = 4;
             this.rdoAdmin.Text = "Admin users only";
+            this.toolTip1.SetToolTip(this.rdoAdmin, "Click to filter by admin users only");
             this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
             // bttnSearch
             // 
-            this.bttnSearch.Location = new System.Drawing.Point(341, 154);
-            this.bttnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.bttnSearch.Location = new System.Drawing.Point(455, 161);
+            this.bttnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bttnSearch.Name = "bttnSearch";
-            this.bttnSearch.Size = new System.Drawing.Size(227, 35);
+            this.bttnSearch.Size = new System.Drawing.Size(303, 43);
             this.bttnSearch.TabIndex = 18;
             this.bttnSearch.Text = "SEARCH";
+            this.toolTip1.SetToolTip(this.bttnSearch, "Click to Search for Employee");
             this.bttnSearch.UseVisualStyleBackColor = true;
             this.bttnSearch.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnSearchReset
+            // 
+            this.btnSearchReset.Location = new System.Drawing.Point(455, 224);
+            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearchReset.Name = "btnSearchReset";
+            this.btnSearchReset.Size = new System.Drawing.Size(201, 32);
+            this.btnSearchReset.TabIndex = 10;
+            this.btnSearchReset.Text = "RESET";
+            this.toolTip1.SetToolTip(this.btnSearchReset, "Click to clear textboxes");
+            this.btnSearchReset.UseVisualStyleBackColor = true;
+            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
             // 
             // gpSearch
             // 
             this.gpSearch.Controls.Add(this.lblSearchLName);
             this.gpSearch.Controls.Add(this.lblSearchUsername);
             this.gpSearch.Controls.Add(this.lblSearchFName);
-            this.gpSearch.Controls.Add(this.btnSearchReset);
             this.gpSearch.Controls.Add(this.txtUsername);
             this.gpSearch.Controls.Add(this.txtSearchFName);
             this.gpSearch.Controls.Add(this.txtSearchLName);
-            this.gpSearch.Location = new System.Drawing.Point(11, 6);
-            this.gpSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.gpSearch.Location = new System.Drawing.Point(15, 7);
+            this.gpSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpSearch.Name = "gpSearch";
-            this.gpSearch.Padding = new System.Windows.Forms.Padding(2);
-            this.gpSearch.Size = new System.Drawing.Size(269, 115);
+            this.gpSearch.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gpSearch.Size = new System.Drawing.Size(359, 160);
             this.gpSearch.TabIndex = 22;
             this.gpSearch.TabStop = false;
             this.gpSearch.Text = "Search by:";
@@ -799,68 +809,57 @@
             // lblSearchLName
             // 
             this.lblSearchLName.AutoSize = true;
-            this.lblSearchLName.Location = new System.Drawing.Point(27, 74);
-            this.lblSearchLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchLName.Location = new System.Drawing.Point(5, 89);
             this.lblSearchLName.Name = "lblSearchLName";
-            this.lblSearchLName.Size = new System.Drawing.Size(61, 13);
+            this.lblSearchLName.Size = new System.Drawing.Size(75, 16);
             this.lblSearchLName.TabIndex = 21;
             this.lblSearchLName.Text = "Last Name:";
             // 
             // lblSearchUsername
             // 
             this.lblSearchUsername.AutoSize = true;
-            this.lblSearchUsername.Location = new System.Drawing.Point(27, 28);
-            this.lblSearchUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchUsername.Location = new System.Drawing.Point(5, 32);
             this.lblSearchUsername.Name = "lblSearchUsername";
-            this.lblSearchUsername.Size = new System.Drawing.Size(58, 13);
+            this.lblSearchUsername.Size = new System.Drawing.Size(73, 16);
             this.lblSearchUsername.TabIndex = 19;
             this.lblSearchUsername.Text = "Username:";
             // 
             // lblSearchFName
             // 
             this.lblSearchFName.AutoSize = true;
-            this.lblSearchFName.Location = new System.Drawing.Point(27, 51);
-            this.lblSearchFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchFName.Location = new System.Drawing.Point(7, 60);
             this.lblSearchFName.Name = "lblSearchFName";
-            this.lblSearchFName.Size = new System.Drawing.Size(60, 13);
+            this.lblSearchFName.Size = new System.Drawing.Size(75, 16);
             this.lblSearchFName.TabIndex = 20;
             this.lblSearchFName.Text = "First Name:";
             // 
-            // btnSearchReset
-            // 
-            this.btnSearchReset.Location = new System.Drawing.Point(89, 92);
-            this.btnSearchReset.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchReset.Name = "btnSearchReset";
-            this.btnSearchReset.Size = new System.Drawing.Size(151, 18);
-            this.btnSearchReset.TabIndex = 10;
-            this.btnSearchReset.Text = "RESET";
-            this.btnSearchReset.UseVisualStyleBackColor = true;
-            this.btnSearchReset.Click += new System.EventHandler(this.btnSearchReset_Click);
-            // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(89, 23);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(119, 28);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(152, 20);
+            this.txtUsername.Size = new System.Drawing.Size(201, 22);
             this.txtUsername.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtUsername, "Enter username to search ");
             this.txtUsername.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtSearchFName
             // 
-            this.txtSearchFName.Location = new System.Drawing.Point(89, 46);
-            this.txtSearchFName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearchFName.Location = new System.Drawing.Point(119, 57);
+            this.txtSearchFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchFName.Name = "txtSearchFName";
-            this.txtSearchFName.Size = new System.Drawing.Size(152, 20);
+            this.txtSearchFName.Size = new System.Drawing.Size(201, 22);
             this.txtSearchFName.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.txtSearchFName, "Enter First Name to search");
             // 
             // txtSearchLName
             // 
-            this.txtSearchLName.Location = new System.Drawing.Point(89, 69);
-            this.txtSearchLName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearchLName.Location = new System.Drawing.Point(119, 85);
+            this.txtSearchLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearchLName.Name = "txtSearchLName";
-            this.txtSearchLName.Size = new System.Drawing.Size(152, 20);
+            this.txtSearchLName.Size = new System.Drawing.Size(201, 22);
             this.txtSearchLName.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.txtSearchLName, "Enter Lasnt Name to search");
             // 
             // hotelManagementSystemDataSet
             // 
@@ -901,12 +900,12 @@
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
-            this.employeeDataGridView.Location = new System.Drawing.Point(54, 353);
-            this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.employeeDataGridView.Location = new System.Drawing.Point(72, 437);
+            this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeDataGridView.Name = "employeeDataGridView";
             this.employeeDataGridView.RowHeadersWidth = 51;
             this.employeeDataGridView.RowTemplate.Height = 24;
-            this.employeeDataGridView.Size = new System.Drawing.Size(840, 202);
+            this.employeeDataGridView.Size = new System.Drawing.Size(1120, 249);
             this.employeeDataGridView.TabIndex = 12;
             this.employeeDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeDataGridView_CellContentClick);
             // 
@@ -992,34 +991,59 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(958, 579);
+            this.pictureBox1.Size = new System.Drawing.Size(1277, 713);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLanguage
             // 
-            this.btnLanguage.Location = new System.Drawing.Point(753, 69);
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Location = new System.Drawing.Point(1020, 36);
+            this.btnLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(75, 23);
+            this.btnLanguage.Size = new System.Drawing.Size(198, 47);
             this.btnLanguage.TabIndex = 14;
             this.btnLanguage.Text = "Afrikaans";
             this.btnLanguage.UseVisualStyleBackColor = true;
             this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HotelManagementSystem.Properties.Resources._544_5440422_back_arrow_icon_transparent_png_clipart_free_download;
+            this.pictureBox2.Location = new System.Drawing.Point(63, 36);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Location = new System.Drawing.Point(365, 130);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(823, 35);
+            this.panel1.TabIndex = 16;
+            // 
             // Employees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 583);
+            this.ClientSize = new System.Drawing.Size(1277, 718);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.employeeDataGridView);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Employees";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
@@ -1047,6 +1071,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1124,7 +1149,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gpFilter;
         private System.Windows.Forms.GroupBox gpSort;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Employee_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1134,5 +1158,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

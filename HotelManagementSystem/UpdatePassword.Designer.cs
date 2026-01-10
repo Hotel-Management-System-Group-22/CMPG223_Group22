@@ -41,6 +41,7 @@
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -51,9 +52,9 @@
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.BackColor = System.Drawing.Color.Wheat;
+            this.lblNewPassword.BackColor = System.Drawing.Color.PapayaWhip;
             this.lblNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewPassword.Location = new System.Drawing.Point(161, 115);
+            this.lblNewPassword.Location = new System.Drawing.Point(130, 118);
             this.lblNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(117, 20);
@@ -64,9 +65,9 @@
             // lblConfirmNewPassword
             // 
             this.lblConfirmNewPassword.AutoSize = true;
-            this.lblConfirmNewPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmNewPassword.BackColor = System.Drawing.Color.PapayaWhip;
             this.lblConfirmNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmNewPassword.Location = new System.Drawing.Point(111, 158);
+            this.lblConfirmNewPassword.Location = new System.Drawing.Point(75, 160);
             this.lblConfirmNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmNewPassword.Name = "lblConfirmNewPassword";
             this.lblConfirmNewPassword.Size = new System.Drawing.Size(172, 20);
@@ -77,28 +78,33 @@
             // txtNewPassword
             // 
             this.txtNewPassword.Location = new System.Drawing.Point(278, 118);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(177, 20);
             this.txtNewPassword.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtNewPassword, "Enter new password that follows password policies");
+            this.txtNewPassword.TextChanged += new System.EventHandler(this.txtNewPassword_TextChanged);
             // 
             // txtNewPassword2
             // 
             this.txtNewPassword2.Location = new System.Drawing.Point(278, 162);
-            this.txtNewPassword2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNewPassword2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPassword2.Name = "txtNewPassword2";
             this.txtNewPassword2.Size = new System.Drawing.Size(177, 20);
             this.txtNewPassword2.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtNewPassword2, "Retype password entered above");
+            this.txtNewPassword2.TextChanged += new System.EventHandler(this.txtNewPassword2_TextChanged);
             // 
             // btnUpdatePassword
             // 
             this.btnUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePassword.Location = new System.Drawing.Point(178, 236);
-            this.btnUpdatePassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdatePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdatePassword.Name = "btnUpdatePassword";
             this.btnUpdatePassword.Size = new System.Drawing.Size(213, 43);
             this.btnUpdatePassword.TabIndex = 5;
             this.btnUpdatePassword.Text = "Update Password";
+            this.toolTip1.SetToolTip(this.btnUpdatePassword, "Click to Update Password");
             this.btnUpdatePassword.UseVisualStyleBackColor = true;
             this.btnUpdatePassword.Click += new System.EventHandler(this.Update_Click);
             // 
@@ -123,20 +129,24 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(598, 363);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLanguage
             // 
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Location = new System.Drawing.Point(178, 285);
             this.btnLanguage.Name = "btnLanguage";
             this.btnLanguage.Size = new System.Drawing.Size(213, 38);
             this.btnLanguage.TabIndex = 7;
-            this.btnLanguage.Text = "LANGUAGE";
+            this.btnLanguage.Text = "Afrikaans";
+            this.toolTip1.SetToolTip(this.btnLanguage, "Click to change Languages");
             this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click_1);
             // 
             // UpdatePassword
             // 
@@ -150,7 +160,7 @@
             this.Controls.Add(this.lblConfirmNewPassword);
             this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdatePassword";
             this.Text = "UpdatePassword";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -176,5 +186,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

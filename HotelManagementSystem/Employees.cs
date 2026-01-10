@@ -18,26 +18,30 @@ using System.Text.RegularExpressions;
 using System.Diagnostics.Eventing.Reader;
 using System.Collections;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static HotelManagementSystem.LogIn;
 
 namespace HotelManagementSystem
 {
     public partial class Employees : Form
     {
-        private bool bAfrikaans = false;
-        public Employees()
+         bool bAfrikaans = false;
+        public Employees(bool isAfrikaans)
         {
             InitializeComponent();
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            bAfrikaans = isAfrikaans;
+            checkLanguage();
         }
 
         string connection = "Data Source=CAITLIN\\SQLEXPRESS;Initial Catalog=HotelManagementSystem;Integrated Security=True;";
-        
+        //string connection = "Data Source=(Localdb)\\MSSQLLocalDB;Database=Cmpg223;Trusted_Connection=True;";
+
         private void Employees_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelManagementSystemDataSet1.Job' table. You can move, or remove it, as needed.
             this.jobTableAdapter.Fill(this.hotelManagementSystemDataSet1.Job);
             // TODO: This line of code loads data into the 'hotelManagementSystemDataSet.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter.Fill(this.hotelManagementSystemDataSet.Employee);
+            tabControl1.Visible = false;
 
         }
         private void UpdateEmployeeDataGridView(string searchTerm, DataGridView dataGridView, string query)
@@ -105,45 +109,20 @@ namespace HotelManagementSystem
                 return result.ToString();
             }
 
-            // Method to generate a username
+            // Generates Username , concatenates and adds two random numbers at the end, in case there are two people with the same name
             public static string GenerateUsername(string name, string lastName)
             {
                 string usernameChars = NumberChars;
                 return name + lastName + GenerateRandomString(2, usernameChars);
             }
 
-            // Method to generate a random password for security reasons
+            // Generate a random password for security reasons - default password
             public static string GenerateRandomPassword(int length = 12)
             {
-                string passwordChars = UppercaseChars + LowercaseChars + NumberChars + SpecialChars;
+                string passwordChars =  LowercaseChars + NumberChars ;
                 return GenerateRandomString(length, passwordChars);
             }
         }
-        /* public bool checkNames(string name)
-         {
-             if (string.IsNullOrEmpty(name))
-             {
-                 errorProvider1.SetError(txtAddFName, "Please enter " + txtAddFName.Text);
-             }
-
-             // Check if the first character is uppercase
-             if (!char.IsUpper(name[0]))
-             {
-                 errorProvider1.SetError(txtAddFName, "Please start with Capital Letter");
-             }
-
-             // Check if all remaining characters are lowercase
-             for (int i = 1; i < name.Length; i++)
-             {
-                 if (!char.IsLower(name[i]))
-                 {
-                     errorProvider1.SetError(txtAddFName, "Must only contain letters");
-                 }
-             }
-
-             return true;
-         }
-         */
 
         private void ValidateTextBox(System.Windows.Forms.TextBox textBox)
         {
@@ -181,13 +160,14 @@ namespace HotelManagementSystem
 
         private bool IsTextValid(string text)
         {
-            // Regular expression to match only letters (Ensures that first letter is capitalized and rest lowercase)
+            //Ensures that first letter is capitalized and rest lowercase
             Regex regex = new Regex("^[A-Z][a-zA-Z]*$");
             return regex.IsMatch(text);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage4;
         }
 
@@ -201,6 +181,7 @@ namespace HotelManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             cmbAddRole.SelectedIndex = -1;
             cmbAddJob.SelectedIndex = -1;
             tabControl1.SelectedTab = tabPage3;
@@ -208,6 +189,7 @@ namespace HotelManagementSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             cmbUpdateRole.SelectedIndex = -1;
             cmbUpdateJob.SelectedIndex = -1;
             tabControl1.SelectedTab = tabPage1;
@@ -215,6 +197,7 @@ namespace HotelManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            tabControl1.Visible = true;
             tabControl1.SelectedTab = tabPage2;
         }
 
@@ -247,6 +230,9 @@ namespace HotelManagementSystem
             txtUsername.Clear();
             txtSearchFName.Clear();
             txtSearchLName.Clear();
+            rdoAdmin.Checked = false;
+            rdoStaff.Checked = false;
+            rdoClerk.Checked = false;
         }
 
         private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -293,24 +279,27 @@ namespace HotelManagementSystem
                 if (cmbAddRole.SelectedItem != null)
                 {
                     string selectedRole = cmbAddRole.SelectedItem.ToString();
-                    if (bAfrikaans)
+                    if (selectedRole == "Administrator")
                     {
-                        if (selectedRole == "Administrator")
-                        {
-                            admin = 1;
-                            clerk = 0;
-                        }
-                        else if (selectedRole == "Clerk")
-                        {
-                            admin = 0;
-                            clerk = 1;
-                        }
+                        admin = 1;
+                        clerk = 0;
                     }
-                    else
+                    else if (selectedRole == "Clerk")
+                    {
+                        admin = 0;
+                        clerk = 1;
+                    }
+                }
+                else
+                {
+                    if (bAfrikaans)
                     {
                         errorProvider1.SetError(cmbAddRole, "Kies asseblief rol");
                     }
-                    
+                    else
+                    {
+                        errorProvider1.SetError(cmbAddRole, "Please choose a role");
+                    }
                 }
                 int selectedJobID = (int)cmbAddJob.SelectedValue;
                 string username = RandomGenerator.GenerateUsername(txtAddFName.Text, txtAddLName.Text);
@@ -374,99 +363,102 @@ namespace HotelManagementSystem
 
         private void btnDeleteEmp_Click(object sender, EventArgs e)
         {
-            //PopulateDeleteFields(selectedEmployeeID);
-
+            // Ensure an employee is selected
             if (selectedEmployeeID == -1)
             {
                 if (bAfrikaans)
                 {
-                    MessageBox.Show("No Employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Geen werknemer gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Geen werknemer gekies nie.", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("No Employee selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                return;
             }
 
-
-            string Selectquery = "SELECT Employee_FName, Employee_LName, Is_Admin_YN, Is_Clerk_YN, Job_Id FROM Employee WHERE Employee_Username = @username";
-            string Deletequery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
-            //string username = txtDeleteSerach.Text;
-
-            
+            // SQL queries
+            string deleteQuery = "DELETE FROM Employee WHERE Employee_ID = @EmployeeId";
+            string setNullQuery = "UPDATE Room SET Employee_ID = NULL WHERE Employee_ID = @EmployeeId";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand(Deletequery, conn))
+
+                // Set Employee_ID to NULL in Room table
+                using (SqlCommand referentialIntegrity = new SqlCommand(setNullQuery, conn))
+                {
+                    referentialIntegrity.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
+                    referentialIntegrity.ExecuteNonQuery();
+                }
+
+                // Delete the employee
+                using (SqlCommand command = new SqlCommand(deleteQuery, conn))
                 {
                     command.Parameters.AddWithValue("@EmployeeId", selectedEmployeeID);
 
+                    // Check if the confirmation checkbox is checked
                     if (!cbConfirm.Checked)
                     {
                         if (bAfrikaans)
                         {
-                            MessageBox.Show("Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete");
-                            return;
+                            MessageBox.Show("Merk asseblief die merkblokkie as die inligting in 'Verifieer werknemerbesonderhede' ooreenstem met die werknemer wat jy van plan is om uit te vee");
                         }
                         else
                         {
-                            MessageBox.Show("Merk asseblief die merkblokkie as die inligting in 'Verifieer werknemerbesonderhede' ooreenstem met die werknemer wat jy van plan is om uit te vee");
-                            return;
+                            MessageBox.Show("Please check the checkbox if the information in 'Verify Employee Details' matches the employee you intend to delete");
                         }
+                        return;
                     }
+
+                    // Show confirmation dialog
                     DialogResult dialogResult;
                     if (bAfrikaans)
                     {
-                        MessageBox.Show("Are you sure you would like to delete this user:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        return;
+                        dialogResult = MessageBox.Show("Is jy seker jy wil hierdie gebruiker uitvee?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Is jy seker jy wil hierdie gebruiker uitvee:?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); 
-                        return;
+                        dialogResult = MessageBox.Show("Are you sure you would like to delete this user?", "Delete User Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     }
+
+                    // If the user confirms the deletion
                     if (dialogResult == DialogResult.Yes)
                     {
                         int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
-                            command.ExecuteNonQuery();
                             if (bAfrikaans)
                             {
-                                MessageBox.Show("Employee sucessfully deleted");
-                                txtVerifyClerk.Text = " ";
-                                txtVerifyAdmin.Text = " ";
-                                txtVerifyFName.Text = " ";
-                                txtVerifyLName.Text = " ";
-                                txtVerifyJob.Text = " ";
+                                MessageBox.Show("Werknemer suksesvol verwyder.");
                             }
                             else
                             {
-                                MessageBox.Show("Werknemer suksesvol verwyder");
-                                txtVerifyClerk.Text = " ";
-                                txtVerifyAdmin.Text = " ";
-                                txtVerifyFName.Text = " ";
-                                txtVerifyLName.Text = " ";
-                                txtVerifyJob.Text = " ";
+                                MessageBox.Show("Employee successfully deleted.");
                             }
+
+                            // Clear the verification text fields
+                            txtVerifyClerk.Clear();
+                            txtVerifyAdmin.Clear();
+                            txtVerifyFName.Clear();
+                            txtVerifyLName.Clear();
+                            txtVerifyJob.Clear();
                         }
                         else
                         {
                             if (bAfrikaans)
                             {
-                                MessageBox.Show("No employee found with the provided username.");
+                                MessageBox.Show("Geen werknemer gevind met die verskafde gebruikersnaam nie.");
                             }
                             else
                             {
-                                MessageBox.Show("Geen werknemer gevind met die verskafde gebruikersnaam nie.");
+                                MessageBox.Show("No employee found with the provided username.");
                             }
                         }
+
+                        LoadData(); // Refresh the data grid after deletion
                     }
-                    LoadData();
                 }
             }
         }
@@ -571,13 +563,7 @@ namespace HotelManagementSystem
 
             // Proceed with updating the employee
             int selectedJobID = (int)cmbAddJob.SelectedValue;
-            string query = "UPDATE Employee SET " +
-                           "Employee_FName = COALESCE(NULLIF(@newFirstName, ''), Employee_FName), " +
-                           "Employee_LName = COALESCE(NULLIF(@newLastName, ''), Employee_LName), " +
-                           "Is_Admin_YN = @isAdmin, " +
-                           "Is_Clerk_YN = @isClerk, " +
-                           "Job_ID = @jobId " +
-                           "WHERE Employee_ID = @EmployeeId";
+            string query = "UPDATE Employee SET " +"Employee_FName = COALESCE(NULLIF(@newFirstName, ''), Employee_FName), " +"Employee_LName = COALESCE(NULLIF(@newLastName, ''), Employee_LName), " +"Is_Admin_YN = @isAdmin, " +"Is_Clerk_YN = @isClerk, " +"Job_ID = @jobId " +"WHERE Employee_ID = @EmployeeId";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -625,6 +611,7 @@ namespace HotelManagementSystem
                 {
                     string newUsername = RandomGenerator.GenerateUsername(newFirstName, newLastName);
                     usernameChanged = true;
+                    //generate new username
                     string queryUsername = "UPDATE Employee SET Employee_Username = @newUsername WHERE Employee_Username = @oldUsername";
                     using (SqlCommand cmdUsername = new SqlCommand(queryUsername, conn))
                     {
@@ -633,7 +620,7 @@ namespace HotelManagementSystem
                         cmdUsername.ExecuteNonQuery();
                         usernameChanged = true;
                     }
-                    username = newUsername; // Update the username variable
+                    username = newUsername; // Update the username 
                 }
                 else if (!string.IsNullOrEmpty(newFirstName) && string.IsNullOrEmpty(newLastName))
                 {
@@ -661,7 +648,7 @@ namespace HotelManagementSystem
                         hasErrors = true;
                     }
                 }
-                // Execute update command only if there are no errors
+                // Execute update only if there are no errors
                 if (!hasErrors)
                 {
                     using (SqlCommand command = new SqlCommand(query, conn))
@@ -678,7 +665,6 @@ namespace HotelManagementSystem
 
                         if (rowsAffected > 0)
                         {
-                            // Show success message only if no errors
                             if (!hasErrors)
                             {
                                 if (usernameChanged)
@@ -719,7 +705,6 @@ namespace HotelManagementSystem
                                     }
                                 }
 
-                                // Optionally refresh DataGridView
                                 LoadData();
 
                             }
@@ -741,10 +726,8 @@ namespace HotelManagementSystem
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            // Get the search term and trim any extra whitespace
             string searchTerm = txtUsername.Text.Trim();
 
-            // Construct the SQL query based on the selected filter
             string query = "SELECT * FROM Employee WHERE Employee_Username LIKE @searchTerm";
 
             if (rdoAdmin.Checked)
@@ -764,7 +747,6 @@ namespace HotelManagementSystem
                 query += " ORDER BY Employee_LName DESC";
             }
 
-            // Update the DataGridView with the constructed query
             UpdateEmployeeDataGridView(searchTerm, employeeDataGridView, query);
         }
 
@@ -861,7 +843,6 @@ namespace HotelManagementSystem
                 conn.Open();
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    // Add parameters to avoid SQL injection
                     if (!string.IsNullOrEmpty(txtUsername.Text))
                     {
                         command.Parameters.AddWithValue("@username", "%" + txtUsername.Text + "%");
@@ -875,7 +856,6 @@ namespace HotelManagementSystem
                         command.Parameters.AddWithValue("@lastName", "%" + txtSearchLName.Text + "%");
                     }
 
-                    // Execute the query and fill the DataGridView
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         DataTable dt = new DataTable();
@@ -906,7 +886,7 @@ namespace HotelManagementSystem
                     {
                         if (reader.Read())
                         {
-                            // Populate the text boxes with the retrieved data
+                            // Populate the text boxes with the retrieved data from datagridview
                             txtVerifyFName.Text = reader["Employee_FName"].ToString();
                             txtVerifyLName.Text = reader["Employee_LName"].ToString();
                             txtVerifyAdmin.Text = Convert.ToBoolean(reader["Is_Admin_YN"]) ? "Yes" : "No";
@@ -945,15 +925,14 @@ namespace HotelManagementSystem
                     {
                         if (reader.Read())
                         {
-                            // Populate the text boxes with the retrieved data
+                            // Populate the text boxes with the retrieved data from datagridview
                             txtUpdateSearch.Text = reader["Employee_Username"].ToString();
                             txtUpdateFName.Text = reader["Employee_FName"].ToString();
                             txtUpdateLName.Text = reader["Employee_LName"].ToString();
                             bool isAdmin = Convert.ToBoolean(reader["Is_Admin_YN"]);
                             bool isClerk = Convert.ToBoolean(reader["Is_Clerk_YN"]);
 
-                            // Update the ComboBox based on the values retrieved
-                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; // Example: 0 for Admin, 1 for Clerk (adjust as needed)
+                            cmbUpdateRole.SelectedIndex = isAdmin ? 0 : 1; //0 for Admin, 1 for Clerk
 
                             // Populate the job ComboBox
                             int jobId = Convert.ToInt32(reader["Job_Id"]);
@@ -981,12 +960,10 @@ namespace HotelManagementSystem
             {
                 DataGridViewRow row = employeeDataGridView.Rows[e.RowIndex];
 
-                // Ensure the correct column name is used
                 if (row.Cells["Employee_ID"] != null && row.Cells["Employee_ID"].Value != DBNull.Value)
                 {
                     selectedEmployeeID = Convert.ToInt32(row.Cells["Employee_ID"].Value);
 
-                    // Check which tab or mode is active and populate fields accordingly
                     if (tabControl1.SelectedTab == tabPage1)
                     {
                         populateUpdateFields(selectedEmployeeID);
@@ -1107,14 +1084,84 @@ namespace HotelManagementSystem
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            if (bAfrikaans == false)
+            if (bAfrikaans)
             {
+                bAfrikaans = false;
+            }
+            else {
+                bAfrikaans = true;
+            }
+            checkLanguage();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FormHelper.ShowAppropriateForm(this, LogIn.isAdmin, LogIn.isClerk, bAfrikaans);
+
+        }
+
+        private void checkLanguage() {
+            if (bAfrikaans)
+            {
+                groupBox1.Text = "KIESLYS";
+                //Hoofknoppies
+                btnSearch.Text = "SOEK";
+                btnAdd.Text = "VOEG TOE";
+                btnUpdate.Text = "OPDATERING";
+                btnDelete.Text = "VERWYDER";
+                btnLanguage.Text = "ENGLISH";
+
+                //Dateer etikette op
+                lblUpdateUsername.Text = "Gebruikersnaam:";
+                lblUpdateFirstName.Text = "Voornaam:";
+                lblUpdateLastName.Text = "Van:";
+                lblUpdateJobTitle.Text = "Postitel:";
+                lblUpdateRole.Text = "Rol:";
+                btnUpdateEmp.Text = "OPDATERING";
+
+                //Vee etikette uit
+                gpVerifyDetails.Text = "Verifieer werknemerbesonderhede";
+                lblDeleteFName.Text = "Werknemer Voornaam:";
+                lblDeleteLName.Text = "Werknemer Van:";
+                lblDeleteAdmin.Text = "Is Admin:";
+                lblDeleteClerk.Text = "Is Klerk:";
+                lblDeleteJob.Text = "Werknemer Pos:";
+                cbConfirm.Text = "Bevestiging dat dit die korrekte werknemer is wat uitgevee moet word";
+                btnDeleteEmp.Text = "VEE UIT";
+
+                //Voeg werknemer by
+                lblAddFName.Text = "Voornaam:";
+                lblAddLName.Text = "Vannaam:";
+                lblAddTitle.Text = "Postitel:";
+                lblAddRole.Text = "Rol:";
+                btnAddReset.Text = "TERUGSTEL";
+                btnAdd.Text = "VOEG TOE";
+
+                //Soek Werknemer
+                gpSearch.Text = "Soek deur:";
+                lblSearchUsername.Text = "Gebruikernaam:";
+                lblSearchFName.Text = "Voornaam:";
+                lblSearchLName.Text = "Van:";
+                btnSearchReset.Text = "TERUGSTEL";
+                gpSort.Text = "Sorteer volgens Gebruikernaam:";
+                rdoAsc.Text = "Stygend";
+                rdoDes.Text = "Daalend";
+                gpFilter.Text = "Filter volgens:";
+                rdoAdmin.Text = "Slegs administrateur gebruikers";
+                rdoClerk.Text = "Slegs klerkgebruikers";
+                rdoStaff.Text = "Slegs werknemerspersoneel";
+                btnSearchReset.Text = "TERUGSTEL";
+                btnSearch.Text = "SOEK";
+            }
+            else
+            {
+                groupBox1.Text = "MENU";
                 //Main buttons
                 btnSearch.Text = "SEARCH";
                 btnAdd.Text = "ADD";
                 btnUpdate.Text = "UPDATE";
                 btnDelete.Text = "DELETE";
-                btnLanguage.Text = "LANGUAGE";
+                btnLanguage.Text = "AFRIKAANS";
 
                 //Update labels
                 lblUpdateUsername.Text = "Employee Username:";
@@ -1148,7 +1195,7 @@ namespace HotelManagementSystem
                 lblSearchFName.Text = "First Name:";
                 lblSearchLName.Text = "Last Name:";
                 btnSearchReset.Text = "RESET";
-                gpSort.Text = "Sort by:";
+                gpSort.Text = "Sort by Username:";
                 rdoAsc.Text = "Ascending";
                 rdoDes.Text = "Descending";
                 gpFilter.Text = "Filter by:";
@@ -1157,59 +1204,17 @@ namespace HotelManagementSystem
                 rdoStaff.Text = "Employee staff only";
                 btnSearchReset.Text = "RESET";
                 btnSearch.Text = "SEARCH";
-
             }
-            else
-            {
-                //Hoofknoppies
-                btnSearch.Text = "SOEK";
-                btnAdd.Text = "VOEG TOE";
-                btnUpdate.Text = "OPDATERING";
-                btnDelete.Text = "VEE";
-                btnLanguage.Text = "TAAL";
+        }
 
-                //Dateer etikette op
-                lblUpdateUsername.Text = "Werknemer Gebruikersnaam:";
-                lblUpdateFirstName.Text = "Voornaam:";
-                lblUpdateLastName.Text = "Vannaam:";
-                lblUpdateJobTitle.Text = "Postitel:";
-                lblUpdateRole.Text = "Rol:";
-                btnUpdateEmp.Text = "OPDATERING";
+        private void rdoAsc_CheckedChanged(object sender, EventArgs e)
+        {
 
-                //Vee etikette uit
-                gpVerifyDetails.Text = "Verifieer werknemerbesonderhede";
-                lblDeleteFName.Text = "Werknemer Voornaam:";
-                lblDeleteLName.Text = "Werknemer Van:";
-                lblDeleteAdmin.Text = "Is Admin:";
-                lblDeleteClerk.Text = "Is Klerk:";
-                lblDeleteJob.Text = "Werknemer Pos:";
-                cbConfirm.Text = "Bevestiging dat dit die korrekte werknemer is wat uitgevee moet word";
-                btnDeleteEmp.Text = "VEE UIT";
+        }
 
-                //Voeg werknemer by
-                lblAddFName.Text = "Voornaam:";
-                lblAddLName.Text = "Vannaam:";
-                lblAddTitle.Text = "Postitel:";
-                lblAddRole.Text = "Rol:";
-                btnAddReset.Text = "TERUGSTEL";
-                btnAdd.Text = "VOEG TOE";
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
-                //Soek Werknemer
-                gpSearch.Text = "Soek deur:";
-                lblSearchUsername.Text = "Gebruikernaam:";
-                lblSearchFName.Text = "Voornaam:";
-                lblSearchLName.Text = "Vannaam:";
-                btnSearchReset.Text = "TERUGSTEL";
-                gpSort.Text = "Sorteer volgens:";
-                rdoAsc.Text = "Stygend";
-                rdoDes.Text = "Daalend";
-                gpFilter.Text = "Filter volgens:";
-                rdoAdmin.Text = "Slegs administrateur gebruikers";
-                rdoClerk.Text = "Slegs klerkgebruikers";
-                rdoStaff.Text = "Slegs werknemerspersoneel";
-                btnSearchReset.Text = "TERUGSTEL";
-                btnSearch.Text = "SOEK";
-            }
         }
     }
     }
